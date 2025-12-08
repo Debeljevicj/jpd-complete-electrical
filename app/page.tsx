@@ -128,7 +128,7 @@ export default function Home() {
 
             {/* Why Choose JPD */}
             <section className="section-padding bg-navy text-white relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-5" />
+                {/* Pattern removed */}
                 <div className="container-custom relative z-10">
                     <SectionHeading centered className="!text-white">Why Choose JPD Complete Electrical</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -245,7 +245,7 @@ export default function Home() {
 
             {/* Final CTA */}
             <section className="section-padding bg-navy text-white relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/pattern.png')] opacity-5" />
+                {/* Pattern removed */}
                 <div className="container-custom text-center relative z-10">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
                     <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
