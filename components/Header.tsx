@@ -25,6 +25,7 @@ export default function Header() {
         { href: '/about', label: 'About' },
         { href: '/services', label: 'Services' },
         { href: '/gallery', label: 'Gallery' },
+        { href: '/reviews', label: 'Reviews' },
         { href: '/contact', label: 'Contact' },
     ];
 
@@ -34,7 +35,7 @@ export default function Header() {
                 }`}
         >
             <div className="container-custom">
-                <div className="flex items-center justify-between py-4">
+                <div className="flex items-center justify-between py-3 md:py-4">
                     {/* Logo - Centered on mobile, left on desktop */}
                     <Link href="/" className="relative h-12 w-48 md:h-14 md:w-56 shrink-0 lg:mr-8 mx-auto lg:mx-0">
                         <Image
@@ -52,7 +53,10 @@ export default function Header() {
                         <div className="flex items-center gap-8">
                             <nav className="flex items-center gap-8">
                                 {navLinks.map((link) => {
-                                    const isActive = pathname === link.href;
+                                    const isActive = link.href === '/'
+                                        ? pathname === '/'
+                                        : pathname.startsWith(link.href);
+
                                     return (
                                         <Link
                                             key={link.href}
@@ -101,7 +105,10 @@ export default function Header() {
                         <TrustBadges className="mb-4 justify-center" />
                         <nav className="flex flex-col gap-4">
                             {navLinks.map((link) => {
-                                const isActive = pathname === link.href;
+                                const isActive = link.href === '/'
+                                    ? pathname === '/'
+                                    : pathname.startsWith(link.href);
+
                                 return (
                                     <Link
                                         key={link.href}

@@ -23,16 +23,16 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: "JPD Complete Electrical | Professional Electrician Adelaide",
-    description: "Reliable, honest electrical solutions for residential, commercial, medical and disability housing. Licensed electrician (PGE296191) serving Adelaide metro.",
+    description: "Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide's trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.",
     keywords: ["electrician Adelaide", "electrical services", "residential electrician", "commercial electrician", "medical clinic electrician", "disability housing electrician"],
     icons: {
         icon: [
             {
-                url: '/favicon-light.png',
+                url: '/favicon-logo.png',
                 media: '(prefers-color-scheme: light)',
             },
             {
-                url: '/favicon-dark.png',
+                url: '/favicon-logo.png',
                 media: '(prefers-color-scheme: dark)',
             },
         ],
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
     metadataBase: new URL('https://www.jpdcompleteelectrical.com.au'),
     openGraph: {
         title: 'JPD Complete Electrical',
-        description: 'Reliable, honest electrical solutions for residential, commercial, medical and disability housing. Licensed electrician (PGE296191) serving Adelaide metro.',
+        description: 'Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide\'s trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.',
         url: 'https://www.jpdcompleteelectrical.com.au',
         siteName: 'JPD Complete Electrical',
         images: [
             {
-                url: '/og-image.png',
+                url: '/google-logo.png',
                 width: 1200,
                 height: 630,
                 alt: 'JPD Complete Electrical Logo',
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'JPD Complete Electrical',
-        description: 'Reliable, honest electrical solutions for residential, commercial, medical and disability housing. Licensed electrician (PGE296191) serving Adelaide metro.',
-        images: ['/og-image.png'],
+        description: 'Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide\'s trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.',
+        images: ['/google-logo.png'],
     },
 };
 

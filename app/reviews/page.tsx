@@ -35,7 +35,7 @@ export default function ReviewsPage() {
                         Your feedback helps us improve and helps others make informed decisions.
                     </p>
                     <a
-                        href="https://www.google.com/search?q=JPD+Complete+Electrical"
+                        href="https://g.page/r/CW2LCGVNt7qSEAI/review"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn btn-gold text-lg px-8 py-4 inline-flex items-center gap-2"

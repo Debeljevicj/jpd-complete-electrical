@@ -30,7 +30,10 @@ export default function StickyNav() {
             <div className="container-custom">
                 <nav className="flex items-center justify-center gap-8 py-3">
                     {mainLinks.map((link) => {
-                        const isActive = pathname === link.href;
+                        const isActive = link.href === '/'
+                            ? pathname === '/'
+                            : pathname.startsWith(link.href);
+
                         return (
                             <Link
                                 key={link.href}

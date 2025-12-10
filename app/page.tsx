@@ -60,18 +60,18 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <div className="pt-8 flex items-center gap-8 text-sm text-gray-400 animate-fade-in-up pb-8 md:pb-0" style={{ animationDelay: '0.5s' }}>
+                        <div className="pt-8 flex items-center gap-8 text-sm text-gray-200 md:text-gray-400 animate-fade-in-up pb-8 md:pb-0" style={{ animationDelay: '0.5s' }}>
                             <div className="flex items-center gap-2">
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/5">
+                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/20">
                                     7+
                                 </div>
-                                <span>Years<br />Experience</span>
+                                <span className="font-medium text-white md:text-gray-400">Years<br />Experience</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/5">
+                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/20">
                                     5★
                                 </div>
-                                <span>Google<br />Rated</span>
+                                <span className="font-medium text-white md:text-gray-400">Google<br />Rated</span>
                             </div>
                         </div>
                     </div>
