@@ -1,5 +1,4 @@
 import { Star, Facebook } from 'lucide-react';
-import Image from 'next/image';
 
 interface Review {
     id: number;
@@ -11,7 +10,7 @@ interface Review {
     avatarColor: string;
 }
 
-const reviews: Review[] = [
+export const reviews: Review[] = [
     {
         id: 3,
         author: "Dylan Godfrey",
@@ -22,22 +21,76 @@ const reviews: Review[] = [
         avatarColor: "bg-blue-800"
     },
     {
-        id: 2,
-        author: "Cam Moar",
+        id: 6,
+        author: "David",
         source: "Google",
         rating: 5,
-        date: "Yesterday",
-        content: "Recently had Justin from JPD come out for a lighting upgrade and tv/soundbar wall mounting as part of a small renovation at home and I’m really happy with how it turned out. He handled everything no dramas, plus happily looked at some other things around the house that I had a few questions about. Overall was a good experience. On time, easy to talk to, explained what he was doing and kept things tidy. Very professional and clearly knows his stuff, but also relaxed and not pushy. If you need something done in Adelaide and want someone reliable who does quality work without any drama, I’d definitely recommend giving him a call.",
-        avatarColor: "bg-green-600"
+        date: "1 month ago",
+        content: "Reliable, honest and great work ethic. Justin did a heap of electrical work for me last year... everything was done to a very high standard and at a fair price. Highly recommend.",
+        avatarColor: "bg-purple-600"
+    },
+    {
+        id: 7,
+        author: "Daniel D",
+        source: "Google",
+        rating: 5,
+        date: "1 month ago",
+        content: "Had Justin attend my workplace to find and repair an electrical fault. Not only did he arrive promptly, but he also took the time to clearly explain every step of the process. Exceptional service...",
+        avatarColor: "bg-orange-600"
+    },
+    {
+        id: 8,
+        author: "Gary Dawe",
+        source: "Google",
+        rating: 5,
+        date: "1 month ago",
+        content: "Justin provides a prompt, professional and friendly service at reasonable prices and I don't hesitate to recommend him.",
+        avatarColor: "bg-teal-600"
     },
     {
         id: 1,
         author: "adam redel",
         source: "Google",
         rating: 5,
-        date: "5 hours ago",
+        date: "1 month ago",
         content: "Justin is hands down the best electrician I’ve ever dealt with. He was on time, professional, and explained everything in a way that was easy to understand. The quality of his work is outstanding, and he went above and beyond to make sure everything was safe, tidy, and working perfectly before he left. Friendly, reliable, and genuinely great at what he does , I wouldn’t hesitate to recommend Justin to anyone needing electrical work done. Five stars well deserved!",
         avatarColor: "bg-blue-600"
+    },
+    {
+        id: 2,
+        author: "Cam Moar",
+        source: "Google",
+        rating: 5,
+        date: "1 month ago",
+        content: "Recently had Justin from JPD come out for a lighting upgrade and tv/soundbar wall mounting as part of a small renovation at home and I’m really happy with how it turned out. He handled everything no dramas, plus happily looked at some other things around the house that I had a few questions about. Overall was a good experience. On time, easy to talk to, explained what he was doing and kept things tidy. Very professional and clearly knows his stuff, but also relaxed and not pushy. If you need something done in Adelaide and want someone reliable who does quality work without any drama, I’d definitely recommend giving him a call.",
+        avatarColor: "bg-green-600"
+    },
+    {
+        id: 5,
+        author: "4d ee",
+        source: "Google",
+        rating: 5,
+        date: "3 weeks ago",
+        content: "I'd like to give a 5-star rating to Justin from JPD Electrical. We had very old electrical cabling throughout our roof, which posed a safety risk to our family. Justin clearly understood our concerns and carried out the necessary repairs... His expertise and advice were invaluable... Thank you, Justin.",
+        avatarColor: "bg-indigo-600"
+    },
+    {
+        id: 4,
+        author: "Paula Bill",
+        source: "Google",
+        rating: 5,
+        date: "3 weeks ago",
+        content: "Justin recently installed a ceiling fan to our home, very professional, reliable and knowledgeable. He did a great job, we are very happy with the work, would highly recommend him.",
+        avatarColor: "bg-pink-600"
+    },
+    {
+        id: 9,
+        author: "Youtuber Jack",
+        source: "Google",
+        rating: 5,
+        date: "1 day ago",
+        content: "Highly recommend! Justin was extremely responsive with great communication from the start and followed up to make sure everything was perfect. He truly goes above and beyond to provide a high-quality service. Will definitely be using him for all my future electrical needs!",
+        avatarColor: "bg-red-600"
     }
 ];
 

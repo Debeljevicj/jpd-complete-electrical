@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Button from '@/components/Button';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
-import ClientReviews from '@/components/ClientReviews';
+import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
 import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award } from 'lucide-react';
@@ -230,7 +230,7 @@ export default function Home() {
                 <div className="container-custom">
                     <SectionHeading centered>What Our Clients Say</SectionHeading>
                     <div className="mt-12">
-                        <ClientReviews />
+                        <ReviewsCarousel />
                     </div>
                     <div className="text-center mt-12">
                         <Link href="/reviews" className="btn btn-primary">
