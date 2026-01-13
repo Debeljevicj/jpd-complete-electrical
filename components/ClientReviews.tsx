@@ -13,7 +13,7 @@ interface Review {
 export const reviews: Review[] = [
     {
         id: 3,
-        author: "Dylan Godfrey",
+        author: "Dylan G",
         source: "Facebook",
         rating: 5,
         date: "Recommended",
@@ -40,7 +40,7 @@ export const reviews: Review[] = [
     },
     {
         id: 8,
-        author: "Gary Dawe",
+        author: "Gary D",
         source: "Google",
         rating: 5,
         date: "1 month ago",
@@ -49,7 +49,7 @@ export const reviews: Review[] = [
     },
     {
         id: 1,
-        author: "adam redel",
+        author: "Adam R",
         source: "Google",
         rating: 5,
         date: "1 month ago",
@@ -58,7 +58,7 @@ export const reviews: Review[] = [
     },
     {
         id: 2,
-        author: "Cam Moar",
+        author: "Cam M",
         source: "Google",
         rating: 5,
         date: "1 month ago",
@@ -67,7 +67,7 @@ export const reviews: Review[] = [
     },
     {
         id: 5,
-        author: "4d ee",
+        author: "4d E",
         source: "Google",
         rating: 5,
         date: "3 weeks ago",
@@ -76,7 +76,7 @@ export const reviews: Review[] = [
     },
     {
         id: 4,
-        author: "Paula Bill",
+        author: "Paula B",
         source: "Google",
         rating: 5,
         date: "3 weeks ago",
@@ -85,7 +85,7 @@ export const reviews: Review[] = [
     },
     {
         id: 9,
-        author: "Youtuber Jack",
+        author: "Jack",
         source: "Google",
         rating: 5,
         date: "1 day ago",
