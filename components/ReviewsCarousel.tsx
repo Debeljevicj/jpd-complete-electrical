@@ -11,12 +11,10 @@ export default function ReviewsCarousel() {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
             const scrollAmount = container.clientWidth * 0.8; // Scroll 80% of width
-            const targetScroll = direction === 'left'
-                ? container.scrollLeft - scrollAmount
-                : container.scrollLeft + scrollAmount;
 
-            container.scrollTo({
-                left: targetScroll,
+            // Use scrollBy for relative scrolling which is often more reliable with snap
+            container.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
             });
         }
@@ -39,16 +37,18 @@ export default function ReviewsCarousel() {
             <div className="relative px-4 md:px-12">
                 {/* Navigation Buttons - Hidden on mobile, visible on desktop */}
                 <button
+                    type="button"
                     onClick={() => scroll('left')}
-                    className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 items-center justify-center text-navy hover:text-gold hover:scale-110 transition-all focus:outline-none focus:ring-2 focus:ring-gold/50"
+                    className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 items-center justify-center text-navy hover:text-gold hover:scale-110 transition-all focus:outline-none focus:ring-2 focus:ring-gold/50 cursor-pointer"
                     aria-label="Previous reviews"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
 
                 <button
+                    type="button"
                     onClick={() => scroll('right')}
-                    className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 items-center justify-center text-navy hover:text-gold hover:scale-110 transition-all focus:outline-none focus:ring-2 focus:ring-gold/50"
+                    className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 items-center justify-center text-navy hover:text-gold hover:scale-110 transition-all focus:outline-none focus:ring-2 focus:ring-gold/50 cursor-pointer"
                     aria-label="Next reviews"
                 >
                     <ChevronRight className="w-6 h-6" />
@@ -57,7 +57,7 @@ export default function ReviewsCarousel() {
                 {/* Carousel Container */}
                 <div
                     ref={scrollContainerRef}
-                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 pt-2 px-1"
+                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 pt-2 px-1 relative z-10"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {reviews.slice().reverse().map((review) => (
