@@ -13,13 +13,13 @@ interface Review {
 
 const reviews: Review[] = [
     {
-        id: 1,
-        author: "adam redel",
-        source: "Google",
+        id: 3,
+        author: "Dylan Godfrey",
+        source: "Facebook",
         rating: 5,
-        date: "5 hours ago",
-        content: "Justin is hands down the best electrician I’ve ever dealt with. He was on time, professional, and explained everything in a way that was easy to understand. The quality of his work is outstanding, and he went above and beyond to make sure everything was safe, tidy, and working perfectly before he left. Friendly, reliable, and genuinely great at what he does , I wouldn’t hesitate to recommend Justin to anyone needing electrical work done. Five stars well deserved!",
-        avatarColor: "bg-blue-600"
+        date: "Recommended",
+        content: "Wasn’t sure who to call when my powerpoints in my new townhouse all went. Called JPD and they were so helpful and fixed the issue for me right away, great price too. Definitely will use them again for all future needs!!",
+        avatarColor: "bg-blue-800"
     },
     {
         id: 2,
@@ -31,13 +31,13 @@ const reviews: Review[] = [
         avatarColor: "bg-green-600"
     },
     {
-        id: 3,
-        author: "Dylan Godfrey",
-        source: "Facebook",
+        id: 1,
+        author: "adam redel",
+        source: "Google",
         rating: 5,
-        date: "Recommended",
-        content: "Wasn’t sure who to call when my powerpoints in my new townhouse all went. Called JPD and they were so helpful and fixed the issue for me right away, great price too. Definitely will use them again for all future needs!!",
-        avatarColor: "bg-blue-800"
+        date: "5 hours ago",
+        content: "Justin is hands down the best electrician I’ve ever dealt with. He was on time, professional, and explained everything in a way that was easy to understand. The quality of his work is outstanding, and he went above and beyond to make sure everything was safe, tidy, and working perfectly before he left. Friendly, reliable, and genuinely great at what he does , I wouldn’t hesitate to recommend Justin to anyone needing electrical work done. Five stars well deserved!",
+        avatarColor: "bg-blue-600"
     }
 ];
 

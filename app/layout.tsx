@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
+                url: '/favicon-theme-light.png', // Default for search engines/crawlers (Navy)
+            },
+            {
                 url: '/favicon-theme-light.png',
                 media: '(prefers-color-scheme: light)',
             },
