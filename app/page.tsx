@@ -39,7 +39,7 @@ export default function Home() {
                     <div className="text-white space-y-6 animate-slide-up pb-12 md:pb-0">
                         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-fade-in-up mt-4 md:mt-0" style={{ animationDelay: '0.1s' }}>
                             <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-                            <span className="text-sm font-semibold tracking-wide uppercase text-gold">Adelaide's Trusted Electrician</span>
+                            <span className="text-sm font-semibold tracking-wide uppercase text-gold">Adelaide's Trusted, Licensed Electrician</span>
                         </div>
 
                         <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>

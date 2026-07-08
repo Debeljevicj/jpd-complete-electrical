@@ -26,7 +26,7 @@ Our color scheme reflects professionalism (Navy) and energy/warmth (Gold).
 | Color Name | Hex Code | Purpose |
 | :--- | :--- | :--- |
 | **JPD Navy** | `#003B5C` | **Primary Brand Color.** Used for headers, primary buttons, and main brand elements. |
-| **JPD Gold** | `#F5D042` | **Accent Color.** Used for Call-to-Actions (CTAs), highlights, underlines, and attention-grabbing elements. |
+| **JPD Gold** | `#CDA84D` | **Accent Color.** Used for Call-to-Actions (CTAs), highlights, underlines, and attention-grabbing elements. |
 
 ### Secondary & Neutral Colors
 
@@ -71,9 +71,9 @@ Used for all paragraph text, input fields, and UI elements. It is optimized for 
     *   *Usage: "Contact Us", "Submit", "Read More"*
 
 *   **Highlight Button (High Priority):**
-    *   **Background:** Gold (`#F5D042`)
+    *   **Background:** Gold (`#CDA84D`)
     *   **Text:** Navy (`#003B5C`)
-    *   **Hover:** Lighter Yellow/Gold
+    *   **Hover:** Deeper Gold (`#B08F3F`)
     *   *Usage: "Book Now", "Emergency Call", "Get a Quote"*
 
 *   **Outline Button (Secondary):**
@@ -87,7 +87,7 @@ Section headers often feature a **Gold Underline** design element to separate th
 
 *   **Style:** Relative positioning with a pseudo-element underline.
 *   **Dimensions:** `w-20` (approx 80px) width, `h-1` (4px) height.
-*   **Color:** Gold (`#F5D042`).
+*   **Color:** Gold (`#CDA84D`).
 
 ### Cards (Services/Reviews)
 *   **Background:** White (`#FFFFFF`)

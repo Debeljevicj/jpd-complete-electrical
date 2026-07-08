@@ -14,7 +14,8 @@ const config: Config = {
                     deep: '#012C45',
                 },
                 gold: {
-                    DEFAULT: '#F5D042',
+                    DEFAULT: '#CDA84D',
+                    dark: '#B08F3F',
                 },
                 neutral: {
                     offwhite: '#F8F9FA',

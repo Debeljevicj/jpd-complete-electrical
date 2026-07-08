@@ -48,7 +48,7 @@
   }
 
   .btn-gold {
-    @apply bg-gold text-navy hover:bg-yellow-400 hover:shadow-lg;
+    @apply bg-gold text-navy hover:bg-gold-dark hover:shadow-lg;
   }
 
   .btn-outline {
