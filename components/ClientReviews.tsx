@@ -91,6 +91,60 @@ export const reviews: Review[] = [
         date: "1 day ago",
         content: "Highly recommend! Justin was extremely responsive with great communication from the start and followed up to make sure everything was perfect. He truly goes above and beyond to provide a high-quality service. Will definitely be using him for all my future electrical needs!",
         avatarColor: "bg-red-600"
+    },
+    {
+        id: 10,
+        author: "Kristie M",
+        source: "Google",
+        rating: 5,
+        date: "6 hours ago",
+        content: "I have used JPD Complete Electrical on 2 occasions now and Justin has completed my jobs to a highly professional standard, quickly and with no mess left behind. The work required was explained to me in detail and highly competitive quotes given. Friendly, expert customer service provided. I would highly recommend giving JPD Complete electrical a go!",
+        avatarColor: "bg-rose-600"
+    },
+    {
+        id: 11,
+        author: "Jan K",
+        source: "Google",
+        rating: 5,
+        date: "Yesterday",
+        content: "I highly recommend Justin from JPD Complete Electrical. They handled a full switchboard upgrade and more for my house and did a meticulous job. They were professional, friendly and completely transparent with the quote, and left my home spotless when they were done. It's great to find a local tradie I can trust with my home's safety. Thanks again!",
+        avatarColor: "bg-violet-600"
+    },
+    {
+        id: 12,
+        author: "Matt W",
+        source: "Google",
+        rating: 5,
+        date: "5 days ago",
+        content: "Justin is unreal, goes above and beyond to make sure the customer is happy.",
+        avatarColor: "bg-amber-600"
+    },
+    {
+        id: 13,
+        author: "Taylor E",
+        source: "Google",
+        rating: 5,
+        date: "7 weeks ago",
+        content: "Justin has become our go to Electrician and has done various jobs for us. Big and small. He is professional, knowledgeable, incredibly tidy and always fits us in.",
+        avatarColor: "bg-cyan-600"
+    },
+    {
+        id: 14,
+        author: "Bailey H",
+        source: "Google",
+        rating: 5,
+        date: "7 weeks ago",
+        content: "Justin was very professional and did a great job of completing my electrical needs around the house. Within a day he installed multiple power points, ethernet points, a tv antenna and other odd jobs here and there and I couldn't be happier with the service provided. I would recommend Justin to anyone who needs an electrician!!",
+        avatarColor: "bg-sky-600"
+    },
+    {
+        id: 15,
+        author: "Kathy S",
+        source: "Google",
+        rating: 5,
+        date: "21 weeks ago",
+        content: "Justin was very helpful and professional. He did a great job!",
+        avatarColor: "bg-emerald-600"
     }
 ];
 
