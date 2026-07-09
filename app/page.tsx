@@ -146,7 +146,7 @@ export default function Home() {
             <section className="py-10 bg-neutral-offwhite border-y border-gray-100">
                 <div className="container-custom text-center">
                     <p className="text-lg font-semibold text-navy">
-                        Trusted by builders, property managers, aged care &amp; NDIS housing providers, medical clinics, and homeowners across Adelaide.
+                        Trusted by homeowners, builders, property managers, aged care &amp; NDIS housing providers, and medical clinics across Adelaide.
                     </p>
                 </div>
             </section>

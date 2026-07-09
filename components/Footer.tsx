@@ -93,19 +93,15 @@ export default function Footer() {
                     {/* Licence & Areas */}
                     <div>
                         <h3 className="text-lg font-bold mb-4 text-gold">Licence & Areas</h3>
-                        <p className="text-white/80 text-sm mb-3">
-                            <strong className="text-gold">PGE296191</strong><br />
-                            Licensed Electrician<br />
-                            Member of NECA
-                        </p>
-                        <p className="text-white/80 text-sm mb-4">
-                            Public Liability Insured
-                        </p>
-                        <p className="text-white/80 text-sm">
-                            <strong className="text-gold mb-2 block">Service Areas:</strong>
-                            Adelaide Metropolitan Area<br />
-                            Adelaide CBD<br />
-                            Regional & Remote (Upon Enquiry)
+                        <ul className="space-y-2 text-white/80 text-sm mb-4">
+                            <li><strong className="text-gold">PGE296191</strong> — Licensed Electrician</li>
+                            <li>Member of NECA</li>
+                            <li>Public Liability &amp; Professional Indemnity Insured</li>
+                        </ul>
+                        <h4 className="font-bold text-gold mb-2 text-sm">Service Areas</h4>
+                        <p className="text-white/80 text-sm leading-relaxed">
+                            Adelaide CBD, Golden Grove, Elizabeth, Salisbury, Gawler, Tea Tree Gully,
+                            Modbury, Burnside, Marion, Morphett Vale, Glenelg, Mount Barker & surrounding suburbs
                         </p>
                     </div>
                 </div>
