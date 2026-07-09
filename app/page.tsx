@@ -10,6 +10,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
 import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
+import TrustBar from '@/components/TrustBar';
 import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap } from 'lucide-react';
 
 export default function Home() {
@@ -85,6 +86,9 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Trust Bar */}
+            <TrustBar />
+
             {/* Services Snapshot */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
@@ -151,8 +155,23 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Process Steps - How We Work */}
-            <ProcessSteps />
+            {/* Testimonials */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <SectionHeading centered>What Our Clients Say</SectionHeading>
+                    <div className="mt-12">
+                        <ReviewsCarousel />
+                    </div>
+                    <div className="text-center mt-12">
+                        <Link href="/reviews" className="btn btn-primary">
+                            Read More Reviews
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            {/* Instagram */}
+            <InstagramFeed />
 
             {/* Why Choose JPD */}
             <section className="section-padding bg-navy text-white relative overflow-hidden">
@@ -190,6 +209,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Process Steps - How We Work */}
+            <ProcessSteps />
 
             {/* Featured Projects */}
             <section className="section-padding bg-neutral-offwhite">
@@ -248,24 +270,6 @@ export default function Home() {
                     <div className="text-center mt-8">
                         <Link href="/gallery" className="btn btn-primary">
                             View All Projects
-                        </Link>
-                    </div>
-                </div>
-            </section>
-
-            {/* Instagram */}
-            <InstagramFeed />
-
-            {/* Testimonials */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
-                    <SectionHeading centered>What Our Clients Say</SectionHeading>
-                    <div className="mt-12">
-                        <ReviewsCarousel />
-                    </div>
-                    <div className="text-center mt-12">
-                        <Link href="/reviews" className="btn btn-primary">
-                            Read More Reviews
                         </Link>
                     </div>
                 </div>
