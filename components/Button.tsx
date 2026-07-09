@@ -13,7 +13,7 @@ export default function Button({ variant = 'primary', href, children, className 
     const variantClasses = {
         primary: 'btn-primary',
         gold: 'btn-gold',
-        outline: 'border-2 border-navy text-navy hover:bg-navy hover:text-white',
+        outline: 'btn-outline',
     };
 
     const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

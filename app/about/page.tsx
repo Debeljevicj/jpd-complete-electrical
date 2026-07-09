@@ -64,33 +64,39 @@ export default function AboutPage() {
             <section className="section-padding bg-neutral-offwhite">
                 <div className="container-custom">
                     <SectionHeading centered>Our Mission & Values</SectionHeading>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                                <CheckCircle2 className="w-8 h-8 text-gold" />
+                    <div className="max-w-2xl mx-auto mt-12 space-y-8">
+                        <div className="flex items-start gap-5">
+                            <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+                                <CheckCircle2 className="w-6 h-6 text-gold" />
                             </div>
-                            <h3 className="text-xl font-bold text-navy mb-2">Reliability</h3>
-                            <p className="text-neutral-slate">
-                                Show up on time, every time. Complete work to schedule and budget.
-                            </p>
+                            <div>
+                                <h3 className="text-xl font-bold text-navy mb-1">Reliability</h3>
+                                <p className="text-neutral-slate">
+                                    Show up on time, every time. Complete work to schedule and budget.
+                                </p>
+                            </div>
                         </div>
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Users className="w-8 h-8 text-gold" />
+                        <div className="flex items-start gap-5">
+                            <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+                                <Users className="w-6 h-6 text-gold" />
                             </div>
-                            <h3 className="text-xl font-bold text-navy mb-2">Integrity</h3>
-                            <p className="text-neutral-slate">
-                                We do what we say we will. Honest, transparent, and accountable in everything we do.
-                            </p>
+                            <div>
+                                <h3 className="text-xl font-bold text-navy mb-1">Integrity</h3>
+                                <p className="text-neutral-slate">
+                                    We do what we say we will. Honest, transparent, and accountable in everything we do.
+                                </p>
+                            </div>
                         </div>
-                        <div className="text-center">
-                            <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Shield className="w-8 h-8 text-gold" />
+                        <div className="flex items-start gap-5">
+                            <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+                                <Shield className="w-6 h-6 text-gold" />
                             </div>
-                            <h3 className="text-xl font-bold text-navy mb-2">Safety</h3>
-                            <p className="text-neutral-slate">
-                                A massive value for our customers and staff. We prioritize safety above all else.
-                            </p>
+                            <div>
+                                <h3 className="text-xl font-bold text-navy mb-1">Safety</h3>
+                                <p className="text-neutral-slate">
+                                    A massive value for our customers and staff. We prioritize safety above all else.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,12 +113,16 @@ export default function AboutPage() {
                             </div>
                             <h3 className="text-2xl font-bold mb-4">Fully Licensed Electrician</h3>
                             <p className="text-white/90 mb-6">
-                                Licensed in South Australia, with full public liability insurance for your peace of mind.
+                                Licensed in South Australia and fully insured for your peace of mind.
                             </p>
-                            <div className="mt-8">
-                                <div className="bg-white/10 rounded-lg p-6 inline-block min-w-[250px]">
-                                    <h4 className="text-gold font-bold mb-2">Insurance</h4>
-                                    <p className="text-white/90">Public Liability Covered</p>
+                            <div className="mt-8 grid sm:grid-cols-2 gap-4 max-w-xl mx-auto">
+                                <div className="bg-white/10 rounded-lg p-6">
+                                    <h4 className="text-gold font-bold mb-2">Public Liability</h4>
+                                    <p className="text-white/90">Fully covered</p>
+                                </div>
+                                <div className="bg-white/10 rounded-lg p-6">
+                                    <h4 className="text-gold font-bold mb-2">Professional Indemnity</h4>
+                                    <p className="text-white/90">Fully covered</p>
                                 </div>
                             </div>
                         </div>

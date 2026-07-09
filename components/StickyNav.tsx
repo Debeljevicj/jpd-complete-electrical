@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Facebook, Instagram } from 'lucide-react';
+import TrustBadges from './TrustBadges';
 
 export default function StickyNav() {
     const [isMoreOpen, setIsMoreOpen] = useState(false);
@@ -28,7 +29,8 @@ export default function StickyNav() {
     return (
         <div className="sticky top-[72px] md:top-[80px] z-40 bg-white border-b border-gray-200 shadow-sm lg:hidden">
             <div className="container-custom">
-                <nav className="flex items-center justify-center gap-8 py-3">
+                <TrustBadges className="justify-center py-2 border-b border-gray-100" />
+                <nav className="flex items-center justify-center gap-8 py-1">
                     {mainLinks.map((link) => {
                         const isActive = link.href === '/'
                             ? pathname === '/'
@@ -38,7 +40,7 @@ export default function StickyNav() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`font-medium text-sm hover:text-gold transition-colors ${isActive ? 'text-gold' : 'text-navy'
+                                className={`font-medium text-sm hover:text-gold transition-colors py-3 ${isActive ? 'text-navy font-bold' : 'text-navy'
                                     }`}
                             >
                                 {link.label}
@@ -50,7 +52,7 @@ export default function StickyNav() {
                     <div className="relative">
                         <button
                             onClick={() => setIsMoreOpen(!isMoreOpen)}
-                            className="flex items-center gap-1 font-medium text-sm text-navy hover:text-gold transition-colors"
+                            className="flex items-center gap-1 font-medium text-sm text-navy hover:text-gold transition-colors py-3"
                             onBlur={() => setTimeout(() => setIsMoreOpen(false), 200)}
                         >
                             More
@@ -65,7 +67,7 @@ export default function StickyNav() {
                                         <Link
                                             key={link.href}
                                             href={link.href}
-                                            className={`block px-4 py-2 text-sm hover:bg-neutral-offwhite transition-colors ${isActive ? 'text-gold font-semibold' : 'text-navy'
+                                            className={`block px-4 py-2 text-sm hover:bg-neutral-offwhite transition-colors ${isActive ? 'text-navy font-bold' : 'text-navy'
                                                 }`}
                                             onClick={() => setIsMoreOpen(false)}
                                         >

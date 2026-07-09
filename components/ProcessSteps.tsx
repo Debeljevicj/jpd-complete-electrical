@@ -51,6 +51,10 @@ export default function ProcessSteps() {
                         </div>
                     ))}
                 </div>
+
+                <p className="text-center text-sm text-neutral-slate mt-12">
+                    Every quote is itemised and confirmed before we start — no hidden fees, ever.
+                </p>
             </div>
         </section>
     );

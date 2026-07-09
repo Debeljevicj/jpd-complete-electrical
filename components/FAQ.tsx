@@ -46,6 +46,9 @@ export default function FAQ() {
                             <button
                                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                                aria-expanded={openIndex === index}
+                                aria-controls={`faq-panel-${index}`}
+                                id={`faq-trigger-${index}`}
                             >
                                 <span className="text-lg font-bold text-navy">{faq.question}</span>
                                 {openIndex === index ? (
@@ -56,6 +59,10 @@ export default function FAQ() {
                             </button>
 
                             <div
+                                id={`faq-panel-${index}`}
+                                role="region"
+                                aria-labelledby={`faq-trigger-${index}`}
+                                aria-hidden={openIndex !== index}
                                 className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100 pb-6' : 'max-h-0 opacity-0'
                                     }`}
                             >

@@ -75,7 +75,7 @@ export default function RootLayout({
             <head>
                 <JsonLd />
             </head>
-            <body className="font-sans antialiased text-navy bg-white flex flex-col min-h-screen">
+            <body className="antialiased text-navy bg-white flex flex-col min-h-screen">
                 <Header />
                 <StickyNav />
                 <Breadcrumbs />

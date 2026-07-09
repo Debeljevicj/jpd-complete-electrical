@@ -27,7 +27,7 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                heading: ['var(--font-montserrat)', 'sans-serif'],
+                heading: ['var(--font-outfit)', 'sans-serif'],
                 body: ['var(--font-inter)', 'sans-serif'],
             },
             letterSpacing: {

@@ -87,7 +87,7 @@ export default function BlogPostPage({ params }: Props) {
                 </div>
 
                 {/* CTA */}
-                <div className="mt-16 bg-neutral-offwhite p-8 rounded-xl border-l-4 border-gold">
+                <div className="mt-16 bg-neutral-offwhite p-8 rounded-xl">
                     <h3 className="text-2xl font-bold text-navy mb-2">Need help with your electricals?</h3>
                     <p className="text-neutral-slate mb-6">
                         JPD Complete Electrical is here to help with all your residential and commercial needs in Adelaide.

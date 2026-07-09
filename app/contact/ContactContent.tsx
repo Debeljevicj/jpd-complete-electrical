@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import SectionHeading from '@/components/SectionHeading';
 import SuccessModal from '@/components/SuccessModal';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactContent() {
     const [formData, setFormData] = useState({
@@ -52,12 +52,10 @@ export default function ContactContent() {
             } else {
                 console.log("Error", result);
                 setStatus("error");
-                alert('Something went wrong. Please try again or call us directly.');
             }
         } catch (error) {
             console.log(error);
             setStatus("error");
-            alert('Something went wrong. Please try again or call us directly.');
         }
     };
 
@@ -190,11 +188,27 @@ export default function ContactContent() {
                                     />
                                 </div>
 
+                                {status === 'error' && (
+                                    <div className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 rounded-lg p-4">
+                                        <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                        <p className="text-sm">Something went wrong sending your message. Please try again, or call us directly on <a href="tel:0435006420" className="font-semibold underline">0435 006 420</a>.</p>
+                                    </div>
+                                )}
+
                                 <button
                                     type="submit"
+                                    disabled={status === 'sending'}
                                     className="btn btn-gold w-full text-lg flex items-center justify-center gap-2"
                                 >
-                                    Send Message <Send className="w-5 h-5" />
+                                    {status === 'sending' ? (
+                                        <>
+                                            Sending... <Loader2 className="w-5 h-5 animate-spin" />
+                                        </>
+                                    ) : (
+                                        <>
+                                            Send Message <Send className="w-5 h-5" />
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
@@ -242,7 +256,7 @@ export default function ContactContent() {
                             </div>
 
                             {/* Service Areas */}
-                            <div className="bg-white p-8 rounded-lg shadow-lg border-t-4 border-gold">
+                            <div className="bg-white p-8 rounded-lg shadow-lg">
                                 <h3 className="text-2xl font-bold text-navy mb-6">Service Areas</h3>
                                 <div className="relative h-64 bg-neutral-offwhite rounded-lg mb-6 overflow-hidden group">
                                     <iframe

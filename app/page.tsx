@@ -8,13 +8,13 @@ import ServiceCard from '@/components/ServiceCard';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
-import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award } from 'lucide-react';
+import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap } from 'lucide-react';
 
 export default function Home() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative bg-navy min-h-[90vh] flex items-center overflow-hidden group pt-16 md:pt-0">
+            <section className="relative bg-navy md:min-h-[90vh] flex items-center overflow-hidden group pt-16 md:pt-0">
                 {/* Background Image with Parallax & Blending */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute right-0 top-0 bottom-0 w-full md:w-2/3 lg:w-1/2">
@@ -59,6 +59,11 @@ export default function Home() {
                                 Call 0435 006 420
                             </a>
                         </div>
+
+                        <p className="flex items-center gap-2 text-sm text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
+                            <Zap className="w-4 h-4 text-gold flex-shrink-0" />
+                            Urgent issue? After-hours emergency callouts available by appointment.
+                        </p>
 
                         <div className="pt-8 flex items-center gap-8 text-sm text-gray-200 md:text-gray-400 animate-fade-in-up pb-8 md:pb-0" style={{ animationDelay: '0.5s' }}>
                             <div className="flex items-center gap-2">
@@ -120,6 +125,15 @@ export default function Home() {
                             variant="residential"
                         />
                     </div>
+                </div>
+            </section>
+
+            {/* Who We Serve */}
+            <section className="py-10 bg-neutral-offwhite border-y border-gray-100">
+                <div className="container-custom text-center">
+                    <p className="text-lg font-semibold text-navy">
+                        Trusted by builders, property managers, aged care &amp; NDIS housing providers, medical clinics, and homeowners across Adelaide.
+                    </p>
                 </div>
             </section>
 
