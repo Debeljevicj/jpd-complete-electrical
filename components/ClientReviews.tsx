@@ -145,6 +145,24 @@ export const reviews: Review[] = [
         date: "21 weeks ago",
         content: "Justin was very helpful and professional. He did a great job!",
         avatarColor: "bg-emerald-600"
+    },
+    {
+        id: 16,
+        author: "Natalie A",
+        source: "Google",
+        rating: 5,
+        date: "1 hour ago",
+        content: "I couldn't be happier with the service from Justin and Chad! From start to finish, they were professional, punctual, and incredibly knowledgeable. Justin installed my TV aerial and wall-mounted my TV perfectly, taking the time to ensure everything was level, secure, and neatly finished with outstanding attention to detail. The quality of the workmanship was fabulous, and he left everything clean and tidy when the job was complete. He also explained everything clearly and made sure I was happy with the final setup before leaving. It's so refreshing to find someone who genuinely takes pride in their work. I would highly recommend him to anyone looking for a reliable, skilled, and friendly electrician. I'll definitely be using his services again in the future.",
+        avatarColor: "bg-fuchsia-600"
+    },
+    {
+        id: 17,
+        author: "Trav",
+        source: "Google",
+        rating: 5,
+        date: "3 hours ago",
+        content: "Was reliable and easy to deal with. Worked efficiently and with attention to detail. Everything was left in a clean and neat standard. Great to work with would recommend to anyone in need of an electrician.",
+        avatarColor: "bg-lime-600"
     }
 ];
 

@@ -8,6 +8,8 @@ import ServiceCard from '@/components/ServiceCard';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
+import InstagramFeed from '@/components/InstagramFeed';
+import Reveal from '@/components/Reveal';
 import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap } from 'lucide-react';
 
 export default function Home() {
@@ -88,42 +90,54 @@ export default function Home() {
                 <div className="container-custom">
                     <SectionHeading centered>Our Services</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <ServiceCard
-                            icon={<Lightbulb className="w-8 h-8" />}
-                            title="Downlights & Lighting"
-                            description="Expert installation of downlights, feature lighting, and LED solutions for modern homes."
-                            variant="residential"
-                        />
-                        <ServiceCard
-                            icon={<Plug className="w-8 h-8" />}
-                            title="Powerpoints & Switches"
-                            description="New installations, upgrades, and relocations for all your power needs."
-                            variant="residential"
-                        />
-                        <ServiceCard
-                            icon={<Fan className="w-8 h-8" />}
-                            title="Ceiling & Exhaust Fans"
-                            description="Professional fan installation and replacement for optimal ventilation."
-                            variant="residential"
-                        />
-                        <ServiceCard
-                            icon={<Gauge className="w-8 h-8" />}
-                            title="Switchboard Upgrades"
-                            description="We upgrade outdated switchboards to modern, compliant installations, removing safety hazards and ensuring full RCD protection to Australian Standards."
-                            variant="residential"
-                        />
-                        <ServiceCard
-                            icon={<Building2 className="w-8 h-8" />}
-                            title="Commercial & Specialty Services"
-                            description="Complete electrical solutions for offices, retail stores, gyms, medical clinics, aged care facilities, and disability housing with full compliance focus."
-                            variant="residential"
-                        />
-                        <ServiceCard
-                            icon={<Shield className="w-8 h-8" />}
-                            title="Service & Maintenance"
-                            description="Scheduled maintenance, RCD testing, emergency lighting testing, smoke detector servicing, and compliance inspections for all property types."
-                            variant="residential"
-                        />
+                        <Reveal delay={0}>
+                            <ServiceCard
+                                icon={<Lightbulb className="w-8 h-8" />}
+                                title="Downlights & Lighting"
+                                description="Expert installation of downlights, feature lighting, and LED solutions for modern homes."
+                                variant="residential"
+                            />
+                        </Reveal>
+                        <Reveal delay={80}>
+                            <ServiceCard
+                                icon={<Plug className="w-8 h-8" />}
+                                title="Powerpoints & Switches"
+                                description="New installations, upgrades, and relocations for all your power needs."
+                                variant="residential"
+                            />
+                        </Reveal>
+                        <Reveal delay={160}>
+                            <ServiceCard
+                                icon={<Fan className="w-8 h-8" />}
+                                title="Ceiling & Exhaust Fans"
+                                description="Professional fan installation and replacement for optimal ventilation."
+                                variant="residential"
+                            />
+                        </Reveal>
+                        <Reveal delay={0}>
+                            <ServiceCard
+                                icon={<Gauge className="w-8 h-8" />}
+                                title="Switchboard Upgrades"
+                                description="We upgrade outdated switchboards to modern, compliant installations, removing safety hazards and ensuring full RCD protection to Australian Standards."
+                                variant="residential"
+                            />
+                        </Reveal>
+                        <Reveal delay={80}>
+                            <ServiceCard
+                                icon={<Building2 className="w-8 h-8" />}
+                                title="Commercial & Specialty Services"
+                                description="Complete electrical solutions for offices, retail stores, gyms, medical clinics, aged care facilities, and disability housing with full compliance focus."
+                                variant="residential"
+                            />
+                        </Reveal>
+                        <Reveal delay={160}>
+                            <ServiceCard
+                                icon={<Shield className="w-8 h-8" />}
+                                title="Service & Maintenance"
+                                description="Scheduled maintenance, RCD testing, emergency lighting testing, smoke detector servicing, and compliance inspections for all property types."
+                                variant="residential"
+                            />
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -146,7 +160,7 @@ export default function Home() {
                 <div className="container-custom relative z-10">
                     <SectionHeading centered className="!text-white">Why Choose JPD Complete Electrical</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        <div className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
+                        <Reveal delay={0} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
                             <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <Shield className="w-10 h-10 text-navy" />
                             </div>
@@ -154,8 +168,8 @@ export default function Home() {
                             <p className="text-white/80 leading-relaxed">
                                 Transparent pricing, punctual service, and dependable workmanship you can trust every time.
                             </p>
-                        </div>
-                        <div className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
+                        </Reveal>
+                        <Reveal delay={100} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
                             <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <Award className="w-10 h-10 text-navy" />
                             </div>
@@ -163,8 +177,8 @@ export default function Home() {
                             <p className="text-white/80 leading-relaxed">
                                 Clean, professional installations with meticulous attention to detail and safety standards.
                             </p>
-                        </div>
-                        <div className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
+                        </Reveal>
+                        <Reveal delay={200} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
                             <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <MessageCircle className="w-10 h-10 text-navy" />
                             </div>
@@ -172,7 +186,7 @@ export default function Home() {
                             <p className="text-white/80 leading-relaxed">
                                 We keep you informed throughout the entire job with clear explanations and regular updates.
                             </p>
-                        </div>
+                        </Reveal>
                     </div>
                 </div>
             </section>
@@ -182,7 +196,7 @@ export default function Home() {
                 <div className="container-custom">
                     <SectionHeading centered>Featured Projects</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="card overflow-hidden p-0 group">
+                        <Reveal delay={0} className="card overflow-hidden p-0 group">
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/solar_system_6kw.jpg"
@@ -197,8 +211,8 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-navy mb-2">Solar System Installation</h3>
                                 <p className="text-neutral-slate">High-efficiency 6.6kW solar system installation helping homeowners reduce energy bills and carbon footprint.</p>
                             </div>
-                        </div>
-                        <div className="card overflow-hidden p-0 group">
+                        </Reveal>
+                        <Reveal delay={100} className="card overflow-hidden p-0 group">
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/kitchen_led_strip.jpg"
@@ -213,8 +227,8 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-navy mb-2">Kitchen LED Lighting</h3>
                                 <p className="text-neutral-slate">Modern LED strip lighting installation adding ambiance and functionality to a contemporary kitchen renovation.</p>
                             </div>
-                        </div>
-                        <div className="card overflow-hidden p-0 group">
+                        </Reveal>
+                        <Reveal delay={200} className="card overflow-hidden p-0 group">
                             <div className="relative h-64 overflow-hidden">
                                 <Image
                                     src="/images/medical_clinic_upgrade.png"
@@ -229,7 +243,7 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-navy mb-2">Medical Clinic Upgrade</h3>
                                 <p className="text-neutral-slate">Full medical clinic electrical upgrade including ceiling-mounted TV installation, 15-camera CCTV system, medical examination lighting across treatment rooms, and scheduled patient-area compliance inspections.</p>
                             </div>
-                        </div>
+                        </Reveal>
                     </div>
                     <div className="text-center mt-8">
                         <Link href="/gallery" className="btn btn-primary">
@@ -238,6 +252,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Instagram */}
+            <InstagramFeed />
 
             {/* Testimonials */}
             <section className="section-padding bg-white">
