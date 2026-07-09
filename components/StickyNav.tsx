@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronDown, Facebook, Instagram } from 'lucide-react';
-import TrustBadges from './TrustBadges';
 
 export default function StickyNav() {
     const [isMoreOpen, setIsMoreOpen] = useState(false);
@@ -29,7 +28,6 @@ export default function StickyNav() {
     return (
         <div className="sticky top-[72px] md:top-[80px] z-40 bg-white border-b border-gray-200 shadow-sm lg:hidden">
             <div className="container-custom">
-                <TrustBadges className="justify-center py-2 border-b border-gray-100" />
                 <nav className="flex items-center justify-center gap-8 py-1">
                     {mainLinks.map((link) => {
                         const isActive = link.href === '/'

@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative bg-navy md:min-h-[90vh] flex items-center overflow-hidden group pt-16 md:pt-0">
+            <section className="relative bg-navy min-h-[560px] md:min-h-[90vh] flex items-center overflow-hidden group">
                 {/* Background Image with Parallax & Blending */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute right-0 top-0 bottom-0 w-full md:w-2/3 lg:w-1/2">
@@ -34,52 +34,54 @@ export default function Home() {
                                 WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%)'
                             }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/20 to-transparent md:hidden" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent md:hidden" />
                     </div>
                 </div>
 
-                <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="text-white space-y-6 animate-slide-up pb-12 md:pb-0">
-                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 animate-fade-in-up mt-4 md:mt-0" style={{ animationDelay: '0.1s' }}>
-                            <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-                            <span className="text-sm font-semibold tracking-wide uppercase text-gold">Adelaide's Trusted, Licensed Electrician</span>
+                <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center py-8 md:py-0">
+                    <div
+                        className="text-white space-y-3 md:space-y-6 animate-slide-up bg-navy/85 backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/10 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0 md:shadow-none md:border-0"
+                    >
+                        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-white/20 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                            <span className="w-2 h-2 bg-gold rounded-full animate-pulse flex-shrink-0" />
+                            <span className="text-xs md:text-sm font-semibold tracking-wide uppercase text-gold">Adelaide's Trusted, Licensed Electrician</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                        <h1 className="text-3xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                             Reliable. Honest. Professional. <span className="text-gold">Electrical Work</span> You Can Trust.
                         </h1>
 
-                        <p className="text-xl text-gray-300 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                        <p className="hidden md:block text-xl text-gray-300 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                             Adelaide's trusted electrician for builders, property managers, and homeowners.
                             We show up, clean up, and keep our promises.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                            <Link href="/contact" className="btn btn-gold text-lg px-8 hover:scale-105 transition-transform">
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-1 md:pt-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                            <Link href="/contact" className="btn btn-gold text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 hover:scale-105 transition-transform">
                                 Get a Free Quote
                             </Link>
-                            <a href="tel:0435006420" className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-lg px-8 hover:scale-105 transition-transform">
+                            <a href="tel:0435006420" className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 hover:scale-105 transition-transform">
                                 Call 0435 006 420
                             </a>
                         </div>
 
-                        <p className="flex items-center gap-2 text-sm text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
+                        <p className="flex items-center gap-2 text-xs md:text-sm text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
                             <Zap className="w-4 h-4 text-gold flex-shrink-0" />
                             Urgent issue? After-hours emergency callouts available by appointment.
                         </p>
 
-                        <div className="pt-8 flex items-center gap-8 text-sm text-gray-200 md:text-gray-400 animate-fade-in-up pb-8 md:pb-0" style={{ animationDelay: '0.5s' }}>
+                        <div className="pt-1 md:pt-8 flex items-center gap-4 md:gap-8 text-sm text-gray-200 md:text-gray-400 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
                             <div className="flex items-center gap-2">
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/20">
+                                <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-sm md:text-xl border border-white/20">
                                     7+
                                 </div>
-                                <span className="font-medium text-white md:text-gray-400">Years<br />Experience</span>
+                                <span className="font-medium text-white md:text-gray-400 text-xs md:text-base">Years<br />Experience</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-xl border border-white/20">
+                                <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-gold font-bold text-sm md:text-xl border border-white/20">
                                     5★
                                 </div>
-                                <span className="font-medium text-white md:text-gray-400">Google<br />Rated</span>
+                                <span className="font-medium text-white md:text-gray-400 text-xs md:text-base">Google<br />Rated</span>
                             </div>
                         </div>
                     </div>
@@ -93,13 +95,14 @@ export default function Home() {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <SectionHeading centered>Our Services</SectionHeading>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
                         <Reveal delay={0}>
                             <ServiceCard
                                 icon={<Lightbulb className="w-8 h-8" />}
                                 title="Downlights & Lighting"
                                 description="Expert installation of downlights, feature lighting, and LED solutions for modern homes."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                         <Reveal delay={80}>
@@ -108,6 +111,7 @@ export default function Home() {
                                 title="Powerpoints & Switches"
                                 description="New installations, upgrades, and relocations for all your power needs."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                         <Reveal delay={160}>
@@ -116,6 +120,7 @@ export default function Home() {
                                 title="Ceiling & Exhaust Fans"
                                 description="Professional fan installation and replacement for optimal ventilation."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                         <Reveal delay={0}>
@@ -124,6 +129,7 @@ export default function Home() {
                                 title="Switchboard Upgrades"
                                 description="We upgrade outdated switchboards to modern, compliant installations, removing safety hazards and ensuring full RCD protection to Australian Standards."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                         <Reveal delay={80}>
@@ -132,6 +138,7 @@ export default function Home() {
                                 title="Commercial & Specialty Services"
                                 description="Complete electrical solutions for offices, retail stores, gyms, medical clinics, aged care facilities, and disability housing with full compliance focus."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                         <Reveal delay={160}>
@@ -140,6 +147,7 @@ export default function Home() {
                                 title="Service & Maintenance"
                                 description="Scheduled maintenance, RCD testing, emergency lighting testing, smoke detector servicing, and compliance inspections for all property types."
                                 variant="residential"
+                                compact
                             />
                         </Reveal>
                     </div>
@@ -159,10 +167,10 @@ export default function Home() {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <SectionHeading centered>What Our Clients Say</SectionHeading>
-                    <div className="mt-12">
+                    <div className="mt-6 md:mt-12">
                         <ReviewsCarousel />
                     </div>
-                    <div className="text-center mt-12">
+                    <div className="text-center mt-4 md:mt-12">
                         <Link href="/reviews" className="btn btn-primary">
                             Read More Reviews
                         </Link>
@@ -180,7 +188,7 @@ export default function Home() {
                     <SectionHeading centered className="!text-white">Why Choose JPD Complete Electrical</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                         <Reveal delay={0} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <Shield className="w-10 h-10 text-navy" />
                             </div>
                             <h3 className="text-2xl font-bold mb-3 text-gold">Reliable & Honest</h3>
@@ -189,7 +197,7 @@ export default function Home() {
                             </p>
                         </Reveal>
                         <Reveal delay={100} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <Award className="w-10 h-10 text-navy" />
                             </div>
                             <h3 className="text-2xl font-bold mb-3 text-gold">High-Quality Workmanship</h3>
@@ -198,7 +206,7 @@ export default function Home() {
                             </p>
                         </Reveal>
                         <Reveal delay={200} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-20 h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <MessageCircle className="w-10 h-10 text-navy" />
                             </div>
                             <h3 className="text-2xl font-bold mb-3 text-gold">Clear Communication</h3>
@@ -219,7 +227,7 @@ export default function Home() {
                     <SectionHeading centered>Featured Projects</SectionHeading>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <Reveal delay={0} className="card overflow-hidden p-0 group">
-                            <div className="relative h-64 overflow-hidden">
+                            <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
                                     src="/images/solar_system_6kw.jpg"
                                     alt="6.6kW Solar System Installation"
@@ -235,7 +243,7 @@ export default function Home() {
                             </div>
                         </Reveal>
                         <Reveal delay={100} className="card overflow-hidden p-0 group">
-                            <div className="relative h-64 overflow-hidden">
+                            <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
                                     src="/images/kitchen_led_strip.jpg"
                                     alt="Kitchen LED Strip Lighting"
@@ -251,7 +259,7 @@ export default function Home() {
                             </div>
                         </Reveal>
                         <Reveal delay={200} className="card overflow-hidden p-0 group">
-                            <div className="relative h-64 overflow-hidden">
+                            <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
                                     src="/images/medical_clinic_upgrade.png"
                                     alt="Medical Clinic Upgrade"

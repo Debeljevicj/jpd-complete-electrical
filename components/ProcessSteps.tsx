@@ -25,22 +25,22 @@ export default function ProcessSteps() {
     ];
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-10 md:py-16 bg-white">
             <div className="container-custom">
-                <div className="text-center mb-12">
+                <div className="text-center mb-8 md:mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">How We Work</h2>
                     <p className="text-neutral-slate max-w-2xl mx-auto">
                         We make your electrical project simple and stress-free. Here's what to expect when you choose JPD Complete Electrical.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
                     {/* Connector Line (Desktop) */}
                     <div className="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gray-200 -z-10 transform translate-y-4" />
 
                     {steps.map((step, index) => (
                         <div key={index} className="flex flex-col items-center text-center group">
-                            <div className="w-24 h-24 rounded-full bg-navy flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-white relative z-10">
+                            <div className="w-16 h-16 md:w-24 md:h-24 rounded-full bg-navy flex items-center justify-center mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-white relative z-10">
                                 {step.icon}
                                 <div className="absolute -bottom-2 bg-gold text-navy text-xs font-bold px-2 py-1 rounded-full">
                                     Step {index + 1}
@@ -52,7 +52,7 @@ export default function ProcessSteps() {
                     ))}
                 </div>
 
-                <p className="text-center text-sm text-neutral-slate mt-12">
+                <p className="text-center text-sm text-neutral-slate mt-8 md:mt-12">
                     Every quote is itemised and confirmed before we start — no hidden fees, ever.
                 </p>
             </div>

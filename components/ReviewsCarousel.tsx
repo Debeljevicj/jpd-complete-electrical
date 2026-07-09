@@ -22,7 +22,7 @@ export default function ReviewsCarousel() {
 
     return (
         <div className="w-full relative group">
-            <div className="text-center mb-12">
+            <div className="text-center mb-4 md:mb-12">
                 <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md mb-4 border border-navy/5">
                     <span className="font-bold text-navy text-xl">5.0</span>
                     <div className="flex gap-1">
@@ -57,17 +57,17 @@ export default function ReviewsCarousel() {
                 {/* Carousel Container */}
                 <div
                     ref={scrollContainerRef}
-                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-8 pt-2 px-1 relative z-10"
+                    className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 md:pb-8 pt-2 px-1 relative z-10"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {reviews.slice().reverse().map((review) => (
                         <div
                             key={review.id}
-                            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full relative"
+                            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full relative"
                         >
-                            <Quote className="absolute top-6 right-6 w-8 h-8 text-gold/10 fill-gold/10" />
+                            <Quote className="absolute top-5 right-5 md:top-6 md:right-6 w-8 h-8 text-gold/10 fill-gold/10" />
 
-                            <div className="flex items-center gap-3 mb-6">
+                            <div className="flex items-center gap-3 mb-3 md:mb-6">
                                 <div className={`w-12 h-12 rounded-full ${review.avatarColor} flex items-center justify-center text-white font-bold text-lg shadow-inner`}>
                                     {review.author.charAt(0).toUpperCase()}
                                 </div>
@@ -96,13 +96,13 @@ export default function ReviewsCarousel() {
                                 </div>
                             </div>
 
-                            <div className="flex gap-1 mb-4">
+                            <div className="flex gap-1 mb-2 md:mb-4">
                                 {[...Array(review.rating)].map((_, i) => (
                                     <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                                 ))}
                             </div>
 
-                            <p className="text-neutral-slate leading-relaxed text-sm flex-grow line-clamp-5">
+                            <p className="text-neutral-slate leading-relaxed text-sm flex-grow line-clamp-4 md:line-clamp-5">
                                 "{review.content}"
                             </p>
                         </div>
