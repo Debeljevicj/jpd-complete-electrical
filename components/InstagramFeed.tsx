@@ -4,17 +4,17 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { Instagram, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Placeholder tiles using real project photos until the live Instagram
+// Placeholder tiles using real recent job photos until the live Instagram
 // widget (SnapWidget) embed is wired in — see chat for setup steps.
 const previewPosts = [
+    { src: '/images/switchboard_fault_finding.jpg', alt: 'Fault finding in a residential switchboard' },
+    { src: '/images/roof_access_ladder.jpg', alt: 'Accessing a tiled roof for installation work' },
+    { src: '/images/heat_strip_install.jpg', alt: 'Outdoor heat strip installation on a patio' },
+    { src: '/images/roof_cavity_insulation_wiring.jpg', alt: 'Roof cavity insulation and wiring work' },
+    { src: '/images/onsite_walkthrough.jpg', alt: 'Heading to the next job on site' },
     { src: '/images/bathroom_renovation.jpg', alt: 'Bathroom renovation electrical work' },
-    { src: '/images/kitchen_led_strip.jpg', alt: 'Kitchen LED strip lighting installation' },
     { src: '/images/exterior_feature_lighting.jpg', alt: 'Exterior feature lighting installation' },
-    { src: '/images/cctv_installation.jpg', alt: 'CCTV camera installation' },
-    { src: '/images/feature_wall_lighting.jpg', alt: 'Feature wall lighting installation' },
-    { src: '/images/commercial_tv_wall_mount.jpg', alt: 'Commercial TV wall mount installation' },
     { src: '/images/led_backlit_mirror.jpg', alt: 'LED backlit mirror installation' },
-    { src: '/images/solar_system_main.jpg', alt: 'Solar system installation' },
 ];
 
 const INSTAGRAM_URL = 'https://www.instagram.com/jpdcompleteelectrical/';
