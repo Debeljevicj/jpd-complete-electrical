@@ -155,25 +155,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Photo Break */}
-            <section className="bg-white pt-12 md:pt-16">
-                <div className="container-custom">
-                    <Reveal>
-                        <div className="relative h-[280px] md:h-[420px] rounded-2xl overflow-hidden shadow-lg">
-                            <Image
-                                src="/images/switchboard_fault_finding.jpg"
-                                alt="Justin fault-finding in a residential switchboard"
-                                fill
-                                sizes="100vw"
-                                loading="lazy"
-                                className="object-cover"
-                                style={{ objectPosition: 'center 20%' }}
-                            />
-                        </div>
-                    </Reveal>
-                </div>
-            </section>
-
             {/* Testimonials */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
