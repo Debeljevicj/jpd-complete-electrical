@@ -57,13 +57,13 @@ export default function ReviewsCarousel() {
                 {/* Carousel Container */}
                 <div
                     ref={scrollContainerRef}
-                    className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 md:pb-8 pt-2 px-1 relative z-10"
+                    className="flex items-start gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 md:pb-8 pt-2 px-1 relative z-10"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {reviews.slice().reverse().map((review) => (
                         <div
                             key={review.id}
-                            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full relative"
+                            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col relative"
                         >
                             <Quote className="absolute top-5 right-5 md:top-6 md:right-6 w-8 h-8 text-gold/10 fill-gold/10" />
 
@@ -102,7 +102,7 @@ export default function ReviewsCarousel() {
                                 ))}
                             </div>
 
-                            <p className="text-neutral-slate leading-relaxed text-sm flex-grow line-clamp-4 md:line-clamp-5">
+                            <p className="text-neutral-slate leading-relaxed text-sm">
                                 "{review.content}"
                             </p>
                         </div>
