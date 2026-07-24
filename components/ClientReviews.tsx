@@ -163,6 +163,51 @@ export const reviews: Review[] = [
         date: "3 hours ago",
         content: "Was reliable and easy to deal with. Worked efficiently and with attention to detail. Everything was left in a clean and neat standard. Great to work with would recommend to anyone in need of an electrician.",
         avatarColor: "bg-lime-600"
+    },
+    {
+        id: 18,
+        author: "Zane J",
+        source: "Google",
+        rating: 5,
+        date: "2 weeks ago",
+        content: "I had the opportunity to observe Justin's work firsthand while on site in a professional capacity, and it was immediately clear that he takes a great deal of pride in his work. Throughout the job, his attention to detail, communication, and workmanship consistently stood out. What also impressed me was the way he involved a work experience student throughout the day. He took the time to explain what he was doing, answer questions, and provide genuine guidance, all while maintaining a high standard of work, culture and keeping the job moving efficiently. It reflected both his professionalism and his willingness to invest in the next generation of tradespeople. Everything was completed professionally, efficiently, and to an exceptionally high standard. I would have no hesitation recommending Justin to anyone looking for quality workmanship and a tradesman who genuinely cares about doing the job properly.",
+        avatarColor: "bg-yellow-600"
+    },
+    {
+        id: 19,
+        author: "Natalie D",
+        source: "Google",
+        rating: 5,
+        date: "2 weeks ago",
+        content: "Justin has done multiple jobs at my office space and home. He is a very reliable, tidy and reasonably priced electrician. If you're looking for an electrician in Adelaide, I recommend you give him a go!",
+        avatarColor: "bg-slate-600"
+    },
+    {
+        id: 20,
+        author: "Parris D",
+        source: "Google",
+        rating: 5,
+        date: "6 days ago",
+        content: "Highly recommend Justin! Really happy with the service from start to finish. Communication was excellent, he was quick to respond, and was able to provide a quote from a few photos I sent, which made everything so easy. Justin offered a few different options, made some helpful suggestions, and was great to deal with throughout. I'd happily use him again and recommend him to anyone looking for an electrician.",
+        avatarColor: "bg-zinc-600"
+    },
+    {
+        id: 21,
+        author: "Tracy P",
+        source: "Google",
+        rating: 5,
+        date: "3 days ago",
+        content: "Justin's work is exceptional. He is extremely thorough, ensuring safety and compliance at all times. He communicated the requirements and solutions throughout. I highly recommend JPD Complete Electrical.",
+        avatarColor: "bg-red-700"
+    },
+    {
+        id: 22,
+        author: "Amy H",
+        source: "Google",
+        rating: 5,
+        date: "2 days ago",
+        content: "Great price. Fantastic service from start to finish. Communication is always excellent, Justin completed the work to a very high standard, was very professional, friendly, and took the time to explain everything clearly. It's great to find a reliable electrician who genuinely cares about the quality of their work. Highly recommend and will definitely be using him again for any future electrical work.",
+        avatarColor: "bg-orange-700"
     }
 ];
 
