@@ -167,6 +167,9 @@ export default function ContactContent() {
                                         <option value="residential">Residential Services</option>
                                         <option value="commercial">Commercial Services</option>
                                         <option value="medical">Medical & Disability Housing</option>
+                                        <option value="switchboard">Switchboard Upgrade</option>
+                                        <option value="rcd-testing">RCD Testing</option>
+                                        <option value="thermal-imaging">Thermal Imaging Inspection</option>
                                         <option value="maintenance">Maintenance & Repairs</option>
                                         <option value="emergency">Emergency Services</option>
                                         <option value="other">Other</option>

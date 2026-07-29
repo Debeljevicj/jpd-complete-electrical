@@ -41,6 +41,52 @@ export default function JsonLd() {
                 "longitude": 138.6007
             },
             "geoRadius": "75000"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Electrical Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Switchboard Upgrades",
+                        "description": "Upgrade outdated switchboards to modern, compliant installations with RCBOs and full safety protection to Australian Standards.",
+                        "areaServed": "Adelaide, SA",
+                        "provider": { "@type": "Electrician", "name": "JPD Complete Electrical" }
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "RCD Testing",
+                        "description": "RCD (safety switch) testing and compliance reporting for residential, commercial, multi-unit, and NDIS properties across Adelaide.",
+                        "areaServed": "Adelaide, SA",
+                        "provider": { "@type": "Electrician", "name": "JPD Complete Electrical" }
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Thermal Imaging Inspections",
+                        "description": "Thermal imaging scans of switchboards and circuits to detect loose connections, overheating, and fire risks before they become a problem.",
+                        "areaServed": "Adelaide, SA",
+                        "provider": { "@type": "Electrician", "name": "JPD Complete Electrical" }
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Electrical Maintenance",
+                        "description": "Scheduled preventative electrical maintenance, safety inspections, and compliance testing for residential, commercial, and medical properties.",
+                        "areaServed": "Adelaide, SA",
+                        "provider": { "@type": "Electrician", "name": "JPD Complete Electrical" }
+                    }
+                }
+            ]
         }
     };
 

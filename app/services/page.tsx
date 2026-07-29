@@ -5,12 +5,12 @@ import Button from '@/components/Button';
 import {
     Lightbulb, Plug, Fan, Gauge, Wrench, Zap,
     Building2, AlertCircle, Calendar,
-    HeartPulse, Home, Shield
+    HeartPulse, Home, Shield, Thermometer
 } from 'lucide-react';
 
 export const metadata = {
-    title: 'Electrical Services Adelaide | Residential & Commercial Electrician',
-    description: 'Comprehensive electrical services including switchboard upgrades, LED lighting, medical clinic fit-outs, and disability housing electrical safety.',
+    title: 'Switchboard Upgrades & RCD Testing Adelaide | JPD Electrical',
+    description: 'Electrical maintenance, RCD testing, switchboard upgrades and thermal imaging inspections across Adelaide. Licensed, insured electrician — book a free quote today.',
 };
 
 export default function ServicesPage() {
@@ -195,15 +195,20 @@ export default function ServicesPage() {
             {/* Maintenance & Safety - Added ID for navigation */}
             <section id="maintenance" className="section-padding bg-neutral-offwhite scroll-mt-20">
                 <div className="container-custom">
-                    <SectionHeading>Service & Maintenance</SectionHeading>
+                    <SectionHeading>Electrical Maintenance &amp; Safety</SectionHeading>
                     <p className="text-neutral-slate text-lg mb-8 max-w-3xl">
-                        Comprehensive preventative maintenance and compliance testing for residential, commercial, and medical properties. Keep your electrical systems safe, compliant, and reliable with our scheduled service programs.
+                        Scheduled electrical maintenance, RCD testing, and thermal imaging inspections for residential, commercial, and medical properties. Keep your electrical systems safe, compliant, and reliable with our preventative service programs.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <ServiceCard
                             icon={<Shield className="w-8 h-8" />}
                             title="Safety Inspections"
                             description="Comprehensive electrical safety checks for homes and businesses."
+                        />
+                        <ServiceCard
+                            icon={<Thermometer className="w-8 h-8" />}
+                            title="Thermal Imaging Inspections"
+                            description="Thermal imaging scans of switchboards and circuits to catch loose connections, overheating, and fire risks before they cause a failure — ideal for compliance reporting."
                         />
                         <ServiceCard
                             icon={<AlertCircle className="w-8 h-8" />}

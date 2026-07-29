@@ -23,8 +23,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: "JPD Complete Electrical | Professional Electrician Adelaide",
-    description: "Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide's trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.",
-    keywords: ["electrician Adelaide", "electrical services", "residential electrician", "commercial electrician", "medical clinic electrician", "disability housing electrician"],
+    description: "Reliable, licensed Adelaide electrician for switchboard upgrades, RCD testing, thermal imaging and electrical maintenance. We show up, clean up, and keep our promises.",
+    keywords: ["electrician Adelaide", "electrical services", "residential electrician", "commercial electrician", "medical clinic electrician", "disability housing electrician", "switchboard upgrades Adelaide", "RCD testing Adelaide", "thermal imaging Adelaide", "electrical maintenance Adelaide"],
     icons: {
         icon: [
             {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     metadataBase: new URL('https://www.jpdcompleteelectrical.com.au'),
     openGraph: {
         title: 'JPD Complete Electrical',
-        description: 'Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide\'s trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.',
+        description: 'Reliable, licensed Adelaide electrician for switchboard upgrades, RCD testing, thermal imaging and electrical maintenance. We show up, clean up, and keep our promises.',
         url: 'https://www.jpdcompleteelectrical.com.au',
         siteName: 'JPD Complete Electrical',
         images: [
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'JPD Complete Electrical',
-        description: 'Reliable. Honest. Professional. Electrical Work You Can Trust. Adelaide\'s trusted electrician for builders, property managers, and homeowners. We show up, clean up, and keep our promises.',
+        description: 'Reliable, licensed Adelaide electrician for switchboard upgrades, RCD testing, thermal imaging and electrical maintenance. We show up, clean up, and keep our promises.',
         images: ['/google-logo.png'],
     },
 };

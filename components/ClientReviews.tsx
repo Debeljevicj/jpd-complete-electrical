@@ -208,6 +208,15 @@ export const reviews: Review[] = [
         date: "2 days ago",
         content: "Great price. Fantastic service from start to finish. Communication is always excellent, Justin completed the work to a very high standard, was very professional, friendly, and took the time to explain everything clearly. It's great to find a reliable electrician who genuinely cares about the quality of their work. Highly recommend and will definitely be using him again for any future electrical work.",
         avatarColor: "bg-orange-700"
+    },
+    {
+        id: 23,
+        author: "Marcus D",
+        source: "Google",
+        rating: 5,
+        date: "22 hours ago",
+        content: "Great price. Have used Justin various times with subcontracting work he's extremely knowledgeable and my go to guy when I need someone with experience and knowledge, couldn't recommend him enough to anyone looking for a reliable professional electrician!",
+        avatarColor: "bg-cyan-700"
     }
 ];
 
