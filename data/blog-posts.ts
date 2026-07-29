@@ -7,6 +7,12 @@ export interface BlogPost {
     content: string;
     image: string;
     category: string;
+    cta: {
+        heading: string;
+        description: string;
+        linkText: string;
+        href: string;
+    };
 }
 
 export const blogPosts: BlogPost[] = [
@@ -37,7 +43,13 @@ export const blogPosts: BlogPost[] = [
 
             <h3>How We Run It</h3>
             <p>For most properties, RCD testing and a thermal scan are done in the same visit. You get a straightforward pass/fail on your safety switches and a report showing exactly what the thermal camera picked up, with photos. If something's running hot, you'll know precisely which connection or circuit before it becomes an emergency callout.</p>
-        `
+        `,
+        cta: {
+            heading: 'Book an RCD Test & Thermal Imaging Scan',
+            description: "Protect your property with a combined RCD safety switch test and thermal imaging inspection from JPD Complete Electrical, Adelaide's licensed local electrician.",
+            linkText: 'Book Your RCD Testing & Thermal Imaging Scan',
+            href: '/contact',
+        },
     },
     {
         slug: 'electrical-safety-tips-adelaide-homes',
@@ -64,7 +76,13 @@ export const blogPosts: BlogPost[] = [
 
             <h3>5. Know the Age of Your Switchboard</h3>
             <p>Old ceramic fuse boards are no longer up to standard. They don't provide the same level of protection as modern circuit breakers and safety switches. If your switchboard looks like it's from the 70s, it's time for an upgrade.</p>
-        `
+        `,
+        cta: {
+            heading: 'Get a Full Electrical Safety Check',
+            description: 'Have a licensed Adelaide electrician run through the checks covered here properly, including a professional RCD test, so you know exactly where your home stands.',
+            linkText: 'Book an Electrical Safety Inspection',
+            href: '/contact',
+        },
     },
     {
         slug: 'led-lighting-upgrade-benefits',
@@ -88,7 +106,13 @@ export const blogPosts: BlogPost[] = [
 
             <h3>Better Light Quality</h3>
             <p>Modern LEDs come in various colour temperatures (Warm White, Cool White, Daylight) and have excellent colour rendering, making your home look its best.</p>
-        `
+        `,
+        cta: {
+            heading: 'Upgrade to LED Lighting',
+            description: 'Start saving on your energy bill with a professional LED downlight upgrade, installed cleanly and safely by JPD Complete Electrical.',
+            linkText: 'Get a Free LED Lighting Upgrade Quote',
+            href: '/contact',
+        },
     },
     {
         slug: 'signs-you-need-switchboard-upgrade',
@@ -112,6 +136,12 @@ export const blogPosts: BlogPost[] = [
 
             <h3>4. No Safety Switches</h3>
             <p>If you don't have RCD protection on both power and light circuits, your home is not as safe as it could be. Current regulations require comprehensive protection.</p>
-        `
+        `,
+        cta: {
+            heading: 'Book a Switchboard Upgrade',
+            description: 'If any of these warning signs sound familiar, get your switchboard assessed by a licensed Adelaide electrician before it turns into an emergency.',
+            linkText: 'Book a Switchboard Upgrade Quote',
+            href: '/contact',
+        },
     }
 ];

@@ -98,13 +98,16 @@ export default function BlogPostPage({ params }: Props) {
 
                 {/* CTA */}
                 <div className="mt-16 bg-neutral-offwhite p-8 rounded-xl">
-                    <h3 className="text-2xl font-bold text-navy mb-2">Need help with your electricals?</h3>
+                    <h3 className="text-2xl font-bold text-navy mb-2">{post.cta.heading}</h3>
                     <p className="text-neutral-slate mb-6">
-                        JPD Complete Electrical is here to help with all your residential and commercial needs in Adelaide.
+                        {post.cta.description}
                     </p>
-                    <Button href="/contact" variant="primary">
-                        Contact Us Today
+                    <Button href={post.cta.href} variant="primary">
+                        {post.cta.linkText}
                     </Button>
+                    <p className="text-neutral-slate text-sm mt-4">
+                        Or call <a href="tel:0435006420" className="text-navy font-semibold hover:text-gold transition-colors">0435 006 420</a> for a free quote.
+                    </p>
                 </div>
             </div>
         </article>
