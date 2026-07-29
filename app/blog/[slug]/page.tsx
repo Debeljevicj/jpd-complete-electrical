@@ -86,6 +86,13 @@ export default function BlogPostPage({ params }: Props) {
                     />
                 </div>
 
+                {/* Related service */}
+                <div className="mt-10 pt-6 border-t border-gray-100">
+                    <p className="text-neutral-slate">
+                        Related service: <Link href="/services#maintenance" className="text-navy font-bold hover:text-gold transition-colors">Electrical Maintenance &amp; Safety</Link>
+                    </p>
+                </div>
+
                 {/* CTA */}
                 <div className="mt-16 bg-neutral-offwhite p-8 rounded-xl">
                     <h3 className="text-2xl font-bold text-navy mb-2">Need help with your electricals?</h3>
