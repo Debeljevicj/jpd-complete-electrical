@@ -119,7 +119,7 @@ export default function Footer() {
                         it, so anyone else who follows it just meets a login screen. */}
                     <p className="mt-3">
                         <a
-                            href="https://thermal.jpdcompleteelectrical.com.au"
+                            href="https://portal.jpdcompleteelectrical.com.au"
                             className="text-white/40 hover:text-gold transition-colors"
                             rel="noopener noreferrer"
                         >
