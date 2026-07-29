@@ -109,6 +109,18 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/20 mt-12 pt-8 pb-24 lg:pb-8 text-center text-white/60 text-sm">
                     <p>&copy; {currentYear} JPD Complete Electrical. All rights reserved.</p>
+                    {/* Internal tools. Deliberately understated so it reads as staff-only
+                        rather than a service on offer. Cloudflare Access sits in front of
+                        it, so anyone else who follows it just meets a login screen. */}
+                    <p className="mt-3">
+                        <a
+                            href="https://thermal.jpdcompleteelectrical.com.au"
+                            className="text-white/40 hover:text-gold transition-colors"
+                            rel="noopener noreferrer"
+                        >
+                            Staff login
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer >
