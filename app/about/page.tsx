@@ -6,6 +6,9 @@ import { Shield, Users, Award, CheckCircle2 } from 'lucide-react';
 export const metadata = {
     title: 'About Justin & JPD Complete Electrical | Adelaide Electrician',
     description: 'Meet Justin, your local licensed electrician (PGE296191). Committed to reliability, honesty, and professional electrical services across Adelaide.',
+    alternates: {
+        canonical: '/about',
+    },
 };
 
 export default function AboutPage() {
@@ -28,6 +31,7 @@ export default function AboutPage() {
                                 src="/images/justin_portrait_new.jpg"
                                 alt="Justin - JPD Complete Electrical"
                                 fill
+                                priority
                                 className="object-cover object-center"
                                 style={{
                                     objectPosition: 'center top',

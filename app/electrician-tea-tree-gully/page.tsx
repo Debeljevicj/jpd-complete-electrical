@@ -3,6 +3,9 @@ import SuburbLandingPage from '@/components/SuburbLandingPage';
 export const metadata = {
     title: 'Electrician Tea Tree Gully | Switchboards, RCD Testing | JPD',
     description: 'Local electrician servicing Tea Tree Gully for switchboard upgrades, RCD testing, thermal imaging inspections and general electrical maintenance. Licensed & insured — free quotes.',
+    alternates: {
+        canonical: '/electrician-tea-tree-gully',
+    },
 };
 
 export default function Page() {

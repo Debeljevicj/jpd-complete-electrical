@@ -3,6 +3,9 @@ import SuburbLandingPage from '@/components/SuburbLandingPage';
 export const metadata = {
     title: 'Electrician Wynn Vale | Switchboards, RCD Testing | JPD',
     description: 'Local electrician servicing Wynn Vale for switchboard upgrades, RCD testing, thermal imaging inspections and general electrical maintenance. Licensed & insured — free quotes.',
+    alternates: {
+        canonical: '/electrician-wynn-vale',
+    },
 };
 
 export default function Page() {

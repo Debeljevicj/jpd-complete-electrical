@@ -7,6 +7,9 @@ import { Calendar, User, ArrowRight } from 'lucide-react';
 export const metadata = {
     title: 'Electrical Tips & News | JPD Complete Electrical Blog',
     description: 'Expert electrical advice, safety tips, and industry news for Adelaide homeowners and businesses.',
+    alternates: {
+        canonical: '/blog',
+    },
 };
 
 export default function BlogPage() {

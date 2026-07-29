@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props) {
     return {
         title: `${post.title} | JPD Complete Electrical`,
         description: post.excerpt,
+        alternates: {
+            canonical: `/blog/${post.slug}`,
+        },
     };
 }
 

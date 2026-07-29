@@ -6,6 +6,9 @@ import { Star, ExternalLink } from 'lucide-react';
 export const metadata = {
     title: 'Customer Reviews | JPD Complete Electrical Adelaide',
     description: 'Read what our satisfied customers say about our electrical services. 5-star rated Adelaide electrician for residential and commercial projects.',
+    alternates: {
+        canonical: '/reviews',
+    },
 };
 
 export default function ReviewsPage() {

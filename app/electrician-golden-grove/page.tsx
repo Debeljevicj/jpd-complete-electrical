@@ -3,6 +3,9 @@ import SuburbLandingPage from '@/components/SuburbLandingPage';
 export const metadata = {
     title: 'Electrician Golden Grove | Switchboards, RCD Testing | JPD',
     description: 'Local electrician servicing Golden Grove for switchboard upgrades, RCD testing, thermal imaging inspections and general electrical maintenance. Licensed & insured — free quotes.',
+    alternates: {
+        canonical: '/electrician-golden-grove',
+    },
 };
 
 export default function Page() {

@@ -40,11 +40,14 @@ export const metadata: Metadata = {
             },
         ],
     },
-    metadataBase: new URL('https://www.jpdcompleteelectrical.com.au'),
+    metadataBase: new URL('https://jpdcompleteelectrical.com.au'),
+    alternates: {
+        canonical: '/',
+    },
     openGraph: {
         title: 'JPD Complete Electrical',
         description: 'Reliable, licensed Adelaide electrician for switchboard upgrades, RCD testing, thermal imaging and electrical maintenance. We show up, clean up, and keep our promises.',
-        url: 'https://www.jpdcompleteelectrical.com.au',
+        url: 'https://jpdcompleteelectrical.com.au',
         siteName: 'JPD Complete Electrical',
         images: [
             {

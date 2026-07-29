@@ -3,6 +3,9 @@ import SuburbLandingPage from '@/components/SuburbLandingPage';
 export const metadata = {
     title: 'Electrician Modbury | Switchboards, RCD Testing | JPD',
     description: 'Local electrician servicing Modbury for switchboard upgrades, RCD testing, thermal imaging inspections and general electrical maintenance. Licensed & insured — free quotes.',
+    alternates: {
+        canonical: '/electrician-modbury',
+    },
 };
 
 export default function Page() {
