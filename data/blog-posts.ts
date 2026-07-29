@@ -11,6 +11,32 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: 'rcd-testing-thermal-imaging-adelaide',
+        title: 'RCD Testing & Thermal Imaging: The Maintenance Most Properties Skip',
+        excerpt: 'Safety switches and thermal scans catch two very different kinds of electrical fault. Here\'s what each one actually finds, and how often you need them.',
+        date: '2026-07-29',
+        author: 'Justin',
+        category: 'Maintenance',
+        image: '/images/switchboard_fault_finding.jpg',
+        content: `
+            <p>Most electrical maintenance conversations start and end with "call someone if something breaks." That's fine until the thing that breaks is a fire, or a fault that's been quietly damaging equipment for months before anyone notices. RCD testing and thermal imaging are the two checks that catch problems before they get to that point, and they catch different things — which is why the best maintenance programs use both.</p>
+
+            <h3>What RCD Testing Actually Checks</h3>
+            <p>An RCD (safety switch) is designed to cut power within milliseconds if current is leaking somewhere it shouldn't — through a damaged appliance, a nicked cable, or a person. It's the single biggest defence against electric shock in a modern home or workplace. But RCDs are mechanical devices, and like anything mechanical, they can fail to trip when you actually need them to.</p>
+            <p>Formal RCD testing involves triggering each safety switch with a calibrated test device and confirming it trips within the required time. For homes, this is worth doing every couple of years. For rental properties, medical premises, and workplaces, there are compliance schedules (often annual, sometimes more frequent) tied to insurance and tenancy legislation — and a test report is the only way to prove it's been done.</p>
+
+            <h3>What Thermal Imaging Catches That RCD Testing Doesn't</h3>
+            <p>RCD testing tells you your shock protection works. It doesn't tell you a connection inside your switchboard has been slowly cooking itself for the last six months. That's where thermal imaging comes in — a scan of your switchboard and circuits with a thermal camera, picking up heat signatures at loose connections, overloaded circuits, and failing components that are completely invisible from the outside.</p>
+            <p>A connection that's heating up under load is a fire risk that will keep getting worse until it either fails or ignites something. The switchboard looks fine, the lights work, nothing trips — right up until it doesn't. Thermal imaging is the only practical way to catch this early, and it's done live, with no need to shut anything down.</p>
+
+            <h3>Who Actually Needs This</h3>
+            <p>Rental properties and medical or disability-care premises usually have compliance obligations that make this a formality rather than a choice. But it's just as relevant for any home or business with an older switchboard, a history of tripped breakers, high-draw appliances (EV chargers, pool pumps, air conditioning), or a switchboard that's never been inspected since the house was built.</p>
+
+            <h3>How We Run It</h3>
+            <p>For most properties, RCD testing and a thermal scan are done in the same visit — you get a straightforward pass/fail on your safety switches and a report showing exactly what the thermal camera picked up, with photos. If something's running hot, you'll know precisely which connection or circuit before it becomes an emergency callout.</p>
+        `
+    },
+    {
         slug: 'electrical-safety-tips-adelaide-homes',
         title: '5 Essential Electrical Safety Tips for Adelaide Homes',
         excerpt: 'Keep your family safe with these crucial electrical safety checks every homeowner should know.',

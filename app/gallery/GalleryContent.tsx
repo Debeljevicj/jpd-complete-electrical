@@ -13,7 +13,7 @@ const projects = [
     { id: 3, title: 'CCTV Installation', category: 'Commercial', image: '/images/cctv_installation.jpg' },
     { id: 4, title: 'EV Charger Installation', category: 'Commercial', image: '/images/commercial_ev_charger.jpg' },
     { id: 5, title: 'Perimeter LED Lighting Upgrade', category: 'Commercial', image: '/images/commercial_perimeter_lighting_1.jpg' },
-    { id: 6, title: 'Perimeter LED Lighting Upgrade', category: 'Commercial', image: '/images/commercial_perimeter_lighting_2.jpg' },
+    { id: 6, title: 'Perimeter LED Lighting — Night View', category: 'Commercial', image: '/images/commercial_perimeter_lighting_2.jpg' },
     { id: 7, title: 'Kitchen LED Strip Lighting', category: 'Residential', image: '/images/kitchen_led_strip.jpg' },
     { id: 8, title: 'LED Backlit Mirror', category: 'Residential', image: '/images/led_backlit_mirror.jpg' },
     { id: 9, title: 'Shed Power Installation', category: 'Residential', image: '/images/shed_power.jpg' },

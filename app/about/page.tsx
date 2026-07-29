@@ -38,7 +38,7 @@ export default function AboutPage() {
                             <SectionHeading>Meet Justin</SectionHeading>
                             <div className="space-y-4 text-neutral-slate">
                                 <p>
-                                    With years of experience in the electrical industry, I founded JPD Complete Electrical
+                                    With 7+ years of experience in the electrical industry, I founded JPD Complete Electrical
                                     with a simple mission: to provide honest, reliable electrical services that exceed expectations.
                                 </p>
                                 <p>
