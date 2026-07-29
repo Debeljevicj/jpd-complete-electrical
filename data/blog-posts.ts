@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
         date: '2023-10-15',
         author: 'Justin',
         category: 'Safety',
-        image: '/images/switchboard_upgrade.jpg', // Using existing image as placeholder
+        image: '/images/residential_switchboard_upgrade_2.jpg',
         content: `
             <p>Electrical safety is paramount for every household. As we head into the warmer months in Adelaide, the demand on our electrical systems increases. Here are five essential tips to keep your home safe.</p>
             

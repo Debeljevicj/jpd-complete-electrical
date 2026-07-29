@@ -261,7 +261,7 @@ export default function Home() {
                         <Reveal delay={200} className="card overflow-hidden p-0 group">
                             <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
-                                    src="/images/medical_clinic_upgrade.png"
+                                    src="/images/medical_clinic_upgrade.jpg"
                                     alt="Medical Clinic Upgrade"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
