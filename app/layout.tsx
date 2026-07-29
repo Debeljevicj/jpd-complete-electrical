@@ -24,7 +24,7 @@ const outfit = Outfit({
 export const metadata: Metadata = {
     title: "JPD Complete Electrical | Professional Electrician Adelaide",
     description: "Reliable, licensed Adelaide electrician for switchboard upgrades, RCD testing, thermal imaging and electrical maintenance. We show up, clean up, and keep our promises.",
-    keywords: ["electrician Adelaide", "electrical services", "residential electrician", "commercial electrician", "medical clinic electrician", "disability housing electrician", "switchboard upgrades Adelaide", "RCD testing Adelaide", "thermal imaging Adelaide", "electrical maintenance Adelaide"],
+    keywords: ["electrician Adelaide", "electrician in Adelaide", "electrical work Adelaide", "electrical services", "residential electrician", "commercial electrician", "medical clinic electrician", "disability housing electrician", "switchboard upgrades Adelaide", "RCD testing Adelaide", "thermal imaging Adelaide", "electrical maintenance Adelaide"],
     icons: {
         icon: [
             {

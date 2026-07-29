@@ -22,8 +22,8 @@ export default function ServicesPage() {
             {/* Hero */}
             <section className="bg-navy text-white py-20">
                 <div className="container-custom text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Services</h1>
-                    <p className="text-xl text-gold">Comprehensive Electrical Solutions</p>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Electrical Services in Adelaide</h1>
+                    <p className="text-xl text-gold">Comprehensive Electrical Work for Homes & Businesses</p>
                 </div>
             </section>
 

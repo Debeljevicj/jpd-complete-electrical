@@ -52,7 +52,7 @@ export default function BlogPage() {
                                         </div>
                                     </div>
                                     <Link href={`/blog/${post.slug}`}>
-                                        <h2 className="text-xl font-bold text-navy mb-3 hover:text-gold transition-colors line-clamp-2">
+                                        <h2 className="text-xl font-bold text-navy mb-3 hover:text-gold transition-colors line-clamp-3 min-h-[5.25rem]">
                                             {post.title}
                                         </h2>
                                     </Link>

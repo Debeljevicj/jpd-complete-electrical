@@ -48,7 +48,7 @@ export default function Home() {
                         </div>
 
                         <h1 className="text-3xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            Reliable. Honest. Professional. <span className="text-gold">Electrical Work</span> You Can Trust.
+                            Reliable. Honest. Professional. <span className="text-gold">Electrical Work in Adelaide</span> You Can Trust.
                         </h1>
 
                         <p className="hidden md:block text-xl text-gray-300 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

@@ -79,7 +79,7 @@ export default function ContactContent() {
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
                         <div>
-                            <SectionHeading>Request a Quote / Contact Us</SectionHeading>
+                            <h1 className="text-3xl md:text-4xl font-bold text-navy gold-underline mb-8">Contact Your Adelaide Electrician</h1>
                             <p className="text-neutral-slate mb-8">
                                 Fill out the form below and we'll get back to you, or give us a call on <a href="tel:0435006420" className="text-gold font-semibold hover:underline">0435 006 420</a> to speak with us directly.
                             </p>
