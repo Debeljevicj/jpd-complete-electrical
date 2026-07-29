@@ -10,9 +10,13 @@ export default function ReviewsCarousel() {
     const scroll = (direction: 'left' | 'right') => {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
-            const scrollAmount = container.clientWidth * 0.8; // Scroll 80% of width
+            const firstCard = container.children[0] as HTMLElement | undefined;
+            // Step by exactly one card's rendered width (+gap) so cards always land
+            // fully in view and never get cropped at the container's edge, no matter
+            // how many cards fit per row at the current viewport size.
+            const gap = parseFloat(getComputedStyle(container).columnGap || '0');
+            const scrollAmount = firstCard ? firstCard.offsetWidth + gap : container.clientWidth * 0.8;
 
-            // Use scrollBy for relative scrolling which is often more reliable with snap
             container.scrollBy({
                 left: direction === 'left' ? -scrollAmount : scrollAmount,
                 behavior: 'smooth'
@@ -63,7 +67,7 @@ export default function ReviewsCarousel() {
                     {reviews.slice().reverse().map((review) => (
                         <div
                             key={review.id}
-                            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col relative"
+                            className="flex-shrink-0 w-full sm:w-[calc(50%-8px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col relative"
                         >
                             <Quote className="absolute top-5 right-5 md:top-6 md:right-6 w-8 h-8 text-gold/10 fill-gold/10" />
 
