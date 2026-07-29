@@ -91,7 +91,7 @@ export const blogPosts: BlogPost[] = [
         date: '2023-11-02',
         author: 'Justin',
         category: 'Efficiency',
-        image: '/images/residential_pool_switchboard.jpg', // Using existing image as placeholder
+        image: '/images/downlight_installation_1764247069579.jpg',
         content: `
             <p>Lighting accounts for a significant portion of your electricity bill. If you're still using old halogen downlights, you're literally burning money. Here's why upgrading to LED is a smart investment.</p>
 
