@@ -27,7 +27,7 @@
   }
 
   .section-padding {
-    @apply py-10 md:py-24;
+    @apply py-8 md:py-16;
   }
 
   .gold-underline {
