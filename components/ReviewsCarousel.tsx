@@ -38,7 +38,7 @@ export default function ReviewsCarousel() {
                 </div>
             </div>
 
-            <div className="relative px-4 md:px-12">
+            <div className="relative px-4 md:px-12 mt-2 mb-4 md:mb-8">
                 {/* Navigation Buttons - Hidden on mobile, visible on desktop */}
                 <button
                     type="button"
@@ -61,7 +61,7 @@ export default function ReviewsCarousel() {
                 {/* Carousel Container */}
                 <div
                     ref={scrollContainerRef}
-                    className="flex items-start gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 md:pb-8 pt-2 px-1 relative z-10"
+                    className="flex items-start gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-2 px-1 relative z-10"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {reviews.slice().reverse().map((review) => (
@@ -106,7 +106,7 @@ export default function ReviewsCarousel() {
                                 ))}
                             </div>
 
-                            <p className="text-neutral-slate leading-relaxed text-sm">
+                            <p className="text-neutral-slate leading-relaxed text-sm line-clamp-5">
                                 "{review.content}"
                             </p>
                         </div>
