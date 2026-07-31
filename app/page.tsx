@@ -11,7 +11,7 @@ import FAQ from '@/components/FAQ';
 import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
 import TrustBar from '@/components/TrustBar';
-import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap } from 'lucide-react';
+import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap, UserPlus } from 'lucide-react';
 
 export default function Home() {
     return (
@@ -65,9 +65,16 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <p className="flex items-center gap-2 text-xs md:text-sm text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
+                        <p className="flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs md:text-sm text-gray-300 animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
                             <Zap className="w-4 h-4 text-gold flex-shrink-0" />
-                            Urgent issue? After-hours emergency callouts available by appointment.
+                            <span>Urgent issue? After-hours emergency callouts available by appointment.</span>
+                            <Link
+                                href="/card"
+                                className="inline-flex items-center gap-1.5 py-2 md:py-0 font-semibold text-gold underline underline-offset-4 decoration-gold/40 hover:decoration-gold hover:text-white transition-colors"
+                            >
+                                <UserPlus className="w-4 h-4 flex-shrink-0" />
+                                Save our number
+                            </Link>
                         </p>
 
                         <div className="pt-1 md:pt-8 flex items-center gap-4 md:gap-8 text-sm text-gray-200 md:text-gray-400 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>

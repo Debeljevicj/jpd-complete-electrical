@@ -58,6 +58,11 @@ export default function Footer() {
                                     Contact
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/card" className="text-white/80 hover:text-gold transition-colors">
+                                    Save My Contact
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
