@@ -35,9 +35,18 @@ export default function Header() {
                 }`}
         >
             <div className="container-custom">
-                <div className="flex items-center justify-between py-3 md:py-4">
-                    {/* Logo - Centered on mobile, left on desktop */}
-                    <Link href="/" className="relative h-12 w-48 md:h-14 md:w-56 shrink-0 lg:mr-8 mx-auto lg:mx-0">
+                {/* Trust badges sit in their own right-aligned row so the logo and the nav
+                    can share a single vertically-centred row below. Previously the logo was
+                    centred against the badges-plus-nav stack, which left it sitting about
+                    20px above the nav it visually pairs with. */}
+                <div className="hidden lg:flex justify-end pt-3">
+                    <TrustBadges />
+                </div>
+
+                <div className="flex items-center justify-between py-3 md:py-4 lg:pt-2">
+                    {/* Logo box matches the artwork's 5.55:1 aspect, so there is no dead
+                        letterbox space above and below to throw the alignment out. */}
+                    <Link href="/" className="relative h-9 w-48 md:h-10 md:w-56 shrink-0 lg:mr-8 mx-auto lg:mx-0">
                         <Image
                             src="/Side By Side Blue Logo Transparent Background.png"
                             alt="JPD Complete Electrical"
@@ -48,8 +57,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden lg:flex flex-col items-end gap-2">
-                        <TrustBadges />
+                    <div className="hidden lg:flex items-center">
                         <div className="flex items-center gap-8">
                             <nav className="flex items-center gap-8">
                                 {navLinks.map((link) => {

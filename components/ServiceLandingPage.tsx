@@ -168,9 +168,9 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                             Where We Do This Work
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed">
-                            We are based in Wynn Vale and work across Adelaide&apos;s north-east, mostly inside the City
-                            of Tea Tree Gully. Pick your suburb for local detail, or call and we will tell you straight
-                            whether you are in our patch.
+                            We service all of Adelaide. Being based in Wynn Vale, these are the suburbs we are in most
+                            often and where we can usually get to you fastest. Pick yours for local detail, and if you
+                            are somewhere else in the metro area, just call and ask.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-2">

@@ -32,7 +32,7 @@ const faqs = [
     },
     {
         question: 'Which suburbs does JPD Complete Electrical cover?',
-        answer: 'We are based in Wynn Vale and work across Adelaide\'s north-east, mostly inside the City of Tea Tree Gully. That includes Golden Grove, Greenwith, Hope Valley, Wynn Vale, Highbury, Modbury, Redwood Park, Ridgehaven, St Agnes, Fairview Park, Holden Hill, Gulfview Heights, Tea Tree Gully, Banksia Park and Vista, plus the suburbs immediately around them.',
+        answer: 'All of Adelaide. We are based in Wynn Vale, so the north-east is where we work most days: Golden Grove, Greenwith, Hope Valley, Wynn Vale, Highbury, Modbury, Redwood Park, Ridgehaven, St Agnes, Fairview Park, Holden Hill, Gulfview Heights, Tea Tree Gully, Banksia Park and Vista, plus the suburbs immediately around them. Beyond that we cover the wider metro area and take regional work when it makes sense.',
     },
     {
         question: 'Do you charge a callout fee?',
@@ -44,7 +44,7 @@ const faqs = [
     },
     {
         question: 'What if I am just outside the suburbs listed?',
-        answer: 'Call and ask. The suburbs listed are where we work most often, not a hard boundary. We regularly work in Surrey Downs, Salisbury Heights, Modbury North and Heights, Yatala Vale, Para Vista, Valley View, Dernancourt and Athelstone, and we take on work further afield when it makes sense.',
+        answer: 'Then we still want the call. We service all of Adelaide. The suburbs listed are where we work most often and where we can get to you quickest, not a boundary. We regularly work in Surrey Downs, Salisbury Heights, Modbury North and Heights, Yatala Vale, Para Vista, Valley View, Dernancourt and Athelstone, right across the rest of the metro area, and into regional South Australia when it makes sense.',
     },
     {
         question: 'Are you available for emergency callouts?',

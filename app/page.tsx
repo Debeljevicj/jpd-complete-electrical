@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/Button';
@@ -8,6 +6,7 @@ import ServiceCard from '@/components/ServiceCard';
 import ReviewsCarousel from '@/components/ReviewsCarousel';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
+import HomeServiceAreas from '@/components/HomeServiceAreas';
 import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
 import TrustBar from '@/components/TrustBar';
@@ -291,6 +290,8 @@ export default function Home() {
             </section>
 
             {/* FAQ Section */}
+            <HomeServiceAreas />
+
             <FAQ />
 
             {/* Final CTA */}

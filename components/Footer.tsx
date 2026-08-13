@@ -14,6 +14,7 @@ const quickLinks = [
     { href: '/services', label: 'Services' },
     { href: '/service-areas', label: 'Service Areas' },
     { href: '/reviews', label: 'Reviews' },
+    { href: '/faq', label: 'FAQs' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
     { href: '/card', label: 'Save My Contact' },
@@ -37,8 +38,7 @@ export default function Footer() {
                             />
                         </div>
                         <p className="text-white/80 text-sm leading-relaxed mb-4">
-                            Owner-operated electrical for homes, rentals, builders and small business across
-                            Adelaide&apos;s north-east.
+                            Owner-operated electrical for homes, rentals, builders and small business across Adelaide.
                         </p>
                         <ul className="space-y-1 text-white/70 text-sm mb-4">
                             <li>
@@ -146,7 +146,7 @@ export default function Footer() {
                                     Based in Wynn Vale SA 5127
                                     <br />
                                     <Link href="/service-areas" className="text-white/60 hover:text-gold transition-colors">
-                                        Servicing Adelaide&apos;s north-east
+                                        Servicing all of Adelaide
                                     </Link>
                                 </span>
                             </li>

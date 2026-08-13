@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE}/gallery/`, changeFrequency: 'monthly', priority: 0.7 },
         { url: `${SITE}/reviews/`, changeFrequency: 'weekly', priority: 0.7 },
         { url: `${SITE}/blog/`, changeFrequency: 'weekly', priority: 0.7 },
+        { url: `${SITE}/faq/`, changeFrequency: 'monthly', priority: 0.7 },
         { url: `${SITE}/card/`, changeFrequency: 'yearly', priority: 0.3 },
     ];
 
