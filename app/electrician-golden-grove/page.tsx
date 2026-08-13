@@ -1,20 +1,23 @@
+import type { Metadata } from 'next';
 import SuburbLandingPage from '@/components/SuburbLandingPage';
+import { suburbBySlug } from '@/data/suburbs';
 
-export const metadata = {
-    title: 'Electrician Golden Grove | Switchboards, RCD Testing | JPD',
-    description: 'Local electrician servicing Golden Grove for switchboard upgrades, RCD testing, thermal imaging inspections and general electrical maintenance. Licensed & insured — free quotes.',
+const suburb = suburbBySlug['electrician-golden-grove'];
+
+export const metadata: Metadata = {
+    title: suburb.title,
+    description: suburb.description,
     alternates: {
         canonical: '/electrician-golden-grove',
+    },
+    openGraph: {
+        title: suburb.title,
+        description: suburb.description,
+        url: 'https://jpdcompleteelectrical.com.au/electrician-golden-grove/',
+        type: 'website',
     },
 };
 
 export default function Page() {
-    return (
-        <SuburbLandingPage
-            suburb="Golden Grove"
-            intro="JPD Complete Electrical is based in the Golden Grove area, offering switchboard upgrades, RCD testing, thermal imaging inspections, and general electrical maintenance to homes and businesses across one of Adelaide's largest residential communities."
-            localNote="Golden Grove is a big, family-focused suburb with homes from every era of its development, so switchboard condition varies a lot from street to street. We're right in the area, which means quick response times and a genuine understanding of what's normal — and what's not — for wiring around here."
-            nearbyAreas={['Wynn Vale', 'Modbury', 'Tea Tree Gully', 'Salisbury Heights', 'Surrey Downs', 'Fairview Park']}
-        />
-    );
+    return <SuburbLandingPage suburb={suburb} />;
 }

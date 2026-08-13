@@ -2,18 +2,18 @@ import type { Metadata } from 'next';
 import SuburbLandingPage from '@/components/SuburbLandingPage';
 import { suburbBySlug } from '@/data/suburbs';
 
-const suburb = suburbBySlug['electrician-wynn-vale'];
+const suburb = suburbBySlug['electrician-highbury'];
 
 export const metadata: Metadata = {
     title: suburb.title,
     description: suburb.description,
     alternates: {
-        canonical: '/electrician-wynn-vale',
+        canonical: '/electrician-highbury',
     },
     openGraph: {
         title: suburb.title,
         description: suburb.description,
-        url: 'https://jpdcompleteelectrical.com.au/electrician-wynn-vale/',
+        url: 'https://jpdcompleteelectrical.com.au/electrician-highbury/',
         type: 'website',
     },
 };

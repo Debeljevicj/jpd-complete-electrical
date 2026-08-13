@@ -2,6 +2,9 @@ export default function JsonLd() {
     const schema = {
         "@context": "https://schema.org",
         "@type": "Electrician",
+        // Canonical business node. Suburb and service pages reference this @id rather
+        // than declaring their own Electrician, so Google sees one business, not fifty.
+        "@id": "https://jpdcompleteelectrical.com.au/#business",
         "name": "JPD Complete Electrical",
         "image": "https://jpdcompleteelectrical.com.au/images/justin_main.jpg",
         "telephone": "0435 006 420",

@@ -1,5 +1,8 @@
+import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
+import ServiceIcon from '@/components/ServiceIcon';
+import { serviceIndex } from '@/data/services';
 import ServiceAreaChecker from '@/components/ServiceAreaChecker';
 import Button from '@/components/Button';
 import {
@@ -24,6 +27,49 @@ export default function ServicesPage() {
                 <div className="container-custom text-center">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Electrical Services in Adelaide</h1>
                     <p className="text-xl text-gold">Comprehensive Electrical Work for Homes & Businesses</p>
+                </div>
+            </section>
+
+            {/* Service pages — the detail behind each one */}
+            <section className="section-padding bg-white">
+                <div className="container-custom">
+                    <div className="max-w-3xl mb-10">
+                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4 gold-underline">
+                            What We Do, In Detail
+                        </h2>
+                        <p className="text-neutral-slate text-lg leading-relaxed">
+                            Each of these has its own page covering what the job actually involves, what drives the
+                            price, and the questions we get asked most. No headline figures that turn into something
+                            else once we are on site.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        {serviceIndex.map((service) => (
+                            <Link
+                                key={service.slug}
+                                href={`/${service.slug}`}
+                                className="card group hover:border-gold hover:shadow-md transition-all"
+                            >
+                                <div className="w-11 h-11 rounded-lg bg-navy flex items-center justify-center mb-3 group-hover:bg-gold transition-colors">
+                                    <ServiceIcon
+                                        name={service.icon}
+                                        className="w-5 h-5 text-gold group-hover:text-navy transition-colors"
+                                    />
+                                </div>
+                                <h3 className="font-bold text-navy mb-1 group-hover:text-gold transition-colors">
+                                    {service.name}
+                                </h3>
+                                <p className="text-sm text-neutral-slate leading-snug">{service.blurb}</p>
+                            </Link>
+                        ))}
+                    </div>
+                    <p className="text-neutral-slate text-lg leading-relaxed mt-8">
+                        Want the local version?{' '}
+                        <Link href="/service-areas" className="text-navy font-bold underline underline-offset-4 hover:text-gold">
+                            See every suburb we cover
+                        </Link>{' '}
+                        for detail on the housing stock and the work that comes up in your area.
+                    </p>
                 </div>
             </section>
 

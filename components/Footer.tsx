@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
+import { serviceIndex } from '@/data/services';
+import { suburbs } from '@/data/suburbs';
+
+/** Highest-intent services and biggest suburbs, so the footer links carry weight rather than listing everything. */
+const footerServices = serviceIndex.slice(0, 6);
+const footerSuburbs = suburbs.slice(0, 7);
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -8,7 +14,7 @@ export default function Footer() {
     return (
         <footer className="bg-navy text-white">
             <div className="container-custom section-padding">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto_1.2fr_1fr] gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
                     {/* Logo & About */}
                     <div>
                         <div className="relative h-16 w-48 mb-4">
@@ -61,6 +67,50 @@ export default function Footer() {
                             <li>
                                 <Link href="/card" className="text-white/80 hover:text-gold transition-colors">
                                     Save My Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Popular Services */}
+                    <div>
+                        <h3 className="text-lg font-bold mb-4 text-gold">Services</h3>
+                        <ul className="space-y-2">
+                            {footerServices.map((service) => (
+                                <li key={service.slug}>
+                                    <Link
+                                        href={`/${service.slug}`}
+                                        className="text-white/80 hover:text-gold transition-colors text-sm"
+                                    >
+                                        {service.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li>
+                                <Link href="/services" className="text-gold hover:text-white transition-colors text-sm font-semibold">
+                                    All services →
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Service Areas */}
+                    <div>
+                        <h3 className="text-lg font-bold mb-4 text-gold">Service Areas</h3>
+                        <ul className="space-y-2">
+                            {footerSuburbs.map((suburb) => (
+                                <li key={suburb.slug}>
+                                    <Link
+                                        href={`/${suburb.slug}`}
+                                        className="text-white/80 hover:text-gold transition-colors text-sm"
+                                    >
+                                        Electrician {suburb.name}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li>
+                                <Link href="/service-areas" className="text-gold hover:text-white transition-colors text-sm font-semibold">
+                                    All suburbs →
                                 </Link>
                             </li>
                         </ul>
