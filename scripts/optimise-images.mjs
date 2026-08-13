@@ -15,7 +15,14 @@
  * Originals are left on disk untouched. Source references point at the .webp
  * files, so the JPEGs are simply no longer requested.
  *
- * Run via `npm run build` (prebuild). Safe and idempotent to re-run.
+ * Run manually with `npm run optimise-images` after adding or replacing photos
+ * in public/images, then commit the generated .webp files alongside them.
+ *
+ * Deliberately NOT part of prebuild. The outputs are committed, so running it on
+ * every Cloudflare build would only put a native dependency (sharp) in the
+ * deploy path for no benefit. It did exactly that once and took the build down.
+ *
+ * Safe and idempotent to re-run.
  */
 import sharp from 'sharp';
 import { readdirSync, statSync, writeFileSync, readFileSync, existsSync } from 'node:fs';

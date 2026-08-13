@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/optimise-images.mjs && node scripts/generate-vcard.mjs",
+    "prebuild": "node scripts/generate-vcard.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -27,6 +27,7 @@
     "eslint": "^8",
     "eslint-config-next": "^14",
     "postcss": "^8",
+    "sharp": "^0.35.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
