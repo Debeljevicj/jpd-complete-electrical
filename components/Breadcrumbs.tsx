@@ -4,6 +4,40 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 
+/** Rendered as-is rather than title-cased. */
+const ACRONYMS: Record<string, string> = {
+    ev: 'EV',
+    rcd: 'RCD',
+    led: 'LED',
+    jpd: 'JPD',
+    sa: 'SA',
+};
+
+/** Lower-cased mid-phrase, the way a person would write it. */
+const MINOR_WORDS = new Set(['and', 'or', 'the', 'a', 'an', 'for', 'in', 'of', 'to', 'at']);
+
+/**
+ * Turn a URL slug into a readable label.
+ *
+ * The old version upper-cased only the very first character of the whole slug,
+ * which was fine for /about but produced "Electrician greenwith" and
+ * "Rcd testing safety switches adelaide" once the suburb and service pages
+ * landed. Deliberately kept as string handling rather than a lookup against the
+ * suburb and service data, because this is a client component and importing
+ * those modules would pull their full page copy into the client bundle.
+ */
+function slugToLabel(slug: string): string {
+    return slug
+        .split('-')
+        .map((word, index) => {
+            const lower = word.toLowerCase();
+            if (ACRONYMS[lower]) return ACRONYMS[lower];
+            if (index > 0 && MINOR_WORDS.has(lower)) return lower;
+            return lower.charAt(0).toUpperCase() + lower.slice(1);
+        })
+        .join(' ');
+}
+
 export default function Breadcrumbs() {
     const pathname = usePathname();
 
@@ -24,7 +58,7 @@ export default function Breadcrumbs() {
                     {pathSegments.map((segment, index) => {
                         const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
                         const isLast = index === pathSegments.length - 1;
-                        const title = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+                        const title = slugToLabel(segment);
 
                         return (
                             <li key={href} className="flex items-center">
