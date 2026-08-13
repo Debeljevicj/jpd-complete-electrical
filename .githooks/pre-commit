@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Blocks commits that look like they contain secrets, customer data, or business exports.
+# Bypass deliberately (never from Claude) with: git commit --no-verify
+
+blocked_path_patterns='(^|/)\.env(\.[^/]+)?$|\.pem$|\.key$|(^|/)(exports?|reports?|output|private)/|customer|invoice|\.csv$|\.xlsx?$'
+blocked_content_patterns='fergPAT_|xero_[a-zA-Z0-9]|sk-[a-zA-Z0-9]{10,}|AKIA[0-9A-Z]{16}|BEGIN (RSA|EC|OPENSSH) PRIVATE KEY|BEGIN CERTIFICATE'
+
+staged=$(git diff --cached --name-only --diff-filter=ACM)
+fail=0
+
+for f in $staged; do
+  if echo "$f" | grep -Eqi "$blocked_path_patterns"; then
+    echo "BLOCKED: '$f' matches a personal/business-data path pattern." >&2
+    fail=1
+  fi
+  # Skip content scanning on this hook itself — it legitimately contains the
+  # pattern *definitions* (e.g. the literal text "fergPAT_"), not a real secret.
+  if [ "$f" != ".githooks/pre-commit" ] && git diff --cached -- "$f" | grep -Eq "$blocked_content_patterns"; then
+    echo "BLOCKED: '$f' contains what looks like a secret/API token." >&2
+    fail=1
+  fi
+done
+
+if [ "$fail" = "1" ]; then
+  echo "" >&2
+  echo "Commit blocked: this repo does not allow personal or business data (customer info, job exports, reports, tokens)." >&2
+  echo "If this is a false positive, resolve it deliberately — do not bypass without reviewing the file." >&2
+  exit 1
+fi
