@@ -21,7 +21,7 @@ export default function Home() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute right-0 top-0 bottom-0 w-full md:w-2/3 lg:w-1/2">
                         <Image
-                            src="/images/justin_portrait_new.jpg"
+                            src="/images/justin_portrait_new.webp"
                             alt="Justin - JPD Complete Electrical Owner"
                             fill
                             className="object-cover object-center"
@@ -235,7 +235,7 @@ export default function Home() {
                         <Reveal delay={0} className="card overflow-hidden p-0 group">
                             <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
-                                    src="/images/solar_system_6kw.jpg"
+                                    src="/images/solar_system_6kw.webp"
                                     alt="6.6kW Solar System Installation"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -251,7 +251,7 @@ export default function Home() {
                         <Reveal delay={100} className="card overflow-hidden p-0 group">
                             <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
-                                    src="/images/kitchen_led_strip.jpg"
+                                    src="/images/kitchen_led_strip.webp"
                                     alt="Kitchen LED Strip Lighting"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -267,7 +267,7 @@ export default function Home() {
                         <Reveal delay={200} className="card overflow-hidden p-0 group">
                             <div className="relative h-48 md:h-64 overflow-hidden">
                                 <Image
-                                    src="/images/medical_clinic_upgrade.jpg"
+                                    src="/images/medical_clinic_upgrade.webp"
                                     alt="Medical Clinic Upgrade"
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

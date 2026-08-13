@@ -84,6 +84,22 @@ export default function ContactContent() {
                                 Fill out the form below and we'll get back to you, or give us a call on <a href="tel:0435006420" className="text-gold font-semibold hover:underline">0435 006 420</a> to speak with us directly.
                             </p>
                             <form onSubmit={handleSubmit} className="space-y-6">
+                                {/*
+                                  * Web3Forms honeypot. Bots fill every field they find, so a
+                                  * submission with this populated is rejected server-side.
+                                  * Hidden with CSS rather than type="hidden" because bots skip
+                                  * hidden inputs; tabIndex and aria-hidden keep it away from
+                                  * keyboard and screen-reader users.
+                                  */}
+                                <input
+                                    type="checkbox"
+                                    name="botcheck"
+                                    className="hidden"
+                                    style={{ display: 'none' }}
+                                    tabIndex={-1}
+                                    autoComplete="off"
+                                    aria-hidden="true"
+                                />
                                 <div>
                                     <label htmlFor="name" className="block text-navy font-semibold mb-2">
                                         Full Name *

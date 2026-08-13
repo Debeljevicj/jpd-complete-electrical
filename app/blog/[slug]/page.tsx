@@ -20,11 +20,20 @@ export async function generateMetadata({ params }: Props) {
         };
     }
 
+    // "| JPD Complete Electrical" is 26 characters of suffix on titles that are
+    // already long, which pushed every post past the ~60 chars Google shows.
+    // seoTitle overrides it entirely where even the short suffix would not fit.
     return {
-        title: `${post.title} | JPD Complete Electrical`,
-        description: post.excerpt,
+        title: post.seoTitle ?? `${post.title} | JPD`,
+        description: post.metaDescription ?? post.excerpt,
         alternates: {
             canonical: `/blog/${post.slug}`,
+        },
+        openGraph: {
+            title: post.seoTitle ?? post.title,
+            description: post.metaDescription ?? post.excerpt,
+            url: `https://jpdcompleteelectrical.com.au/blog/${post.slug}/`,
+            type: 'article',
         },
     };
 }

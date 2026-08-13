@@ -8,8 +8,7 @@ export const coreServices: Service[] = [
         icon: 'emergency',
         blurb: 'Lost power, tripping breakers, burning smells or sparking outlets. Call and we will tell you straight whether it can wait.',
         title: 'Emergency Electrician Adelaide | Fast Local Callout | JPD',
-        description:
-            'Emergency electrician for Adelaide\'s north-east. Power loss, tripping safety switches, burning smells, sparking outlets and storm damage. Based in Wynn Vale. Call 0435 006 420.',
+        description: 'Emergency electrician for Adelaide. Power loss, tripping safety switches, burning smells, sparking outlets and storm damage. Call 0435 006 420.',
         h1: 'Emergency Electrician, Adelaide North-East',
         intro:
             'Power out, a breaker that will not stay on, a burning smell at the switchboard or a sparking outlet. Call 0435 006 420. We are based in Wynn Vale and we cover the Tea Tree Gully area, so you are not waiting on someone crossing town.',
@@ -96,8 +95,7 @@ export const coreServices: Service[] = [
         icon: 'switchboard',
         blurb: 'Old fuses out, RCBOs in. Shock protection on every circuit and room to add what you want next.',
         title: 'Switchboard Upgrade Adelaide | RCBO Boards | JPD Electrical',
-        description:
-            'Switchboard upgrades across Adelaide\'s north-east. Ceramic fuses replaced with modern RCBO boards, full safety switch protection, proper labelling and a Certificate of Compliance. Free quotes.',
+        description: 'Switchboard upgrades across Adelaide. Ceramic fuses replaced with modern RCBO boards, full safety switch protection and a Certificate of Compliance.',
         h1: 'Switchboard Upgrades in Adelaide',
         intro:
             'If your switchboard still has rewireable ceramic fuses, has no safety switches, trips regularly, or is so full there is nowhere to add a circuit, it is due. We replace it with a properly sized board on RCBOs and label it so it makes sense to whoever opens it next.',
@@ -190,8 +188,7 @@ export const coreServices: Service[] = [
         icon: 'ev',
         blurb: 'Home wall chargers on a dedicated circuit, with the right protection and the board capacity checked first.',
         title: 'EV Charger Installation Adelaide | Home Chargers | JPD',
-        description:
-            'Home EV charger installation across Adelaide\'s north-east. Dedicated circuit, correct RCD protection, switchboard capacity checked and SA Power Networks notified where required. Free quotes.',
+        description: 'Home EV charger installation in Adelaide. Dedicated circuit, correct RCD protection and switchboard capacity checked first. Free quotes.',
         h1: 'EV Charger Installation, Adelaide',
         intro:
             'We install home wall chargers on a dedicated circuit with the protection the standard requires. The charger is the easy part. The job is making sure your switchboard can actually carry it alongside everything else in the house.',
@@ -282,8 +279,7 @@ export const coreServices: Service[] = [
         icon: 'rcd',
         blurb: 'Proper trip-time testing with a calibrated instrument, not just pushing the button on the board.',
         title: 'RCD Testing & Safety Switches Adelaide | JPD Electrical',
-        description:
-            'Safety switch installation and RCD testing across Adelaide\'s north-east. Calibrated trip-time testing with a written report, for homes, rentals, workplaces and medical premises.',
+        description: 'Safety switch installation and RCD testing across Adelaide. Calibrated trip-time testing with a written report for homes, rentals and workplaces.',
         h1: 'Safety Switches and RCD Testing',
         intro:
             'A safety switch is the only thing in your house designed specifically to stop a shock from killing someone. It is also a mechanical device that can fail silently. We install them, and we test them properly with a calibrated instrument rather than just pressing the button.',
@@ -362,9 +358,8 @@ export const coreServices: Service[] = [
         name: 'Smoke Alarm Installation',
         icon: 'smoke',
         blurb: 'Mains-powered, interconnected photoelectric alarms installed and positioned where they will actually work.',
-        title: 'Smoke Alarm Installation Adelaide | Hardwired & Interconnected',
-        description:
-            'Smoke alarm installation and replacement across Adelaide\'s north-east. Mains-powered interconnected photoelectric alarms, correctly positioned, for homes and rental properties.',
+        title: 'Smoke Alarm Installation Adelaide | Hardwired & Linked',
+        description: 'Smoke alarm installation and replacement across Adelaide. Mains-powered interconnected photoelectric alarms, correctly positioned. Free quotes.',
         h1: 'Smoke Alarm Installation and Replacement',
         intro:
             'Smoke alarms have a service life and most people do not know theirs has passed it. We install and replace mains-powered interconnected photoelectric alarms, positioned where they will actually detect a fire rather than where they were easiest to screw in.',

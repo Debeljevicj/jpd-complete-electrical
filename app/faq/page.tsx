@@ -12,7 +12,7 @@ const PHONE_HREF = 'tel:0435006420';
 export const metadata: Metadata = {
     title: 'Electrician FAQs Adelaide | Costs, Safety, Compliance | JPD',
     description:
-        'Straight answers on electrician costs, callout fees, switchboard upgrades, safety switches, smoke alarms, EV chargers and compliance. Licensed Adelaide electrician.',
+        'Straight answers on electrician costs, callout fees, switchboards, safety switches, smoke alarms and compliance. Licensed Adelaide electrician.',
     alternates: { canonical: '/faq' },
     openGraph: {
         title: 'Electrician FAQs Adelaide | JPD Complete Electrical',

@@ -12,8 +12,8 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-    title: 'Switchboard Upgrades & RCD Testing Adelaide | JPD Electrical',
-    description: 'Electrical maintenance, RCD testing, switchboard upgrades and thermal imaging inspections across Adelaide. Licensed, insured electrician — book a free quote today.',
+    title: 'Electrical Services Adelaide | Switchboards, EV, Lighting',
+    description: 'Electrical services across Adelaide. Switchboard upgrades, EV chargers, downlights, safety switch testing and emergency callouts. Free quotes.',
     alternates: {
         canonical: '/services',
     },

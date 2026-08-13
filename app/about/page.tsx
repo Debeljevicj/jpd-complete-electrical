@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Shield, Users, Award, CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
-    title: 'About Justin & JPD Complete Electrical | Adelaide Electrician',
+    title: 'About Justin | Licensed Adelaide Electrician | JPD',
     description: 'Meet Justin, your local licensed electrician (PGE296191). Committed to reliability, honesty, and professional electrical services across Adelaide.',
     alternates: {
         canonical: '/about',
@@ -28,7 +28,7 @@ export default function AboutPage() {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl">
                             <Image
-                                src="/images/justin_portrait_new.jpg"
+                                src="/images/justin_portrait_new.webp"
                                 alt="Justin - JPD Complete Electrical"
                                 fill
                                 priority

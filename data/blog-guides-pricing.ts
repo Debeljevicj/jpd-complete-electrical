@@ -5,12 +5,14 @@ export const pricingPosts: BlogPost[] = [
     {
         slug: 'electrician-cost-adelaide',
         title: 'What Should an Electrician Cost in Adelaide?',
+        metaDescription:
+            'How Adelaide electricians actually price work, what drives the number, and the six questions that let you compare two quotes properly.',
         excerpt:
             'Nobody publishes real numbers, and most quotes are impossible to compare. Here is how electricians actually price work, and the questions that let you compare two quotes properly.',
         date: '2026-08-13',
         author: 'Justin',
         category: 'Pricing',
-        image: '/images/onsite_walkthrough.jpg',
+        image: '/images/onsite_walkthrough.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>You ring three electricians, you get three numbers, and they are nowhere near each other. One is half the price of the next. There is no way to tell whether the cheap one is efficient or whether they have simply left half the job out of the quote, and you find out which after the work has started.</p>
@@ -69,7 +71,7 @@ export const pricingPosts: BlogPost[] = [
         date: '2026-08-13',
         author: 'Justin',
         category: 'Advice',
-        image: '/images/electrician_working_1764247092697.jpg',
+        image: '/images/electrician_working_1764247092697.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>Electrical work is one of the few trades where you cannot inspect the result. You can see whether a paint job is good. You cannot see whether a connection was torqued properly, whether the circuit is protected correctly, or whether the earthing was ever checked. It looks identical either way until something goes wrong.</p>
@@ -137,7 +139,7 @@ export const pricingPosts: BlogPost[] = [
         date: '2026-08-13',
         author: 'Justin',
         category: 'Troubleshooting',
-        image: '/images/switchboard_fault_finding.jpg',
+        image: '/images/switchboard_fault_finding.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>A tripping safety switch is annoying, and the temptation is to treat the tripping itself as the fault. It usually is not. The device is doing exactly what it was installed to do, and it is telling you that something in your installation or your appliances is not right.</p>

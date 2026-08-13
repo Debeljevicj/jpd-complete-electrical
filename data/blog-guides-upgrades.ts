@@ -10,7 +10,7 @@ export const upgradePosts: BlogPost[] = [
         date: '2026-08-13',
         author: 'Justin',
         category: 'EV Charging',
-        image: '/images/commercial_ev_charger.jpg',
+        image: '/images/commercial_ev_charger.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>Home charging is the whole point of owning an electric car. Charging at home overnight is dramatically cheaper than public fast charging, and it means you leave every morning with a full battery instead of planning your week around a charging stop.</p>
@@ -72,12 +72,13 @@ export const upgradePosts: BlogPost[] = [
     {
         slug: 'halogen-downlights-cost-adelaide',
         title: 'Your Halogen Downlights Are Costing More Than You Think',
+        seoTitle: 'Halogen vs LED Downlights: The Real Cost | JPD',
         excerpt:
             'Thirty halogen downlights is 1,500 watts of lighting and a ceiling full of insulation gaps. The running cost is only half the problem.',
         date: '2026-08-13',
         author: 'Justin',
         category: 'Efficiency',
-        image: '/images/bedroom_led_downlights.jpg',
+        image: '/images/bedroom_led_downlights.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>If your house was built or renovated between roughly 1995 and 2010, you very likely have halogen downlights, and there is a good chance nobody has ever told you what they are costing you.</p>
@@ -134,7 +135,7 @@ export const upgradePosts: BlogPost[] = [
         date: '2026-08-13',
         author: 'Justin',
         category: 'Renovations',
-        image: '/images/bathroom_renovation.jpg',
+        image: '/images/bathroom_renovation.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>Renovation electrical work is cheap to get right and expensive to get wrong, and the difference between the two is almost entirely about timing.</p>

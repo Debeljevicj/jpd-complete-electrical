@@ -6,7 +6,7 @@ export default function JsonLd() {
         // than declaring their own Electrician, so Google sees one business, not fifty.
         "@id": "https://jpdcompleteelectrical.com.au/#business",
         "name": "JPD Complete Electrical",
-        "image": "https://jpdcompleteelectrical.com.au/images/justin_main.jpg",
+        "image": "https://jpdcompleteelectrical.com.au/images/justin_main.webp",
         "telephone": "0435 006 420",
         "email": "admin@jpdcompleteelectrical.com.au",
         "address": {

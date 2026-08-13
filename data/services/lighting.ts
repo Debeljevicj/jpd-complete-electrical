@@ -8,8 +8,7 @@ export const lightingServices: Service[] = [
         icon: 'downlight',
         blurb: 'Halogen out, proper LED fittings in. Cooler ceilings, lower bills, and insulation that can sit where it should.',
         title: 'Downlight Installation Adelaide | LED Downlights | JPD',
-        description:
-            'LED downlight installation and halogen replacement across Adelaide\'s north-east. Full fitting replacement, correct layout, dimming done properly. Licensed electrician, free quotes.',
+        description: 'LED downlight installation and halogen replacement across Adelaide. Full fitting replacement, sensible layout, dimming done properly. Free quotes.',
         h1: 'LED Downlight Installation, Adelaide',
         intro:
             'We install LED downlights and replace old halogens across Adelaide\'s north-east. We change the whole fitting, not just the globe, which is the version that actually saves you money and takes the heat out of your ceiling.',
@@ -93,8 +92,7 @@ export const lightingServices: Service[] = [
         icon: 'feature',
         blurb: 'Coves, under-bench, stair and joinery lighting, wired with the driver somewhere you can actually reach it.',
         title: 'Feature Lighting & LED Strip Installation Adelaide | JPD',
-        description:
-            'Feature lighting and LED strip installation across Adelaide\'s north-east. Cove lighting, under-bench, stair, joinery and outdoor feature lighting, planned and wired properly. Free quotes.',
+        description: 'Feature lighting and LED strip installation in Adelaide. Cove, under-bench, stair and joinery lighting, planned and wired properly. Free quotes.',
         h1: 'Feature Lighting and LED Strip Installation',
         intro:
             'Cove lighting, under-bench strip, stair and joinery lighting, and outdoor feature lighting. Done properly it makes a room. Done badly you see the dots, the joins and a driver that nobody can get to when it fails.',
@@ -183,8 +181,7 @@ export const lightingServices: Service[] = [
         icon: 'fan',
         blurb: 'Fans installed on existing points or new ones, with a wall control instead of a remote that goes missing.',
         title: 'Ceiling Fan Installation Adelaide | Supply & Install | JPD',
-        description:
-            'Ceiling fan installation and replacement across Adelaide\'s north-east. New points, existing light points, wall controls and bathroom exhaust fans. Licensed electrician, free quotes.',
+        description: 'Ceiling fan installation across Adelaide. New points, existing light points, wall controls and bathroom exhaust fans. Licensed electrician.',
         h1: 'Ceiling Fan Installation, Adelaide',
         intro:
             'Ceiling fans installed onto existing light points or on new points where you actually want them, with a wall control fitted rather than leaving you dependent on a remote. We also handle replacements and bathroom exhaust fans.',
@@ -265,8 +262,7 @@ export const lightingServices: Service[] = [
         icon: 'powerpoint',
         blurb: 'New outlets run properly from the board, plus dedicated circuits for the appliances that keep tripping things.',
         title: 'Powerpoint Installation Adelaide | Extra Outlets & Circuits',
-        description:
-            'Powerpoint installation and additional circuits across Adelaide\'s north-east. Indoor and weatherproof outdoor outlets, USB points, dedicated appliance circuits and shed submains. Free quotes.',
+        description: 'Powerpoint installation and extra circuits across Adelaide. Indoor and weatherproof outlets, dedicated appliance circuits and shed submains.',
         h1: 'Powerpoint Installation and Extra Circuits',
         intro:
             'Older houses were wired for a different life. We add powerpoints where you actually need them, run dedicated circuits for the appliances that keep tripping things, and get proper power out to sheds and garages.',

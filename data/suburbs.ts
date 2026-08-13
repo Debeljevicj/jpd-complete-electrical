@@ -46,9 +46,8 @@ export const suburbs: Suburb[] = [
         population: 10299,
         council: 'City of Tea Tree Gully',
         hook: 'Local, Licensed and Ten Minutes Away',
-        title: 'Electrician Golden Grove | Switchboards, EV Chargers, Downlights',
-        description:
-            'Licensed electrician in Golden Grove for switchboard upgrades, EV charger installs, downlights, safety switches and emergency callouts. Owner-operated, based in Wynn Vale. Free quotes.',
+        title: 'Electrician Golden Grove | Switchboards, EV Chargers, LEDs',
+        description: 'Licensed electrician in Golden Grove for switchboard upgrades, EV chargers, downlights and emergency callouts. Based in Wynn Vale. Free quotes.',
         intro:
             'JPD Complete Electrical is based in Wynn Vale, a few minutes down Golden Grove Road. We handle switchboard upgrades, EV charger installs, downlights and feature lighting, oven and cooktop connections, safety switch testing and emergency callouts for Golden Grove homes and businesses.',
         local: [
@@ -118,9 +117,8 @@ export const suburbs: Suburb[] = [
         population: 10103,
         council: 'City of Tea Tree Gully',
         hook: 'Local Sparky for the Newer End of the Grove',
-        title: 'Electrician Greenwith | EV Chargers, Downlights, Switchboards',
-        description:
-            'Licensed Greenwith electrician for EV charger installs, downlights and feature lighting, switchboard upgrades, oven and cooktop connections and emergency callouts. Local, owner-operated, free quotes.',
+        title: 'Electrician Greenwith | EV Chargers, Downlights, Boards',
+        description: 'Greenwith electrician for EV charger installs, downlights, LED strip, switchboard upgrades and emergency callouts. Owner-operated. Free quotes.',
         intro:
             'JPD Complete Electrical covers Greenwith from our base in Wynn Vale, a short run up Golden Grove Road. EV chargers, downlights and LED strip lighting, switchboard upgrades, safety switch testing, oven and cooktop connections and emergency callouts.',
         local: [
@@ -189,9 +187,8 @@ export const suburbs: Suburb[] = [
         population: 8184,
         council: 'City of Tea Tree Gully',
         hook: 'Older Homes, Older Wiring, Honest Advice',
-        title: 'Electrician Hope Valley | Switchboard Upgrades, Safety Switches',
-        description:
-            'Licensed Hope Valley electrician for switchboard upgrades, safety switch installs, rewiring, downlights, oven connections and emergency callouts. Local to Adelaide\'s north-east. Free quotes.',
+        title: 'Electrician Hope Valley | Switchboards & Safety Switches',
+        description: 'Hope Valley electrician for switchboard upgrades, safety switches, rewiring, downlights and emergency callouts. Local to Adelaide\'s north-east.',
         intro:
             'JPD Complete Electrical services Hope Valley for switchboard upgrades, safety switch installs, downlights, oven and cooktop connections, fault finding and emergency callouts. We are based nearby in Wynn Vale and we work across the Tea Tree Gully council area most days.',
         local: [
@@ -261,8 +258,7 @@ export const suburbs: Suburb[] = [
         council: 'City of Tea Tree Gully',
         hook: 'This Is Where We Are Based',
         title: 'Electrician Wynn Vale | Local, Licensed, Same Suburb | JPD',
-        description:
-            'JPD Complete Electrical is based in Wynn Vale. Switchboard upgrades, EV chargers, downlights, safety switch testing, oven and cooktop installs and emergency callouts. Free quotes from your local sparky.',
+        description: 'JPD Complete Electrical is based in Wynn Vale. Switchboards, EV chargers, downlights, safety switch testing and emergency callouts. Free quotes.',
         intro:
             'JPD Complete Electrical is based right here in Wynn Vale. Switchboard upgrades, EV charger installs, downlights and feature lighting, safety switch testing, oven and cooktop connections and emergency callouts, from an electrician who lives in the same suburb.',
         local: [
@@ -333,8 +329,7 @@ export const suburbs: Suburb[] = [
         council: 'City of Tea Tree Gully',
         hook: 'Foothills Homes, Mixed Vintages, Straight Answers',
         title: 'Electrician Highbury | Switchboards, Downlights, EV Chargers',
-        description:
-            'Licensed Highbury electrician for switchboard upgrades, safety switches, downlights, EV chargers, oven and cooktop installs and emergency callouts. Local to Adelaide\'s north-east foothills. Free quotes.',
+        description: 'Highbury electrician for switchboard upgrades, safety switches, downlights, EV chargers and shed submains. Local to the foothills. Free quotes.',
         intro:
             'JPD Complete Electrical services Highbury for switchboard upgrades, safety switch testing, downlights and feature lighting, EV charger installs, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -405,8 +400,7 @@ export const suburbs: Suburb[] = [
         council: 'City of Tea Tree Gully',
         hook: 'Homes, Rentals and Small Business',
         title: 'Electrician Modbury | Switchboards, Emergency, Test & Tag',
-        description:
-            'Licensed Modbury electrician for switchboard upgrades, safety switch testing, emergency callouts, downlights, oven installs and small commercial work. Local to Tea Tree Gully. Free quotes.',
+        description: 'Modbury electrician for switchboard upgrades, safety switch testing, emergency callouts, rental compliance and small commercial work. Free quotes.',
         intro:
             'JPD Complete Electrical services Modbury for switchboard upgrades, safety switch testing, emergency callouts, downlights and lighting, oven and cooktop connections, and electrical work for the shops and small businesses along North East Road.',
         local: [
@@ -476,9 +470,8 @@ export const suburbs: Suburb[] = [
         population: 5367,
         council: 'City of Tea Tree Gully',
         hook: 'Straightforward Work on 1970s and 80s Homes',
-        title: 'Electrician Redwood Park | Switchboards, Safety Switches, LEDs',
-        description:
-            'Licensed Redwood Park electrician for switchboard upgrades, safety switch installs, downlights, powerpoints, oven connections and emergency callouts. Based nearby in Wynn Vale. Free quotes.',
+        title: 'Electrician Redwood Park | Switchboards & Safety Switches',
+        description: 'Redwood Park electrician for switchboard upgrades, safety switches, downlights, ceiling fans and emergency callouts. Based nearby in Wynn Vale.',
         intro:
             'JPD Complete Electrical services Redwood Park for switchboard upgrades, safety switch installs and testing, downlights, extra powerpoints, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -547,9 +540,8 @@ export const suburbs: Suburb[] = [
         population: 4304,
         council: 'City of Tea Tree Gully',
         hook: 'Homes, Rentals and the Industrial Pocket',
-        title: 'Electrician Ridgehaven | Switchboards, Rentals, Small Commercial',
-        description:
-            'Licensed Ridgehaven electrician for switchboard upgrades, safety switch testing, rental compliance, emergency callouts and small commercial and industrial work. Local, free quotes.',
+        title: 'Electrician Ridgehaven | Switchboards, Rentals, Commercial',
+        description: 'Ridgehaven electrician for switchboard upgrades, rental compliance, emergency callouts and small commercial and industrial work. Free quotes.',
         intro:
             'JPD Complete Electrical services Ridgehaven for switchboard upgrades, safety switch testing, rental compliance work, downlights and lighting, emergency callouts, and electrical work in the light industrial pocket off Milne Road.',
         local: [
@@ -618,9 +610,8 @@ export const suburbs: Suburb[] = [
         population: 4233,
         council: 'City of Tea Tree Gully',
         hook: 'Local Sparky for a 1970s Suburb',
-        title: 'Electrician St Agnes | Switchboard Upgrades, Downlights, Repairs',
-        description:
-            'Licensed St Agnes electrician for switchboard upgrades, safety switches, downlights, ceiling fans, oven installs, fault finding and emergency callouts. Local to Tea Tree Gully. Free quotes.',
+        title: 'Electrician St Agnes | Switchboards, Downlights, Repairs',
+        description: 'St Agnes electrician for switchboard upgrades, safety switches, downlights, ceiling fans, shed power and emergency callouts. Free quotes.',
         intro:
             'JPD Complete Electrical services St Agnes for switchboard upgrades, safety switch installs and testing, downlights and lighting, ceiling fans, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -689,9 +680,8 @@ export const suburbs: Suburb[] = [
         population: 3792,
         council: 'City of Tea Tree Gully',
         hook: 'Foothills Suburb, Local Electrician',
-        title: 'Electrician Fairview Park | Switchboards, Lighting, EV Chargers',
-        description:
-            'Licensed Fairview Park electrician for switchboard upgrades, safety switches, downlights and outdoor lighting, EV chargers, oven installs and emergency callouts. Local, free quotes.',
+        title: 'Electrician Fairview Park | Switchboards, Lighting, EV',
+        description: 'Fairview Park electrician for switchboard upgrades, outdoor and step lighting, EV chargers and renovation wiring. Local, free quotes.',
         intro:
             'JPD Complete Electrical services Fairview Park for switchboard upgrades, safety switch testing, downlights and outdoor lighting, EV charger installs, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -761,9 +751,8 @@ export const suburbs: Suburb[] = [
         population: 3716,
         council: 'City of Tea Tree Gully',
         hook: 'Older Homes, Honest Pricing',
-        title: 'Electrician Holden Hill | Switchboards, Safety Switches, Repairs',
-        description:
-            'Licensed Holden Hill electrician for switchboard upgrades, safety switches, rental compliance, downlights, oven installs, fault finding and emergency callouts. Local, free quotes.',
+        title: 'Electrician Holden Hill | Switchboards & Safety Switches',
+        description: 'Holden Hill electrician for switchboard upgrades, safety switches, rental compliance, fault finding and emergency callouts. Free quotes.',
         intro:
             'JPD Complete Electrical services Holden Hill for switchboard upgrades, safety switch installs and testing, rental compliance, downlights and lighting, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -832,9 +821,8 @@ export const suburbs: Suburb[] = [
         population: 3674,
         council: 'City of Salisbury and City of Tea Tree Gully',
         hook: 'Elevated Blocks, Newer Homes, Local Service',
-        title: 'Electrician Gulfview Heights | EV Chargers, Downlights, Boards',
-        description:
-            'Licensed Gulfview Heights electrician for EV charger installs, downlights and feature lighting, switchboard upgrades, safety switch testing and emergency callouts. Local, free quotes.',
+        title: 'Electrician Gulfview Heights | EV Chargers, Downlights',
+        description: 'Gulfview Heights electrician for EV charger installs, downlights, outdoor lighting and switchboard upgrades. Owner-operated. Free quotes.',
         intro:
             'JPD Complete Electrical services Gulfview Heights for EV charger installs, downlights and feature lighting, switchboard upgrades, safety switch testing, oven and cooktop connections and emergency callouts.',
         local: [
@@ -903,9 +891,8 @@ export const suburbs: Suburb[] = [
         population: 3499,
         council: 'City of Tea Tree Gully',
         hook: 'Old Village, Old Wiring, Careful Work',
-        title: 'Electrician Tea Tree Gully | Older Homes, Switchboards, Sheds',
-        description:
-            'Licensed Tea Tree Gully electrician for switchboard upgrades, older-home wiring, shed and submain work, downlights, safety switches and emergency callouts. Local, free quotes.',
+        title: 'Electrician Tea Tree Gully | Older Homes, Switchboards',
+        description: 'Tea Tree Gully electrician for switchboard upgrades, older and heritage home wiring, shed submains and safety switches. Free quotes.',
         intro:
             'JPD Complete Electrical services Tea Tree Gully for switchboard upgrades, wiring work on older and heritage homes, shed and submain installs, downlights, safety switch testing and emergency callouts.',
         local: [
@@ -976,8 +963,7 @@ export const suburbs: Suburb[] = [
         council: 'City of Tea Tree Gully',
         hook: 'Quiet 1970s Suburb, Local Electrician',
         title: 'Electrician Banksia Park | Switchboards, Downlights, Fans',
-        description:
-            'Licensed Banksia Park electrician for switchboard upgrades, safety switches, downlights, ceiling fans, oven installs, fault finding and emergency callouts. Local to Tea Tree Gully. Free quotes.',
+        description: 'Banksia Park electrician for switchboard upgrades, shed and backyard power, ceiling fans, downlights and emergency callouts. Free quotes.',
         intro:
             'JPD Complete Electrical services Banksia Park for switchboard upgrades, safety switch installs and testing, downlights, ceiling fans, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
@@ -1047,8 +1033,7 @@ export const suburbs: Suburb[] = [
         council: 'City of Tea Tree Gully',
         hook: 'Small Suburb, Same Local Sparky',
         title: 'Electrician Vista SA | Switchboards, Sheds, Safety Switches',
-        description:
-            'Licensed Vista electrician for switchboard upgrades, shed and submain work, safety switches, downlights, oven installs and emergency callouts. Local to Adelaide\'s north-east. Free quotes.',
+        description: 'Vista SA electrician for switchboard upgrades, shed and submain work, safety switches, downlights and emergency callouts. Small jobs welcome.',
         intro:
             'JPD Complete Electrical services Vista for switchboard upgrades, shed and submain work, safety switch installs and testing, downlights, oven and cooktop connections and emergency callouts.',
         local: [

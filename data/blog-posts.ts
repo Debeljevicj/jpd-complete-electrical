@@ -4,6 +4,10 @@ import { upgradePosts } from './blog-guides-upgrades';
 export interface BlogPost {
     slug: string;
     title: string;
+    /** Overrides the <title> tag where `title` plus the " | JPD" suffix exceeds ~60 chars. */
+    seoTitle?: string;
+    /** Overrides the meta description where the excerpt runs past ~160 chars. */
+    metaDescription?: string;
     excerpt: string;
     date: string;
     author: string;
@@ -22,11 +26,12 @@ const legacyPosts: BlogPost[] = [
     {
         slug: 'rcd-testing-thermal-imaging-adelaide',
         title: 'RCD Testing & Thermal Imaging: The Maintenance Most Properties Skip',
+        seoTitle: 'RCD Testing & Thermal Imaging Adelaide | JPD',
         excerpt: 'Safety switches and thermal scans catch two very different kinds of electrical fault. Here\'s what each one actually finds, and how often you need them.',
         date: '2026-07-29',
         author: 'Justin',
         category: 'Maintenance',
-        image: '/images/switchboard_fault_finding.jpg',
+        image: '/images/switchboard_fault_finding.webp',
         content: `
             <h3>Why This Matters to You</h3>
             <p>If a connection inside your switchboard is quietly overheating, you won't know about it until it trips, fails, or starts a fire. If one of your safety switches has stopped working properly, you won't find out until someone actually needs it to save them from a shock. Both of these are cheap, fast checks. Neither one shows up on a walk-through, and neither gets fixed by waiting and hoping.</p>
@@ -61,7 +66,7 @@ const legacyPosts: BlogPost[] = [
         date: '2023-10-15',
         author: 'Justin',
         category: 'Safety',
-        image: '/images/residential_switchboard_upgrade_2.jpg',
+        image: '/images/residential_switchboard_upgrade_2.webp',
         content: `
             <p>Electrical safety is paramount for every household. As we head into the warmer months in Adelaide, the demand on our electrical systems increases. Here are five essential tips to keep your home safe.</p>
             
@@ -94,7 +99,7 @@ const legacyPosts: BlogPost[] = [
         date: '2023-11-02',
         author: 'Justin',
         category: 'Efficiency',
-        image: '/images/bedroom_led_downlights.jpg',
+        image: '/images/bedroom_led_downlights.webp',
         content: `
             <p>Lighting accounts for a significant portion of your electricity bill. If you're still using old halogen downlights, you're literally burning money. Here's why upgrading to LED is a smart investment.</p>
 
@@ -124,7 +129,7 @@ const legacyPosts: BlogPost[] = [
         date: '2023-11-20',
         author: 'Justin',
         category: 'Maintenance',
-        image: '/images/residential_switchboard_upgrade_1.jpg',
+        image: '/images/residential_switchboard_upgrade_1.webp',
         content: `
             <p>Your switchboard is the heart of your home's electrical system. If it's outdated, it can't handle the load of modern appliances like air conditioners, induction cooktops, and EV chargers.</p>
 

@@ -8,8 +8,7 @@ export const projectServices: Service[] = [
         icon: 'oven',
         blurb: 'Ovens, cooktops and rangehoods connected properly, including the dedicated circuit induction usually needs.',
         title: 'Oven & Cooktop Installation Adelaide | Electrician | JPD',
-        description:
-            'Oven, cooktop and rangehood installation across Adelaide\'s north-east. Hardwired connections, dedicated circuits for induction, and gas-to-electric conversions. Licensed electrician, free quotes.',
+        description: 'Oven, cooktop and rangehood installation in Adelaide. Hardwired connections and the dedicated circuit induction needs. Licensed electrician.',
         h1: 'Oven, Cooktop and Rangehood Installation',
         intro:
             'We connect ovens, cooktops and rangehoods, including hardwired installs and the dedicated circuit an induction cooktop almost always needs. Tell us what you have bought before delivery day and we will tell you what it actually needs.',
@@ -99,8 +98,7 @@ export const projectServices: Service[] = [
         icon: 'renovation',
         blurb: 'Kitchens, bathrooms, extensions and whole-home renovations. Rough-in, fit-off, and decisions made before the plaster.',
         title: 'Renovation Electrician Adelaide | Kitchens, Extensions | JPD',
-        description:
-            'Renovation electrician for Adelaide\'s north-east. Kitchen, bathroom and extension rewiring, rough-in and fit-off, switchboard upgrades and lighting design. For homeowners and builders.',
+        description: 'Renovation electrician for Adelaide. Kitchen, bathroom and extension wiring, rough-in and fit-off, switchboard upgrades. Homeowners and builders.',
         h1: 'Renovation Electrician, Adelaide',
         intro:
             'Kitchens, bathrooms, extensions and whole-home renovations. We handle the rough-in before the plaster goes up and the fit-off once the surfaces are finished, and we make the decisions that matter while they are still cheap to make.',
@@ -189,8 +187,7 @@ export const projectServices: Service[] = [
         icon: 'builder',
         blurb: 'A subcontractor who turns up on the day, does the rough-in clean, and does not hold up your next trade.',
         title: 'Electrician for Builders Adelaide | Reliable Subcontractor',
-        description:
-            'Electrical subcontracting for Adelaide builders and renovators. New builds, extensions, renovations and fitouts. On-site when scheduled, clean rough-ins, compliance paperwork on time.',
+        description: 'Electrical subcontracting for Adelaide builders. New builds, extensions, renovations and fitouts. On site when scheduled, paperwork back on time.',
         h1: 'Electrical Subcontracting for Builders',
         intro:
             'If you build or renovate for a living, you do not need a sales pitch. You need a sparky who turns up on the day he said, does a rough-in that the plasterer is not cursing, and gets the paperwork back to you before you have to chase it.',
@@ -287,8 +284,7 @@ export const projectServices: Service[] = [
         icon: 'thermal',
         blurb: 'Thermal scans of switchboards and circuits under load, finding hot connections before they fail or ignite.',
         title: 'Thermal Imaging Electrical Inspection Adelaide | JPD',
-        description:
-            'Thermal imaging inspections of switchboards and electrical installations across Adelaide. Finds overheating connections and overloaded circuits under live load, with a photo report.',
+        description: 'Thermal imaging inspections of switchboards across Adelaide. Finds overheating connections under live load, with a photo report. No shutdown.',
         h1: 'Thermal Imaging Electrical Inspections',
         intro:
             'A loose or degraded connection inside a switchboard heats up under load long before it fails. A thermal scan finds it while it is still a repair rather than a fire, and it is done live with nothing shut down.',
@@ -379,8 +375,7 @@ export const projectServices: Service[] = [
         icon: 'testtag',
         blurb: 'Portable appliance testing on a schedule, with a register you can actually produce when someone asks.',
         title: 'Test and Tag Adelaide | Portable Appliance Testing | JPD',
-        description:
-            'Test and tag services across Adelaide\'s north-east. Portable appliance testing for offices, workshops, clinics, retail and construction, with a full register and scheduled retesting.',
+        description: 'Test and tag across Adelaide. Portable appliance testing for offices, workshops, clinics and construction, with a register and retest schedule.',
         h1: 'Test and Tag, Adelaide',
         intro:
             'Portable appliance testing for offices, workshops, clinics, retail and construction sites. Tested, tagged, and recorded in a register you can produce when an auditor, an insurer or a client asks for it.',

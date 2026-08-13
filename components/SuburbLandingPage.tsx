@@ -227,7 +227,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                 <div className="container-custom">
                     <div className="relative h-[260px] md:h-[380px] rounded-2xl overflow-hidden shadow-lg">
                         <Image
-                            src="/images/switchboard_fault_finding.jpg"
+                            src="/images/switchboard_fault_finding.webp"
                             alt={`Switchboard upgrade work by JPD Complete Electrical near ${name}, Adelaide`}
                             fill
                             sizes="100vw"

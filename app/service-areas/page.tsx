@@ -12,9 +12,9 @@ const PHONE = '0435 006 420';
 const PHONE_HREF = 'tel:0435006420';
 
 export const metadata: Metadata = {
-    title: 'Electrician Near Me | Adelaide North-East Service Areas | JPD',
+    title: 'Electrician Near Me | Adelaide Service Areas | JPD',
     description:
-        'Looking for an electrician near you in Adelaide\'s north-east? JPD Complete Electrical is based in Wynn Vale and covers Golden Grove, Greenwith, Hope Valley, Modbury, Highbury, Tea Tree Gully and more.',
+        'Looking for an electrician near you? JPD Complete Electrical services all of Adelaide from a Wynn Vale base. Switchboards, EV chargers, emergency work.',
     alternates: { canonical: '/service-areas' },
     openGraph: {
         title: 'Electrician Near Me | Adelaide North-East Service Areas',
