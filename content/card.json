@@ -1,0 +1,50 @@
+{
+  "_comment": "Single source of truth for /card and the generated vCard. The URL https://jpdcompleteelectrical.com.au/card is printed on physical business cards and must never change. Everything in this file can be edited freely - run `npm run build` (or `node scripts/generate-vcard.mjs`) afterwards to regenerate the .vcf.",
+
+  "contact": {
+    "displayName": "Justin (Electrician)",
+    "org": "JPD Complete Electrical",
+    "title": "Electrician | Owner",
+    "phoneDisplay": "0435 006 420",
+    "phoneE164": "+61435006420",
+    "email": "justin@jpdcompleteelectrical.com.au",
+    "website": "https://jpdcompleteelectrical.com.au"
+  },
+
+  "vcard": {
+    "path": "/justin-jpd-electrical.vcf",
+    "downloadAs": "Justin-JPD-Electrical.vcf"
+  },
+
+  "reviewUrl": "https://g.page/r/CW2LCGVNt7qSEAI/review",
+
+  "meta": {
+    "title": "Justin's Digital Card | JPD Complete Electrical",
+    "description": "Save Justin's contact, leave a review, or call now for an electrical emergency."
+  },
+
+  "intro": {
+    "portrait": "/images/justin_portrait_new.jpg",
+    "portraitAlt": "Justin - JPD Complete Electrical",
+    "heading": "Justin — JPD Complete Electrical",
+    "tagline": "Adelaide's reliable local electrician"
+  },
+
+  "actions": {
+    "save": {
+      "heading": "Save My Number",
+      "body": "Add me to your contacts so you've got me when you need me.",
+      "cta": "Tap to save"
+    },
+    "review": {
+      "heading": "Happy With the Service?",
+      "body": "A 5-star review takes 30 seconds and means the world to a small local business.",
+      "cta": "Tap to leave a review"
+    },
+    "call": {
+      "heading": "Emergency? Call Now",
+      "body": "Something that can't wait? Straight through to me on {phone}.",
+      "cta": "Tap to call"
+    }
+  }
+}

@@ -4,9 +4,11 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
+        "prebuild": "node scripts/generate-vcard.mjs",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "test": "node --test test/*.test.mjs"
     },
     "dependencies": {
         "framer-motion": "^11",
