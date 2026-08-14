@@ -1,5 +1,6 @@
 import { pricingPosts } from './blog-guides-pricing';
 import { upgradePosts } from './blog-guides-upgrades';
+import { localPosts } from './blog-guides-local';
 
 export interface BlogPost {
     slug: string;
@@ -158,6 +159,9 @@ const legacyPosts: BlogPost[] = [
  * Newest first. The guide posts live in their own modules so this file does not
  * grow past the point where it is painful to edit a single post.
  */
-export const blogPosts: BlogPost[] = [...pricingPosts, ...upgradePosts, ...legacyPosts].sort(
-    (a, b) => Date.parse(b.date) - Date.parse(a.date)
-);
+export const blogPosts: BlogPost[] = [
+    ...localPosts,
+    ...pricingPosts,
+    ...upgradePosts,
+    ...legacyPosts,
+].sort((a, b) => Date.parse(b.date) - Date.parse(a.date));

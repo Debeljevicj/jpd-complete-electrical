@@ -44,6 +44,8 @@ export async function generateStaticParams() {
     }));
 }
 
+const SITE = 'https://jpdcompleteelectrical.com.au';
+
 export default function BlogPostPage({ params }: Props) {
     const post = blogPosts.find((p) => p.slug === params.slug);
 
@@ -51,8 +53,48 @@ export default function BlogPostPage({ params }: Props) {
         notFound();
     }
 
+    // Article + a real author entity. Google weights first-hand expertise for
+    // advice content, and an anonymous post from an unnamed site is the weakest
+    // possible version of that. Justin is a licensed electrician writing about
+    // his own trade, and the markup should say so.
+    const articleSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        '@id': `${SITE}/blog/${post.slug}/#article`,
+        headline: post.title,
+        description: post.metaDescription ?? post.excerpt,
+        image: `${SITE}${post.image}`,
+        datePublished: post.date,
+        dateModified: post.date,
+        inLanguage: 'en-AU',
+        mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/blog/${post.slug}/` },
+        author: {
+            '@type': 'Person',
+            name: 'Justin Debeljevic',
+            jobTitle: 'Licensed Electrician',
+            url: `${SITE}/about/`,
+            worksFor: { '@id': `${SITE}/#business` },
+        },
+        publisher: { '@id': `${SITE}/#business` },
+        articleSection: post.category,
+    };
+
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE}/blog/` },
+            { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE}/blog/${post.slug}/` },
+        ],
+    };
+
     return (
         <article className="bg-white min-h-screen pb-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }}
+            />
             {/* Hero / Header */}
             <div className="bg-navy text-white py-16 relative">
                 <div className="container-custom relative z-10">
