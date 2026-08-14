@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SectionHeading from '@/components/SectionHeading';
 import SuccessModal from '@/components/SuccessModal';
+import { trackEvent } from '@/components/Analytics';
 import { Phone, Mail, MapPin, Clock, Send, Loader2, AlertCircle } from 'lucide-react';
 
 export default function ContactContent() {
@@ -38,6 +39,12 @@ export default function ContactContent() {
             const result = await response.json();
 
             if (result.success) {
+                // The other half of the conversion picture. Phone clicks are tracked
+                // by the delegated listener in Analytics; this is the form side.
+                trackEvent('quote_request_submitted', {
+                    service: formData.service || 'not specified',
+                    urgency: formData.urgency || 'not specified',
+                });
                 setSubmittedUrgency(formData.urgency);
                 setStatus("success");
                 setFormData({

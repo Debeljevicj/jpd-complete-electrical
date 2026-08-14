@@ -8,6 +8,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import StickyNav from "@/components/StickyNav";
+import Analytics from "@/components/Analytics";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -94,6 +95,7 @@ export default function RootLayout({
                 <Footer />
                 <ScrollToTop />
                 <StickyMobileCTA />
+                <Analytics />
             </body>
         </html>
     );
