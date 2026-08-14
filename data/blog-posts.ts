@@ -1,6 +1,7 @@
 import { pricingPosts } from './blog-guides-pricing';
 import { upgradePosts } from './blog-guides-upgrades';
 import { localPosts } from './blog-guides-local';
+import { jobReports } from './job-reports';
 
 export interface BlogPost {
     slug: string;
@@ -14,6 +15,12 @@ export interface BlogPost {
     author: string;
     content: string;
     image: string;
+    /** Extra job photos, shown under the article body. Job reports use this; guides do not. */
+    gallery?: {
+        src: string;
+        alt: string;
+        caption?: string;
+    }[];
     category: string;
     cta: {
         heading: string;
@@ -160,6 +167,7 @@ const legacyPosts: BlogPost[] = [
  * grow past the point where it is painful to edit a single post.
  */
 export const blogPosts: BlogPost[] = [
+    ...jobReports,
     ...localPosts,
     ...pricingPosts,
     ...upgradePosts,

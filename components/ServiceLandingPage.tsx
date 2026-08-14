@@ -3,8 +3,10 @@ import { Phone, Check, ArrowRight, Receipt } from 'lucide-react';
 import TrustBadges from './TrustBadges';
 import Accordion from './Accordion';
 import ServiceIcon from './ServiceIcon';
+import RecentJobs from './RecentJobs';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
+import { jobsForService } from '@/data/job-reports';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -236,6 +238,15 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                     </div>
                 </section>
             )}
+
+            {/* Real jobs, where one is written up for this service. Sits immediately
+                before the CTA so the proof is the last thing read before the ask. */}
+            <RecentJobs
+                jobs={jobsForService(slug)}
+                angleFor={slug}
+                heading="Recent Work"
+                intro={`Real ${name} jobs from around Adelaide, with photos and what was actually involved.`}
+            />
 
             {/* CTA */}
             <section className="section-padding bg-navy text-white">

@@ -4,8 +4,11 @@ import { Phone, CheckCircle2, MapPin, Clock, ShieldCheck, Wrench } from 'lucide-
 import TrustBadges from './TrustBadges';
 import Accordion from './Accordion';
 import ServiceIcon from './ServiceIcon';
+import RecentJobs from './RecentJobs';
+import InlineCTA from './InlineCTA';
 import { serviceIndex } from '@/data/services';
 import { suburbSlugByName, type Suburb } from '@/data/suburbs';
+import { jobsForSuburb } from '@/data/job-reports';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -156,6 +159,19 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                 </div>
             </section>
 
+            {/*
+              * First mid-page CTA. Measured at 375px, this page runs ~12,700px and had a
+              * 7,300px stretch — about nine phone screens — between the hero buttons and
+              * the next chance to act. This lands right after the local-relevance copy,
+              * which is the earliest point a reader searching "electrician {suburb}" has
+              * what they came for. Gold so it breaks the run of white sections.
+              */}
+            <InlineCTA
+                tone="gold"
+                heading={`Need an electrician in ${name}?`}
+                body={`We are based in Wynn Vale, so ${name} is a short drive rather than a trip across town. Free quotes, fixed prices.`}
+            />
+
             {/* Services */}
             <section className="section-padding bg-neutral-offwhite">
                 <div className="container-custom">
@@ -191,6 +207,14 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                     </div>
                 </div>
             </section>
+
+            {/* Second mid-page CTA, after the fourteen service cards. On mobile that grid
+                alone is over four screens of scrolling, so a reader who found their job in
+                it should not have to keep going to act on it. */}
+            <InlineCTA
+                heading="Found the job you need doing?"
+                body="Tell us what is going on and we will give you a straight answer on what it involves and what it costs."
+            />
 
             {/* What we see locally */}
             <section className="section-padding bg-white">
@@ -341,6 +365,13 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                     </Link>
                 </div>
             </section>
+
+            {/* Real jobs done in this suburb. Renders nothing until one is written up. */}
+            <RecentJobs
+                jobs={jobsForSuburb(slug)}
+                heading={`Recent Work in ${name}`}
+                intro={`Jobs we have actually done in ${name}, with photos and what was involved.`}
+            />
 
             {/* CTA */}
             <section className="section-padding bg-navy text-white">

@@ -2,8 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog-posts';
+import { jobReports } from '@/data/job-reports';
+import { serviceBySlug } from '@/data/services';
+import { suburbBySlug } from '@/data/suburbs';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
+import InlineCTA from '@/components/InlineCTA';
 
 interface Props {
     params: {
@@ -46,12 +50,39 @@ export async function generateStaticParams() {
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
+const PROSE_CLASSES =
+    'prose prose-lg max-w-none prose-headings:text-navy prose-headings:font-bold prose-p:text-neutral-slate prose-a:text-gold hover:prose-a:text-navy';
+
+/**
+ * Splits article HTML after the Nth <h3> so a CTA can sit partway through.
+ *
+ * Posts are stored as one HTML string, so there is no component boundary to slot
+ * into. Splitting on the lookahead keeps each heading attached to the section it
+ * introduces. Short posts are left whole: breaking a three-heading article in
+ * half puts the CTA almost at the end anyway, where one already exists.
+ */
+function splitArticle(html: string, afterHeadings = 2): { before: string; after: string } {
+    const parts = html.split(/(?=<h3)/);
+    // parts[0] is whatever precedes the first heading, so N headings needs N+1 slices.
+    if (parts.length < afterHeadings + 3) return { before: html, after: '' };
+    return {
+        before: parts.slice(0, afterHeadings + 1).join(''),
+        after: parts.slice(afterHeadings + 1).join(''),
+    };
+}
+
 export default function BlogPostPage({ params }: Props) {
     const post = blogPosts.find((p) => p.slug === params.slug);
 
     if (!post) {
         notFound();
     }
+
+    // Job reports carry the service and suburb slugs they belong to, so the
+    // "related" block below can point at the actual pages this job supports
+    // instead of the one hardcoded maintenance link every post used to share.
+    const job = jobReports.find((j) => j.slug === params.slug);
+    const articleParts = splitArticle(post.content);
 
     // Article + a real author entity. Google weights first-hand expertise for
     // advice content, and an anonymous post from an unnamed site is the weakest
@@ -63,7 +94,7 @@ export default function BlogPostPage({ params }: Props) {
         '@id': `${SITE}/blog/${post.slug}/#article`,
         headline: post.title,
         description: post.metaDescription ?? post.excerpt,
-        image: `${SITE}${post.image}`,
+        image: [post.image, ...(post.gallery ?? []).map((g) => g.src)].map((src) => `${SITE}${src}`),
         datePublished: post.date,
         dateModified: post.date,
         inLanguage: 'en-AU',
@@ -132,19 +163,102 @@ export default function BlogPostPage({ params }: Props) {
                     />
                 </div>
 
-                {/* Content */}
+                {/* Content, split so a CTA sits partway through rather than only at the
+                    very bottom. These articles run long and most readers never reach the
+                    end, so the only conversion point used to be one almost nobody saw. */}
                 <div className="bg-white">
                     <div
-                        className="prose prose-lg max-w-none prose-headings:text-navy prose-headings:font-bold prose-p:text-neutral-slate prose-a:text-gold hover:prose-a:text-navy"
-                        dangerouslySetInnerHTML={{ __html: post.content }}
+                        className={PROSE_CLASSES}
+                        dangerouslySetInnerHTML={{ __html: articleParts.before }}
                     />
+
+                    {articleParts.after && (
+                        <InlineCTA
+                            boxed
+                            heading={post.cta.heading}
+                            body={post.cta.description}
+                            quoteHref={post.cta.href}
+                            quoteLabel={post.cta.linkText}
+                        />
+                    )}
+
+                    {articleParts.after && (
+                        <div
+                            className={PROSE_CLASSES}
+                            dangerouslySetInnerHTML={{ __html: articleParts.after }}
+                        />
+                    )}
                 </div>
 
-                {/* Related service */}
-                <div className="mt-10 pt-6 border-t border-gray-100">
-                    <p className="text-neutral-slate">
-                        Related service: <Link href="/services#maintenance" className="text-navy font-bold hover:text-gold transition-colors">Electrical Maintenance &amp; Safety</Link>
-                    </p>
+                {/* Job photos */}
+                {post.gallery && post.gallery.length > 0 && (
+                    <div className="mt-12 grid gap-6 sm:grid-cols-2">
+                        {post.gallery.map((photo) => (
+                            <figure key={photo.src}>
+                                <div className="relative h-[360px] w-full rounded-xl overflow-hidden shadow-md">
+                                    <Image
+                                        src={photo.src}
+                                        alt={photo.alt}
+                                        fill
+                                        sizes="(max-width: 640px) 100vw, 50vw"
+                                        className="object-cover"
+                                    />
+                                </div>
+                                {photo.caption && (
+                                    <figcaption className="text-sm text-neutral-slate mt-3 leading-relaxed">
+                                        {photo.caption}
+                                    </figcaption>
+                                )}
+                            </figure>
+                        ))}
+                    </div>
+                )}
+
+                {/* Related pages */}
+                <div className="mt-10 pt-6 border-t border-gray-100 space-y-2">
+                    {job ? (
+                        <>
+                            <p className="text-neutral-slate">
+                                Services on this job:{' '}
+                                {job.services.map((serviceSlug, i) => {
+                                    const service = serviceBySlug[serviceSlug];
+                                    if (!service) return null;
+                                    return (
+                                        <span key={serviceSlug}>
+                                            {i > 0 && ', '}
+                                            <Link
+                                                href={`/${serviceSlug}`}
+                                                className="text-navy font-bold hover:text-gold transition-colors"
+                                            >
+                                                {service.name}
+                                            </Link>
+                                        </span>
+                                    );
+                                })}
+                            </p>
+                            {suburbBySlug[job.suburb] && (
+                                <p className="text-neutral-slate">
+                                    Suburb:{' '}
+                                    <Link
+                                        href={`/${job.suburb}`}
+                                        className="text-navy font-bold hover:text-gold transition-colors"
+                                    >
+                                        Electrician in {suburbBySlug[job.suburb].name}
+                                    </Link>
+                                </p>
+                            )}
+                        </>
+                    ) : (
+                        <p className="text-neutral-slate">
+                            Related service:{' '}
+                            <Link
+                                href="/services#maintenance"
+                                className="text-navy font-bold hover:text-gold transition-colors"
+                            >
+                                Electrical Maintenance &amp; Safety
+                            </Link>
+                        </p>
+                    )}
                 </div>
 
                 {/* CTA */}
