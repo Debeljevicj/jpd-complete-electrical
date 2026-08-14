@@ -12,6 +12,6 @@
  * env var override exists so a staging build can point somewhere else without a
  * code change.
  */
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-W76JZ5EJKL';
 
 export const analyticsEnabled = GA_MEASUREMENT_ID.length > 0;
