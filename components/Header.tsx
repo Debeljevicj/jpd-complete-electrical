@@ -34,16 +34,26 @@ export default function Header() {
             className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
                 }`}
         >
-            <div className="container-custom">
-                {/* Trust badges sit in their own right-aligned row so the logo and the nav
-                    can share a single vertically-centred row below. Previously the logo was
-                    centred against the badges-plus-nav stack, which left it sitting about
-                    20px above the nav it visually pairs with. */}
-                <div className="hidden lg:flex justify-end pt-3">
-                    <TrustBadges />
+            {/* Slim utility strip. The badges used to float in an untinted row whose
+                left half was empty, which read as three loose pills pinned to the
+                corner. Giving them a tinted band with the social icons opposite
+                anchors them and puts the previously dead left side to work. */}
+            <div className="hidden lg:block bg-navy/[0.035] border-b border-navy/[0.07]">
+                <div className="container-custom flex items-center justify-between py-1.5">
+                    <div className="flex items-center gap-3">
+                        <a href="https://www.facebook.com/profile.php?id=61567696480436" target="_blank" rel="noopener noreferrer" className="text-navy/60 hover:text-gold transition-colors" aria-label="Facebook">
+                            <Facebook className="w-4 h-4" />
+                        </a>
+                        <a href="https://www.instagram.com/jpdcompleteelectrical/" target="_blank" rel="noopener noreferrer" className="text-navy/60 hover:text-gold transition-colors" aria-label="Instagram">
+                            <Instagram className="w-4 h-4" />
+                        </a>
+                    </div>
+                    <TrustBadges variant="plain" />
                 </div>
+            </div>
 
-                <div className="flex items-center justify-between py-3 md:py-4 lg:pt-2">
+            <div className="container-custom">
+                <div className="flex items-center justify-between py-3">
                     {/* Logo box matches the artwork's 5.55:1 aspect, so there is no dead
                         letterbox space above and below to throw the alignment out. */}
                     <Link href="/" className="relative h-9 w-48 md:h-10 md:w-56 shrink-0 lg:mr-8 mx-auto lg:mx-0">
@@ -77,15 +87,7 @@ export default function Header() {
                                     );
                                 })}
                             </nav>
-                            <div className="flex items-center gap-4 pl-4 border-l border-gray-200">
-                                <div className="flex items-center gap-2 mr-2">
-                                    <a href="https://www.facebook.com/profile.php?id=61567696480436" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-gold transition-colors">
-                                        <Facebook className="w-5 h-5" />
-                                    </a>
-                                    <a href="https://www.instagram.com/jpdcompleteelectrical/" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-gold transition-colors">
-                                        <Instagram className="w-5 h-5" />
-                                    </a>
-                                </div>
+                            <div className="flex items-center gap-4 pl-6 border-l border-gray-200">
                                 <a href="tel:0435006420" className="flex items-center gap-2 text-navy hover:text-gold transition-colors whitespace-nowrap">
                                     <Phone className="w-5 h-5" />
                                     <span className="font-semibold">0435 006 420</span>
