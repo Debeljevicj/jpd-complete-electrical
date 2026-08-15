@@ -140,10 +140,28 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             {/* Local intro */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
-                    <div className="max-w-3xl">
+                    <div className="max-w-3xl flow-root">
                         <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 gold-underline">
                             Your Local {name} Electrician
                         </h2>
+                        {/*
+                          * Square, and floated so the copy wraps around it from sm up.
+                          * It previously sat in a full-width band roughly 3.2:1, which
+                          * cropped this 787x1400 portrait down to a shoulder and a
+                          * forearm. Below sm it stacks full width instead, because a
+                          * 288px float in a 375px viewport leaves a two-word column.
+                          */}
+                        <div className="relative w-full sm:w-64 md:w-72 aspect-square rounded-2xl overflow-hidden shadow-lg mb-6 sm:float-right sm:ml-8 sm:mb-4">
+                            <Image
+                                src="/images/switchboard_fault_finding.webp"
+                                alt={`Switchboard work by JPD Complete Electrical near ${name}, Adelaide`}
+                                fill
+                                sizes="(max-width: 640px) 100vw, 288px"
+                                loading="lazy"
+                                className="object-cover"
+                                style={{ objectPosition: 'center 35%' }}
+                            />
+                        </div>
                         {local.map((paragraph) => (
                             <p key={paragraph.slice(0, 40)} className="text-neutral-slate text-lg leading-relaxed mb-4">
                                 {paragraph}
@@ -242,23 +260,6 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Featured work photo */}
-            <section className="bg-white pb-12 md:pb-16">
-                <div className="container-custom">
-                    <div className="relative h-[260px] md:h-[380px] rounded-2xl overflow-hidden shadow-lg">
-                        <Image
-                            src="/images/switchboard_fault_finding.webp"
-                            alt={`Switchboard upgrade work by JPD Complete Electrical near ${name}, Adelaide`}
-                            fill
-                            sizes="100vw"
-                            loading="lazy"
-                            className="object-cover"
-                            style={{ objectPosition: 'center 20%' }}
-                        />
                     </div>
                 </div>
             </section>

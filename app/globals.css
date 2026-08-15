@@ -58,6 +58,64 @@
   .card {
     @apply bg-white p-5 md:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100;
   }
+
+  /*
+   * Blog article body.
+   *
+   * These pages carried `prose prose-lg prose-headings:...` classes, but
+   * @tailwindcss/typography was never installed and `plugins` is empty, so every
+   * one of those classes emitted nothing. Headings rendered at body size and
+   * weight with no space between paragraphs, which made a 900 word article a
+   * single undifferentiated block.
+   *
+   * Styled explicitly against the site's own tokens rather than by adding the
+   * plugin, so article copy matches the rest of the site instead of inheriting
+   * Typography's separate type scale.
+   */
+  .article-body h3 {
+    @apply text-xl md:text-2xl font-bold text-navy leading-snug mt-10 mb-3;
+  }
+
+  .article-body h3:first-child {
+    @apply mt-0;
+  }
+
+  .article-body p {
+    @apply text-neutral-slate text-lg leading-relaxed mb-5;
+  }
+
+  .article-body ul {
+    @apply list-disc pl-6 mb-5 space-y-2;
+  }
+
+  .article-body ol {
+    @apply list-decimal pl-6 mb-5 space-y-2;
+  }
+
+  .article-body li {
+    @apply text-neutral-slate text-lg leading-relaxed;
+  }
+
+  .article-body li::marker {
+    @apply text-gold;
+  }
+
+  /* Several posts open a paragraph with a bold lead-in ("Access.", "Is this a
+     fixed price?") that acts as a sub-heading. Navy gives those the weight the
+     structure implies without promoting them to real headings. */
+  .article-body strong {
+    @apply font-bold text-navy;
+  }
+
+  /* Navy text with a gold underline rather than gold text. Gold on white is
+     about 2.2:1, which is unreadable as body-size link text. */
+  .article-body a {
+    @apply text-navy font-semibold underline decoration-gold decoration-2 underline-offset-2 hover:text-gold transition-colors;
+  }
+
+  .article-body > :last-child {
+    @apply mb-0;
+  }
 }
 
 @layer utilities {

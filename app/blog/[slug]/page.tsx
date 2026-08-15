@@ -50,8 +50,7 @@ export async function generateStaticParams() {
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
-const PROSE_CLASSES =
-    'prose prose-lg max-w-none prose-headings:text-navy prose-headings:font-bold prose-p:text-neutral-slate prose-a:text-gold hover:prose-a:text-navy';
+const PROSE_CLASSES = 'article-body';
 
 /**
  * Splits article HTML after the Nth <h3> so a CTA can sit partway through.
