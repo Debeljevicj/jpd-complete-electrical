@@ -15,8 +15,14 @@ import type { BlogPost } from './blog-posts';
 export interface JobReport extends BlogPost {
     /** Service page slugs this job appears on. Primary first. */
     services: string[];
-    /** Suburb page slug this job appears on. */
-    suburb: string;
+    /**
+     * Suburb page slug this job appears on.
+     *
+     * Optional, because we work outside the fifteen suburbs that have pages. A job
+     * with no suburb page still earns its article and its service links, it just
+     * has no suburb page to surface on.
+     */
+    suburb?: string;
     /**
      * Per-service framing for the card, keyed by service slug.
      *
@@ -31,6 +37,201 @@ export interface JobReport extends BlogPost {
 }
 
 export const jobReports: JobReport[] = [
+    {
+        slug: 'shed-electrical-fitout-mawson-lakes-golf-course',
+        title: 'Shed Electrical Fitout at Mawson Lakes Golf Course',
+        metaDescription:
+            'A full electrical fitout of a machinery shed at Mawson Lakes Golf Course: new board, LED lighting throughout, wall fans and a data connection run underground.',
+        excerpt:
+            'New board, LED lighting throughout, wall fans and a data connection trenched out to the shed. A working shed is a different job to a domestic one.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/shed_fitout_mawson_lakes_golf_course.webp',
+        gallery: [
+            {
+                src: '/images/shed_switchboard_mawson_lakes_golf_course.webp',
+                alt: 'Switchboard build for a machinery shed at Mawson Lakes Golf Course, cables dressed and terminated',
+                caption:
+                    'Individually protected circuits, dressed and labelled. On a site where something failing stops the day, being able to see what is what matters.',
+            },
+            {
+                src: '/images/shed_workbench_lighting_mawson_lakes.webp',
+                alt: 'LED batten lighting over a workbench in a golf course machinery shed',
+                caption: 'Light over the bench, not just over the floor. Different problem, different fitting.',
+            },
+        ],
+        services: ['downlight-installation-adelaide', 'powerpoint-installation-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A domestic shed holds a mower and some paint tins. A working shed on a commercial site holds the equipment the whole operation depends on, gets used from first light, and has people servicing machinery in it. The electrical requirements are not comparable.</p>
+            <p>This was a full fitout of a machinery shed at Mawson Lakes Golf Course. New board, LED lighting throughout, two wall-mounted fans for ventilation, and a data connection run out to the shed underground.</p>
+
+            <h3 id="the-board">Start With the Board</h3>
+            <p>A shed like this is not one circuit. It is lighting, general power around the walls, the bench, the fans, and whatever gets plugged in to charge overnight. Putting all of that behind one protective device means the first fault stops everything, and on a site where the day starts at sunrise that is not an inconvenience, it is the morning gone.</p>
+            <p>So it gets a properly built board with individually protected circuits, dressed and labelled, with room left in it. The labelling matters more on a commercial site than a domestic one, because the person who needs to isolate something at six in the morning is not the person who installed it. If a circuit cannot be identified from the board, it will be found by trial and error, which means turning off things that should have stayed on.</p>
+            <p>Leaving spare capacity matters too. Sheds accumulate. A battery charger, then a compressor, then a second fridge. A board with nothing left in it turns each of those into a bigger job than it should be.</p>
+
+            <h3 id="lighting">Lighting a Shed Is Two Different Jobs</h3>
+            <p>General light and task light are not the same thing, and a shed usually gets sold only the first one.</p>
+            <p>General light means you can see across the space, move machinery safely and find what you need. That runs along the length of the building rather than sitting in the middle, because a single central fitting in a shed with a high roof leaves the ends dim and casts long shadows off everything stored along the walls.</p>
+            <p>Task light is different. Somebody working at a bench needs light on the work, not on the room, and coming from in front of them rather than over their shoulder. That is why there is a separate <a href="/downlight-installation-adelaide">LED fitting</a> directly above the bench. Same principle as a kitchen: if you are standing between the light and what you are doing, the room is lit and your hands are not.</p>
+            <p>Height and environment drive the fitting choice. A shed is dusty, gets damp, and things get thrown around in it, so the fittings need to suit that rather than being what would go in a garage at home.</p>
+
+            <h3 id="data">Running Data Underground</h3>
+            <p>The interesting part of this job was getting an internet connection out to the shed, which meant trenching.</p>
+            <p>Data underground has its own considerations, separate from power. Ethernet has a practical distance limit of around 100 metres for the whole run, which on a site the size of a golf course is a real constraint rather than a theoretical one, and it needs working out before the trench goes in rather than after. It also needs separation from power cable, and it needs to be in conduit, because direct-buried data cable in wet ground has a short life.</p>
+            <p>The other thing worth doing while a trench is open is putting a draw wire in the conduit and leaving space. The trench is the expensive part. Adding a second cable later through an existing conduit is straightforward. Digging the same trench twice is not.</p>
+
+            <h3 id="fans">Fans, and Why Ventilation Is Not Cooling</h3>
+            <p>Two wall-mounted fans went in for ventilation and comfort on warmer days. Worth being clear about what they do: they move air, which makes people in the shed more comfortable and helps clear fumes and heat. They do not cool the building.</p>
+            <p>In a steel shed in an Adelaide summer that distinction matters, because air movement across a person is genuinely effective while trying to cool the volume of a shed is not. Wall mounting rather than ceiling mounting also keeps the air moving through the working area rather than across the roof space.</p>
+
+            <h3>If You Run a Site With a Shed on It</h3>
+            <p>Two things are worth doing before you need them. First, find out whether your board has spare capacity, because that determines whether the next addition is a small job or a large one. Second, if you are ever opening a trench, put in more conduit than you need and leave a draw wire.</p>
+            <p>On a commercial site there are also obligations a home does not have around testing and maintaining the installation, which is worth being on top of rather than discovering during an insurance claim. We do this work for clubs, small commercial sites and homes across the northern and north-eastern suburbs. There is more on <a href="/powerpoint-installation-adelaide">power and extra circuits</a> and on <a href="/test-and-tag-adelaide">test and tag</a> if that is relevant to your site.</p>
+        `,
+        cta: {
+            heading: 'Shed, Workshop or Commercial Site?',
+            description:
+                'Board, lighting, power and data planned as one job rather than added one piece at a time. JPD Complete Electrical covers Adelaide and the northern suburbs.',
+            linkText: 'Get a Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'outdoor-feature-lighting-redwood-park',
+        title: 'Outdoor Feature Lighting in Redwood Park',
+        metaDescription:
+            'Eave downlights, floodlights, wall sconces and sensor-operated up and down lights around a Redwood Park home, and what each type of fitting is actually for.',
+        excerpt:
+            'Four different types of outdoor fitting doing four different jobs, including sensor-operated lights on the shed that come on as you walk towards it.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/outdoor_lighting_redwood_park.webp',
+        gallery: [
+            {
+                src: '/images/outdoor_eave_downlights_redwood_park.webp',
+                alt: 'Eave downlights washing light down a brick wall at a Redwood Park home at night',
+                caption: 'Downlights in the eave washing down the brickwork, which lights the wall rather than the lawn.',
+            },
+            {
+                src: '/images/outdoor_wall_sconce_redwood_park.webp',
+                alt: 'Outdoor wall sconce mounted on brickwork at a Redwood Park home',
+                caption: 'A sconce at an entry point does a decorative job and a practical one at the same time.',
+            },
+        ],
+        services: ['feature-lighting-led-strip-adelaide', 'downlight-installation-adelaide'],
+        suburb: 'electrician-redwood-park',
+        angles: {
+            'downlight-installation-adelaide': {
+                title: 'Eave Downlights and Outdoor Lighting in Redwood Park',
+                blurb: 'Downlights in the eave wash light down the wall of the house, which is what makes a brick facade look intentional at night.',
+                anchor: 'four-types',
+                image: '/images/outdoor_eave_downlights_redwood_park.webp',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>You spend money on a house and then for half the hours you own it, nobody can see any of it. Outdoor lighting is the only improvement that shows from the street after dark, and it is the one that turns a paved area you built into somewhere you actually sit.</p>
+            <p>This job in Redwood Park was feature lighting right around the home. Four different types of fitting, including sensor-operated up and down lights on the shed that come on as you walk towards it.</p>
+
+            <h3 id="four-types">Four Types, Four Different Jobs</h3>
+            <p>The mistake with outdoor lighting is treating it as one thing. It is not, and using the wrong type in a spot is why some houses end up lit like a car park.</p>
+            <p><strong>Eave downlights</strong> sit in the soffit and wash light down the face of the building. This is the one that makes a house look deliberate at night, because it lights the wall rather than the lawn, and it puts light on the ground close to the house where you actually walk. On brick it picks up the texture, which is why the wall in the photo below reads as a feature rather than a dark mass.</p>
+            <p><strong>Floodlights</strong> cover area. They are the right answer for a driveway, a side path or a yard where you need to see across a space, and the wrong answer anywhere you sit, because they are too much light from one direction.</p>
+            <p><strong>Wall sconces</strong> go at entry points. They do a job your eye reads as decorative and a job that is entirely practical, which is putting light on a door and a lock and the step in front of it.</p>
+            <p><strong>Up and down lights</strong> throw a narrow beam in two directions on a wall. They are accent fittings, used to break up a long blank surface, and they work best on a textured wall where the beam has something to catch.</p>
+
+            <h3 id="sensors">Where Sensors Belong</h3>
+            <p>The shed lights on this job are sensor-operated, so walking towards the shed at night turns them on without anyone finding a switch in the dark.</p>
+            <p>Sensors suit places you pass through. Approaches, side paths, the walk from the car to the door, anywhere you arrive with your hands full. They do not suit anywhere you sit, because a sensor cannot tell the difference between an empty patio and one where four people are sitting still, and a light that switches off while you are having a beer is worse than no light.</p>
+            <p>Placement is the part that gets botched. A sensor with the road in its field of view will trigger on every car and every dog walker, which is annoying inside the house and useless as a signal that somebody is actually there. It wants to see the approach to your property, not the street beyond it.</p>
+
+            <h3 id="glare">Glare, Spill and the Neighbours</h3>
+            <p>The difference between lighting a space and ruining it is aim.</p>
+            <p>Light should go downward onto surfaces rather than outward into eyes. A fitting aimed even slightly up throws glare straight at anyone walking towards it, which paradoxically makes it harder to see, not easier, because your eyes adjust to the bright source instead of the darker area around it.</p>
+            <p>The same applies over the fence. A floodlight that covers your yard beautifully may also be pointing into a neighbour's bedroom window, and that is a conversation worth avoiding before it happens rather than after. Aim it, shield it, or move it.</p>
+
+            <h3 id="weather">Rated for Outside, and on a Circuit That Can Take It</h3>
+            <p>Everything outside needs to be rated for the location it is in, and there is a real difference between a fitting under a covered eave and one on an exposed wall or in the garden where it gets watered by a sprinkler twice a week.</p>
+            <p>The other half is the circuit. A full lighting scheme around a house, plus whatever else is out there in the way of powerpoints, fans or heating, is more than a single existing outdoor circuit was built for. Working that out before rather than adding to it until something trips is the difference between a scheme and an accumulation. There is more on our <a href="/feature-lighting-led-strip-adelaide">feature lighting</a> page.</p>
+
+            <h3>If You Are Lighting the Outside of Your House</h3>
+            <p>Walk around it after dark first and note what you cannot see and what you would like to look at. Those are two different lists and they want different fittings.</p>
+            <p>Then decide which areas you pass through and which you sit in, because that determines what goes on a sensor and what goes on a switch. Get both right and you end up with a house that looks better at night than it does in the day. There is more on what we do locally on our <a href="/electrician-redwood-park">Redwood Park electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Want the Outside to Look as Good as the Inside?',
+            description:
+                'Eave lighting, feature lighting, floods and sensors, aimed and wired properly. JPD Complete Electrical covers Redwood Park and the north-eastern suburbs.',
+            linkText: 'Get an Outdoor Lighting Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'wall-sconces-stairwell-chandelier-redwood-park',
+        title: 'Wall Sconces and a Stairwell Chandelier in Redwood Park',
+        seoTitle: 'Sconces and a Stairwell Chandelier | JPD',
+        metaDescription:
+            'Dimmable wall sconces in a master suite and a customer-supplied chandelier in a stairwell in Redwood Park, and the two problems those fittings each bring.',
+        excerpt:
+            'Dimmable sconces in a master suite and a chandelier over a stairwell. One is a dimming problem, the other is an access problem.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/stairwell_chandelier_redwood_park.webp',
+        gallery: [
+            {
+                src: '/images/wall_sconce_dimmer_redwood_park.webp',
+                alt: 'Dimmable wall sconce beside a bedhead in a Redwood Park master suite, with the dimmer switch below',
+                caption:
+                    'The dimmer is the point. A sconce at a fixed height is only comfortable if you can set the level.',
+            },
+            {
+                src: '/images/wall_sconce_redwood_park.webp',
+                alt: 'Pleated shade wall sconce mounted in a master suite in Redwood Park',
+                caption: 'Mounted at reading height, throwing light down rather than across the room.',
+            },
+        ],
+        services: ['feature-lighting-led-strip-adelaide'],
+        suburb: 'electrician-redwood-park',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Two fittings on the same job in Redwood Park, and two completely unrelated problems. The sconces in the master suite are a dimming problem. The chandelier in the stairwell is an access problem. Neither is about the fitting itself, which is why both are worth understanding before you buy anything.</p>
+
+            <h3 id="dimming">Dimming LED Is Not Automatic</h3>
+            <p>The sconces were installed with dimming so the level can be set to suit the time of night, and this is where LED catches people out more than anywhere else.</p>
+            <p>With old incandescent globes, dimming worked because you were simply reducing power to a filament. Any dimmer, any globe. LED does not work that way. The lamp has electronics in it, and it has to be a dimmable lamp in the first place, which not all of them are. Then the dimmer has to be one that suits LED, because a dimmer designed for the old loads often behaves badly with electronic ones.</p>
+            <p>When the two are mismatched you get a specific set of symptoms, and they are worth recognising because people usually blame the light: flickering at low levels, a faint buzz from the switch or the fitting, a lamp that will not dim below about half, or one that glows faintly when it is supposed to be off. None of that means the sconce is faulty. It means the dimmer and the lamp were never going to get along.</p>
+            <p>There is a load issue as well. Dimmers have a minimum load, and two small LED lamps may not draw enough for a dimmer built for a room full of incandescents to see them properly. So the honest advice is: decide you want dimming before the fittings are bought, and get the lamp and the dimmer specified together as a pair.</p>
+
+            <h3 id="sconces">Why Sconces Beat Bedside Lamps</h3>
+            <p>Practically, a wall sconce does something a lamp cannot. It frees the whole surface of the bedside table, and because it is fixed at a chosen height it throws light down onto a book instead of across the room into the other person's face.</p>
+            <p>Mounting height is the decision that matters, and it is set by where the bedhead is and where you sit up to, not by what looks centred on the wall in daylight. Slightly too high and it lights the wall above you. Slightly too low and it is in your eye line. That has to be worked out with the bed in position, or at least with its dimensions known, which means it is a conversation before the wiring goes in.</p>
+
+            <h3 id="chandelier">The Stairwell Problem</h3>
+            <p>The chandelier was customer-supplied and went in the stairwell, which is the hardest place in a house to hang anything.</p>
+            <p>Two things make it difficult. The first is fixing. A chandelier is a real weight, and unlike a downlight it cannot be carried by the ceiling lining. It needs a fixing into structure that will hold that load indefinitely, and the structure is wherever it happens to be rather than conveniently where the fitting is meant to hang. That sometimes means the mounting point is the thing that determines the exact position, not the plan.</p>
+            <p>The second is access, and it is the one nobody thinks about. You cannot stand a ladder on a staircase. The floor under the fitting is not level, it is a set of treads, so both the install and every future globe change need a proper working platform rather than someone balancing on the stairs with an extension pole. It is worth asking, before you buy a fitting for a void or a stairwell, how anyone is going to reach it in five years. Some fittings can be lowered on a winch for exactly this reason, and if yours cannot then you want to know that now.</p>
+
+            <h3 id="supplied">On Customer-Supplied Fittings</h3>
+            <p>We are happy to install fittings you have bought, and often the piece you have chosen is the whole reason for the job. Two things make it go smoothly.</p>
+            <p>Send the details before install day rather than on it: the weight, the mounting arrangement, and whether the lamps are dimmable if dimming is wanted. And check the fitting is one that can legitimately be installed here, because electrical equipment sold for use in Australia has to meet Australian requirements, and an electrician cannot fit something that does not.</p>
+
+            <h3>If You Are Buying Feature Lighting</h3>
+            <p>Decide on dimming first, because it affects the lamp, the switch and the wiring, and retro-fitting it is more work than including it. For anything heavy or anything in a void or a stairwell, sort out how it gets installed and how it gets serviced before you buy it.</p>
+            <p>Feature fittings are usually the most expensive lights in a house and the ones people are most pleased with afterwards, which is a good reason to spend a bit of time on the boring questions first. There is more on our <a href="/feature-lighting-led-strip-adelaide">feature lighting</a> page, and on what we do locally on our <a href="/electrician-redwood-park">Redwood Park electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Bought a Fitting You Want Installed Properly?',
+            description:
+                'Sconces, chandeliers and feature lighting, including dimming that actually works. JPD Complete Electrical covers Redwood Park and the north-eastern suburbs.',
+            linkText: 'Get a Feature Lighting Quote',
+            href: '/contact',
+        },
+    },
     {
         slug: 'kitchen-appliances-lighting-greenwith',
         title: 'Kitchen Appliances and Lighting in Greenwith',

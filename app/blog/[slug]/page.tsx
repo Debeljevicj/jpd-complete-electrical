@@ -238,7 +238,7 @@ export default function BlogPostPage({ params }: Props) {
                                         ))}
                                 </p>
                             )}
-                            {suburbBySlug[job.suburb] && (
+                            {job.suburb && suburbBySlug[job.suburb] && (
                                 <p className="text-neutral-slate">
                                     Suburb:{' '}
                                     <Link
