@@ -32,6 +32,100 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'outdoor-strip-heaters-golden-grove',
+        title: 'Outdoor Strip Heaters in Golden Grove',
+        metaDescription:
+            'Two 3.2 kW outdoor strip heaters installed on dedicated circuits in Golden Grove, and why outdoor heating cannot run off an existing outdoor powerpoint.',
+        excerpt:
+            'Two 3.2 kW radiant heaters, each on its own circuit. At that rating a pair of them is most of a small house, which is the whole reason they cannot share.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/outdoor_strip_heaters_golden_grove.webp',
+        services: ['powerpoint-installation-adelaide'],
+        suburb: 'electrician-golden-grove',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>An outdoor area in Adelaide is comfortable for about eight months of the year. The other four it sits empty, which is a lot of money spent on paving and a pergola you look at from indoors between May and August.</p>
+            <p>This job in Golden Grove was two Lucci outdoor heaters, around 3.2 kW each, each on its own dedicated circuit. The heaters are the easy part. The circuits are the reason it works.</p>
+
+            <h3 id="why-dedicated-circuits">Why Each One Needs Its Own Circuit</h3>
+            <p>A 3.2 kW heater pulls roughly 14 amps on its own. Two of them running together is around 28 amps of continuous load, which is more than a general outdoor powerpoint circuit was ever built to carry.</p>
+            <p>This is the single most common misunderstanding with outdoor heating. People assume that because the heater comes with a plug, an existing outdoor powerpoint will do. It will not. That outlet is very likely sharing a circuit with other outlets, and heating is not an intermittent load like a drill or a radio. It runs flat out for hours, which is exactly the condition that finds the weakest connection on a circuit and heats it up.</p>
+            <p>So each heater got a <a href="/powerpoint-installation-adelaide">dedicated circuit</a> sized for continuous load. That also means you can run one or both without anything else on the property being affected, and if you only want to warm half the area you are not paying to run the other heater.</p>
+
+            <h3 id="radiant">Why Radiant and Not a Fan Heater</h3>
+            <p>Outdoor heating only works if it is radiant. A fan heater warms the air, and outdoors the air simply leaves. You are heating the suburb.</p>
+            <p>A radiant strip heater sends heat directly onto people and surfaces the same way sunlight does, so it works regardless of whether the air around it is moving. That is why it can be effective in a semi-open pergola where a convection heater would be useless.</p>
+            <p>It also means aim and mounting height matter more than raw output. Too high and the heat spreads out and thins before it reaches anyone. Too low and it is uncomfortable to sit under and harder to keep the required clearances. Both heaters need to cover where people actually sit rather than the middle of the paving.</p>
+
+            <h3 id="planning">If You Are Adding Outdoor Heating</h3>
+            <p>Work out the heater size and how many before the electrical, because the answer determines the circuits and possibly the switchboard. Two 3.2 kW heaters is a meaningful addition to a house's total load, and if the board has no spare ways then that is part of the job.</p>
+            <p>It is also worth doing outdoor heating at the same time as anything else out there. An outdoor area that gains heating usually also wants lighting, fans and weatherproof outlets, and those together are well beyond what one existing outdoor circuit can carry. Doing them in one visit costs far less than adding each one separately, and it means the whole area gets designed as a whole.</p>
+            <p>For what it is worth, this is a job that pays for itself in use rather than in resale. Cold evenings around Greenwith and Golden Grove are the difference between an outdoor area you use three seasons a year and one you use all four. There is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Want to Use Your Outdoor Area in Winter?',
+            description:
+                'Heating, lighting and power for an outdoor space, sized properly and on circuits that can carry it. JPD Complete Electrical covers Golden Grove, Greenwith and the north-eastern suburbs.',
+            linkText: 'Get an Outdoor Heating Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'security-camera-install-golden-grove',
+        title: 'Security Camera Install in Golden Grove',
+        metaDescription:
+            'Seven security cameras installed for full coverage around a solid brick property in Golden Grove, where no wall cavities meant every cable run had to be planned.',
+        excerpt:
+            'Seven cameras for full coverage on a solid brick property, where there are no wall cavities to hide a single cable in.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/security_cameras_eaves_golden_grove.webp',
+        gallery: [
+            {
+                src: '/images/security_cameras_bracket_golden_grove.webp',
+                alt: 'Two security cameras on a bracket under the eaves of a Golden Grove property',
+                caption:
+                    'Two cameras on one bracket covering different approaches, mounted high enough to be out of reach.',
+            },
+        ],
+        services: ['powerpoint-installation-adelaide'],
+        suburb: 'electrician-golden-grove',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most camera systems are sold on the cameras. The number of megapixels, the night vision range, the app. In practice the thing that decides whether an install looks professional or looks like an afterthought is the cabling, and that is decided by the building rather than the kit.</p>
+            <p>This job in Golden Grove was seven cameras for full coverage around the property. Solid brick construction, which meant there were no wall cavities to run anything in.</p>
+
+            <h3 id="solid-brick">No Cavity Means No Easy Route</h3>
+            <p>In a brick veneer house there is a cavity behind the internal lining, so a cable can be dropped down a wall and come out where you want it with nothing showing. Solid brick does not give you that. There is no gap to work in.</p>
+            <p>So every run has to be planned rather than improvised. That means working through the roof space where possible, out through the eaves, and using surface conduit where there is genuinely no other option, run along lines that already exist on the building so it reads as deliberate rather than added. The difference between a tidy install and an ugly one is almost entirely in these decisions, and they are much easier to get right before the first hole is drilled than after.</p>
+            <p>It also takes longer, which is worth knowing when you are comparing quotes. A cheaper quote on a solid brick house often means cable stapled across the brickwork by the shortest route.</p>
+
+            <h3 id="coverage">Seven Cameras, and Where They Point</h3>
+            <p>Full coverage does not mean a camera on every wall. It means the approaches are covered and the views overlap enough that there is no blind gap between them, particularly at the points where somebody would actually come onto the property.</p>
+            <p>Height matters in two directions. High enough that nobody can reach up and turn a camera away, but not so high that everything you record is the top of a head. A camera at second-storey height gives you excellent footage of somebody's shoulders and nothing you could identify them by.</p>
+            <p>Direction matters too, and not just for image quality. A camera aimed into the afternoon sun will give you a silhouette for two hours a day. And it is worth being considerate about where the field of view lands, because a camera that takes in a good portion of the neighbour's back yard tends to become a conversation you did not want to have. Point them at your own property and the system does its job without creating a second problem.</p>
+
+            <h3 id="power">The Recorder Needs Power and Somewhere to Live</h3>
+            <p>The cameras themselves typically take power and data down the same cable, which keeps the outdoor side simple. The recorder is the part people do not plan for.</p>
+            <p>It needs a <a href="/powerpoint-installation-adelaide">supply</a>, it needs somewhere ventilated because it runs continuously and generates heat, and it needs to be somewhere reasonably secure. A recorder sitting in an obvious spot inside the front door is the first thing taken, along with everything it recorded.</p>
+            <p>Worth thinking about too: if the power goes off, the recording stops. If that matters to you, the recorder wants to be on a small uninterruptible supply so a brief outage, or somebody deliberately killing the power, does not create a gap.</p>
+
+            <h3>If You Are Getting Cameras Installed</h3>
+            <p>Walk the property first and decide what you actually want to see. Approaches, entry points, and anywhere a vehicle or a bike is left. That list drives the camera count, and the camera count drives the cabling, which is where the work actually is.</p>
+            <p>Then find out what your walls are. If the house is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. There is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Thinking About Cameras?',
+            description:
+                'The cabling is the part that decides how it looks and how long it lasts. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
+            linkText: 'Get a Security Camera Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'induction-cooktop-oven-install-golden-grove',
         title: 'Induction Cooktop and Oven Install in Golden Grove',
         metaDescription:

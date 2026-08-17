@@ -217,24 +217,27 @@ export default function BlogPostPage({ params }: Props) {
                 <div className="mt-10 pt-6 border-t border-gray-100 space-y-2">
                     {job ? (
                         <>
-                            <p className="text-neutral-slate">
-                                Services on this job:{' '}
-                                {job.services.map((serviceSlug, i) => {
-                                    const service = serviceBySlug[serviceSlug];
-                                    if (!service) return null;
-                                    return (
-                                        <span key={serviceSlug}>
-                                            {i > 0 && ', '}
-                                            <Link
-                                                href={`/${serviceSlug}`}
-                                                className="text-navy font-bold hover:text-gold transition-colors"
-                                            >
-                                                {service.name}
-                                            </Link>
-                                        </span>
-                                    );
-                                })}
-                            </p>
+                            {/* Not every job maps to a service page. Security cameras, outdoor
+                                heating and TV wall mounting have no page of their own, and an
+                                empty list here rendered a dangling "Services on this job:". */}
+                            {job.services.filter((s) => serviceBySlug[s]).length > 0 && (
+                                <p className="text-neutral-slate">
+                                    Services on this job:{' '}
+                                    {job.services
+                                        .filter((serviceSlug) => serviceBySlug[serviceSlug])
+                                        .map((serviceSlug, i) => (
+                                            <span key={serviceSlug}>
+                                                {i > 0 && ', '}
+                                                <Link
+                                                    href={`/${serviceSlug}`}
+                                                    className="text-navy font-bold hover:text-gold transition-colors"
+                                                >
+                                                    {serviceBySlug[serviceSlug].name}
+                                                </Link>
+                                            </span>
+                                        ))}
+                                </p>
+                            )}
                             {suburbBySlug[job.suburb] && (
                                 <p className="text-neutral-slate">
                                     Suburb:{' '}
