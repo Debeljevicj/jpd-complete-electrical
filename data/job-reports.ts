@@ -32,6 +32,352 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'switchboard-upgrade-signs-golden-grove',
+        title: 'Switchboards That Need Upgrading Around Golden Grove',
+        metaDescription:
+            'Real switchboards from recent jobs around Golden Grove, Ridgehaven and Greenwith, and the signs that tell you a board has reached the end of its useful life.',
+        excerpt:
+            'Rewireable fuses, one safety switch covering a whole house, and hand-written labels. Three real boards and what each one tells you.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/switchboard_ceramic_fuses_golden_grove.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_single_rcd_golden_grove.webp',
+                alt: 'Switchboard with a single earth leakage main switch covering every circuit in the house',
+                caption:
+                    'One "earth leakage main switch" for the whole house. Every circuit shares it, so one fault anywhere takes out everything.',
+            },
+            {
+                src: '/images/switchboard_hand_labelled_golden_grove.webp',
+                alt: 'Switchboard with hand-written labels and breakers from several different eras',
+                caption:
+                    'Hand-written labels and devices from three different decades. This board was added to over time rather than planned.',
+            },
+        ],
+        services: ['switchboard-upgrade-adelaide', 'rcd-testing-safety-switches-adelaide'],
+        suburb: 'electrician-golden-grove',
+        angles: {
+            'rcd-testing-safety-switches-adelaide': {
+                title: 'When One Safety Switch Is Covering Your Whole House',
+                blurb: 'A single earth leakage main switch means one fault anywhere takes out every circuit, including the fridge.',
+                anchor: 'one-rcd',
+                image: '/images/switchboard_single_rcd_golden_grove.webp',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Nobody looks at their switchboard until something stops working. It sits in a cupboard or on an outside wall, and as long as the lights come on it is easy to assume it is fine.</p>
+            <p>The problem is that a switchboard is the one part of your electrical installation whose whole job is to protect you, and the standard of protection it provides depends entirely on when it was built. A board from 1975 is not a worse version of a modern board. It is a board designed before the protection you now rely on existed at all.</p>
+            <p>These are real boards from recent jobs around Golden Grove, Ridgehaven and Greenwith. Here is what each one tells you, and what to look for on your own.</p>
+
+            <h3 id="fuses">Rewireable Fuses</h3>
+            <p>The board in the photo at the top of this page has white ceramic fuse carriers labelled by hand, one for lighting and one for the stove, on a slate panel with an old enclosed main switch above it.</p>
+            <p>A fuse like that protects the cable in your wall from carrying more current than it should. That is genuinely useful and it is why the house has not burnt down. What it does not do is protect a person. It has no mechanism for detecting current leaking to earth through somebody, which is the thing that actually kills people. That protection is what a safety switch does, and boards of this era were built before it was required.</p>
+            <p>There is a second problem specific to rewireable fuses. The fuse wire is replaceable, which means over fifty years somebody has almost certainly replaced one with whatever gauge was in the drawer. A fuse rewired with heavier wire than it should have quietly stops protecting the cable it was installed to protect, and nothing about the board's appearance tells you it has happened.</p>
+
+            <h3 id="one-rcd">One Safety Switch Covering Everything</h3>
+            <p>The second photo below is a more modern board, and at a glance it looks fine. Neat row of breakers, printed labels, solar connected. Look at the labels though and there is a single "earth leakage main switch" sitting across the whole installation.</p>
+            <p>That is one safety switch protecting every circuit in the house. It meets the requirement it was installed under, and it is far better than nothing. But it has two consequences you live with daily.</p>
+            <p>The first is that a fault anywhere takes out everywhere. A failing outdoor light, a wet powerpoint or a dying appliance trips the lot, so you lose the fridge, the freezer, the internet and every clock in the house because of a fault in one fitting. The second is that it makes the fault almost impossible to identify. When everything goes off together, nothing has been narrowed down.</p>
+            <p>The modern arrangement puts individual protection on each circuit instead. A fault on the outdoor lights trips the outdoor lights. Everything else keeps running, and you already know where to look. More on how these are tested is on our <a href="/rcd-testing-safety-switches-adelaide">safety switches and RCD testing</a> page.</p>
+
+            <h3 id="tripping">Circuits That Keep Tripping</h3>
+            <p>A breaker or safety switch that trips repeatedly is not being oversensitive and it is not worn out. It is reporting something.</p>
+            <p>Resetting it is the equivalent of turning off a smoke alarm rather than looking for the smoke. Sometimes the cause is trivial and sometimes it is a cable sitting in wet ground, but either way the device is doing its job and the answer is to find out what it is detecting.</p>
+
+            <h3 id="other-signs">Other Things Worth Looking For</h3>
+            <p>Beyond what is in these photos, these are the signs that come up most often on boards around here. None of them require you to open anything, and you should not.</p>
+            <p><strong>Hand-written or missing labels.</strong> The third photo has labels in marker pen and breakers from several different decades sitting side by side. That is a board that has been added to piece by piece rather than planned. The practical cost is that nobody can isolate the right circuit quickly, including whoever turns up in an emergency.</p>
+            <p><strong>No spare space.</strong> If the board is physically full, then the next thing you want, an EV charger, ducted air conditioning, a pool, quietly becomes a board replacement rather than a new circuit. This is worth knowing before you buy the equipment, not after.</p>
+            <p><strong>Any sign of heat.</strong> Discoloured or brittle insulation, brown marks around terminals, or a faint smell of hot plastic. This one is not a plan-for-it item. That is a call-someone-now item.</p>
+            <p><strong>Solar bolted onto an old board.</strong> Solar adds a second supply and its own main switch. Where that has been added to a board which was already at the end of its life, the whole arrangement is worth a proper look rather than just the solar part.</p>
+            <p><strong>Age alone, if the board is pre-1980s.</strong> Boards from that era sometimes have backing panels containing asbestos. It does not make your house dangerous to live in, but it does change how the work has to be done, and it is one of several reasons a board is not somewhere to experiment.</p>
+
+            <h3>What To Do About It</h3>
+            <p>None of this is a reason to panic. Plenty of old boards are working exactly as designed, and an upgrade is planned work rather than an emergency unless you are seeing heat.</p>
+            <p>The sensible trigger is when you are about to do something else. A renovation, an EV charger, air conditioning or a pool all need capacity and protection the old board may not have, and doing the board at the same time avoids paying twice for access. Our <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> page covers what the work actually involves, and there is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Not Sure About Your Board?',
+            description:
+                'Send a photo and we will tell you honestly whether it needs attention now, later, or not at all. JPD Complete Electrical covers Golden Grove, Ridgehaven, Greenwith and the surrounding suburbs.',
+            linkText: 'Get Your Switchboard Assessed',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'ev-charger-install-greenwith',
+        title: 'EV Charger Install in a Greenwith Apartment Car Park',
+        metaDescription:
+            'A 7 kW EV charger installed on a dedicated circuit in the lower level of a multi-level residential car park in Greenwith, and what is different about charging in a shared building.',
+        excerpt:
+            'A 7 kW charger on its own dedicated circuit in a multi-level residential car park, where the wiring, the supply and the permissions all work differently to a house.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/ev_charger_greenwith.webp',
+        services: ['ev-charger-installation-adelaide', 'powerpoint-installation-adelaide'],
+        suburb: 'electrician-greenwith',
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'A Dedicated 7 kW Circuit for an EV Charger in Greenwith',
+                blurb: 'A charger pulls near its maximum for hours at a time, which is why it gets its own circuit rather than sharing an existing one.',
+                anchor: 'dedicated-circuit',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most writing about home EV charging assumes a house with a garage and a switchboard on the other side of the wall. Plenty of people in Adelaide do not have that. They have a park in a shared basement, a board somewhere else entirely, and a body corporate.</p>
+            <p>This install was on the lower level of a multi-level residential car park in Greenwith. A customer-supplied EV Switch unit, 7 kW, on a new dedicated circuit. The electrical principles are the same as a house. Almost everything around them is different.</p>
+
+            <h3 id="dedicated-circuit">Why It Gets Its Own Circuit</h3>
+            <p>A 7 kW single-phase charger draws around 32 amps, and the thing that makes an EV different to every other appliance you own is duration. A kettle pulls hard for two minutes. An oven cycles on and off. A car charger sits at close to its maximum continuously for hours.</p>
+            <p>That is why it goes on a dedicated circuit sized for continuous load rather than sharing with anything else. A circuit that copes fine with intermittent use can run hot when something sits on it all night, and heat is what degrades cable and connections over years rather than minutes. It is also why plugging a car into an ordinary powerpoint on an extension lead is a genuinely bad idea rather than just a slow one.</p>
+
+            <h3 id="dc-fault">The Protection Is Not the Same as a Powerpoint</h3>
+            <p>An electric vehicle can introduce DC fault current into the supply, and an ordinary safety switch is not built to detect that. If DC blinds the safety switch, the protection you assumed you had is not there.</p>
+            <p>So an EV circuit needs protection that accounts for it. Some chargers have that detection built into the unit, and where they do not, it has to be provided on the circuit instead. Either way it is not optional and it is not something a standard powerpoint arrangement gives you. It is worth asking whoever quotes you how the DC side is being handled, because the answer tells you quickly whether they install these regularly.</p>
+            <p>The unit also has local isolation beside it, so it can be switched off where it sits rather than by walking to a board somewhere else in the building.</p>
+
+            <h3 id="strata">What Is Different in a Shared Building</h3>
+            <p>This is the part that catches people out, and none of it is electrical.</p>
+            <p><strong>Whose supply is it coming from.</strong> In a shared building the answer needs to be your own meter, not common property, unless there is an agreed arrangement for metering and paying for it. Getting this wrong means you are charging your car on everybody else's bill, which tends to get noticed.</p>
+            <p><strong>Permission.</strong> Running a new circuit through common areas and mounting equipment on a common wall is not yours to decide alone. That is a body corporate or strata conversation, and it is far easier before the work than after.</p>
+            <p><strong>Cable route.</strong> A car park has no wall cavities to hide anything in. The supply runs in surface conduit, which means the route has to be planned so it is neat, protected from vehicle damage, and does not cut across somebody else's space.</p>
+            <p><strong>What happens when the neighbours want one.</strong> Buildings are steadily going from nobody charging to several residents charging, and the building's supply is finite. If you are first, you are in the best position. It is still worth asking what capacity is there, because the answer affects everyone who comes after you.</p>
+
+            <h3>If You Are Getting a Charger</h3>
+            <p>Sort the charger choice and the location before you book the electrical, because both change the job. We install customer-supplied units like this one and we can supply a range of brands, so if you have not bought yet that is worth a conversation first rather than after.</p>
+            <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There is more on our <a href="/ev-charger-installation-adelaide">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Thinking About an EV Charger?',
+            description:
+                'House or apartment, the first questions are supply, capacity and where it is going. JPD Complete Electrical covers Greenwith and the north-eastern suburbs.',
+            linkText: 'Get an EV Charger Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'led-downlights-tv-wall-mount-hope-valley',
+        title: 'LED Downlights and a TV Wall Mount in Hope Valley',
+        metaDescription:
+            'Modernising the lighting through a Hope Valley home, plus a master bedroom TV wall mount with concealed HDMI, a new antenna point and power behind the screen.',
+        excerpt:
+            'LED downlights through the house, and a wall-mounted TV with the power, HDMI and antenna all run inside the wall so nothing shows.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/tv_wall_mount_hope_valley.webp',
+        gallery: [
+            {
+                src: '/images/led_downlights_bedroom_hope_valley.webp',
+                alt: 'Bedroom with new LED downlights installed during a Hope Valley renovation',
+                caption: 'Downlights set around the room rather than directly over the bed.',
+            },
+            {
+                src: '/images/led_downlights_second_room_hope_valley.webp',
+                alt: 'Second room with new LED downlights during a Hope Valley renovation',
+                caption: 'Same colour temperature throughout, so no room reads warmer or cooler than the next.',
+            },
+        ],
+        services: [
+            'downlight-installation-adelaide',
+            'powerpoint-installation-adelaide',
+            'renovation-electrician-adelaide',
+        ],
+        suburb: 'electrician-hope-valley',
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Power and Data Behind a Wall-Mounted TV in Hope Valley',
+                blurb: 'A powerpoint behind the screen, two HDMI runs and a new antenna point, all inside the wall so no cable shows.',
+                anchor: 'tv-wall',
+            },
+            'renovation-electrician-adelaide': {
+                title: 'Lighting and Media Rough-In on a Hope Valley Renovation',
+                blurb: 'Cabling for lights, power and data all goes in before the plasterer. After that, every change is patch and paint.',
+                anchor: 'timing',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A wall-mounted TV with a cable hanging down to a powerpoint undoes the whole point of mounting it on the wall. So does a media unit with a visible HDMI lead looping up from a console.</p>
+            <p>This was part of a larger renovation in Hope Valley to modernise the lighting through the house. The interesting part is the master bedroom, where the TV is mounted with the power, the HDMI and the antenna all inside the wall.</p>
+
+            <h3 id="tv-wall">What "No Visible Cables" Actually Requires</h3>
+            <p>Three separate things had to be in the wall behind that screen, and each is a different type of cabling.</p>
+            <p>A <a href="/powerpoint-installation-adelaide">powerpoint behind the TV</a>, positioned so the plug and any adaptor sit hidden behind the screen rather than below it. Two HDMI cables, so a console or media device somewhere else in the room connects without a lead crossing the wall. And a new TV antenna point, because the old outlet was not where the TV was going.</p>
+            <p>Two HDMI runs rather than one is deliberate. The cable itself is cheap and the labour of getting it inside a finished wall is not, so the second one costs very little now and saves opening the wall later when a device changes. If you are doing this, run a spare.</p>
+            <p>All of it has to land at the right height for where the bracket goes, which means the TV size and bracket need deciding before the cabling, not after.</p>
+
+            <h3 id="downlights">Where the Downlights Went</h3>
+            <p>The rest of the job was <a href="/downlight-installation-adelaide">LED downlights</a> through the other rooms, and positioning matters more than people expect.</p>
+            <p>The instinct is to centre lights in a room. In a bedroom that puts a downlight directly above where you lie down, which is unpleasant every night. Setting them around the room instead lights the space evenly without anything shining into your face, and it also lights the wardrobe and the walkway rather than just the middle of the floor.</p>
+            <p>The other thing worth deciding once, for the whole house, is colour temperature. Mixing warm white in one room with cool white in the next is the kind of thing you cannot unsee afterwards, and it reads as a mistake rather than a choice. Pick one and use it everywhere, and if you want a different feel in a particular room, do it with dimming rather than a different globe colour.</p>
+
+            <h3 id="timing">Why This Is Renovation Work, Not Afterwards Work</h3>
+            <p>Everything described here went in before the plasterer. Once the walls are closed and painted, running a new HDMI or moving a powerpoint means cutting, patching and repainting, and it never quite matches.</p>
+            <p>So the media wall is a conversation to have at the same time as the lighting plan, even if the TV itself is not being bought for another six months. Deciding the wall, the height and roughly the screen size early costs nothing. Deciding it late costs a plasterer.</p>
+            <p>If you are planning a renovation, our <a href="/renovation-electrician-adelaide">renovation electrician</a> page covers how the electrical sequences with the other trades, and there is more on what we do locally on our <a href="/electrician-hope-valley">Hope Valley electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Planning a Renovation?',
+            description:
+                'Lighting, power and media cabling all go in before the walls close. JPD Complete Electrical covers Hope Valley and the north-eastern suburbs.',
+            linkText: 'Book a Renovation Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'hex-led-lighting-garage-fairview-park',
+        title: 'Hex LED Lighting in a Fairview Park Garage',
+        metaDescription:
+            'Hexagon LED lighting installed in a Fairview Park garage for a car detailer, where seeing paint defects properly is the entire point of the lighting.',
+        excerpt:
+            'Hex LED panels across a garage ceiling. When your job is spotting swirl marks in black paint, ordinary garage lighting actively hides them.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/hex_led_lighting_garage_fairview_park.webp',
+        gallery: [
+            {
+                src: '/images/hex_led_lighting_ceiling_fairview_park.webp',
+                alt: 'Hexagon LED lighting array mounted across a garage ceiling in Fairview Park',
+                caption:
+                    'The array is linked modules, so the layout has to be set out to the ceiling before anything is fixed.',
+            },
+        ],
+        services: ['feature-lighting-led-strip-adelaide', 'powerpoint-installation-adelaide'],
+        suburb: 'electrician-fairview-park',
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Circuit and Supply for a Hex Lighting Array in Fairview Park',
+                blurb: 'A full ceiling array is a real load with multiple drivers, so the supply and driver positions get planned with the layout.',
+                anchor: 'supply',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most garage lighting exists so you can find things. This one exists so its owner can see defects in paint, which is a completely different requirement.</p>
+            <p>The customer is a car detailer in Fairview Park, working on dark-coloured cars. Swirl marks, holograms and an uneven polish are only visible when light hits the panel from the right angle, and a single batten in the middle of the ceiling gives you exactly one angle. Half the defects stay hidden until the car is outside in the sun and the customer finds them instead.</p>
+
+            <h3 id="why-detailers">Why the Shape Matters</h3>
+            <p>A hex array covers the ceiling with lit edges running in six directions rather than one. Because the light arrives from many angles at once, a curved panel gets lit right across its surface and the reflections that reveal swirls show up wherever you stand.</p>
+            <p>You can see it in the photo at the top of this page. The hex pattern is reflected across the bonnet and roof of the car, and that reflection is the working tool. A detailer is reading those lines for distortion.</p>
+            <p>It is not only for cars. The same reasoning applies to a home workshop where you need to see what your hands are doing without standing in your own shadow, a home gym, or a garage that doubles as a work space. If you have ever leaned over a bench and blocked your own light, that is the problem this solves.</p>
+
+            <h3 id="planning-the-layout">It Has To Be Set Out Before Anything Is Fixed</h3>
+            <p>These arrays are linked modules rather than individual light fittings. That has a practical consequence: the layout is decided as a whole and set out to the actual ceiling dimensions before the first module goes up.</p>
+            <p>You cannot sensibly add one into the middle of a finished array later, and an array that was not set out properly ends up off-centre against the walls or the roller door, which is obvious every time you walk in. Measuring the ceiling and working out the pattern is most of the job. Fixing them up is the quick part.</p>
+
+            <h3 id="supply">Supply, Drivers and Load</h3>
+            <p>A ceiling-sized array is a real load rather than a light fitting, and it runs off drivers that have to live somewhere accessible. If a driver fails in three years, whoever replaces it needs to reach it without dismantling the array.</p>
+            <p>So the supply, the <a href="/powerpoint-installation-adelaide">circuit</a> and the driver positions get planned alongside the layout. In a garage there is often no ceiling cavity to hide anything in, which makes that positioning a visible decision rather than a hidden one.</p>
+
+            <h3 id="customer-supplied">On Customer-Supplied Fittings</h3>
+            <p>This lighting was supplied by the customer, which we are happy to install. One thing worth saying plainly though, because it comes up often with LED bought online.</p>
+            <p>Electrical equipment sold for use in Australia has to meet Australian requirements, and an electrician cannot install something that does not. It is not a formality. The part that fails first in cheap LED is almost always the driver, and when a driver fails inside a linked array you are troubleshooting the whole run rather than swapping a globe. If you are buying your own, buy something with a driver you can still get in five years.</p>
+            <p>If you are unsure about a fitting you have already bought, send us the details before the install day rather than finding out on it. More on this kind of work is on our <a href="/feature-lighting-led-strip-adelaide">feature lighting and LED strip</a> page, and on what we cover locally on our <a href="/electrician-fairview-park">Fairview Park electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Want Lighting You Can Actually Work Under?',
+            description:
+                'Garage, workshop, gym or feature lighting, set out properly and wired to suit the load. JPD Complete Electrical covers Fairview Park and the north-eastern suburbs.',
+            linkText: 'Get a Lighting Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'ceiling-fans-pergola-ridgehaven',
+        title: 'Ceiling Fans Under a Pergola in Ridgehaven',
+        metaDescription:
+            'Two large ceiling fans installed under a pergola in Ridgehaven, and what makes an outdoor fan install different to an indoor one.',
+        excerpt:
+            'Two large fans under a gabled pergola, so an outdoor space that was unusable on still summer evenings actually gets used.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/ceiling_fans_pergola_ridgehaven.webp',
+        services: ['ceiling-fan-installation-adelaide'],
+        suburb: 'electrician-ridgehaven',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>An Adelaide summer evening outdoors is pleasant right up until the air stops moving. Then the space you built to sit in becomes the space you look at from inside where the air conditioning is.</p>
+            <p>This job in Ridgehaven was two large ceiling fans, supplied by Beacon Lighting, installed under a pergola over an outdoor area that also holds a gym setup and a spa. The point was simply to get enough air moving that the space is usable on a still night.</p>
+
+            <h3 id="outdoor-rated">An Indoor Fan Will Not Do</h3>
+            <p>The first thing that matters is that a fan under a pergola is an outdoor fan, even though it is under a roof and never gets rained on directly.</p>
+            <p>Outdoor air carries moisture, and in an open structure it moves through constantly. An indoor fan put in that position corrodes at the motor housing and fixings, and timber or MDF-cored blades absorb moisture and start to droop unevenly. A drooping blade puts the fan out of balance, an out-of-balance fan wobbles, and a wobbling fan works its own fixings loose. It is a slow failure that starts as an annoyance and ends as something hanging off a rafter.</p>
+            <p>Fans rated for outdoor or damp locations have sealed motors and blades that do not take up water. It is the single most important choice in the job and it is made at the shop, not on site.</p>
+
+            <h3 id="fixing">Fixing Into a Pergola Is Not Fixing Into a Ceiling</h3>
+            <p>Inside, a fan goes to a ceiling joist through plasterboard, and the fixing is hidden. A pergola has exposed rafters and beams and a raked or gabled roof, as this one does, so the fixing is both visible and structural.</p>
+            <p>A ceiling fan is not a static weight. It is a rotating mass applying a continuous side-to-side load for years, and the fixing has to be into structural timber that can take that rather than into a batten or a lining board. The mount also has to sit square to level, because a fan hung off a sloped rafter without correcting for the angle will spin out of plane and wobble no matter how well it is balanced.</p>
+            <p>On a raked roof, the downrod length becomes a real decision too. It sets how far the blades sit below the roof line, which affects both how well the fan moves air and whether anyone on the gym equipment underneath is going to reach it.</p>
+
+            <h3 id="two-fans">Why Two Rather Than One</h3>
+            <p>A ceiling fan only really moves air in the column beneath itself. A single fan in the middle of a long outdoor room leaves both ends still, which people usually read as the fan being underpowered when the problem is coverage.</p>
+            <p>Two large fans spaced along the space is a different result entirely. Blade span does more for air movement than motor speed does, which is why a big fan turning slowly is both more effective and much quieter than a small one working hard. In an outdoor area you sit and talk in, quiet is worth paying attention to.</p>
+
+            <h3>If You Are Adding Fans Outside</h3>
+            <p>Work out the fan and the fixing points before you buy, particularly under a raked or gabled roof, because the downrod and the mount depend on the structure and the ceiling height. Check the fan is rated for outdoor use even if it will be under cover.</p>
+            <p>Then think about the circuit and the switching. An outdoor entertaining area that gains fans usually also wants lighting, weatherproof powerpoints and sometimes heating, and those together are more than an existing outdoor light circuit was built for. It is much cheaper to allow for that in one visit than to add each piece separately. More on our <a href="/ceiling-fan-installation-adelaide">ceiling fan installation</a> page, and on what we do locally on our <a href="/electrician-ridgehaven">Ridgehaven electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Want to Actually Use Your Outdoor Area?',
+            description:
+                'Fans, lighting, weatherproof power and heating, sized and wired for an outdoor space. JPD Complete Electrical covers Ridgehaven and the north-eastern suburbs.',
+            linkText: 'Get a Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'hot-water-unit-powerpoint-greenwith',
+        title: 'Hot Water Unit Powerpoint in Greenwith',
+        metaDescription:
+            'A weatherproof powerpoint installed for a new instantaneous gas hot water unit in Greenwith, where there was no power supply anywhere near it.',
+        excerpt:
+            'A new continuous flow gas hot water unit needs power to run. This one had none anywhere near it, which surprises most people.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/hot_water_powerpoint_greenwith.webp',
+        services: ['powerpoint-installation-adelaide'],
+        suburb: 'electrician-greenwith',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Here is the thing that catches people out when they replace a hot water system: a gas unit needs electricity.</p>
+            <p>This job in Greenwith was a weatherproof powerpoint for a brand new instantaneous gas hot water unit, in a spot where there was no power supply anywhere nearby. Straightforward work, but it is the single most common reason a hot water changeover stalls on the day.</p>
+
+            <h3 id="why-gas-needs-power">Why a Gas Unit Needs a Powerpoint</h3>
+            <p>An old gas storage system typically ran on a standing pilot light. A small flame burned continuously, so when the thermostat called for heat there was already a flame to light the burner. No electricity involved anywhere.</p>
+            <p>A continuous flow unit works differently. There is no stored tank and no pilot. When you turn on a hot tap, the unit senses the flow, opens the gas, ignites electronically and modulates the burner to hold the temperature you asked for. All of that sensing, ignition and control needs power.</p>
+            <p>So the moment you go from an old storage unit to a continuous flow one, you need a powerpoint in a place that has probably never had one, on the outside of the house. That is not a fault in the new unit. It is just a consequence of how it works, and nobody mentions it when you are choosing between models.</p>
+
+            <h3 id="whose-job">It Is Not the Plumber's Job</h3>
+            <p>Your plumber installs the unit, connects the gas and does the water. The powerpoint is electrical work and needs a licensed electrician.</p>
+            <p>That split is where changeovers go wrong. The plumber arrives, removes the old unit, mounts the new one, and then finds there is nothing to plug it into. Now you have no hot water and you are waiting on a second trade, which can easily be days.</p>
+            <p>If you are replacing a hot water system, ask one question up front: does the new unit need power, and is there a suitable outlet where it is going? If the answer to the first is yes and the second is no, book both trades for the same day or get the outlet in beforehand.</p>
+
+            <h3 id="weatherproofing">Outside Means Weatherproof</h3>
+            <p>Hot water units live on an external wall, so the outlet is a weatherproof one with a sealing lid rather than an ordinary indoor point, and it is on an RCD-protected circuit like any other outlet.</p>
+            <p>Position takes a bit of thought. It has to be reachable so the unit can actually be unplugged and isolated for service, clear of the flue and the hot parts of the casing, and clear of the gas fittings and the water connections. Far enough away to be sensible, close enough that the unit's own lead reaches without strain, which usually means agreeing the spot with the plumber before anything is mounted.</p>
+
+            <h3>If Your Hot Water Is on Its Way Out</h3>
+            <p>Hot water systems rarely fail conveniently. If yours is getting old, it is worth finding out now what a replacement would need, because the decision usually gets made in a hurry on a cold morning.</p>
+            <p>Two minutes of checking, whether there is an outlet near the unit and whether it is weatherproof, is the difference between a one-day changeover and a three-day one. More on this kind of work is on our <a href="/powerpoint-installation-adelaide">powerpoints and extra circuits</a> page, and on what we cover locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Replacing a Hot Water System?',
+            description:
+                'Get the outlet sorted before the plumber arrives rather than after. JPD Complete Electrical covers Greenwith and the north-eastern suburbs.',
+            linkText: 'Book an Electrician',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'underground-cable-fault-finding-golden-grove',
         title: 'Underground Cable Fault Finding in Golden Grove',
         metaDescription:
