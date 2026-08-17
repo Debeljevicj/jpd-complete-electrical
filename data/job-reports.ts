@@ -32,6 +32,87 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'induction-cooktop-oven-install-golden-grove',
+        title: 'Induction Cooktop and Oven Install in Golden Grove',
+        metaDescription:
+            'A full kitchen renovation in Golden Grove with an induction cooktop, oven and built-in microwave, and what changes electrically when you move away from gas.',
+        excerpt:
+            'Induction, oven and a built-in microwave in a full kitchen renovation. Going from gas to induction means a new circuit, not a new plug.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/kitchen_renovation_golden_grove.webp',
+        gallery: [
+            {
+                src: '/images/kitchen_oven_microwave_golden_grove.webp',
+                alt: 'Built-in oven and microwave in a cabinet tower in a renovated Golden Grove kitchen',
+                caption:
+                    'Integrated appliances need their supply where the cabinetmaker leaves room for it, and where somebody can still reach it later.',
+            },
+        ],
+        services: [
+            'oven-cooktop-installation-adelaide',
+            'renovation-electrician-adelaide',
+            'powerpoint-installation-adelaide',
+            'downlight-installation-adelaide',
+        ],
+        suburb: 'electrician-golden-grove',
+        angles: {
+            'renovation-electrician-adelaide': {
+                title: 'Appliance Wiring on a Golden Grove Kitchen Renovation',
+                blurb: 'Appliance specs drive the cabinetry and the cabinetry drives the outlet positions, so the order those decisions get made in matters.',
+                anchor: 'sequence',
+            },
+            'powerpoint-installation-adelaide': {
+                title: 'Outlets for Integrated Kitchen Appliances in Golden Grove',
+                blurb: 'An outlet behind a fixed oven that nobody can reach is a problem the first time the appliance needs isolating.',
+                anchor: 'integrated',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Induction cooktops are the thing people most often get wrong when planning a kitchen, and it is almost never the cooktop's fault. It is that everyone treats it as an appliance swap when it is actually a new circuit.</p>
+            <p>This was a full kitchen renovation in Golden Grove. Smeg appliances throughout, an induction cooktop, an oven and a built-in microwave, new powerpoints and LED lighting as part of the same job. Here is what the appliance side actually involves.</p>
+
+            <h3 id="induction">Induction Is Not a Like-for-Like Swap</h3>
+            <p>If you are coming from gas, your cooktop currently has a gas connection and no meaningful electrical supply at all. Nothing behind it is capable of running an induction unit, so the job includes a new circuit run from the switchboard to the cooktop position.</p>
+            <p>Induction also draws considerably more than most people assume. It is not a powerpoint appliance. These generally need a dedicated circuit sized specifically for that model, and plenty of them are hardwired rather than plugged in. The important detail is that the requirement varies genuinely between models, sometimes substantially, so the number that matters is the one on the spec sheet of the cooktop you are actually buying.</p>
+            <p>Which leads to the one piece of advice worth more than anything else here: get the model number to your electrician before you buy, not after it arrives. It takes a minute and it is the difference between a booked-in circuit and a kitchen you cannot cook in while you wait for one.</p>
+
+            <h3 id="board">It May Also Be a Switchboard Question</h3>
+            <p>A new dedicated circuit needs somewhere to land, and that means a spare way in the board with capacity to match.</p>
+            <p>On plenty of Golden Grove homes there is not one. When the board is full, adding an induction cooktop quietly becomes a cooktop plus board work, and finding that out during planning is very different from finding it out on installation day with a bench full of new appliances. It is worth having the board looked at while you are still choosing appliances rather than after. Our page on <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> covers what that involves.</p>
+
+            <h3 id="integrated">Integrated Appliances and Getting to Them Later</h3>
+            <p>The oven and microwave here sit in a cabinet tower, which is a different problem to a freestanding appliance.</p>
+            <p>Each needs its supply positioned where the cabinetmaker has left room for it, which means the cabinetry drawings and the electrical rough-in have to agree before either is built. And it has to be somewhere a person can actually reach. An outlet sealed behind a fixed oven with no access panel technically works, right up until the appliance needs isolating for a repair and the only way to reach the plug is to pull the oven out of the joinery.</p>
+            <p>The same applies to the microwave. It is inside the cabinetry, so its <a href="/powerpoint-installation-adelaide">outlet</a> has to be hidden but serviceable. That is a decision made on the plan, not on the day.</p>
+
+            <h3 id="sequence">The Order These Decisions Happen In</h3>
+            <p>Kitchens go wrong on sequence more than on any technical detail. The order that works is:</p>
+            <ul>
+                <li>Choose the appliances, or at least confirm their electrical requirements and physical sizes</li>
+                <li>Cabinetry designed around those</li>
+                <li>Electrical rough-in to match the cabinetry, before the plasterer and before any splashback</li>
+                <li>Cabinetry and benchtops installed</li>
+                <li>Appliances connected and tested</li>
+            </ul>
+            <p>Every step depends on the one above it. Skip ahead and you get the classic outcomes: a cooktop that needs a circuit nobody allowed for, an outlet in the wrong place behind finished joinery, or a splashback that needs cutting after it is installed.</p>
+            <p>It is the same reasoning as any other room, just less forgiving because a kitchen has more fixed, expensive, made-to-measure parts than anywhere else in a house. More on how this sequences with the other trades is on our <a href="/renovation-electrician-adelaide">renovation electrician</a> page.</p>
+
+            <h3>If You Are Doing a Kitchen</h3>
+            <p>Two things and you avoid most of the trouble. Send the appliance model numbers to your electrician early, and ask whether the switchboard has the capacity for what you have chosen.</p>
+            <p>If you are going gas to induction, assume a new circuit and budget for it rather than hoping. And if lighting is part of the same job, do it in the same run of work while the ceilings and walls are already open. Our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page has more on the connection side, and there is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Planning a New Kitchen?',
+            description:
+                'Send the appliance model numbers before you order and we will tell you what the circuits and the board need to do. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
+            linkText: 'Get a Kitchen Electrical Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'whole-house-led-downlights-golden-grove',
         title: 'Whole House LED Downlights in Golden Grove',
         metaDescription:
