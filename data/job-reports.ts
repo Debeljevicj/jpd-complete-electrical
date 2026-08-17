@@ -32,6 +32,72 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'kitchen-appliances-lighting-greenwith',
+        title: 'Kitchen Appliances and Lighting in Greenwith',
+        metaDescription:
+            'A full kitchen renovation in Greenwith with Smeg appliances throughout and new LED lighting, and why a modern kitchen needs far more circuits than the one it replaces.',
+        excerpt:
+            'Smeg appliances throughout and new LED lighting. A modern kitchen is a much bigger electrical load than the kitchen it replaces, and the total is what catches people out.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/kitchen_lighting_greenwith.webp',
+        services: [
+            'oven-cooktop-installation-adelaide',
+            'downlight-installation-adelaide',
+            'renovation-electrician-adelaide',
+        ],
+        suburb: 'electrician-greenwith',
+        angles: {
+            'downlight-installation-adelaide': {
+                title: 'Kitchen Lighting Done Properly in Greenwith',
+                blurb: 'Downlights behind where you stand put you in your own shadow over the bench. Kitchen lighting is a working tool, not ambience.',
+                anchor: 'lighting',
+            },
+            'renovation-electrician-adelaide': {
+                title: 'A Full Kitchen Renovation in Greenwith',
+                blurb: 'Appliances, circuits and lighting all decided before the cabinetry is built, because everything downstream depends on it.',
+                anchor: 'order',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>The kitchen you are replacing was probably built for a gas cooktop, an oven, a fridge and a kettle. The kitchen you are installing has considerably more in it than that, and the total is what catches people out rather than any single appliance.</p>
+            <p>This was a full kitchen renovation in Greenwith with Smeg appliances throughout, including the oven and an induction cooktop, plus new LED lighting. Here is what a modern kitchen actually asks for electrically, and the lighting decision most kitchens get wrong.</p>
+
+            <h3 id="the-load">Add Up What Is Actually Going In</h3>
+            <p>Write out the appliance list for a current kitchen and it is longer than people expect. An oven. A cooktop, which if it is induction is the single largest item on the list. A built-in microwave. A dishwasher. A rangehood. A fridge, and increasingly a second one or a freezer in the garage. Then the bench outlets for a kettle, a toaster, an air fryer and a coffee machine, several of which get used at the same time every morning.</p>
+            <p>Individually none of that is remarkable. Together it is a lot more than the kitchen it replaced was wired for, and the older the kitchen the bigger the gap. A 1990s kitchen commonly had one circuit for the oven and cooktop and one general circuit doing everything else, which was adequate for what was in it then.</p>
+            <p>So the question at the start of a kitchen job is not just what the cooktop needs. It is what the whole room needs, and whether the switchboard has the capacity and the spare ways for it. That is much better established while you are choosing appliances than after the cabinetry is in.</p>
+
+            <h3 id="circuits">What Needs Its Own Circuit</h3>
+            <p>Broadly, the heavy fixed appliances get their own circuits and the bench outlets share.</p>
+            <p>An induction cooktop needs a dedicated circuit sized for that specific model, and going from gas to induction means running that circuit from the board for the first time. We covered that in more detail on a <a href="/blog/induction-cooktop-oven-install-golden-grove">Golden Grove kitchen</a> where the same change was made, so rather than repeat it here: get the model number to your electrician before you buy.</p>
+            <p>The oven usually wants its own supply as well, and a dishwasher and rangehood need outlets positioned inside the cabinetry where they can still be reached. The bench outlets are where you want to be generous rather than minimal, because the alternative is a permanent extension lead on a stone benchtop. More on the connection side is on our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page.</p>
+
+            <h3 id="lighting">The Lighting Mistake Almost Every Kitchen Makes</h3>
+            <p>Here is the one worth reading even if you are not renovating.</p>
+            <p>Most kitchens are lit by downlights spaced evenly across the middle of the ceiling. Stand at the bench and work out where that puts the light. It is behind you. Your body is between the light and the surface you are working on, so you chop, read recipes and check whether the chicken is done in your own shadow. The room is well lit and the bench is not.</p>
+            <p>The fix is to light the bench rather than the room. That means <a href="/downlight-installation-adelaide">downlights positioned over the front edge of the bench</a> rather than the centre of the ceiling, so the light comes down onto the work surface past you instead of over your shoulder. Where cabinetry allows, under-cabinet lighting does it better again, because it sits below head height and cannot be blocked at all.</p>
+            <p>Think of it as two separate jobs. General light so the room is not gloomy, and task light where you actually work. A kitchen with both is noticeably easier to use, and the difference costs very little at rough-in stage. It costs a great deal after the ceiling is closed and the splashback is on.</p>
+
+            <h3 id="order">The Order It Has To Happen In</h3>
+            <p>Appliances chosen first, because their sizes and electrical requirements drive everything. Then cabinetry designed around them. Then electrical rough-in to match the cabinetry, before the plasterer and before any splashback goes on. Then benchtops and cabinetry installed, then appliances connected and tested.</p>
+            <p>Every stage depends on the one above. The reason kitchens are less forgiving than any other room is that almost everything in them is fixed, made to measure and expensive, so a decision made in the wrong order is not a quick adjustment. Our <a href="/renovation-electrician-adelaide">renovation electrician</a> page covers how this sequences alongside the other trades.</p>
+
+            <h3>If You Are Doing a Kitchen</h3>
+            <p>Two things at the start. Send the appliance list with model numbers to your electrician, and ask whether the board has capacity for the lot rather than just for the cooktop.</p>
+            <p>Then spend five minutes on where you will actually be standing when you use the room, and put light on those surfaces. It is the cheapest thing on the list and the one you will notice every single day. There is more on what we do locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Planning a Kitchen Renovation?',
+            description:
+                'Appliances, circuits and lighting sorted before the cabinetmaker measures up. JPD Complete Electrical covers Greenwith and the north-eastern suburbs.',
+            linkText: 'Get a Kitchen Electrical Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'outdoor-strip-heaters-golden-grove',
         title: 'Outdoor Strip Heaters in Golden Grove',
         metaDescription:
@@ -76,9 +142,9 @@ export const jobReports: JobReport[] = [
         slug: 'security-camera-install-golden-grove',
         title: 'Security Camera Install in Golden Grove',
         metaDescription:
-            'Seven security cameras installed for full coverage around a solid brick property in Golden Grove, where no wall cavities meant every cable run had to be planned.',
+            'Seven security cameras installed for full coverage at a Golden Grove business, in a solid brick building with no wall cavities to run cable in.',
         excerpt:
-            'Seven cameras for full coverage on a solid brick property, where there are no wall cavities to hide a single cable in.',
+            'Seven cameras covering a commercial premises in solid brick, where there are no wall cavities to hide a single cable in.',
         date: '2026-08-15',
         author: 'Justin',
         category: 'Recent Work',
@@ -96,12 +162,17 @@ export const jobReports: JobReport[] = [
         content: `
             <h3>Why This Matters to You</h3>
             <p>Most camera systems are sold on the cameras. The number of megapixels, the night vision range, the app. In practice the thing that decides whether an install looks professional or looks like an afterthought is the cabling, and that is decided by the building rather than the kit.</p>
-            <p>This job in Golden Grove was seven cameras for full coverage around the property. Solid brick construction, which meant there were no wall cavities to run anything in.</p>
+            <p>This job was for a business in Golden Grove. Seven cameras for full coverage around the premises, in a solid brick building, which meant there were no wall cavities to run anything in.</p>
 
             <h3 id="solid-brick">No Cavity Means No Easy Route</h3>
-            <p>In a brick veneer house there is a cavity behind the internal lining, so a cable can be dropped down a wall and come out where you want it with nothing showing. Solid brick does not give you that. There is no gap to work in.</p>
+            <p>In a brick veneer building there is a cavity behind the internal lining, so a cable can be dropped down a wall and come out where you want it with nothing showing. Solid brick does not give you that. There is no gap to work in.</p>
             <p>So every run has to be planned rather than improvised. That means working through the roof space where possible, out through the eaves, and using surface conduit where there is genuinely no other option, run along lines that already exist on the building so it reads as deliberate rather than added. The difference between a tidy install and an ugly one is almost entirely in these decisions, and they are much easier to get right before the first hole is drilled than after.</p>
-            <p>It also takes longer, which is worth knowing when you are comparing quotes. A cheaper quote on a solid brick house often means cable stapled across the brickwork by the shortest route.</p>
+            <p>It also takes longer, which is worth knowing when you are comparing quotes. A cheaper quote on a solid brick building often means cable stapled across the brickwork by the shortest route.</p>
+
+            <h3 id="commercial">What Is Different About a Business</h3>
+            <p>Cameras on a commercial site are doing a different job to cameras on a house. Nobody is there overnight, which is when most of what you want recorded happens, so coverage of the approaches and anywhere stock or vehicles sit matters more than coverage of the building itself.</p>
+            <p>There is usually more to cover, too. A business tends to have multiple entry points, a yard, a loading area and a car park rather than a front and back door, which is how a job gets to seven cameras rather than three. And because the footage may end up being used for an insurance claim or shown to police, image quality at the points that matter is worth more than camera count spread thinly.</p>
+            <p>Worth thinking through before install: who needs to be able to view it, from where, and whether that is only on site or from a phone as well. That decision changes what the recorder needs to be connected to.</p>
 
             <h3 id="coverage">Seven Cameras, and Where They Point</h3>
             <p>Full coverage does not mean a camera on every wall. It means the approaches are covered and the views overlap enough that there is no blind gap between them, particularly at the points where somebody would actually come onto the property.</p>
@@ -114,13 +185,13 @@ export const jobReports: JobReport[] = [
             <p>Worth thinking about too: if the power goes off, the recording stops. If that matters to you, the recorder wants to be on a small uninterruptible supply so a brief outage, or somebody deliberately killing the power, does not create a gap.</p>
 
             <h3>If You Are Getting Cameras Installed</h3>
-            <p>Walk the property first and decide what you actually want to see. Approaches, entry points, and anywhere a vehicle or a bike is left. That list drives the camera count, and the camera count drives the cabling, which is where the work actually is.</p>
-            <p>Then find out what your walls are. If the house is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. There is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>Walk the site first and decide what you actually want to see. Approaches, entry points, and anywhere a vehicle, stock or equipment is left. That list drives the camera count, and the camera count drives the cabling, which is where the work actually is.</p>
+            <p>Then find out what your walls are. If the building is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. We do this work for homes and small commercial sites across the north-east, and there is more on what we cover locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Thinking About Cameras?',
             description:
-                'The cabling is the part that decides how it looks and how long it lasts. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
+                'Home or business, the cabling is the part that decides how it looks and how long it lasts. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
             linkText: 'Get a Security Camera Quote',
             href: '/contact',
         },
@@ -224,6 +295,12 @@ export const jobReports: JobReport[] = [
                 caption:
                     'The kitchen was updated in the same run of work, which is when new appliances are easiest to allow for.',
             },
+            {
+                src: '/images/outdoor_twin_spotlight_golden_grove.webp',
+                alt: 'Twin-head outdoor spotlight lighting a pool area at a Golden Grove home',
+                caption:
+                    'From a separate Golden Grove job: a twin-head spotlight aimed across a pool area, which is the outdoor half of the same idea.',
+            },
         ],
         services: [
             'downlight-installation-adelaide',
@@ -269,6 +346,11 @@ export const jobReports: JobReport[] = [
             <p>Forty sounds like a lot until you count the rooms. Spread across a whole house it is a normal number, and the count is not really the decision anyway. The spacing is.</p>
             <p>Downlights get spaced against ceiling height and beam angle so the light overlaps evenly rather than leaving scallops of bright and dim across a wall. Get that wrong in either direction and you notice: too few and the room has dark corners no lamp fixes, too many and it feels like a display home with nowhere comfortable to sit at night.</p>
             <p>The way out of that tension is dimming rather than fewer lights. A well-lit room you can wind back to a quarter gives you both a working kitchen and a comfortable lounge from the same fittings, and it is far cheaper to allow for while the ceilings are open. More on the fittings themselves is on our <a href="/downlight-installation-adelaide">downlights and LED lighting</a> page.</p>
+
+            <h3 id="outside">Do Not Stop at the Back Door</h3>
+            <p>The one place a lighting upgrade usually stops short is outside, and it is the cheapest remaining win once someone is already on site.</p>
+            <p>The third photo below is from a separate Golden Grove job rather than this one, but it makes the point. A twin-head spotlight aimed across a pool area turns a space that was unusable after dark into one you can actually see. Outdoor lighting does two jobs at once: it makes the area usable at night, and a house that is lit at the approaches is a less appealing target than one that is not.</p>
+            <p>The things worth getting right are aim and glare. A floodlight pointed at where people walk rather than at their eyes is the difference between lighting an area and blinding everyone in it. Sensors are worth considering for anywhere you only pass through, and a switch for anywhere you sit. And it all needs to be weather-rated and on a circuit that can carry whatever else is out there.</p>
 
             <h3 id="kitchen">The Kitchen and the New Appliances</h3>
             <p>The kitchen was updated in the same run of work, including new appliances throughout.</p>
