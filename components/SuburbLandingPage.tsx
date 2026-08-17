@@ -370,6 +370,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             {/* Real jobs done in this suburb. Renders nothing until one is written up. */}
             <RecentJobs
                 jobs={jobsForSuburb(slug)}
+                limit={6}
                 heading={`Recent Work in ${name}`}
                 intro={`Jobs we have actually done in ${name}, with photos and what was involved.`}
             />

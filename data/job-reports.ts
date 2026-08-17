@@ -32,6 +32,87 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'whole-house-led-downlights-golden-grove',
+        title: 'Whole House LED Downlights in Golden Grove',
+        metaDescription:
+            'Over forty LED downlights through a Golden Grove home, plus every switch and powerpoint replaced, as part of a renovation that also did floors and paint.',
+        excerpt:
+            'Over forty downlights, every switch and powerpoint replaced, and a kitchen refit. Paint, floors and lighting together change a house more than any one of them alone.',
+        date: '2026-08-15',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/led_downlights_living_golden_grove.webp',
+        gallery: [
+            {
+                src: '/images/led_downlights_kitchen_golden_grove.webp',
+                alt: 'Golden Grove kitchen with new LED downlights, new benchtop and new appliances',
+                caption:
+                    'The kitchen was updated in the same run of work, which is when new appliances are easiest to allow for.',
+            },
+        ],
+        services: [
+            'downlight-installation-adelaide',
+            'powerpoint-installation-adelaide',
+            'renovation-electrician-adelaide',
+            'oven-cooktop-installation-adelaide',
+        ],
+        suburb: 'electrician-golden-grove',
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Every Switch and Powerpoint Replaced in a Golden Grove Home',
+                blurb: 'Fresh paint next to twenty-year-old yellowed switches is the detail that gives a renovation away. Replacing them is cheap and it is also a chance to check what is behind them.',
+                anchor: 'switches',
+            },
+            'renovation-electrician-adelaide': {
+                title: 'Paint, Floors and Lighting on a Golden Grove Renovation',
+                blurb: 'The three things that shift how a house feels the most for the money, and why doing the electrical while the painter is still there costs less.',
+                anchor: 'the-trio',
+            },
+            'oven-cooktop-installation-adelaide': {
+                title: 'New Kitchen Appliances in a Golden Grove Renovation',
+                blurb: 'New appliances do not always want the same circuit the old ones had, which is worth checking before delivery day rather than on it.',
+                anchor: 'kitchen',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>If you want a house to feel different, there are three things that do more than anything else for the money: paint, floors and lighting. We see it constantly. A house gets those three done and people walk in and assume it has been rebuilt, when the layout has not moved and the kitchen might not even have been touched.</p>
+            <p>This job in Golden Grove was the full version. Over forty LED downlights through the whole house, new floors, every wall painted, the kitchen updated with new appliances, and every switch and powerpoint replaced. Our part was the lighting, the switches and outlets, and the kitchen.</p>
+
+            <h3 id="the-trio">Paint, Floors and Lighting</h3>
+            <p>Each of the three does something the others cannot.</p>
+            <p>Paint resets every surface and it is the cheapest of the three by a long way. Floors change what the whole house feels like underfoot and visually tie rooms together, particularly when you go from several different floor coverings to one. Lighting is the one people underestimate, because it changes not just how the house looks but how it reads. A room lit by a single centre fitting with a yellowing diffuser looks dated in a way that no amount of paint fixes, and it makes good paint and good floors look worse than they are.</p>
+            <p>The reason they belong together is practical rather than aesthetic. Installing downlights means cutting into ceilings. Replacing switches and outlets means marks on walls. Running anything new means access. If the painter is coming anyway and the floors are already up, all of that is absorbed into work that was happening regardless. Do the lighting two years after the painting and you are paying someone to patch and repaint.</p>
+            <p>In our experience this is where the money goes furthest, both for people renovating to sell and for people who intend to stay. We are electricians rather than valuers, so take the resale part as a trade observation rather than a valuation, but the pattern is consistent enough that it is worth saying.</p>
+
+            <h3 id="switches">The Part Everyone Forgets</h3>
+            <p>Every switch and powerpoint in the house was replaced with a current style, and this is the detail most people leave out of the budget.</p>
+            <p>It matters visually because switch plates are at eye level and at hand height, on every wall, in every room. Twenty-year-old plates that have yellowed unevenly sitting against brand new paint are the single clearest giveaway that a house has been freshened up rather than renovated. They are also the cheapest thing on the list to fix.</p>
+            <p>There is a second reason that has nothing to do with looks. Replacing an outlet means the terminations behind it get seen. Connections work loose over decades, and a loose connection heats up, and heat is what eventually discolours and embrittles the insulation around it. Most of the time everything behind the plate is fine. Occasionally it is not, and finding that during a planned renovation is a much better outcome than finding it later. It is also why this is <a href="/powerpoint-installation-adelaide">electrical work</a> rather than a job for whoever is already on site with a screwdriver.</p>
+
+            <h3 id="how-many">On Forty-Plus Downlights</h3>
+            <p>Forty sounds like a lot until you count the rooms. Spread across a whole house it is a normal number, and the count is not really the decision anyway. The spacing is.</p>
+            <p>Downlights get spaced against ceiling height and beam angle so the light overlaps evenly rather than leaving scallops of bright and dim across a wall. Get that wrong in either direction and you notice: too few and the room has dark corners no lamp fixes, too many and it feels like a display home with nowhere comfortable to sit at night.</p>
+            <p>The way out of that tension is dimming rather than fewer lights. A well-lit room you can wind back to a quarter gives you both a working kitchen and a comfortable lounge from the same fittings, and it is far cheaper to allow for while the ceilings are open. More on the fittings themselves is on our <a href="/downlight-installation-adelaide">downlights and LED lighting</a> page.</p>
+
+            <h3 id="kitchen">The Kitchen and the New Appliances</h3>
+            <p>The kitchen was updated in the same run of work, including new appliances throughout.</p>
+            <p>The thing to check there is that new appliances do not necessarily want the circuit the old ones had. Cooking appliances in particular have changed, and swapping what was in a kitchen twenty years ago for a current equivalent can mean a different circuit rating, a different connection type, or a dedicated circuit where the old appliance shared one. It is a five minute conversation before you order and a genuine problem on delivery day if nobody has had it.</p>
+            <p>Our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page covers the connection side of that in more detail.</p>
+
+            <h3>If You Are Planning This</h3>
+            <p>Do the three together, and get the electrical decided before the painter books in. The order that saves money is: agree the lighting layout and the switch and outlet positions, do the electrical, then plaster patching, then paint, then floors last so they do not get worked over.</p>
+            <p>If you are only doing one of the three, lighting is the one that changes the feel of a house most for the least disruption, because it does not require you to move out or empty rooms. If you are doing all three, say so at the quoting stage, because it changes how the job is sequenced and usually reduces what it costs. There is more on renovation sequencing on our <a href="/renovation-electrician-adelaide">renovation electrician</a> page, and on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Renovating, or Just Want It to Feel New?',
+            description:
+                'Lighting, switches and outlets done while the walls are already open costs less than doing it after. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
+            linkText: 'Get a Renovation Lighting Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'switchboard-upgrade-signs-golden-grove',
         title: 'Switchboards That Need Upgrading Around Golden Grove',
         metaDescription:

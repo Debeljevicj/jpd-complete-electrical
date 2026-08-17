@@ -16,12 +16,19 @@ export default function RecentJobs({
     heading,
     intro,
     angleFor,
+    limit = 3,
 }: {
     jobs: JobReport[];
     heading: string;
     intro?: string;
     /** Service slug to frame the cards for. Falls back to the job's own title and excerpt. */
     angleFor?: string;
+    /**
+     * Cards to show. Three fills the grid on one row, which suits a service page.
+     * Suburb pages pass more, because a suburb with several jobs written up is
+     * exactly the page that needs the most content of its own.
+     */
+    limit?: number;
 }) {
     if (jobs.length === 0) return null;
 
@@ -32,7 +39,7 @@ export default function RecentJobs({
                 {intro && <p className="text-neutral-slate mb-8 max-w-3xl">{intro}</p>}
 
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {jobs.slice(0, 3).map((job) => {
+                    {jobs.slice(0, limit).map((job) => {
                         const angle = angleFor ? job.angles?.[angleFor] : undefined;
                         const href = angle?.anchor
                             ? `/blog/${job.slug}#${angle.anchor}`
