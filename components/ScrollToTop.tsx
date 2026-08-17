@@ -28,10 +28,14 @@ export default function ScrollToTop() {
         };
     }, []);
 
+    // On mobile the sticky call bar owns the bottom of the screen, so this clears
+    // its full height (plus any home-indicator inset) instead of sitting on its
+    // edge and reading as part of the bar. Desktop has no bar, so it drops back down.
     return (
         <button
             onClick={scrollToTop}
-            className={`fixed bottom-24 left-8 z-50 p-3 rounded-full bg-gold text-navy shadow-lg transition-all duration-300 hover:bg-gold-dark hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+            style={{ bottom: 'calc(env(safe-area-inset-bottom, 0px) + 6.5rem)' }}
+            className={`fixed left-4 md:left-8 md:!bottom-8 z-40 p-3 rounded-full bg-gold text-navy shadow-lg transition-all duration-300 hover:bg-gold-dark hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
                 }`}
             aria-label="Scroll to top"
         >

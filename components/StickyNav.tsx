@@ -26,7 +26,7 @@ export default function StickyNav() {
     ];
 
     return (
-        <div className="sticky top-[72px] md:top-[80px] z-40 bg-white border-b border-gray-200 shadow-sm lg:hidden">
+        <div className="bg-white border-t border-gray-100 lg:hidden">
             <div className="container-custom">
                 <nav className="flex items-center justify-center gap-8 py-1">
                     {mainLinks.map((link) => {

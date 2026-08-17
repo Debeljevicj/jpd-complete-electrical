@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 
 export default function StickyMobileCTA() {
     const [isVisible, setIsVisible] = useState(false);
-    const [isCompact, setIsCompact] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
 
     useEffect(() => {
@@ -23,15 +22,7 @@ export default function StickyMobileCTA() {
     return (
         <>
             {/* Mobile/Tablet View */}
-            <div className={`fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] transition-transform duration-300 md:hidden ${isCompact ? 'translate-y-[calc(100%-3rem)]' : ''}`}>
-                {/* Toggle Handle */}
-                <button
-                    onClick={() => setIsCompact(!isCompact)}
-                    className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 border-b-0 rounded-t-lg px-4 py-1 shadow-sm"
-                >
-                    <div className="w-8 h-1 bg-gray-300 rounded-full" />
-                </button>
-
+            <div className="fixed bottom-0 left-0 right-0 z-[100] bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden">
                 <div className="px-3 pt-3 grid grid-cols-2 gap-3" style={{ paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom, 0.75rem))' }}>
                     <a
                         href="tel:0435006420"

@@ -7,7 +7,6 @@ import ScrollToTop from "@/components/ScrollToTop";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
-import StickyNav from "@/components/StickyNav";
 import Analytics from "@/components/Analytics";
 
 const inter = Inter({
@@ -87,7 +86,6 @@ export default function RootLayout({
             </head>
             <body className="antialiased text-navy bg-white flex flex-col min-h-screen">
                 <Header />
-                <StickyNav />
                 <Breadcrumbs />
                 <main className="flex-grow">
                     {children}

@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Phone, Facebook, Instagram } from 'lucide-react';
 import TrustBadges from './TrustBadges';
+import StickyNav from './StickyNav';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -100,6 +101,11 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+
+            {/* The mobile nav lives inside the header rather than as its own sticky
+                element. It used to pin itself at a hardcoded top-[72px] while the
+                header is only 60px tall, which left a gap the page scrolled through. */}
+            <StickyNav />
         </header>
     );
 }
