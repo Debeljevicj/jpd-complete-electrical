@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: Props) {
         description: post.metaDescription ?? post.excerpt,
         image: [post.image, ...(post.gallery ?? []).map((g) => g.src)].map((src) => `${SITE}${src}`),
         datePublished: post.date,
-        dateModified: post.date,
+        dateModified: post.updated ?? post.date,
         inLanguage: 'en-AU',
         mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/blog/${post.slug}/` },
         author: {

@@ -235,8 +235,7 @@ export const jobReports: JobReport[] = [
     {
         slug: 'kitchen-appliances-lighting-greenwith',
         title: 'Kitchen Appliances and Lighting in Greenwith',
-        metaDescription:
-            'A full kitchen renovation in Greenwith with Smeg appliances throughout and new LED lighting, and why a modern kitchen needs far more circuits than the one it replaces.',
+        metaDescription: `A Greenwith kitchen renovation with Smeg appliances throughout and new LED lighting, and why a modern kitchen needs far more circuits than the one it replaced.`,
         excerpt:
             'Smeg appliances throughout and new LED lighting. A modern kitchen is a much bigger electrical load than the kitchen it replaces, and the total is what catches people out.',
         date: '2026-08-15',
@@ -649,8 +648,7 @@ export const jobReports: JobReport[] = [
     {
         slug: 'ev-charger-install-greenwith',
         title: 'EV Charger Install in a Greenwith Apartment Car Park',
-        metaDescription:
-            'A 7 kW EV charger installed on a dedicated circuit in the lower level of a multi-level residential car park in Greenwith, and what is different about charging in a shared building.',
+        metaDescription: `A 7 kW EV charger on a dedicated circuit in a multi-level residential car park in Greenwith, and what is different about charging in a shared building.`,
         excerpt:
             'A 7 kW charger on its own dedicated circuit in a multi-level residential car park, where the wiring, the supply and the permissions all work differently to a house.',
         date: '2026-08-15',
@@ -984,8 +982,7 @@ export const jobReports: JobReport[] = [
         slug: 'zetr-powerpoint-stone-splashback-golden-grove',
         title: 'Zetr Powerpoint on a Stone Splashback in Golden Grove',
         seoTitle: 'Zetr Powerpoint on Stone Splashback | JPD',
-        metaDescription:
-            'Installing a flush matt black Zetr outlet into a genuine stone splashback in a Golden Grove kitchen renovation, and why the cutout has to be agreed before the stone is cut.',
+        metaDescription: `A flush matt black Zetr outlet set into a genuine stone splashback in a Golden Grove kitchen, and why the cutout has to be agreed before the stone is cut.`,
         excerpt:
             'A flush matt black outlet set into genuine stone, where the cutout is made off site and there is no second attempt if the size is wrong.',
         date: '2026-08-15',

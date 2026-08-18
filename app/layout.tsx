@@ -43,6 +43,9 @@ export const metadata: Metadata = {
         ],
     },
     metadataBase: new URL('https://jpdcompleteelectrical.com.au'),
+    // Inherited by any route that does not set its own alternates.canonical, which
+    // makes that route declare itself a duplicate of the homepage. Every page under
+    // app/ sets its own - keep it that way when adding new ones.
     alternates: {
         canonical: '/',
     },

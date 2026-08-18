@@ -20,6 +20,12 @@ const { contact, vcard, reviewUrl, intro, actions } = card;
 export const metadata = {
     title: card.meta.title,
     description: card.meta.description,
+    // Self-referencing. Metadata is inherited down the tree in the App Router, so
+    // without this the page picks up canonical: "/" from the root layout and tells
+    // Google that /card/ is a duplicate of the homepage.
+    alternates: {
+        canonical: '/card',
+    },
     robots: {
         index: false,
         follow: true,

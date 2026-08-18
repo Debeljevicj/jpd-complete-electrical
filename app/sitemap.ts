@@ -21,8 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE}/reviews/`, changeFrequency: 'weekly', priority: 0.7 },
         { url: `${SITE}/blog/`, changeFrequency: 'weekly', priority: 0.7 },
         { url: `${SITE}/faq/`, changeFrequency: 'monthly', priority: 0.7 },
-        { url: `${SITE}/card/`, changeFrequency: 'yearly', priority: 0.3 },
     ];
+
+    // /card/ is deliberately absent. It is noindex - it exists for the QR code on
+    // physical business cards, not for search - and listing a noindex URL in the
+    // sitemap asks Google to index a page we have told it to skip. Search Console
+    // reports that contradiction as an "Excluded by noindex tag" error.
 
     const servicePages: MetadataRoute.Sitemap = services.map((service) => ({
         url: `${SITE}/${service.slug}/`,
@@ -40,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
         url: `${SITE}/blog/${post.slug}/`,
-        lastModified: post.date,
+        lastModified: post.updated ?? post.date,
         changeFrequency: 'yearly',
         priority: 0.6,
     }));
