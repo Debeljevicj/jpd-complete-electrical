@@ -47,7 +47,7 @@ export default function AboutPage() {
                                 </p>
                                 <p>
                                     As a fully qualified and licensed electrician, I take pride in delivering clean, professional
-                                    workmanship across residential, commercial, and specialized sectors including medical clinics
+                                    workmanship across residential, commercial, and specialised sectors including medical clinics
                                     and disability housing.
                                 </p>
                                 <p>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-navy mb-1">Safety</h3>
                                 <p className="text-neutral-slate">
-                                    A massive value for our customers and staff. We prioritize safety above all else.
+                                    A massive value for our customers and staff. We prioritise safety above all else.
                                 </p>
                             </div>
                         </div>
