@@ -75,7 +75,7 @@ export const jobReports: JobReport[] = [
             <h3 id="lighting">Lighting a Shed Is Two Different Jobs</h3>
             <p>General light and task light are not the same thing, and a shed usually gets sold only the first one.</p>
             <p>General light means you can see across the space, move machinery safely and find what you need. That runs along the length of the building rather than sitting in the middle, because a single central fitting in a shed with a high roof leaves the ends dim and casts long shadows off everything stored along the walls.</p>
-            <p>Task light is different. Somebody working at a bench needs light on the work, not on the room, and coming from in front of them rather than over their shoulder. That is why there is a separate <a href="/downlight-installation-adelaide">LED fitting</a> directly above the bench. Same principle as a kitchen: if you are standing between the light and what you are doing, the room is lit and your hands are not.</p>
+            <p>Task light is different. Somebody working at a bench needs light on the work, not on the room, and coming from in front of them rather than over their shoulder. That is why there is a separate <a href="/downlight-installation-adelaide/">LED fitting</a> directly above the bench. Same principle as a kitchen: if you are standing between the light and what you are doing, the room is lit and your hands are not.</p>
             <p>Height and environment drive the fitting choice. A shed is dusty, gets damp, and things get thrown around in it, so the fittings need to suit that rather than being what would go in a garage at home.</p>
 
             <h3 id="data">Running Data Underground</h3>
@@ -89,7 +89,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Run a Site With a Shed on It</h3>
             <p>Two things are worth doing before you need them. First, find out whether your board has spare capacity, because that determines whether the next addition is a small job or a large one. Second, if you are ever opening a trench, put in more conduit than you need and leave a draw wire.</p>
-            <p>On a commercial site there are also obligations a home does not have around testing and maintaining the installation, which is worth being on top of rather than discovering during an insurance claim. We do this work for clubs, small commercial sites and homes across the northern and north-eastern suburbs. There is more on <a href="/powerpoint-installation-adelaide">power and extra circuits</a> and on <a href="/test-and-tag-adelaide">test and tag</a> if that is relevant to your site.</p>
+            <p>On a commercial site there are also obligations a home does not have around testing and maintaining the installation, which is worth being on top of rather than discovering during an insurance claim. We do this work for clubs, small commercial sites and homes across the northern and north-eastern suburbs. There is more on <a href="/powerpoint-installation-adelaide/">power and extra circuits</a> and on <a href="/test-and-tag-adelaide/">test and tag</a> if that is relevant to your site.</p>
         `,
         cta: {
             heading: 'Shed, Workshop or Commercial Site?',
@@ -156,11 +156,11 @@ export const jobReports: JobReport[] = [
 
             <h3 id="weather">Rated for Outside, and on a Circuit That Can Take It</h3>
             <p>Everything outside needs to be rated for the location it is in, and there is a real difference between a fitting under a covered eave and one on an exposed wall or in the garden where it gets watered by a sprinkler twice a week.</p>
-            <p>The other half is the circuit. A full lighting scheme around a house, plus whatever else is out there in the way of powerpoints, fans or heating, is more than a single existing outdoor circuit was built for. Working that out before rather than adding to it until something trips is the difference between a scheme and an accumulation. There is more on our <a href="/feature-lighting-led-strip-adelaide">feature lighting</a> page.</p>
+            <p>The other half is the circuit. A full lighting scheme around a house, plus whatever else is out there in the way of powerpoints, fans or heating, is more than a single existing outdoor circuit was built for. Working that out before rather than adding to it until something trips is the difference between a scheme and an accumulation. There is more on our <a href="/feature-lighting-led-strip-adelaide/">feature lighting</a> page.</p>
 
             <h3>If You Are Lighting the Outside of Your House</h3>
             <p>Walk around it after dark first and note what you cannot see and what you would like to look at. Those are two different lists and they want different fittings.</p>
-            <p>Then decide which areas you pass through and which you sit in, because that determines what goes on a sensor and what goes on a switch. Get both right and you end up with a house that looks better at night than it does in the day. There is more on what we do locally on our <a href="/electrician-redwood-park">Redwood Park electrician</a> page.</p>
+            <p>Then decide which areas you pass through and which you sit in, because that determines what goes on a sensor and what goes on a switch. Get both right and you end up with a house that looks better at night than it does in the day. There is more on what we do locally on our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
         cta: {
             heading: 'Want the Outside to Look as Good as the Inside?',
@@ -222,7 +222,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Are Buying Feature Lighting</h3>
             <p>Decide on dimming first, because it affects the lamp, the switch and the wiring, and retro-fitting it is more work than including it. For anything heavy or anything in a void or a stairwell, sort out how it gets installed and how it gets serviced before you buy it.</p>
-            <p>Feature fittings are usually the most expensive lights in a house and the ones people are most pleased with afterwards, which is a good reason to spend a bit of time on the boring questions first. There is more on our <a href="/feature-lighting-led-strip-adelaide">feature lighting</a> page, and on what we do locally on our <a href="/electrician-redwood-park">Redwood Park electrician</a> page.</p>
+            <p>Feature fittings are usually the most expensive lights in a house and the ones people are most pleased with afterwards, which is a good reason to spend a bit of time on the boring questions first. There is more on our <a href="/feature-lighting-led-strip-adelaide/">feature lighting</a> page, and on what we do locally on our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
         cta: {
             heading: 'Bought a Fitting You Want Installed Properly?',
@@ -272,22 +272,22 @@ export const jobReports: JobReport[] = [
 
             <h3 id="circuits">What Needs Its Own Circuit</h3>
             <p>Broadly, the heavy fixed appliances get their own circuits and the bench outlets share.</p>
-            <p>An induction cooktop needs a dedicated circuit sized for that specific model, and going from gas to induction means running that circuit from the board for the first time. We covered that in more detail on a <a href="/blog/induction-cooktop-oven-install-golden-grove">Golden Grove kitchen</a> where the same change was made, so rather than repeat it here: get the model number to your electrician before you buy.</p>
-            <p>The oven usually wants its own supply as well, and a dishwasher and rangehood need outlets positioned inside the cabinetry where they can still be reached. The bench outlets are where you want to be generous rather than minimal, because the alternative is a permanent extension lead on a stone benchtop. More on the connection side is on our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page.</p>
+            <p>An induction cooktop needs a dedicated circuit sized for that specific model, and going from gas to induction means running that circuit from the board for the first time. We covered that in more detail on a <a href="/blog/induction-cooktop-oven-install-golden-grove/">Golden Grove kitchen</a> where the same change was made, so rather than repeat it here: get the model number to your electrician before you buy.</p>
+            <p>The oven usually wants its own supply as well, and a dishwasher and rangehood need outlets positioned inside the cabinetry where they can still be reached. The bench outlets are where you want to be generous rather than minimal, because the alternative is a permanent extension lead on a stone benchtop. More on the connection side is on our <a href="/oven-cooktop-installation-adelaide/">oven and cooktop installation</a> page.</p>
 
             <h3 id="lighting">The Lighting Mistake Almost Every Kitchen Makes</h3>
             <p>Here is the one worth reading even if you are not renovating.</p>
             <p>Most kitchens are lit by downlights spaced evenly across the middle of the ceiling. Stand at the bench and work out where that puts the light. It is behind you. Your body is between the light and the surface you are working on, so you chop, read recipes and check whether the chicken is done in your own shadow. The room is well lit and the bench is not.</p>
-            <p>The fix is to light the bench rather than the room. That means <a href="/downlight-installation-adelaide">downlights positioned over the front edge of the bench</a> rather than the centre of the ceiling, so the light comes down onto the work surface past you instead of over your shoulder. Where cabinetry allows, under-cabinet lighting does it better again, because it sits below head height and cannot be blocked at all.</p>
+            <p>The fix is to light the bench rather than the room. That means <a href="/downlight-installation-adelaide/">downlights positioned over the front edge of the bench</a> rather than the centre of the ceiling, so the light comes down onto the work surface past you instead of over your shoulder. Where cabinetry allows, under-cabinet lighting does it better again, because it sits below head height and cannot be blocked at all.</p>
             <p>Think of it as two separate jobs. General light so the room is not gloomy, and task light where you actually work. A kitchen with both is noticeably easier to use, and the difference costs very little at rough-in stage. It costs a great deal after the ceiling is closed and the splashback is on.</p>
 
             <h3 id="order">The Order It Has To Happen In</h3>
             <p>Appliances chosen first, because their sizes and electrical requirements drive everything. Then cabinetry designed around them. Then electrical rough-in to match the cabinetry, before the plasterer and before any splashback goes on. Then benchtops and cabinetry installed, then appliances connected and tested.</p>
-            <p>Every stage depends on the one above. The reason kitchens are less forgiving than any other room is that almost everything in them is fixed, made to measure and expensive, so a decision made in the wrong order is not a quick adjustment. Our <a href="/renovation-electrician-adelaide">renovation electrician</a> page covers how this sequences alongside the other trades.</p>
+            <p>Every stage depends on the one above. The reason kitchens are less forgiving than any other room is that almost everything in them is fixed, made to measure and expensive, so a decision made in the wrong order is not a quick adjustment. Our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page covers how this sequences alongside the other trades.</p>
 
             <h3>If You Are Doing a Kitchen</h3>
             <p>Two things at the start. Send the appliance list with model numbers to your electrician, and ask whether the board has capacity for the lot rather than just for the cooktop.</p>
-            <p>Then spend five minutes on where you will actually be standing when you use the room, and put light on those surfaces. It is the cheapest thing on the list and the one you will notice every single day. There is more on what we do locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+            <p>Then spend five minutes on where you will actually be standing when you use the room, and put light on those surfaces. It is the cheapest thing on the list and the one you will notice every single day. There is more on what we do locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
         cta: {
             heading: 'Planning a Kitchen Renovation?',
@@ -318,7 +318,7 @@ export const jobReports: JobReport[] = [
             <h3 id="why-dedicated-circuits">Why Each One Needs Its Own Circuit</h3>
             <p>A 3.2 kW heater pulls roughly 14 amps on its own. Two of them running together is around 28 amps of continuous load, which is more than a general outdoor powerpoint circuit was ever built to carry.</p>
             <p>This is the single most common misunderstanding with outdoor heating. People assume that because the heater comes with a plug, an existing outdoor powerpoint will do. It will not. That outlet is very likely sharing a circuit with other outlets, and heating is not an intermittent load like a drill or a radio. It runs flat out for hours, which is exactly the condition that finds the weakest connection on a circuit and heats it up.</p>
-            <p>So each heater got a <a href="/powerpoint-installation-adelaide">dedicated circuit</a> sized for continuous load. That also means you can run one or both without anything else on the property being affected, and if you only want to warm half the area you are not paying to run the other heater.</p>
+            <p>So each heater got a <a href="/powerpoint-installation-adelaide/">dedicated circuit</a> sized for continuous load. That also means you can run one or both without anything else on the property being affected, and if you only want to warm half the area you are not paying to run the other heater.</p>
 
             <h3 id="radiant">Why Radiant and Not a Fan Heater</h3>
             <p>Outdoor heating only works if it is radiant. A fan heater warms the air, and outdoors the air simply leaves. You are heating the suburb.</p>
@@ -328,7 +328,7 @@ export const jobReports: JobReport[] = [
             <h3 id="planning">If You Are Adding Outdoor Heating</h3>
             <p>Work out the heater size and how many before the electrical, because the answer determines the circuits and possibly the switchboard. Two 3.2 kW heaters is a meaningful addition to a house's total load, and if the board has no spare ways then that is part of the job.</p>
             <p>It is also worth doing outdoor heating at the same time as anything else out there. An outdoor area that gains heating usually also wants lighting, fans and weatherproof outlets, and those together are well beyond what one existing outdoor circuit can carry. Doing them in one visit costs far less than adding each one separately, and it means the whole area gets designed as a whole.</p>
-            <p>For what it is worth, this is a job that pays for itself in use rather than in resale. Cold evenings around Greenwith and Golden Grove are the difference between an outdoor area you use three seasons a year and one you use all four. There is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>For what it is worth, this is a job that pays for itself in use rather than in resale. Cold evenings around Greenwith and Golden Grove are the difference between an outdoor area you use three seasons a year and one you use all four. There is more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Want to Use Your Outdoor Area in Winter?',
@@ -381,12 +381,12 @@ export const jobReports: JobReport[] = [
 
             <h3 id="power">The Recorder Needs Power and Somewhere to Live</h3>
             <p>The cameras themselves typically take power and data down the same cable, which keeps the outdoor side simple. The recorder is the part people do not plan for.</p>
-            <p>It needs a <a href="/powerpoint-installation-adelaide">supply</a>, it needs somewhere ventilated because it runs continuously and generates heat, and it needs to be somewhere reasonably secure. A recorder sitting in an obvious spot inside the front door is the first thing taken, along with everything it recorded.</p>
+            <p>It needs a <a href="/powerpoint-installation-adelaide/">supply</a>, it needs somewhere ventilated because it runs continuously and generates heat, and it needs to be somewhere reasonably secure. A recorder sitting in an obvious spot inside the front door is the first thing taken, along with everything it recorded.</p>
             <p>Worth thinking about too: if the power goes off, the recording stops. If that matters to you, the recorder wants to be on a small uninterruptible supply so a brief outage, or somebody deliberately killing the power, does not create a gap.</p>
 
             <h3>If You Are Getting Cameras Installed</h3>
             <p>Walk the site first and decide what you actually want to see. Approaches, entry points, and anywhere a vehicle, stock or equipment is left. That list drives the camera count, and the camera count drives the cabling, which is where the work actually is.</p>
-            <p>Then find out what your walls are. If the building is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. We do this work for homes and small commercial sites across the north-east, and there is more on what we cover locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>Then find out what your walls are. If the building is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. We do this work for homes and small commercial sites across the north-east, and there is more on what we cover locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Thinking About Cameras?',
@@ -446,12 +446,12 @@ export const jobReports: JobReport[] = [
 
             <h3 id="board">It May Also Be a Switchboard Question</h3>
             <p>A new dedicated circuit needs somewhere to land, and that means a spare way in the board with capacity to match.</p>
-            <p>On plenty of Golden Grove homes there is not one. When the board is full, adding an induction cooktop quietly becomes a cooktop plus board work, and finding that out during planning is very different from finding it out on installation day with a bench full of new appliances. It is worth having the board looked at while you are still choosing appliances rather than after. Our page on <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> covers what that involves.</p>
+            <p>On plenty of Golden Grove homes there is not one. When the board is full, adding an induction cooktop quietly becomes a cooktop plus board work, and finding that out during planning is very different from finding it out on installation day with a bench full of new appliances. It is worth having the board looked at while you are still choosing appliances rather than after. Our page on <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> covers what that involves.</p>
 
             <h3 id="integrated">Integrated Appliances and Getting to Them Later</h3>
             <p>The oven and microwave here sit in a cabinet tower, which is a different problem to a freestanding appliance.</p>
             <p>Each needs its supply positioned where the cabinetmaker has left room for it, which means the cabinetry drawings and the electrical rough-in have to agree before either is built. And it has to be somewhere a person can actually reach. An outlet sealed behind a fixed oven with no access panel technically works, right up until the appliance needs isolating for a repair and the only way to reach the plug is to pull the oven out of the joinery.</p>
-            <p>The same applies to the microwave. It is inside the cabinetry, so its <a href="/powerpoint-installation-adelaide">outlet</a> has to be hidden but serviceable. That is a decision made on the plan, not on the day.</p>
+            <p>The same applies to the microwave. It is inside the cabinetry, so its <a href="/powerpoint-installation-adelaide/">outlet</a> has to be hidden but serviceable. That is a decision made on the plan, not on the day.</p>
 
             <h3 id="sequence">The Order These Decisions Happen In</h3>
             <p>Kitchens go wrong on sequence more than on any technical detail. The order that works is:</p>
@@ -463,11 +463,11 @@ export const jobReports: JobReport[] = [
                 <li>Appliances connected and tested</li>
             </ul>
             <p>Every step depends on the one above it. Skip ahead and you get the classic outcomes: a cooktop that needs a circuit nobody allowed for, an outlet in the wrong place behind finished joinery, or a splashback that needs cutting after it is installed.</p>
-            <p>It is the same reasoning as any other room, just less forgiving because a kitchen has more fixed, expensive, made-to-measure parts than anywhere else in a house. More on how this sequences with the other trades is on our <a href="/renovation-electrician-adelaide">renovation electrician</a> page.</p>
+            <p>It is the same reasoning as any other room, just less forgiving because a kitchen has more fixed, expensive, made-to-measure parts than anywhere else in a house. More on how this sequences with the other trades is on our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page.</p>
 
             <h3>If You Are Doing a Kitchen</h3>
             <p>Two things and you avoid most of the trouble. Send the appliance model numbers to your electrician early, and ask whether the switchboard has the capacity for what you have chosen.</p>
-            <p>If you are going gas to induction, assume a new circuit and budget for it rather than hoping. And if lighting is part of the same job, do it in the same run of work while the ceilings and walls are already open. Our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page has more on the connection side, and there is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>If you are going gas to induction, assume a new circuit and budget for it rather than hoping. And if lighting is part of the same job, do it in the same run of work while the ceilings and walls are already open. Our <a href="/oven-cooktop-installation-adelaide/">oven and cooktop installation</a> page has more on the connection side, and there is more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Planning a New Kitchen?',
@@ -540,12 +540,12 @@ export const jobReports: JobReport[] = [
             <h3 id="switches">The Part Everyone Forgets</h3>
             <p>Every switch and powerpoint in the house was replaced with a current style, and this is the detail most people leave out of the budget.</p>
             <p>It matters visually because switch plates are at eye level and at hand height, on every wall, in every room. Twenty-year-old plates that have yellowed unevenly sitting against brand new paint are the single clearest giveaway that a house has been freshened up rather than renovated. They are also the cheapest thing on the list to fix.</p>
-            <p>There is a second reason that has nothing to do with looks. Replacing an outlet means the terminations behind it get seen. Connections work loose over decades, and a loose connection heats up, and heat is what eventually discolours and embrittles the insulation around it. Most of the time everything behind the plate is fine. Occasionally it is not, and finding that during a planned renovation is a much better outcome than finding it later. It is also why this is <a href="/powerpoint-installation-adelaide">electrical work</a> rather than a job for whoever is already on site with a screwdriver.</p>
+            <p>There is a second reason that has nothing to do with looks. Replacing an outlet means the terminations behind it get seen. Connections work loose over decades, and a loose connection heats up, and heat is what eventually discolours and embrittles the insulation around it. Most of the time everything behind the plate is fine. Occasionally it is not, and finding that during a planned renovation is a much better outcome than finding it later. It is also why this is <a href="/powerpoint-installation-adelaide/">electrical work</a> rather than a job for whoever is already on site with a screwdriver.</p>
 
             <h3 id="how-many">On Forty-Plus Downlights</h3>
             <p>Forty sounds like a lot until you count the rooms. Spread across a whole house it is a normal number, and the count is not really the decision anyway. The spacing is.</p>
             <p>Downlights get spaced against ceiling height and beam angle so the light overlaps evenly rather than leaving scallops of bright and dim across a wall. Get that wrong in either direction and you notice: too few and the room has dark corners no lamp fixes, too many and it feels like a display home with nowhere comfortable to sit at night.</p>
-            <p>The way out of that tension is dimming rather than fewer lights. A well-lit room you can wind back to a quarter gives you both a working kitchen and a comfortable lounge from the same fittings, and it is far cheaper to allow for while the ceilings are open. More on the fittings themselves is on our <a href="/downlight-installation-adelaide">downlights and LED lighting</a> page.</p>
+            <p>The way out of that tension is dimming rather than fewer lights. A well-lit room you can wind back to a quarter gives you both a working kitchen and a comfortable lounge from the same fittings, and it is far cheaper to allow for while the ceilings are open. More on the fittings themselves is on our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page.</p>
 
             <h3 id="outside">Do Not Stop at the Back Door</h3>
             <p>The one place a lighting upgrade usually stops short is outside, and it is the cheapest remaining win once someone is already on site.</p>
@@ -555,11 +555,11 @@ export const jobReports: JobReport[] = [
             <h3 id="kitchen">The Kitchen and the New Appliances</h3>
             <p>The kitchen was updated in the same run of work, including new appliances throughout.</p>
             <p>The thing to check there is that new appliances do not necessarily want the circuit the old ones had. Cooking appliances in particular have changed, and swapping what was in a kitchen twenty years ago for a current equivalent can mean a different circuit rating, a different connection type, or a dedicated circuit where the old appliance shared one. It is a five minute conversation before you order and a genuine problem on delivery day if nobody has had it.</p>
-            <p>Our <a href="/oven-cooktop-installation-adelaide">oven and cooktop installation</a> page covers the connection side of that in more detail.</p>
+            <p>Our <a href="/oven-cooktop-installation-adelaide/">oven and cooktop installation</a> page covers the connection side of that in more detail.</p>
 
             <h3>If You Are Planning This</h3>
             <p>Do the three together, and get the electrical decided before the painter books in. The order that saves money is: agree the lighting layout and the switch and outlet positions, do the electrical, then plaster patching, then paint, then floors last so they do not get worked over.</p>
-            <p>If you are only doing one of the three, lighting is the one that changes the feel of a house most for the least disruption, because it does not require you to move out or empty rooms. If you are doing all three, say so at the quoting stage, because it changes how the job is sequenced and usually reduces what it costs. There is more on renovation sequencing on our <a href="/renovation-electrician-adelaide">renovation electrician</a> page, and on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>If you are only doing one of the three, lighting is the one that changes the feel of a house most for the least disruption, because it does not require you to move out or empty rooms. If you are doing all three, say so at the quoting stage, because it changes how the job is sequenced and usually reduces what it costs. There is more on renovation sequencing on our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page, and on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Renovating, or Just Want It to Feel New?',
@@ -619,7 +619,7 @@ export const jobReports: JobReport[] = [
             <p>The second photo below is a more modern board, and at a glance it looks fine. Neat row of breakers, printed labels, solar connected. Look at the labels though and there is a single "earth leakage main switch" sitting across the whole installation.</p>
             <p>That is one safety switch protecting every circuit in the house. It meets the requirement it was installed under, and it is far better than nothing. But it has two consequences you live with daily.</p>
             <p>The first is that a fault anywhere takes out everywhere. A failing outdoor light, a wet powerpoint or a dying appliance trips the lot, so you lose the fridge, the freezer, the internet and every clock in the house because of a fault in one fitting. The second is that it makes the fault almost impossible to identify. When everything goes off together, nothing has been narrowed down.</p>
-            <p>The modern arrangement puts individual protection on each circuit instead. A fault on the outdoor lights trips the outdoor lights. Everything else keeps running, and you already know where to look. More on how these are tested is on our <a href="/rcd-testing-safety-switches-adelaide">safety switches and RCD testing</a> page.</p>
+            <p>The modern arrangement puts individual protection on each circuit instead. A fault on the outdoor lights trips the outdoor lights. Everything else keeps running, and you already know where to look. More on how these are tested is on our <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> page.</p>
 
             <h3 id="tripping">Circuits That Keep Tripping</h3>
             <p>A breaker or safety switch that trips repeatedly is not being oversensitive and it is not worn out. It is reporting something.</p>
@@ -635,7 +635,7 @@ export const jobReports: JobReport[] = [
 
             <h3>What To Do About It</h3>
             <p>None of this is a reason to panic. Plenty of old boards are working exactly as designed, and an upgrade is planned work rather than an emergency unless you are seeing heat.</p>
-            <p>The sensible trigger is when you are about to do something else. A renovation, an EV charger, air conditioning or a pool all need capacity and protection the old board may not have, and doing the board at the same time avoids paying twice for access. Our <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> page covers what the work actually involves, and there is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>The sensible trigger is when you are about to do something else. A renovation, an EV charger, air conditioning or a pool all need capacity and protection the old board may not have, and doing the board at the same time avoids paying twice for access. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers what the work actually involves, and there is more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Not Sure About Your Board?',
@@ -687,7 +687,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Are Getting a Charger</h3>
             <p>Sort the charger choice and the location before you book the electrical, because both change the job. We install customer-supplied units like this one and we can supply a range of brands, so if you have not bought yet that is worth a conversation first rather than after.</p>
-            <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There is more on our <a href="/ev-charger-installation-adelaide">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+            <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There is more on our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
         cta: {
             heading: 'Thinking About an EV Charger?',
@@ -745,19 +745,19 @@ export const jobReports: JobReport[] = [
 
             <h3 id="tv-wall">What "No Visible Cables" Actually Requires</h3>
             <p>Three separate things had to be in the wall behind that screen, and each is a different type of cabling.</p>
-            <p>A <a href="/powerpoint-installation-adelaide">powerpoint behind the TV</a>, positioned so the plug and any adaptor sit hidden behind the screen rather than below it. Two HDMI cables, so a console or media device somewhere else in the room connects without a lead crossing the wall. And a new TV antenna point, because the old outlet was not where the TV was going.</p>
+            <p>A <a href="/powerpoint-installation-adelaide/">powerpoint behind the TV</a>, positioned so the plug and any adaptor sit hidden behind the screen rather than below it. Two HDMI cables, so a console or media device somewhere else in the room connects without a lead crossing the wall. And a new TV antenna point, because the old outlet was not where the TV was going.</p>
             <p>Two HDMI runs rather than one is deliberate. The cable itself is cheap and the labour of getting it inside a finished wall is not, so the second one costs very little now and saves opening the wall later when a device changes. If you are doing this, run a spare.</p>
             <p>All of it has to land at the right height for where the bracket goes, which means the TV size and bracket need deciding before the cabling, not after.</p>
 
             <h3 id="downlights">Where the Downlights Went</h3>
-            <p>The rest of the job was <a href="/downlight-installation-adelaide">LED downlights</a> through the other rooms, and positioning matters more than people expect.</p>
+            <p>The rest of the job was <a href="/downlight-installation-adelaide/">LED downlights</a> through the other rooms, and positioning matters more than people expect.</p>
             <p>The instinct is to centre lights in a room. In a bedroom that puts a downlight directly above where you lie down, which is unpleasant every night. Setting them around the room instead lights the space evenly without anything shining into your face, and it also lights the wardrobe and the walkway rather than just the middle of the floor.</p>
             <p>The other thing worth deciding once, for the whole house, is colour temperature. Mixing warm white in one room with cool white in the next is the kind of thing you cannot unsee afterwards, and it reads as a mistake rather than a choice. Pick one and use it everywhere, and if you want a different feel in a particular room, do it with dimming rather than a different globe colour.</p>
 
             <h3 id="timing">Why This Is Renovation Work, Not Afterwards Work</h3>
             <p>Everything described here went in before the plasterer. Once the walls are closed and painted, running a new HDMI or moving a powerpoint means cutting, patching and repainting, and it never quite matches.</p>
             <p>So the media wall is a conversation to have at the same time as the lighting plan, even if the TV itself is not being bought for another six months. Deciding the wall, the height and roughly the screen size early costs nothing. Deciding it late costs a plasterer.</p>
-            <p>If you are planning a renovation, our <a href="/renovation-electrician-adelaide">renovation electrician</a> page covers how the electrical sequences with the other trades, and there is more on what we do locally on our <a href="/electrician-hope-valley">Hope Valley electrician</a> page.</p>
+            <p>If you are planning a renovation, our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page covers how the electrical sequences with the other trades, and there is more on what we do locally on our <a href="/electrician-hope-valley/">Hope Valley electrician</a> page.</p>
         `,
         cta: {
             heading: 'Planning a Renovation?',
@@ -811,12 +811,12 @@ export const jobReports: JobReport[] = [
 
             <h3 id="supply">Supply, Drivers and Load</h3>
             <p>A ceiling-sized array is a real load rather than a light fitting, and it runs off drivers that have to live somewhere accessible. If a driver fails in three years, whoever replaces it needs to reach it without dismantling the array.</p>
-            <p>So the supply, the <a href="/powerpoint-installation-adelaide">circuit</a> and the driver positions get planned alongside the layout. In a garage there is often no ceiling cavity to hide anything in, which makes that positioning a visible decision rather than a hidden one.</p>
+            <p>So the supply, the <a href="/powerpoint-installation-adelaide/">circuit</a> and the driver positions get planned alongside the layout. In a garage there is often no ceiling cavity to hide anything in, which makes that positioning a visible decision rather than a hidden one.</p>
 
             <h3 id="customer-supplied">On Customer-Supplied Fittings</h3>
             <p>This lighting was supplied by the customer, which we are happy to install. One thing worth saying plainly though, because it comes up often with LED bought online.</p>
             <p>Electrical equipment sold for use in Australia has to meet Australian requirements, and an electrician cannot install something that does not. It is not a formality. The part that fails first in cheap LED is almost always the driver, and when a driver fails inside a linked array you are troubleshooting the whole run rather than swapping a globe. If you are buying your own, buy something with a driver you can still get in five years.</p>
-            <p>If you are unsure about a fitting you have already bought, send us the details before the install day rather than finding out on it. More on this kind of work is on our <a href="/feature-lighting-led-strip-adelaide">feature lighting and LED strip</a> page, and on what we cover locally on our <a href="/electrician-fairview-park">Fairview Park electrician</a> page.</p>
+            <p>If you are unsure about a fitting you have already bought, send us the details before the install day rather than finding out on it. More on this kind of work is on our <a href="/feature-lighting-led-strip-adelaide/">feature lighting and LED strip</a> page, and on what we cover locally on our <a href="/electrician-fairview-park/">Fairview Park electrician</a> page.</p>
         `,
         cta: {
             heading: 'Want Lighting You Can Actually Work Under?',
@@ -860,7 +860,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Are Adding Fans Outside</h3>
             <p>Work out the fan and the fixing points before you buy, particularly under a raked or gabled roof, because the downrod and the mount depend on the structure and the ceiling height. Check the fan is rated for outdoor use even if it will be under cover.</p>
-            <p>Then think about the circuit and the switching. An outdoor entertaining area that gains fans usually also wants lighting, weatherproof powerpoints and sometimes heating, and those together are more than an existing outdoor light circuit was built for. It is much cheaper to allow for that in one visit than to add each piece separately. More on our <a href="/ceiling-fan-installation-adelaide">ceiling fan installation</a> page, and on what we do locally on our <a href="/electrician-ridgehaven">Ridgehaven electrician</a> page.</p>
+            <p>Then think about the circuit and the switching. An outdoor entertaining area that gains fans usually also wants lighting, weatherproof powerpoints and sometimes heating, and those together are more than an existing outdoor light circuit was built for. It is much cheaper to allow for that in one visit than to add each piece separately. More on our <a href="/ceiling-fan-installation-adelaide/">ceiling fan installation</a> page, and on what we do locally on our <a href="/electrician-ridgehaven/">Ridgehaven electrician</a> page.</p>
         `,
         cta: {
             heading: 'Want to Actually Use Your Outdoor Area?',
@@ -904,7 +904,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If Your Hot Water Is on Its Way Out</h3>
             <p>Hot water systems rarely fail conveniently. If yours is getting old, it is worth finding out now what a replacement would need, because the decision usually gets made in a hurry on a cold morning.</p>
-            <p>Two minutes of checking, whether there is an outlet near the unit and whether it is weatherproof, is the difference between a one-day changeover and a three-day one. More on this kind of work is on our <a href="/powerpoint-installation-adelaide">powerpoints and extra circuits</a> page, and on what we cover locally on our <a href="/electrician-greenwith">Greenwith electrician</a> page.</p>
+            <p>Two minutes of checking, whether there is an outlet near the unit and whether it is weatherproof, is the difference between a one-day changeover and a three-day one. More on this kind of work is on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
         cta: {
             heading: 'Replacing a Hot Water System?',
@@ -964,11 +964,11 @@ export const jobReports: JobReport[] = [
 
             <h3 id="tripping">The Safety Switch Was Not the Problem</h3>
             <p>This is worth saying plainly, because it comes up constantly. A safety switch that keeps tripping is almost never a faulty safety switch. It is a device doing exactly what it was installed to do, telling you that current is going somewhere it should not.</p>
-            <p>Repeatedly resetting it is not a fix, and replacing it because it seems oversensitive removes the only protection standing between a fault and a person. If you have a circuit that trips after rain, or trips more in winter than summer, moisture getting into something is the first thing to suspect. Our page on <a href="/rcd-testing-safety-switches-adelaide">safety switches and RCD testing</a> covers how they are properly tested.</p>
+            <p>Repeatedly resetting it is not a fix, and replacing it because it seems oversensitive removes the only protection standing between a fault and a person. If you have a circuit that trips after rain, or trips more in winter than summer, moisture getting into something is the first thing to suspect. Our page on <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> covers how they are properly tested.</p>
 
             <h3>If Your Circuit Keeps Tripping</h3>
             <p>Note the pattern before you call. Does it trip at a particular time of day, after rain, when a specific light or appliance comes on, or at random? That pattern is genuinely useful diagnostic information and it can save an hour of testing.</p>
-            <p>For clubs, schools and businesses there is a second reason not to leave it: lighting that fails without warning is a safety and liability problem before it is an inconvenience. If it needs sorting the same day, that is what our <a href="/emergency-electrician-adelaide">emergency electrician</a> service is for, and we cover Golden Grove and the surrounding suburbs from Wynn Vale. There is more on what we do locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>For clubs, schools and businesses there is a second reason not to leave it: lighting that fails without warning is a safety and liability problem before it is an inconvenience. If it needs sorting the same day, that is what our <a href="/emergency-electrician-adelaide/">emergency electrician</a> service is for, and we cover Golden Grove and the surrounding suburbs from Wynn Vale. There is more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Circuit Tripping and Nobody Can Find Why?',
@@ -1019,7 +1019,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Are Planning a Premium Kitchen</h3>
             <p>Get your electrician involved at the design stage rather than at the fit-out stage. By the time the stone is on site, every decision that mattered has already been made, and the only question left is whether it was made correctly.</p>
-            <p>If you are choosing flush outlets, confirm the exact product early, because the cutout dimension is product specific and the stonemason needs it before fabrication. More on outlets and circuits is on our <a href="/powerpoint-installation-adelaide">powerpoints page</a>, and on planning electrical for a whole renovation on our <a href="/renovation-electrician-adelaide">renovation electrician</a> page. We work across Golden Grove and the surrounding suburbs, see our <a href="/electrician-golden-grove">Golden Grove electrician</a> page for what else we cover locally.</p>
+            <p>If you are choosing flush outlets, confirm the exact product early, because the cutout dimension is product specific and the stonemason needs it before fabrication. More on outlets and circuits is on our <a href="/powerpoint-installation-adelaide/">powerpoints page</a>, and on planning electrical for a whole renovation on our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page. We work across Golden Grove and the surrounding suburbs, see our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page for what else we cover locally.</p>
         `,
         cta: {
             heading: 'Planning a Premium Kitchen?',
@@ -1090,16 +1090,16 @@ export const jobReports: JobReport[] = [
 
             <h3 id="subboard">A Subboard at the Pool End</h3>
             <p>The alternative to a subboard is running four separate circuits all the way from the house, which means four times the trenching, four times the cable, and a switchboard at the house filling up with pool circuits.</p>
-            <p>Instead this job runs one correctly sized supply out to the pool and puts a small board there. Everything the pool needs is protected and switched at the pool, so if the pump needs isolating for service it happens right there rather than someone walking back inside to guess at a label. It also leaves room to add to it later, which matters because pools accumulate equipment. Today it is a pump, a chlorinator and lights. In two years it is a heater and a robot cleaner as well. For the same reasoning applied to a main board, see <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a>.</p>
+            <p>Instead this job runs one correctly sized supply out to the pool and puts a small board there. Everything the pool needs is protected and switched at the pool, so if the pump needs isolating for service it happens right there rather than someone walking back inside to guess at a label. It also leaves room to add to it later, which matters because pools accumulate equipment. Today it is a pump, a chlorinator and lights. In two years it is a heater and a robot cleaner as well. For the same reasoning applied to a main board, see <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a>.</p>
 
             <h3 id="nuisance-tripping">Why Everything Got Its Own Circuit</h3>
             <p>This is the part that matters most, and it is the difference between a pool that works and a pool that annoys you.</p>
             <p>Pool lights, outdoor outlets and pump motors are the equipment most likely to develop a small amount of earth leakage over time. They live in water, weather and UV. If all of that shares one safety switch, then the first fitting to let a bit of moisture in trips everything, including the pump. That is what nuisance tripping actually is: not a faulty safety switch, but one safety switch being asked to cover too much.</p>
-            <p>So the pool pump, the pool lights and the heater each got their own circuit and their own protection. A fault in a pool light now trips the pool light. The pump keeps running, the water keeps moving, and you have a fault narrowed to one circuit before anyone even looks at it. If your existing pool trips regularly, that is worth reading alongside our page on <a href="/rcd-testing-safety-switches-adelaide">safety switches and RCD testing</a>, because the safety switch is usually doing its job correctly and telling you something real.</p>
+            <p>So the pool pump, the pool lights and the heater each got their own circuit and their own protection. A fault in a pool light now trips the pool light. The pump keeps running, the water keeps moving, and you have a fault narrowed to one circuit before anyone even looks at it. If your existing pool trips regularly, that is worth reading alongside our page on <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a>, because the safety switch is usually doing its job correctly and telling you something real.</p>
 
             <h3 id="heater-outlet">A 15A Outlet for the Heater</h3>
             <p>Pool heaters, particularly heat pumps, commonly draw more than a standard outlet is rated for. A 15A plug has a wider earth pin than a 10A plug specifically so it physically cannot be pushed into a 10A socket, because the circuit behind that socket was never built to carry it.</p>
-            <p>So the heater got a <a href="/powerpoint-installation-adelaide">dedicated 15A outlet</a> on its own circuit. If you are buying a heater, check what it needs before it arrives rather than after, because a 15A appliance and a 10A outlet is a problem that gets discovered on delivery day.</p>
+            <p>So the heater got a <a href="/powerpoint-installation-adelaide/">dedicated 15A outlet</a> on its own circuit. If you are buying a heater, check what it needs before it arrives rather than after, because a 15A appliance and a 10A outlet is a problem that gets discovered on delivery day.</p>
 
             <h3 id="weatherproofing">Built to Live Outside</h3>
             <p>Everything at the pool end is in weatherproof enclosures and weatherproof outlets, mounted on a backing board rather than screwed straight to the fence. It sits in full Adelaide sun and gets rained on for the next twenty years, and the difference between gear rated for that and gear that is not shows up in about three summers.</p>
@@ -1107,7 +1107,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You Are Putting In a Pool</h3>
             <p>Talk to your electrician while the yard is still open. Once the paving is down and the fence is up, trenching a supply out to the equipment becomes a much bigger and more expensive job than it needed to be. The cheapest time to run underground cable is when there is already a hole in the ground.</p>
-            <p>Get the equipment list from your pool builder first, including whether a heater is coming later. It is far easier to install a board with room in it than to go back and add capacity to a full one. We do this work across Golden Grove and the surrounding suburbs, and you can see the rest of what we cover locally on our <a href="/electrician-golden-grove">Golden Grove electrician</a> page.</p>
+            <p>Get the equipment list from your pool builder first, including whether a heater is coming later. It is far easier to install a board with room in it than to go back and add capacity to a full one. We do this work across Golden Grove and the surrounding suburbs, and you can see the rest of what we cover locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
         cta: {
             heading: 'Putting In a Pool?',
@@ -1168,24 +1168,24 @@ export const jobReports: JobReport[] = [
 
             <h3>The Property</h3>
             <p>Redwood Park is largely late-1970s and early-1980s brick veneer, and this house sits right in that band. That matters more than it sounds, because a bathroom from 1980 was wired for almost nothing. The standard fit-out of the day was a single batten holder or a combined light and fan unit, often a heat lamp, and frequently not one powerpoint in the room. Nobody in 1980 was charging an electric toothbrush, running a heated towel rail or hanging a backlit mirror.</p>
-            <p>So a bathroom renovation in a house like this is not a case of reusing what is already there. It is a new set of circuits going into a room that never had them, which is why it is worth involving <a href="/renovation-electrician-adelaide">an electrician at the planning stage</a> rather than once the walls are open.</p>
+            <p>So a bathroom renovation in a house like this is not a case of reusing what is already there. It is a new set of circuits going into a room that never had them, which is why it is worth involving <a href="/renovation-electrician-adelaide/">an electrician at the planning stage</a> rather than once the walls are open.</p>
 
             <h3 id="powerpoints">Setting Out the Points Before the Tiles Go On</h3>
             <p>AS/NZS 3000 divides a bathroom into zones based on how close you are to the bath, shower and basin, and it sets what can be installed in each zone and how well sealed it has to be. Socket outlets in particular have to sit clear of the wet zones. That rules out a fair bit of wall in a room this size, and it has to be resolved on paper before anything is roughed in.</p>
-            <p>The other half of the job is coordination. The <a href="/powerpoint-installation-adelaide">powerpoints</a> here needed to clear the basin, land at a height that works with the benchtop and the vanity, and not fight the tile layout. Once those points are agreed with the tiler and the cabinetmaker, they are locked in. Moving one afterwards is a tile cut, not an electrical job.</p>
+            <p>The other half of the job is coordination. The <a href="/powerpoint-installation-adelaide/">powerpoints</a> here needed to clear the basin, land at a height that works with the benchtop and the vanity, and not fight the tile layout. Once those points are agreed with the tiler and the cabinetmaker, they are locked in. Moving one afterwards is a tile cut, not an electrical job.</p>
 
             <h3 id="led-mirror">The Mirror Needs a Supply You Cannot See</h3>
             <p>Backlit LED mirrors are the detail that catches people out. The mirror in this bathroom has an integrated LED surround and a touch control on the face, and all of that needs a permanent supply sitting behind it. There is no cord and no visible outlet, which is the whole point of the look.</p>
             <p>That supply has to be roughed in before the wall is tiled, at the right height and the right offset for the specific mirror being fitted. Order the mirror after the tiling is done and you have a choice between a visible cable or a tiler back on site. This is the single most common thing to get missed on a bathroom renovation.</p>
 
             <h3 id="downlights">Downlights and the Exhaust Fan</h3>
-            <p>The <a href="/downlight-installation-adelaide">LED downlights</a> went in on IC-rated fittings, which can sit in direct contact with ceiling insulation. That is a genuine change from the halogens this house would have been built with, which needed clearance from insulation because they ran hot enough to be a fire risk. If you are replacing old downlights rather than starting fresh, that clearance gap is worth asking about.</p>
+            <p>The <a href="/downlight-installation-adelaide/">LED downlights</a> went in on IC-rated fittings, which can sit in direct contact with ceiling insulation. That is a genuine change from the halogens this house would have been built with, which needed clearance from insulation because they ran hot enough to be a fire risk. If you are replacing old downlights rather than starting fresh, that clearance gap is worth asking about.</p>
             <p>The exhaust fan is ducted out through the eave, not left venting into the roof space. Pushing warm, wet air into a roof cavity is how you rot timber and grow mould in a spot nobody inspects. It is a small amount of extra work on the day and it is the difference between a fan that solves the problem and a fan that relocates it.</p>
 
             <h3>If You Have a Bathroom From This Era</h3>
-            <p>Two things are worth checking before you start. The first is your switchboard. A 1980 board often has no RCD protection on the lighting circuit, and sometimes none at all, so adding new circuits to a bathroom is a natural point to look at whether the board is still doing its job. If yours has ceramic fuses or a single safety switch covering everything, read up on <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> before you commit to a renovation budget.</p>
+            <p>Two things are worth checking before you start. The first is your switchboard. A 1980 board often has no RCD protection on the lighting circuit, and sometimes none at all, so adding new circuits to a bathroom is a natural point to look at whether the board is still doing its job. If yours has ceramic fuses or a single safety switch covering everything, read up on <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> before you commit to a renovation budget.</p>
             <p>The second is timing. All of the cabling in this job went in during first fix, before the plasterer and well before the tiler. The fittings, the mirror, the fan and the downlights went on at second fix once the room was finished. Bathroom renovations go wrong when the electrical is treated as something to sort out at the end, because by then the walls are closed.</p>
-            <p>We work across Redwood Park and the surrounding north-eastern suburbs, and this is a common job here given the age of the housing. If you want to see what else we do locally, have a look at our <a href="/electrician-redwood-park">Redwood Park electrician</a> page.</p>
+            <p>We work across Redwood Park and the surrounding north-eastern suburbs, and this is a common job here given the age of the housing. If you want to see what else we do locally, have a look at our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
         cta: {
             heading: 'Planning a Bathroom Renovation?',

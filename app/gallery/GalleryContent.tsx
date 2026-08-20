@@ -221,7 +221,7 @@ export default function GalleryContent() {
                     <p className="text-xl mb-8 text-white/90">
                         Contact us today for a free consultation and quote
                     </p>
-                    <a href="/contact" className="btn btn-gold text-lg px-8 py-4 inline-block">
+                    <a href="/contact/" className="btn btn-gold text-lg px-8 py-4 inline-block">
                         Get a Free Quote
                     </a>
                 </div>

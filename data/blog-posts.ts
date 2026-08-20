@@ -86,13 +86,13 @@ const legacyPosts: BlogPost[] = [
             <h3>1. Test Your Safety Switches, and Understand What the Test Proves</h3>
             <p>A safety switch (RCD) is designed to cut power within about 30 milliseconds if current starts leaking somewhere it should not, through a damaged appliance, a nicked cable, or a person. It is the single biggest defence against electric shock in a modern home.</p>
             <p>Press the "Test" button on each one every three months. It should trip instantly. If it does not, stop using that circuit and call an electrician.</p>
-            <p>Here is the part most people miss: the test button only confirms the mechanism moves. It does not confirm the device trips fast enough, or at the right leakage current, to actually protect someone. That needs a calibrated tester, and it is the difference between "the button works" and "this will save someone". If your RCDs have never had a proper instrument test, that is worth booking. Our guide to <a href="/blog/rcd-testing-thermal-imaging-adelaide">RCD testing and thermal imaging</a> covers what a real test involves, and <a href="/rcd-testing-safety-switches-adelaide">RCD testing and safety switches</a> explains the service itself.</p>
+            <p>Here is the part most people miss: the test button only confirms the mechanism moves. It does not confirm the device trips fast enough, or at the right leakage current, to actually protect someone. That needs a calibrated tester, and it is the difference between "the button works" and "this will save someone". If your RCDs have never had a proper instrument test, that is worth booking. Our guide to <a href="/blog/rcd-testing-thermal-imaging-adelaide/">RCD testing and thermal imaging</a> covers what a real test involves, and <a href="/rcd-testing-safety-switches-adelaide/">RCD testing and safety switches</a> explains the service itself.</p>
             <p>One more thing worth checking: a lot of older Adelaide homes have RCD protection on the power circuits but not the lighting circuits. If yours is like that, you are only half covered.</p>
 
             <h3>2. Power Boards, Double Adaptors and the Daisy Chain Problem</h3>
             <p>Plugging a power board into another power board is a genuine fire risk, not a technicality. Each board is rated for a total load, and chaining them lets you draw far more through one wall outlet than it was ever designed to carry. The outlet and the cable behind it heat up, and nothing trips, because the breaker is protecting the circuit rather than the overloaded accessory.</p>
             <p>Watch the high draw items in particular: heaters, kettles, toasters, air fryers, and anything with a heating element. These are the ones that turn a marginal setup into a hot one. A fan heater on an extension lead run under a door is a classic.</p>
-            <p>If you are permanently short of outlets in a room, that is the actual problem, and the fix is <a href="/powerpoint-installation-adelaide">additional powerpoints</a> rather than more boards. It is safer, it is tidier, and in most rooms it is a straightforward job.</p>
+            <p>If you are permanently short of outlets in a room, that is the actual problem, and the fix is <a href="/powerpoint-installation-adelaide/">additional powerpoints</a> rather than more boards. It is safer, it is tidier, and in most rooms it is a straightforward job.</p>
 
             <h3>3. Check Cords, Plugs and Where They Run</h3>
             <p>Look along appliance cords for fraying, nicks, stiffness, or any section that has gone discoloured. Check the plug itself for scorching or a loose pin. If a plug feels warm after normal use, something is wrong with it.</p>
@@ -105,7 +105,7 @@ const legacyPosts: BlogPost[] = [
 
             <h3>5. Know the Age of Your Switchboard</h3>
             <p>If your board still has ceramic fuses, the ones with the removable carriers and fuse wire, it belongs to an era before safety switches existed. It offers no shock protection at all, only rudimentary overload protection, and it cannot be extended to run modern loads.</p>
-            <p>A lot of the housing stock through the north-eastern suburbs sits in exactly this bracket. If your board looks like it came with the house and the house is from the sixties or seventies, it is worth having assessed. The <a href="/blog/signs-you-need-switchboard-upgrade">warning signs that a switchboard needs upgrading</a> covers this in more detail, and <a href="/switchboard-upgrade-adelaide">switchboard upgrades</a> explains what the work involves.</p>
+            <p>A lot of the housing stock through the north-eastern suburbs sits in exactly this bracket. If your board looks like it came with the house and the house is from the sixties or seventies, it is worth having assessed. The <a href="/blog/signs-you-need-switchboard-upgrade/">warning signs that a switchboard needs upgrading</a> covers this in more detail, and <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> explains what the work involves.</p>
 
             <h3>6. Pay Attention to Things That Have Changed</h3>
             <p>Most of the calls we get that turn out to be serious started with someone noticing something different. A light that flickers when the air conditioner starts. A switch that has begun to feel warm. A faint smell of hot plastic near the board that comes and goes. A breaker that trips once a month rather than never.</p>
@@ -113,7 +113,7 @@ const legacyPosts: BlogPost[] = [
 
             <h3>When to Stop and Call Someone</h3>
             <p>Turn off the main switch and call an electrician straight away if you smell burning plastic, see scorch or brown marks around an outlet or the switchboard, get any kind of tingle from an appliance or a tap, or have a breaker that trips immediately every time you reset it. That last one means there is a fault on the circuit right now, and resetting it repeatedly is not a fix.</p>
-            <p>If it is after hours and it will not wait, that is what an <a href="/emergency-electrician-adelaide">emergency electrician</a> is for.</p>
+            <p>If it is after hours and it will not wait, that is what an <a href="/emergency-electrician-adelaide/">emergency electrician</a> is for.</p>
 
             <h3>The Honest Summary</h3>
             <p>Testing your RCDs quarterly, keeping cords sensible, and not chaining power boards covers a lot of ground for no cost. Beyond that, the two things genuinely worth paying for are a proper instrument test of your safety switches and an assessment of an old switchboard. Both are quick, neither is expensive relative to what they protect against, and together they cover the failure modes that actually hurt people.</p>
@@ -163,7 +163,7 @@ const legacyPosts: BlogPost[] = [
             <h3>What a Proper Upgrade Involves</h3>
             <p>Swapping a halogen for an LED is not always just changing the globe. Depending on what you have, the job may involve removing old transformers, which continue drawing power and are a common failure point, replacing the whole fitting rather than the lamp, and checking that the existing cabling and the way the fittings were installed is sound.</p>
             <p>Older downlight installs are also a reasonable place to find work that was done poorly. Once the fittings are out and we can see into the ceiling, problems that were invisible from below tend to surface.</p>
-            <p>If you are changing the number or position of fittings rather than swapping like for like, that is a lighting design question as much as an electrical one, and it is worth getting right while the ceiling is open. Our <a href="/downlight-installation-adelaide">downlight installation</a> page covers the layout side, and <a href="/feature-lighting-led-strip-adelaide">feature lighting and LED strip</a> covers the work that goes beyond general lighting.</p>
+            <p>If you are changing the number or position of fittings rather than swapping like for like, that is a lighting design question as much as an electrical one, and it is worth getting right while the ceiling is open. Our <a href="/downlight-installation-adelaide/">downlight installation</a> page covers the layout side, and <a href="/feature-lighting-led-strip-adelaide/">feature lighting and LED strip</a> covers the work that goes beyond general lighting.</p>
 
             <h3>Where the Cheap Version Goes Wrong</h3>
             <p>The failure modes with budget LED fittings are predictable. Flicker, which some people see and some do not, and which is genuinely unpleasant if you are one of the people who does. Buzzing on dimmers, because the dimmer was designed for a resistive halogen load and an LED is not one. Colour drift, where fittings that matched on day one no longer match after two years. And early driver failure, where the LED chip is fine but the electronics behind it are not, at which point you are replacing the fitting anyway.</p>
@@ -197,7 +197,7 @@ const legacyPosts: BlogPost[] = [
             <h3>1. Burning Smell or Scorch Marks</h3>
             <p>Taking this out of order because it is the one that cannot wait. If you smell hot or burning plastic near the board, or see brown or black marks around the board or any outlet, turn off the main switch and call an electrician immediately.</p>
             <p>That smell is insulation or plastic getting hot enough to break down, which means a connection is arcing or badly overloaded. It does not resolve itself. Left alone it progresses to a fire, and it can do so quickly.</p>
-            <p>Worth knowing: a connection can run hot for months before it ever produces a smell or a mark. That is precisely what <a href="/thermal-imaging-adelaide">thermal imaging</a> is for, and it is covered in more detail in our guide to <a href="/blog/rcd-testing-thermal-imaging-adelaide">RCD testing and thermal imaging</a>. It is the only practical way to catch this stage early.</p>
+            <p>Worth knowing: a connection can run hot for months before it ever produces a smell or a mark. That is precisely what <a href="/thermal-imaging-adelaide/">thermal imaging</a> is for, and it is covered in more detail in our guide to <a href="/blog/rcd-testing-thermal-imaging-adelaide/">RCD testing and thermal imaging</a>. It is the only practical way to catch this stage early.</p>
 
             <h3>2. No Safety Switches, or Only Partial Coverage</h3>
             <p>If your board has no RCDs at all, you have no shock protection, and that is the strongest single argument for upgrading.</p>
@@ -219,7 +219,7 @@ const legacyPosts: BlogPost[] = [
             <p>If the flickering is house wide rather than one room, it is more likely to be at the board or the incoming supply, and that is worth investigating properly.</p>
 
             <h3>6. No Room Left on the Board</h3>
-            <p>This one is not a safety issue on its own, it is a planning one. If the board is physically full, every future addition becomes awkward and expensive. Adding an <a href="/ev-charger-installation-adelaide">EV charger</a>, a new air conditioner, or a decent workshop circuit all need a spare way and adequate capacity.</p>
+            <p>This one is not a safety issue on its own, it is a planning one. If the board is physically full, every future addition becomes awkward and expensive. Adding an <a href="/ev-charger-installation-adelaide/">EV charger</a>, a new air conditioner, or a decent workshop circuit all need a spare way and adequate capacity.</p>
             <p>If you are considering any of those in the next few years, doing the board first is usually cheaper than doing it twice.</p>
 
             <h3>7. Asbestos Backing Board</h3>
@@ -229,7 +229,7 @@ const legacyPosts: BlogPost[] = [
             <h3>What an Upgrade Actually Involves</h3>
             <p>A switchboard upgrade replaces the enclosure and the protective devices: main switch, circuit breakers, and RCDs across the circuits. Existing circuits get transferred across, tested, and labelled properly, which by itself is worth something in a house where nobody has ever known which breaker does what.</p>
             <p>Expect the power to be off for a chunk of the day. Expect the electrician to find at least one thing behind the old board that nobody knew about, because on boards of this age that is closer to the rule than the exception. A good quote states what is included, what is excluded, and what happens if something turns up once the old board is off the wall. Ours does, and you hear about anything unexpected before the work continues rather than on the invoice.</p>
-            <p>The <a href="/switchboard-upgrade-adelaide">switchboard upgrade</a> page covers the process and what drives the price.</p>
+            <p>The <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page covers the process and what drives the price.</p>
 
             <h3>What It Will Not Fix</h3>
             <p>Being straight about this: a new board does not rewire the house. If the cabling in the walls is old rubber or fabric insulated, or previous work was done poorly, the new board will protect those circuits far better than the old one did, but the cabling itself is unchanged.</p>
