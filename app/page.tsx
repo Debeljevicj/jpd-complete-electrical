@@ -37,7 +37,17 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center py-8 md:py-0">
+                {/* The vertical padding stays on at every width. It used to be
+                    md:py-0, on the assumption that min-h-[90vh] would always be
+                    taller than the hero content and `items-center` would do the
+                    spacing -- which is true on a desktop monitor and false on a
+                    laptop. The content column measures ~814px, so below roughly
+                    904px of viewport height 90vh is the smaller of the two, the
+                    section shrinks to exactly its content, and centring has no
+                    slack left to give: the badge ends up flush against the
+                    header with no gap at all. Reported from a MacBook, where
+                    the browser's own chrome leaves ~826px. */}
+                <div className="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center py-8">
                     <div
                         className="text-white space-y-3 md:space-y-6 animate-slide-up bg-navy/85 backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/10 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0 md:shadow-none md:border-0"
                     >
