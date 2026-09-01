@@ -190,4 +190,118 @@ export const upgradePosts: BlogPost[] = [
             href: '/renovation-electrician-adelaide',
         },
     },
+    {
+        slug: 'asbestos-switchboard-adelaide',
+        title: 'Asbestos in Your Switchboard: How to Tell, and What It Means',
+        seoTitle: 'Asbestos Switchboard Adelaide | JPD',
+        metaDescription:
+            'Asbestos backing panels are common in Adelaide switchboards built before the mid-1980s. How to recognise one, why it is not an emergency, and what it changes about the work.',
+        excerpt:
+            'Plenty of Adelaide switchboards have an asbestos backing panel behind the fuses. Here is how to tell, why it is not a reason to panic, and what it changes about replacing the board.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Safety',
+        image: '/images/switchboard_asbestos_ceramic_fuses.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_asbestos_warning_sticker.webp',
+                alt: 'Warning contains asbestos sticker applied to the brown fibrous backing panel inside a switchboard',
+                caption:
+                    'The label an electrician applies once a panel has been identified. The brown fibrous board behind it is the panel itself.',
+            },
+            {
+                src: '/images/switchboard_asbestos_behind_modern_board.webp',
+                alt: 'Modern switchboard with breakers, RCD and surge protection above a brown asbestos backing panel carrying a warning sticker',
+                caption:
+                    'A tidy modern board with an RCD, surge protection and solar connected. The panel behind the meter is still the original asbestos one.',
+            },
+            {
+                src: '/images/switchboard_full_no_spare_ways.webp',
+                alt: 'Switchboard packed with breakers and hand-written circuit labels including one marked with question marks',
+                caption:
+                    'No spare ways, and a circuit labelled "?SHED?" because nobody was sure. Both are reasons a board gets replaced.',
+            },
+            {
+                src: '/images/switchboard_asbestos_backing_wide.webp',
+                alt: 'The same full switchboard seen wider, showing the meter and the dark backing panel it is all mounted on',
+                caption:
+                    'The same board from further back. Two more enclosures have been added beside it over the years, and the whole lot is mounted on the original dark backing panel.',
+            },
+            {
+                src: '/images/switchboard_retrofit_safety_switch.webp',
+                alt: 'Older commercial switchboard with a single safety switch added later in a separate yellow enclosure below the board',
+                caption:
+                    'An older commercial board with no RCD protection of its own. One safety switch was added later, in its own box bolted underneath.',
+            },
+            {
+                src: '/images/switchboard_too_close_to_pool.webp',
+                alt: 'Switchboard cabinet mounted on a wall directly beside a swimming pool',
+                caption:
+                    'A switchboard on the wall beside the pool. The wiring rules keep electrical equipment out of the zone around the water, and this is well inside it.',
+            },
+        ],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>If your house was built before the mid-1980s, there is a reasonable chance the switchboard has an asbestos backing panel behind the fuses. That is not a dramatic statement, it is just what boards were made of at the time.</p>
+            <p>The two things worth knowing are that it almost certainly is not doing you any harm right now, and that it does change how any work on that board has to be done. Between those two facts sits a lot of unnecessary worry, and occasionally some unnecessary spending.</p>
+            <p>These are real boards from around Adelaide. Here is what to look for and what it actually means.</p>
+
+            <h3>What the Asbestos Actually Is</h3>
+            <p>It is the panel. Not the wiring, not the fuses, not anything you touch.</p>
+            <p>Switchboards need a backing board that is rigid, fireproof and does not conduct electricity. From roughly the 1930s to the mid-1980s, the material that did all three cheaply was an asbestos-cement composite. In Australia the common trade names were Zelemite and Ausbestos, and the boards are typically a dark brown or black fibrous sheet, noticeably heavier and harder than timber.</p>
+            <p>The fuse carriers, the breakers and the meters are all bolted to the front of that panel. So the asbestos sits behind everything, which is precisely why people who have looked at their own board a hundred times have never seen it.</p>
+
+            <h3>How to Tell Without Opening Anything</h3>
+            <p>To be clear first: do not take the cover off your switchboard to check. The incoming connections inside are live whatever position your main switch is in. There is nothing you can determine by looking that is worth that.</p>
+            <p>What you can go on:</p>
+            <p><strong>The age of the house.</strong> This is the strongest single indicator. Pre-1980s and original board, assume it is possible. Built after about 1990, very unlikely.</p>
+            <p><strong>Ceramic fuses.</strong> If the board has white ceramic fuse carriers that pull out, rather than switches that flick, it is old enough. The board in the photo at the top of this page is a good example: two dial-face meters still marked as property of the Electricity Trust of South Australia, an off-peak time switch, a row of rewireable ceramic fuses, and a modern safety switch bolted on beside them decades later.</p>
+            <p><strong>A warning sticker.</strong> If an electrician has been in the board and identified a panel, they will normally label it, and that label often ends up somewhere visible on the front. It looks like the one in the second photo. Finding one is good news, not bad. It means somebody has already checked and recorded it.</p>
+            <p><strong>Ask.</strong> Any electrician who opens your board will tell you, and it costs nothing to ask when one is there for something else.</p>
+
+            <h3>A Modern-Looking Board Can Still Have It</h3>
+            <p>This is the one that surprises people, and the third photo is the reason it is worth its own section.</p>
+            <p>That board has a full row of modern breakers, a proper safety switch, surge protection and solar connected through its own main switch. Printed labels, everything tidy. By every rule of thumb people use, it reads as a modern board.</p>
+            <p>The brown panel below it, the one carrying the asbestos sticker, is the original. What happened here is completely normal: at some point the protective devices were replaced and mounted in a new enclosure, but the backing panel the meter sits on was left alone because there was no reason to disturb it.</p>
+            <p>So the useful version of the rule is not "old board, asbestos". It is "old house, possible asbestos, regardless of how new the breakers look".</p>
+
+            <h3>It Is Not Making Your House Dangerous</h3>
+            <p>Asbestos is hazardous when its fibres are airborne and get breathed in. That requires the material to be broken, drilled, cut or abraded.</p>
+            <p>An intact backing panel sitting inside a closed enclosure, doing nothing, is not releasing fibres. It has most likely been there for fifty years with your family living around it, which is the situation for a very large number of Adelaide homes and is not the thing to lose sleep over.</p>
+            <p>There is no obligation to remove it because it exists. Nobody needs to move out. If your board is otherwise sound and doing its job, the honest answer is often to leave it alone.</p>
+            <p>The risk is not the panel. It is the panel being disturbed by someone who did not know it was there.</p>
+
+            <h3>When It Actually Matters</h3>
+            <p>It matters the moment somebody works on that board.</p>
+            <p>Drilling a new hole to mount a breaker, cutting the panel to fit a larger enclosure, or unbolting devices off it all have the potential to release fibres. That is the point at which an asbestos panel stops being a historical curiosity and becomes a control measure, and it is why an electrician who spots one will tell you before quoting rather than after.</p>
+            <p>The practical consequence is that adding to an old asbestos-backed board is often not sensible. Once the panel has to be disturbed anyway, replacing the whole board is usually the better value and it is certainly the better outcome, because you end up with a board that has RCD protection on every circuit rather than an old one with a newer bit stuck to it.</p>
+
+            <h3>What Replacing One Involves</h3>
+            <p>More than a straight swap, and it is worth knowing why before you compare quotes.</p>
+            <p><strong>The supply has to be isolated.</strong> The incoming main is live and is not something that can be switched off from inside the house, so the service fuse has to be pulled or the supply otherwise isolated, and reconnection arranged with SA Power Networks. That is a scheduling dependency rather than a technical difficulty, and it is the main reason this work cannot always happen on the day you ring.</p>
+            <p><strong>The panel is removed under controls.</strong> Kept intact where possible, wetted down rather than cut, sealed and disposed of properly. The aim is to take the whole sheet out in one piece, not to work around it.</p>
+            <p><strong>Everything transfers to a new enclosure.</strong> Circuits are identified, tested and reconnected onto individual protection, and the board is labelled properly. On a board with hand-written labels this is frequently where you find out that a circuit nobody could name feeds the shed.</p>
+            <p><strong>You are without power for part of the day.</strong> Usually most of it. Worth planning around if anyone works from home or there is a full freezer.</p>
+            <p>Our <a href="/blog/switchboard-upgrade-what-actually-happens/">guide to what happens during a switchboard upgrade</a> covers the process in more detail, and the <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers what we do.</p>
+
+            <h3>Three Other Reasons Boards Get Replaced</h3>
+            <p>Asbestos is rarely the only thing wrong with a board of that age, and on its own it is rarely the reason someone finally does something. These three come up constantly.</p>
+            <p><strong>No spare ways.</strong> The board in the fourth photo is physically full. That matters the day you want solar, an EV charger, ducted air conditioning or a pool, because the new circuit has nowhere to go and a straightforward job quietly becomes a board replacement. Worth checking before you buy the equipment. Notice also the circuit labelled with question marks, because somebody was not sure what it fed. That is its own argument.</p>
+            <p><strong>No RCD protection, or one device covering everything.</strong> The fifth photo is an older commercial board with a single safety switch added later in its own yellow box bolted underneath. That retrofit is a genuine improvement on nothing and it was the right call at the time. It is still one device standing in for what should be protection on every circuit. Older safety switches are also worth testing properly rather than trusting: pressing the test button proves the button works, not that the device will operate fast enough during a real fault, and that difference only shows up on a meter. Our <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> page covers what that test involves.</p>
+            <p><strong>The board is in the wrong place.</strong> The last photo is a switchboard mounted on the wall directly beside a swimming pool. The wiring rules set zones around a pool where electrical equipment either cannot be installed or has to meet specific requirements, and the clearance involved for a switchboard is 3.5 metres. This one is well inside that. The fix is relocation, which is not cheap, and it is the sort of defect a homeowner has no way of recognising because there is nothing visibly wrong with the board itself.</p>
+
+            <h3>What To Do</h3>
+            <p>If you think you have an asbestos-backed board and nothing is wrong with it, do nothing urgently. Leave the cover on, do not go looking, and mention it the next time an electrician is there.</p>
+            <p>Deal with it when you are doing something else anyway. A renovation, solar, an EV charger, air conditioning or a pool all need capacity and protection an old board may not have, and doing the board at the same time means paying for access once.</p>
+            <p>Deal with it now if you can smell hot plastic, see any browning or scorching, or the board is warm to the touch. That is not about asbestos at all, it is heat, and heat is the one symptom that does not wait. We wrote up <a href="/blog/burnt-main-switch-tea-tree-gully/">what that looks like on a board in Tea Tree Gully</a>.</p>
+            <p>And if you just want to know, send a photo of the front of your board. That is usually enough to tell you roughly what era it is from and whether it is worth a proper look, and it costs nothing.</p>
+        `,
+        cta: {
+            heading: 'Not Sure What Is Behind Your Board?',
+            description:
+                'Send a photo of the front of your switchboard and we will tell you honestly whether it needs attention now, later, or not at all. No obligation and no scare tactics.',
+            linkText: 'Get Your Switchboard Assessed',
+            href: '/contact',
+        },
+    },
 ];

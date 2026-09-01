@@ -17,7 +17,7 @@ export interface BlogPost {
     author: string;
     content: string;
     image: string;
-    /** Extra job photos, shown under the article body. Job reports use this; guides do not. */
+    /** Extra photos, shown under the article body. Job reports use this, as do the photo-led guides. */
     gallery?: {
         src: string;
         alt: string;

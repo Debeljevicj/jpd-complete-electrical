@@ -38,6 +38,375 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'bathroom-renovation-electrical-wynn-vale',
+        title: 'Bathroom Renovation Electrical in Wynn Vale',
+        metaDescription:
+            'A full bathroom strip-out in Wynn Vale across three visits: making safe before demolition, roughing in a heat light and a separate shower exhaust, then fitting off after tiling.',
+        excerpt:
+            'A gutted bathroom needs the electrician three times, not once. Here is what happens on each visit, and why this one got two extraction fans instead of one.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/bathroom_heat_light_exhaust_wynn_vale.webp',
+        gallery: [
+            {
+                src: '/images/bathroom_switch_plate_wynn_vale.webp',
+                alt: 'Three-gang switch plate labelled Light, Fan and Heat on a tiled bathroom wall in Wynn Vale',
+                caption:
+                    'Light, fan and heat switched separately. A three-in-one unit on a single switch means you cannot run the fan without the heat lamps.',
+            },
+            {
+                src: '/images/bathroom_vanity_powerpoint_wynn_vale.webp',
+                alt: 'Double powerpoint installed beside a bathroom vanity in a Wynn Vale renovation',
+                caption:
+                    'The vanity powerpoint, set out clear of the basin and agreed with the tiler before anything was roughed in.',
+            },
+        ],
+        services: [
+            'renovation-electrician-adelaide',
+            'downlight-installation-adelaide',
+            'powerpoint-installation-adelaide',
+        ],
+        suburb: 'electrician-wynn-vale',
+        angles: {
+            'downlight-installation-adelaide': {
+                title: 'Bathroom Lighting in a Wynn Vale Renovation',
+                blurb: 'A downlight over the vanity, centred on the mirror, plus a heat light unit and a separate shower exhaust.',
+                anchor: 'lighting',
+            },
+            'powerpoint-installation-adelaide': {
+                title: 'New Bathroom Powerpoint in Wynn Vale',
+                blurb: 'One powerpoint beside the vanity, set out before tiling. There is no adding it later without cutting tile.',
+                anchor: 'powerpoint',
+                image: '/images/bathroom_vanity_powerpoint_wynn_vale.webp',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most people booking a bathroom renovation think of the electrician as one visit. It is three, and the first one has to happen before the demolition crew arrives.</p>
+            <p>This was a full strip-out in Wynn Vale. New tiling, new bath, new shower, new vanity, and with it a new set of circuits into a room that was built for far less. Nothing about it was unusual, which is exactly why it is worth writing up: this is what the electrical side of a normal bathroom renovation actually looks like, in the order it happens.</p>
+
+            <h3>Visit One: Before Anything Gets Knocked Down</h3>
+            <p>The first job was to come in ahead of demolition and disconnect the existing fittings, then leave the room safe to be pulled apart.</p>
+            <p>This is the visit people forget to book, and it is the one that matters most. A bathroom that is about to be gutted still has live cables in the walls and ceiling feeding a light, a fan and whatever else was there. Somebody swinging a bar at a wall sheet has no way of knowing where those cables run. Disconnecting and isolating them properly first is a short visit that removes the risk entirely.</p>
+            <p>It also means the demolition crew can work without stopping, which is usually what the builder actually cares about. If you are project-managing the renovation yourself, put this visit in the calendar before the skip bin.</p>
+
+            <h3>Visit Two: Cabling, With the Walls Open</h3>
+            <p>Once the room was stripped back, everything went in at once while the framing was exposed. That is the only window where cabling is cheap, and it closes as soon as the plasterer starts.</p>
+            <p>This is also the point where every position gets locked in. Switch heights, the powerpoint location, where the downlight lands, where the fans go. Once tiles are on those decisions are permanent, so they get agreed on site with the walls open rather than assumed.</p>
+
+            <h3 id="lighting">Two Fans, Not One</h3>
+            <p>The room got a combined heat light, exhaust fan and light unit in the ceiling, which is the standard fitting for an Adelaide bathroom and does three jobs adequately. Then it got a second, dedicated exhaust fan directly above the shower.</p>
+            <p>That second fan is the detail worth stealing. A three-in-one unit sits in the middle of the ceiling because that is where the heat lamps need to be to warm someone standing on the mat. But the steam is not in the middle of the room, it is in the shower, and by the time it has drifted across the ceiling to reach the fan it has already condensed on everything on the way.</p>
+            <p>Putting a dedicated extractor directly above the shower catches the moisture where it is produced. Mould in a bathroom is almost always a ventilation problem rather than a cleaning problem, and the cheapest time to solve it is while the ceiling is open. It costs a fan and a bit of ducting at rough-in. Retrofitting one afterwards costs a ceiling.</p>
+            <p>Both fans duct outside rather than into the roof space. Venting wet air into a roof cavity moves the problem somewhere nobody looks.</p>
+
+            <h3>Switching Them Separately</h3>
+            <p>The three-in-one unit and the room lighting are switched from a single plate, but each function has its own switch: light, fan, heat.</p>
+            <p>That sounds obvious and often is not done. Where a three-in-one is wired to a single switch you cannot run the fan on its own, which means every shower in summer also runs two 275-watt heat lamps. Separating them is a slightly larger switch plate and no extra work if it is decided at rough-in.</p>
+            <p>A downlight went in above the vanity, centred on the mirror. Vanity lighting is the one position in a bathroom worth being fussy about, because a light behind you throws your own shadow onto your face in the mirror. Centred and slightly forward is what makes the room usable for shaving and makeup, and it is a free decision if it is made before the ceiling is closed. There is more on fitting choice on our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page.</p>
+
+            <h3 id="powerpoint">The Powerpoint Beside the Vanity</h3>
+            <p>One new <a href="/powerpoint-installation-adelaide/">powerpoint</a> went in next to the vanity. Older bathrooms frequently have none at all, and a modern one needs at least one for a shaver, a hair dryer or an electric toothbrush.</p>
+            <p>The wiring rules set zones around the bath, shower and basin, and socket outlets have to sit clear of them. In a small bathroom that rules out a surprising amount of wall, so the position is worked out on site with the vanity dimensions in hand, not guessed from a plan. It also has to miss the tile joins and the mirror, which is a conversation with the tiler rather than a calculation.</p>
+
+            <h3>Visit Three: Fitting Off After the Tiler</h3>
+            <p>The last visit came after tiling was finished, to install the fittings and terminate everything: the fans, the light, the switches, the powerpoint.</p>
+            <p>Splitting the work this way is not padding, it is the only order that works. Fittings cannot go on until the wall surface is final, and cables cannot go in once it is. Three short visits spread across the renovation is normal and it should be in the programme from the start.</p>
+
+            <h3>If You Are Planning One</h3>
+            <p>Three things are worth sorting before the job starts.</p>
+            <p><strong>Book the electrician before the demolition, not after.</strong> It is the shortest visit of the three and the only one with a safety consequence if it is skipped.</p>
+            <p><strong>Decide the fittings early.</strong> A heat light, a second exhaust, a heated towel rail or a backlit mirror each need a supply in a specific place. They are trivial at rough-in and expensive afterwards.</p>
+            <p><strong>Check the switchboard while you are at it.</strong> Adding circuits to a bathroom is a sensible moment to look at whether the board can carry them and whether it has proper RCD protection. If yours has ceramic fuses or a single safety switch covering the whole house, our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page is worth a read before you set the budget.</p>
+            <p>We are based in Wynn Vale and work right across the north-eastern suburbs. There is more about what we do locally on our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page, and on <a href="/renovation-electrician-adelaide/">renovation electrical</a> generally.</p>
+        `,
+        cta: {
+            heading: 'Renovating a Bathroom?',
+            description:
+                'Get the electrical booked in before the demolition and set out before the tiler. JPD Complete Electrical is based in Wynn Vale and covers the north-eastern suburbs.',
+            linkText: 'Book a Bathroom Renovation Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'partial-house-rewire-old-cable-kingswood',
+        title: 'Partial Rewire of a 1950s Kingswood Home',
+        seoTitle: 'Partial House Rewire in Kingswood | JPD',
+        metaDescription:
+            'Power circuits tripping in a 1950s Kingswood home traced back to perished VIR and cotton-braided cable, with newer work spliced onto it. What we found and what got rewired.',
+        excerpt:
+            'Circuits kept tripping in a 1950s home. Testing found perished rubber and cotton-braided cable still in service, with newer work joined straight onto it.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/rewire_insulation_testing_kingswood.webp',
+        gallery: [
+            {
+                src: '/images/rewire_vir_cable_kingswood.webp',
+                alt: 'Length of perished vulcanised india rubber cable pulled out of a roof space in a 1950s Kingswood home',
+                caption:
+                    'Vulcanised india rubber cable out of the roof space. The rubber has gone hard and the sheath is splitting where it has been bent.',
+            },
+            {
+                src: '/images/rewire_cotton_braid_cable_kingswood.webp',
+                alt: 'Close-up of cotton-braided electrical cable with the outer braid frayed and split open',
+                caption:
+                    'The cotton braid frays and opens up wherever the cable passes over a batten. That is where the moisture gets in.',
+            },
+            {
+                src: '/images/rewire_removed_cable_kingswood.webp',
+                alt: 'Old cable and timber cleats removed from a Kingswood home during a partial rewire',
+                caption:
+                    'What came out. Old cable is pulled out rather than left dead in the walls wherever it can be reached.',
+            },
+        ],
+        services: ['emergency-electrician-adelaide', 'rcd-testing-safety-switches-adelaide'],
+        angles: {
+            'rcd-testing-safety-switches-adelaide': {
+                title: 'Why Old Cable Trips Safety Switches',
+                blurb: 'Perished insulation leaks current to earth. The safety switch is not faulty, it is reporting a cable that has run out of life.',
+                anchor: 'why-tripping',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>If your power circuits keep tripping and the house was built before about 1965, the wiring itself is a real candidate. Not a loose connection, not a dodgy appliance. The cable.</p>
+            <p>This was a home in Kingswood, roughly 1950s to 1960s, called out because multiple power circuits were nuisance tripping. Testing traced it back to the original cabling, which was still in service and had reached the end of its life. Here is what was in the walls, how it was found, and what actually got done.</p>
+
+            <h3>What Was Actually in the Walls</h3>
+            <p>Two types of old cable, both of which turn up regularly in Adelaide homes of this era.</p>
+            <p><strong>VIR, or vulcanised india rubber.</strong> Rubber-insulated conductors, usually with a cotton braid over the top and sometimes a lead sheath. It was excellent cable when it was installed. The problem is that rubber does not last. Over fifty or sixty years it oxidises, goes hard and brittle, and then cracks. You can see it in the photo at the top of this page: the sheath has split where the cable has been bent, and the rubber underneath crumbles rather than flexes.</p>
+            <p><strong>Cotton-braided cable.</strong> The braided outer covering frays and opens up, particularly anywhere the cable crosses a batten or a joist and has been rubbing for decades. Once the braid is open, the insulation underneath is exposed to dust, moisture and vermin.</p>
+            <p>Neither of these is a defect. They are cable doing exactly what cable of that age does. The defect is leaving them in service.</p>
+
+            <h3 id="why-tripping">Why Perished Cable Trips Breakers</h3>
+            <p>This is the part that connects the two halves of the story.</p>
+            <p>Insulation has one job: keep the current inside the conductor. When it perishes, small amounts of current start finding their way out, to earth or between the conductors. Not enough to blow anything up, just enough to be detected.</p>
+            <p>A safety switch exists specifically to detect current going where it should not, and it does not care whether the leak is a person or a sixty-year-old cable. So it trips. Then it holds for a while, then it trips again, usually worse in damp weather because moisture in a roof space makes the leakage worse.</p>
+            <p>People read that as a faulty safety switch. It is the opposite. The device is doing precisely what it was installed to do, and the answer is to find what it is detecting rather than to keep resetting it. There is more on how these devices are tested on our <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> page.</p>
+
+            <h3>Finding It: Insulation Resistance Testing</h3>
+            <p>The photo at the top of this page is the actual diagnosis. That is an insulation resistance tester, and the faceplate on the floor is marked in pen with the fault found at that point: active to neutral.</p>
+            <p>The method is unglamorous and it works. The circuit is isolated, the wiring is divided up point by point, and each section is tested to see whether the insulation is still holding. Sections that pass are ruled out. Sections that fail get labelled, and the pattern of failures shows how far the bad cable extends.</p>
+            <p>That mapping is what makes a partial rewire possible rather than guesswork. Without it the only honest quote is to do the whole house, because nobody can say which circuits are sound.</p>
+
+            <h3>The Thing the Previous Electricians Got Wrong</h3>
+            <p>The house had been added to over the years, which is completely normal. What was not normal is how.</p>
+            <p>Newer work had been connected onto sections of the original cable rather than run back to the board. Somebody added a point, found old cable nearby, and joined onto it. Each of those decisions probably looked reasonable at the time and each one was cheaper on the day.</p>
+            <p>The result is that new cable, new fittings and a new circuit all end up depending on a length of sixty-year-old rubber that nobody looked at. The installation looks modern at the powerpoint and is not modern behind it. If you have had work done over the years in an older house, this is worth asking about directly: was it run back to the board, or joined onto what was there?</p>
+
+            <h3>What Got Done</h3>
+            <p>The affected power circuits were rewired. Circuits that tested sound were left, because replacing cable that is doing its job is spending money for nothing.</p>
+            <p>RCD protection was installed as part of the rectification, which is the other half of the answer. New cable removes the fault that was there. RCD protection covers the faults that turn up later, including on any older cable elsewhere in the house.</p>
+            <p>Old cable was pulled out where it could be reached rather than left dead in the walls. It is not strictly required in every case, but the next person opening that ceiling should not have to work out which of three cables is live.</p>
+
+            <h3>Partial or Full Rewire?</h3>
+            <p>A full rewire is a serious job. It usually means lifting floors or opening ceilings across the house, and in an occupied home it is disruptive and expensive.</p>
+            <p>A partial rewire is the right answer when testing shows the deterioration is confined to particular circuits, which is often the case where a house has been extended or partly upgraded already. It is the wrong answer when the failures are spread evenly across everything, because then you are just replacing the worst third and waiting for the next third.</p>
+            <p>The only way to tell the difference is to test first. Anyone quoting a rewire in an older home without testing is guessing, in one direction or the other.</p>
+
+            <h3>If Your House Is This Era</h3>
+            <p>Kingswood is not the only place this cable turns up. The same wiring is common right across Adelaide's older suburbs, including Prospect, Unley, Mitcham, Collinswood and Norwood, and in the older pockets of the north-east.</p>
+            <p>Worth acting on: repeated tripping with no obvious cause, tripping that gets worse when it rains, a burning or hot-plastic smell, or lights that dim and flicker together. Worth checking without urgency: a house built before the mid-1960s that has never been rewired, particularly if you are about to renovate or you have just bought it.</p>
+            <p>You do not need to go into the roof to look. A licensed electrician can test the circuits from the board and the points, which is both safer and more informative than seeing one length of cable. If something is already tripping, our <a href="/emergency-electrician-adelaide/">fault finding</a> page covers how we go about it.</p>
+        `,
+        cta: {
+            heading: 'Circuits Tripping in an Older Home?',
+            description:
+                'Testing tells you whether it is one circuit or the whole house before you commit to anything. JPD Complete Electrical covers Kingswood and metropolitan Adelaide.',
+            linkText: 'Book Electrical Fault Finding',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'burnt-main-switch-tea-tree-gully',
+        title: 'A Burnt Main Switch in Tea Tree Gully',
+        metaDescription:
+            'A burning smell at a Tea Tree Gully switchboard turned out to be a loose connection left behind by a solar install, quietly cooking the main switch. Why age is not the warning sign.',
+        excerpt:
+            'The board was modern and tidy. Behind the cover the main switch was charred, from a loose connection left behind by an earlier solar install.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/burnt_main_switch_tea_tree_gully.webp',
+        services: ['switchboard-upgrade-adelaide', 'emergency-electrician-adelaide'],
+        suburb: 'electrician-tea-tree-gully',
+        angles: {
+            'emergency-electrician-adelaide': {
+                title: 'Burning Smell at the Switchboard',
+                blurb: 'A hot-plastic smell near a board is not something to monitor. This one was a loose connection cooking the main switch.',
+                anchor: 'smell',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Almost everything written about switchboard problems is about old boards. Ceramic fuses, no safety switches, asbestos backing. That is fair enough, because old boards are the bigger problem overall.</p>
+            <p>This one was not old. The property was relatively modern, the board was a tidy row of modern breakers with a proper RCD, and from the front there was nothing to see. Behind the cover, the main switch was burnt.</p>
+
+            <h3 id="smell">What Was Found</h3>
+            <p>The photo on this page is the board with the cover off. The main switch is an 80 amp device at the left of the row, and the bottom corner of its casing is charred black, with the damage running down onto the cable tail below it.</p>
+            <p>Nothing had tripped. Nothing had stopped working. A breaker protects the circuit downstream of it against overload and short circuit, and a safety switch protects against current leaking to earth. A connection generating heat inside a terminal is neither of those things. It can run for months without a single protective device having any reason to operate.</p>
+            <p>What it does produce is a smell, and that is usually the only warning anyone gets.</p>
+
+            <h3>The Cause: A Loose Connection From Earlier Solar Work</h3>
+            <p>The damage traced back to a loose connection associated with a previous solar installation.</p>
+            <p>The mechanism is simple and it is worth understanding, because it explains why this is not a rare fault. Electricity passing through a joint meets some resistance. A properly torqued terminal has almost none, so almost no heat. A terminal that is slightly loose has more resistance, so it warms up. Warming makes the metal expand and contract with every load cycle, which works the connection looser still, which makes more heat.</p>
+            <p>It is a feedback loop with no natural stopping point short of the plastic around it charring, and it accelerates. That is why a connection can sit there for two years doing nothing much and then damage a switch in a fortnight.</p>
+            <p>Solar work is a common trigger simply because it means somebody has been inside the board making connections at the main switch and the meter. Any work in a board is, for the same reason. It is not an argument against solar and it is not evidence that the installer was careless. It is an argument for the board being looked at properly afterwards rather than just closed up.</p>
+
+            <h3>What This Means If You Smell Something</h3>
+            <p>A burning, hot-plastic or fishy smell around a switchboard is the one symptom on the list that is not a plan-for-it item.</p>
+            <p>Everything else about an ageing board, no spare ways, hand-written labels, an old safety switch, is worth sorting out when you are doing something else anyway. Heat is different, because heat is already damaging something and the damage compounds.</p>
+            <p><strong>Do not take the cover off.</strong> The parts that get hot are the incoming connections, and those are live regardless of the position of your main switch. Turning everything off at the board does not make the terminals inside it safe.</p>
+            <p><strong>Do not try to tighten anything.</strong> This is the specific thing that turns an expensive repair into a serious injury.</p>
+            <p><strong>Switch off at the main switch if you can smell it strongly and nobody can attend immediately.</strong> That removes the load through the board, which removes most of the heating.</p>
+            <p>Then get someone out. Our <a href="/emergency-electrician-adelaide/">emergency electrician</a> page covers what happens when you call.</p>
+
+            <h3>Age Is Not the Warning Sign People Think It Is</h3>
+            <p>The useful thing about this job is that it breaks the rule of thumb everyone carries around.</p>
+            <p>A board full of modern devices with printed labels reads as fine, and mostly it is. But connection failures are not a function of the age of the devices. They are a function of whether every terminal in the board was properly tightened, and whether anything has been done to the board since.</p>
+            <p>The practical version: if your board has had work done to it, solar, an EV charger, air conditioning, a new circuit for a shed, it is worth having the connections checked at some point afterwards. Not urgently, and not as a separate call-out, but the next time an electrician is there for something else. It takes minutes with the cover off, and this is the fault it finds.</p>
+            <p>A thermal camera finds these before they become visible, because a hot joint shows up on a scan long before it chars anything. That is what our <a href="/thermal-imaging-adelaide/">thermal imaging inspections</a> are for, and it is why the commercial version of this check is done that way as routine.</p>
+
+            <h3>What Was Done</h3>
+            <p>A burnt main switch is not repairable. The device is replaced, the cable tail is cut back past the damage and re-terminated, and everything else in the board is checked at the same time, because a loose connection is rarely the only one.</p>
+            <p>Whether that turns into a full <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> depends on what the rest of the board looks like. On a modern board it is usually a repair. On an older one, replacing a burnt main switch on a board that is already at the end of its life is money spent twice.</p>
+            <p>We cover Tea Tree Gully and the surrounding north-eastern suburbs, and there is more about what we do locally on our <a href="/electrician-tea-tree-gully/">Tea Tree Gully electrician</a> page.</p>
+        `,
+        cta: {
+            heading: 'Smelling Something at the Switchboard?',
+            description:
+                'A burning smell at a board is not something to watch and see. Leave the cover on and call. JPD Complete Electrical covers Tea Tree Gully and the north-east.',
+            linkText: 'Get Your Switchboard Checked',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'outdoor-strip-heaters-alfresco-norwood',
+        title: 'Two Outdoor Strip Heaters in a Norwood Alfresco',
+        metaDescription:
+            'Two 2400 watt Heatstrip radiant heaters into an older Norwood alfresco, each on its own dedicated circuit. Why the circuits matter more than the heaters do.',
+        excerpt:
+            'Two 2400 watt radiant heaters over an alfresco, each on its own circuit. Most of the day went into getting the supplies out there, not into hanging the heaters.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/outdoor_heaters_alfresco_norwood.webp',
+        gallery: [
+            {
+                src: '/images/heatstrip_heater_bracket_norwood.webp',
+                alt: 'Heatstrip radiant heater on a ceiling drop bracket with the supply coming through a mounting plate above',
+                caption:
+                    'Hard-wired through a plate above the unit. The drop bracket sets the height and angle, and both are worth getting right first time.',
+            },
+            {
+                src: '/images/heatstrip_heater_ceiling_norwood.webp',
+                alt: 'Second Heatstrip radiant heater mounted to the alfresco ceiling in Norwood',
+                caption:
+                    'The second unit, angled to cover the other end of the seating rather than doubling up on the same spot.',
+            },
+        ],
+        services: ['powerpoint-installation-adelaide'],
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Dedicated Circuits for Outdoor Heaters',
+                blurb: 'Two 2400 watt heaters is 20 amps. That is a new circuit each, not an extension of the alfresco powerpoints.',
+                anchor: 'circuits',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Outdoor heaters are sold as an appliance and installed as an electrical job, and the gap between those two things is where the surprises live.</p>
+            <p>This was an older home in Norwood with a covered alfresco off the back, running out of usable weeks at either end of summer. Two radiant strip heaters went into the ceiling. The heaters themselves took a fraction of the day. Getting the electrical supply out to them took the rest of it.</p>
+
+            <h3>The Units</h3>
+            <p>Two Heatstrip units, 2400 watts each, sourced through The Home of Fire on Magill Road at Norwood, so the customer had seen them running in a showroom before committing. That is worth doing with radiant heat, because the specification tells you very little about how it actually feels underneath.</p>
+            <p>These are radiant heaters, not fan heaters. They warm objects and people directly rather than heating the air, which is the only approach that works outdoors where the air you have just warmed immediately blows away. The practical consequence is that placement matters enormously. A radiant heater warms what it can see. Sit outside its cone and you get very little, which is why the two units here are angled to cover different parts of the seating rather than both pointed at the middle of the table.</p>
+            <p>They are also ceiling mounted on drop brackets rather than fixed flat. That sets both the height and the angle, and getting it right at install time is the difference between warmth on your shoulders and warmth on the top of your head.</p>
+
+            <h3 id="circuits">Why Each One Needed Its Own Circuit</h3>
+            <p>This is the part that decides the price, and it is worth understanding before you get quotes.</p>
+            <p>2400 watts at 240 volts is 10 amps. Continuously, for as long as the heater is on. Two of them is 20 amps.</p>
+            <p>A general power circuit in a house is typically protected at 16 or 20 amps and already has things on it. Putting two heaters that together draw 20 amps onto an existing circuit means it either trips or sits permanently at its limit, which is worse. A circuit running at its rated current for hours is not doing anything illegal, it is just running warm indefinitely, and warm is how connections fail.</p>
+            <p>So each heater got a dedicated circuit run from the switchboard. Not because the rules demand two separate circuits in every case, but because these are large, continuous, predictable loads and separating them is what keeps the alfresco powerpoints usable at the same time.</p>
+            <p>Two new circuits means two spare ways in the board. That is the check worth doing before you buy anything: if the board is full, the heaters have just become a heater job plus a board job. There is more about that on our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page.</p>
+
+            <h3>Where the Six Hours Went</h3>
+            <p>About six hours on site, and most of it was cable.</p>
+            <p>An alfresco is attached to the house but not inside it. Getting two new supplies from the board out to a covered outdoor ceiling means working out a route through roof space, wall cavity or along the eave, and in an older home the roof space is not the tidy modern truss space that makes that easy. Then it has to be concealed, supported and terminated to survive being outdoors.</p>
+            <p>That is why quotes for outdoor heating vary so much for what looks like the same pair of heaters. The heaters are a fixed cost. The route from the board to them is the variable, and it is not visible from a photo. Anyone quoting outdoor heating over the phone is quoting the easy half.</p>
+
+            <h3>Wall Switches Versus Remote Control</h3>
+            <p>These are on wall switches, which is the simplest arrangement and the one that fails least.</p>
+            <p>Other models offer remote or app control, and some have variable output rather than just on and off. They are genuinely nicer to use, particularly if the heaters are high and you are sitting under them. The decision is worth making before installation rather than after, because a controller frequently needs its own supply and a spot to live, and retrofitting that means going back into a finished ceiling.</p>
+            <p>The one thing worth avoiding is choosing a control method because it saves electrical work. It usually does not, and a heater you cannot conveniently switch off is a heater that gets left on.</p>
+
+            <h3>If You Are Thinking About It</h3>
+            <p>Check the board for spare ways first. Decide the mounting height and the seating layout before install, because the bracket position is not something to revise later. Look at the units running somewhere before buying, since radiant output is hard to judge on paper. And get the cable route looked at, because that is what the quote actually turns on.</p>
+            <p>We did a similar pair of <a href="/blog/outdoor-strip-heaters-golden-grove/">outdoor strip heaters in Golden Grove</a>, which is worth a look if you want to see how the same equipment lands in a different setting. Norwood and Golden Grove are at opposite ends of the metro area but the cold evenings arrive at both of them at the same time, and the job is much the same either way.</p>
+            <p>We cover Norwood and metropolitan Adelaide generally. There is more on adding new circuits and outlets on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page.</p>
+        `,
+        cta: {
+            heading: 'Want the Alfresco Usable in Winter?',
+            description:
+                'Outdoor heating is mostly a cabling job, so the quote depends on the route from your board. JPD Complete Electrical covers Norwood and metropolitan Adelaide.',
+            linkText: 'Get an Outdoor Heating Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'tv-wall-mount-medical-waiting-room-gillman',
+        title: 'TV Wall Mount in a Gillman Medical Waiting Room',
+        metaDescription:
+            'A wall-mounted screen and a new dedicated power outlet in a medical waiting room at Gillman, on a full-motion bracket so it can be angled to the seating.',
+        excerpt:
+            'A waiting room screen on a full-motion bracket, with a new outlet behind it so there is no cable on show. What commercial mounting asks for that domestic does not.',
+        date: '2026-08-31',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/tv_wall_mount_waiting_room_gillman.webp',
+        services: ['powerpoint-installation-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Mounting a screen on a wall looks like the same job everywhere. In a commercial fitout it is not, and the differences are all in things nobody photographs: what is behind the plasterboard, where the outlet goes, and who has to be able to reach it in two years.</p>
+            <p>This was a medical premises at Gillman. A screen went into the patient waiting room, on a full-motion bracket, with a new power outlet installed for it.</p>
+
+            <h3>The Outlet Goes In First</h3>
+            <p>A new <a href="/powerpoint-installation-adelaide/">power outlet</a> went in specifically for the screen, positioned behind where it would sit.</p>
+            <p>This is the part people skip and then live with. A screen mounted on a wall with a lead running down to a skirting-level outlet looks unfinished, and in a waiting room it is at eye height for everyone sitting in front of it. Worse, a visible lead is something people pull on and children swing off, and in a medical setting that is a hazard rather than an aesthetic issue.</p>
+            <p>Putting a dedicated outlet behind the screen means the only thing on the wall is the screen. It has to go in before the bracket, because once the screen is up the wall behind it is gone.</p>
+
+            <h3>Fixing Into a Commercial Wall</h3>
+            <p>The one genuine technical difference between commercial and domestic screen mounting is what you are fixing to.</p>
+            <p>In a house the answer is usually timber studs at a known spacing, and you find them and fix to them. Commercial partitioning is often steel stud, sometimes with different sheeting, occasionally with services running through the cavity in places that would surprise you. A full-motion bracket makes that matter more, not less, because of the leverage.</p>
+            <p>That is the thing to understand about articulating brackets. A screen sitting flat against a wall puts its weight almost straight down. Pull it out on an extended arm and the same screen is now on the end of a lever, and the fixings at the top of the bracket are being pulled directly out of the wall rather than loaded downward. The load on the fixings can be several times higher extended than folded.</p>
+            <p>So the bracket choice is not independent of the wall. Deciding on a full-motion mount means the fixing has to suit it, and that is worth establishing before the bracket is bought rather than discovering on the day.</p>
+
+            <h3>Why Full Motion in a Waiting Room</h3>
+            <p>A waiting room is a genuinely good case for an articulating bracket, which is not true of most living rooms.</p>
+            <p>Seating in a waiting area is arranged around the room rather than pointed at the screen, so there is no single viewing position to aim at. A bracket that swivels lets the screen be angled toward wherever the seating actually ends up, and re-angled when the furniture gets rearranged, which in a waiting room it will be.</p>
+            <p>The other reason is access. Anything behind a screen, the outlet, the bracket bolts, a data point, is unreachable once a fixed mount is up. On a full-motion arm the screen pulls away from the wall and everything behind it is accessible without taking the screen down. In a commercial building that is worth the extra cost on its own, because it means the next person who needs to get in there is not booking a two-person lift.</p>
+
+            <h3>Height, and Getting It Wrong</h3>
+            <p>Screens in commercial spaces are almost always mounted too high.</p>
+            <p>The reason is understandable. Standing in an empty room and holding a screen against the wall, chest height looks low. But the people watching it are seated, often for twenty minutes, and a screen mounted at standing eye level puts them at a permanent upward angle.</p>
+            <p>The check that works is to sit in the actual chairs before marking the wall. Where the room genuinely needs the screen high, above a counter, or where it has to clear sightlines to a reception desk, that is a real constraint and it is another argument for a bracket that tilts.</p>
+
+            <h3>If You Are Fitting Out a Commercial Space</h3>
+            <p>The screen is the last decision, not the first. What matters is settled before it arrives: where the outlet goes, what the wall is made of, whether the bracket suits both, and whether anything behind the screen will ever need to be reached.</p>
+            <p>Get those four right and the install is straightforward. Get them wrong and the fix involves patching a wall in a room full of patients.</p>
+            <p>We do commercial fitout work across metropolitan Adelaide, including Gillman and the Port area. There is more on adding outlets and circuits on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page.</p>
+        `,
+        cta: {
+            heading: 'Fitting Out a Commercial Space?',
+            description:
+                'Screens, outlets and the wall behind them are one job, not three. JPD Complete Electrical covers Gillman, the Port area and metropolitan Adelaide.',
+            linkText: 'Get a Commercial Fitout Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'shed-electrical-fitout-mawson-lakes-golf-course',
         title: 'Shed Electrical Fitout at Mawson Lakes Golf Course',
         metaDescription:
