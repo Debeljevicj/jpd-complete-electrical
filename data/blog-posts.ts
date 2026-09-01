@@ -74,7 +74,7 @@ const legacyPosts: BlogPost[] = [
         title: '5 Essential Electrical Safety Tips for Adelaide Homes',
         excerpt: `The safety checks worth doing yourself, the ones that need a licensed electrician, and how to tell which is which.`,
         date: '2023-10-15',
-        updated: '2026-08-18',
+        updated: '2026-09-01',
         author: 'Justin',
         category: 'Safety',
         image: '/images/residential_switchboard_upgrade_2.webp',
@@ -130,7 +130,7 @@ const legacyPosts: BlogPost[] = [
         title: 'Why Upgrading to LED Lighting Saves You Money',
         excerpt: `What halogen downlights actually cost to run in Adelaide, and what a proper LED upgrade involves beyond swapping globes.`,
         date: '2023-11-02',
-        updated: '2026-08-18',
+        updated: '2026-09-01',
         author: 'Justin',
         category: 'Efficiency',
         image: '/images/bedroom_led_downlights.webp',
@@ -184,10 +184,36 @@ const legacyPosts: BlogPost[] = [
         title: 'Warning Signs Your Switchboard Needs Upgrading',
         excerpt: `The warning signs worth acting on, what a switchboard upgrade actually involves, and what it will not fix.`,
         date: '2023-11-20',
-        updated: '2026-08-18',
+        updated: '2026-09-01',
         author: 'Justin',
         category: 'Maintenance',
         image: '/images/residential_switchboard_upgrade_1.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_ceramic_fuses_golden_grove.webp',
+                alt: 'Ceramic rewireable fuse carriers in an original switchboard',
+                caption:
+                    'Ceramic fuses. This board predates safety switches entirely, so there is no shock protection on anything it feeds.',
+            },
+            {
+                src: '/images/switchboard_single_rcd_golden_grove.webp',
+                alt: 'Switchboard with a single RCD protecting every circuit in the house',
+                caption:
+                    'One safety switch covering the whole house. It works, but any fault anywhere takes the entire place out, and it is a long way short of what a board would be built with today.',
+            },
+            {
+                src: '/images/switchboard_hand_labelled_golden_grove.webp',
+                alt: 'Switchboard with handwritten circuit labels, several of them uncertain',
+                caption:
+                    'Hand-written labels, some of them guesses. Worth noticing where somebody has written a question mark: that circuit was never traced.',
+            },
+            {
+                src: '/images/burnt_main_switch_tea_tree_gully.webp',
+                alt: 'Main switch showing heat damage and discolouration from a loose connection',
+                caption:
+                    'A main switch cooked by a loose connection. This board was not especially old. Heat damage is about workmanship and load, not just age.',
+            },
+        ],
         content: `
             <h3>Why This Matters to You</h3>
             <p>Your switchboard is where every circuit in the house terminates and where all the protection lives. When it is old, the failure is rarely sudden. It is a slow drift where the board gets less able to handle what the house now asks of it, while the protection it offers falls further behind what is expected.</p>
@@ -221,10 +247,18 @@ const legacyPosts: BlogPost[] = [
             <h3>6. No Room Left on the Board</h3>
             <p>This one is not a safety issue on its own, it is a planning one. If the board is physically full, every future addition becomes awkward and expensive. Adding an <a href="/ev-charger-installation-adelaide/">EV charger</a>, a new air conditioner, or a decent workshop circuit all need a spare way and adequate capacity.</p>
             <p>If you are considering any of those in the next few years, doing the board first is usually cheaper than doing it twice.</p>
+            <p>There is more on this in <a href="/blog/switchboard-full-no-spare-ways-adelaide/">what a full switchboard actually blocks</a>, including how to check before you commit to the equipment.</p>
 
             <h3>7. Asbestos Backing Board</h3>
             <p>Switchboards from roughly the fifties through the seventies were often mounted on asbestos backing sheet. Undisturbed and in good condition it is not an immediate hazard, but it does constrain what can be done to the board, and it needs handling correctly during any upgrade rather than being discovered halfway through.</p>
             <p>If your board is that vintage, mention it when you get a quote so it is priced properly from the start rather than becoming a variation on the day.</p>
+
+            <h3>What These Look Like in Real Boards</h3>
+            <p>The photos below are boards from around the north-eastern suburbs, and each one shows a different version of the same question. None of them were emergencies on the day. All of them were worth doing something about.</p>
+            <p><strong>Ceramic fuses.</strong> The first board is the straightforward case. Rewireable fuses, no safety switches, nothing that could be described as modern protection. There is no diagnosis needed here: a board like this is at the end of its life and the only question is timing.</p>
+            <p><strong>One safety switch doing everything.</strong> The second is the one people get wrong, because there is an RCD on the board and the owner reasonably assumes they are covered. They are, in the narrow sense. But a single device protecting every circuit means one fault anywhere puts the whole house in the dark, and it is nothing like the per-circuit protection a board would be built with now.</p>
+            <p><strong>Labels that are guesses.</strong> The third board is labelled by hand, and a couple of the labels have question marks. Somebody was not certain what those circuits fed and wrote down their best guess. That is not a safety fault on its own. It does mean nobody can safely isolate part of the house without testing first, and it is a reliable sign the board has been added to over the years without anyone stepping back.</p>
+            <p><strong>Heat damage.</strong> The fourth is the one worth dwelling on, because that board was not especially old. The main switch is discoloured and heat damaged from a loose connection left behind by an earlier solar install. Age had nothing to do with it. A poor termination on a newer board will cook itself just as happily as an old one, which is why "my board is only fifteen years old" is not the reassurance people take it for.</p>
 
             <h3>What an Upgrade Actually Involves</h3>
             <p>A switchboard upgrade replaces the enclosure and the protective devices: main switch, circuit breakers, and RCDs across the circuits. Existing circuits get transferred across, tested, and labelled properly, which by itself is worth something in a house where nobody has ever known which breaker does what.</p>

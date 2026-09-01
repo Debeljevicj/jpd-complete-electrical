@@ -41,7 +41,7 @@ export const jobReports: JobReport[] = [
         slug: 'bathroom-renovation-electrical-wynn-vale',
         title: 'Bathroom Renovation Electrical in Wynn Vale',
         metaDescription:
-            'A full bathroom strip-out in Wynn Vale across three visits: making safe before demolition, roughing in a heat light and a separate shower exhaust, then fitting off after tiling.',
+            `A full bathroom strip-out in Wynn Vale across three visits: making safe, roughing in a heat light and shower exhaust, then fitting off after tiling.`,
         excerpt:
             'A gutted bathroom needs the electrician three times, not once. Here is what happens on each visit, and why this one got two extraction fans instead of one.',
         date: '2026-08-31',
@@ -134,7 +134,7 @@ export const jobReports: JobReport[] = [
         title: 'Partial Rewire of a 1950s Kingswood Home',
         seoTitle: 'Partial House Rewire in Kingswood | JPD',
         metaDescription:
-            'Power circuits tripping in a 1950s Kingswood home traced back to perished VIR and cotton-braided cable, with newer work spliced onto it. What we found and what got rewired.',
+            `Tripping circuits in a 1950s Kingswood home traced to perished VIR and cotton-braided cable with newer work spliced onto it. What got rewired.`,
         excerpt:
             'Circuits kept tripping in a 1950s home. Testing found perished rubber and cotton-braided cable still in service, with newer work joined straight onto it.',
         date: '2026-08-31',
@@ -223,7 +223,7 @@ export const jobReports: JobReport[] = [
         slug: 'burnt-main-switch-tea-tree-gully',
         title: 'A Burnt Main Switch in Tea Tree Gully',
         metaDescription:
-            'A burning smell at a Tea Tree Gully switchboard turned out to be a loose connection left behind by a solar install, quietly cooking the main switch. Why age is not the warning sign.',
+            `A burning smell at a Tea Tree Gully board was a loose connection from a solar install, cooking the main switch. Why age is not the warning sign.`,
         excerpt:
             'The board was modern and tidy. Behind the cover the main switch was charred, from a loose connection left behind by an earlier solar install.',
         date: '2026-08-31',

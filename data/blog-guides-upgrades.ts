@@ -195,7 +195,7 @@ export const upgradePosts: BlogPost[] = [
         title: 'Asbestos in Your Switchboard: How to Tell, and What It Means',
         seoTitle: 'Asbestos Switchboard Adelaide | JPD',
         metaDescription:
-            'Asbestos backing panels are common in Adelaide switchboards built before the mid-1980s. How to recognise one, why it is not an emergency, and what it changes about the work.',
+            `Asbestos backing panels are common in Adelaide boards built before the mid-1980s. How to spot one, why it is not an emergency, what it changes.`,
         excerpt:
             'Plenty of Adelaide switchboards have an asbestos backing panel behind the fuses. Here is how to tell, why it is not a reason to panic, and what it changes about replacing the board.',
         date: '2026-08-31',
@@ -301,6 +301,76 @@ export const upgradePosts: BlogPost[] = [
             description:
                 'Send a photo of the front of your switchboard and we will tell you honestly whether it needs attention now, later, or not at all. No obligation and no scare tactics.',
             linkText: 'Get Your Switchboard Assessed',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'switchboard-full-no-spare-ways-adelaide',
+        title: 'Your Switchboard Is Full. Here Is What That Actually Blocks',
+        seoTitle: 'Switchboard Full? No Spare Ways | JPD',
+        metaDescription:
+            `A full switchboard is the reason a simple EV charger or solar job turns into a board replacement. How to check before you buy the equipment.`,
+        excerpt:
+            `Nobody rings an electrician because their switchboard is full. They ring because they want an EV charger, or solar, or ducted air conditioning, and find out the hard way that there is nowhere to put it.`,
+        date: '2026-09-01',
+        author: 'Justin',
+        category: 'Switchboards',
+        image: '/images/switchboard_full_no_spare_ways.webp',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Nobody books an electrician because their switchboard is full. They book because they have just bought an electric car, or signed a contract for solar and a battery, or decided this is the summer the ducted air conditioning goes in. The board being full is what they find out afterwards, usually at the quoting stage, and usually as a number considerably larger than they expected.</p>
+            <p>This is the most avoidable expensive surprise in domestic electrical work. Checking takes a few minutes and can be done before you commit to anything.</p>
+
+            <h3>What "Full" Actually Means</h3>
+            <p>A switchboard holds a fixed number of what the trade calls ways, sometimes poles. Each circuit breaker occupies one, and an RCD or a combined RCBO occupies one or two depending on the type. When every position is taken, the board is full.</p>
+            <p>Two things surprise people here. The first is that a board can look like it has room and have none, because the empty-looking space is not usable mounting rail. The second is the opposite: a board can look completely packed and still have a way or two free behind the cover.</p>
+            <p>So the honest answer to "is my board full" is that you cannot reliably tell from a photo, and neither can we. Someone has to take the cover off, and that is not a job for the homeowner. What you can do from the outside is count the switches. If you are seeing a solid row with no gaps at all, assume it is full until told otherwise.</p>
+
+            <h3>Why Boards Fill Up</h3>
+            <p>A board is specified for the house as it was built. Every addition since has taken a way: the air conditioner, the second oven, the pool pump, the shed, the spa, the solar inverter, the hot water changeover. Individually each was a small job. Collectively they used up the board.</p>
+            <p>The houses this catches hardest are the ones from the 1980s and early 90s, which were built with enough capacity for their era and have since absorbed thirty years of additions. In the newer estates the board is usually larger to begin with but the houses draw more, so the pressure arrives from the other direction.</p>
+
+            <h3>What a Full Board Blocks</h3>
+            <p>Every one of these needs its own circuit, which means its own way in the board:</p>
+            <ul>
+                <li>An <a href="/ev-charger-installation-adelaide/">EV charger</a>, which needs a dedicated circuit and appropriate RCD protection, and cannot share with anything</li>
+                <li>Solar, and a battery, which each need their own protection and isolation</li>
+                <li>Ducted or added-on air conditioning</li>
+                <li>A heat pump or changed-over hot water service</li>
+                <li>A shed or granny flat, which usually means a submain and a sub-board</li>
+                <li>A pool or spa, which brings its own requirements on top of the circuit</li>
+            </ul>
+            <p>This is why the same EV charger install is quoted at wildly different prices at different houses. The charger is the same. Whether your board can accept it is not.</p>
+
+            <h3>The Fixes That Look Cheap</h3>
+            <p>When a board is full there are ways to squeeze another circuit in, and some of them are legitimate in the right situation. The problem is that they get used as a way to avoid a conversation about the board.</p>
+            <p>Slimline or tandem breakers fit two circuits into one physical way. They have their place. They also make an already crowded board harder to work on, and they do nothing about the fact that the board is at its limit for a reason.</p>
+            <p>A sub-board fed from the main board is a proper solution when the load is genuinely somewhere else, like a shed or a workshop. It is not a proper solution when it is being used to avoid replacing a main board that should have been replaced anyway.</p>
+            <p>Being blunt about the incentive: the cheapest quote for adding a circuit to a full board is usually the one that has decided not to mention the board. That difference shows up later, either as a second job or as a compromise nobody explained to you.</p>
+
+            <h3>Full Is Rarely the Only Thing</h3>
+            <p>A board that has run out of room has usually been in service a long time, and age brings company. The same board is often the one with no <a href="/rcd-testing-safety-switches-adelaide/">RCD protection</a> on the lighting circuits, or a single safety switch covering the entire house, or circuits nobody has ever labelled properly.</p>
+            <p>If it is old enough, it may also have an asbestos backing panel, which changes how the work has to be handled and is worth understanding before you get quotes. That is covered properly in our guide to <a href="/blog/asbestos-switchboard-adelaide/">asbestos in your switchboard</a>.</p>
+            <p>The practical consequence is that "I need one more circuit" and "this board is due" are frequently the same conversation, and it is better to have it once.</p>
+
+            <h3>Check Before You Buy the Equipment</h3>
+            <p>The order that saves people money is straightforward, and almost nobody follows it.</p>
+            <p>Have the board looked at <em>before</em> you sign for the solar, order the charger, or book the air conditioning. Not after. A ten minute look tells you whether the job you are planning is the job you are planning, or whether it comes with a board replacement attached.</p>
+            <p>It also means that if the board does need doing, you can decide how to sequence it. Doing the board and the new circuit together is meaningfully cheaper than doing the board six months later and paying to disturb the same work twice.</p>
+
+            <h3>What You Get Beyond the Space</h3>
+            <p>Replacing a full board is not only about making room. The same job brings the protection up to current standards, gives every circuit proper RCD coverage, and leaves you with a board where the labelling actually reflects what the circuits do.</p>
+            <p>It also leaves spare ways, which is the part worth insisting on. A board replaced with exactly enough room for today is a board you will be having this conversation about again. Ask for headroom.</p>
+            <p>What is involved, and what moves the price, is set out on our <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page, and the other reasons a board reaches the end of its life are covered in <a href="/blog/signs-you-need-switchboard-upgrade/">the warning signs guide</a>.</p>
+
+            <h3>The Short Version</h3>
+            <p>If you are planning anything that needs its own circuit, get the board checked first. It is a short look that either clears the way or saves you from finding out at the worst possible moment. Either answer is worth having before you spend the money.</p>
+        `,
+        cta: {
+            heading: 'Planning Solar, an EV Charger or Air Conditioning?',
+            description:
+                'Have the switchboard checked before you commit to the equipment. It takes a few minutes and it either clears the way or tells you what else is involved, while you can still plan around it.',
+            linkText: 'Book a Switchboard Check',
             href: '/contact',
         },
     },
