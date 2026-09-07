@@ -34,9 +34,123 @@ export interface JobReport extends BlogPost {
      * same photos, which is the doorway-page pattern Google demotes.
      */
     angles?: Record<string, { title: string; blurb: string; anchor?: string; image?: string }>;
+    /**
+     * Service page slugs where this job leads the page instead of sitting in the
+     * card grid. For a job that shows the whole arc of the service rather than one
+     * slice of it, a card in a row of three undersells it.
+     */
+    featuredFor?: string[];
 }
 
 export const jobReports: JobReport[] = [
+    {
+        slug: 'switchboard-upgrade-asbestos-ridgehaven',
+        title: 'A Full Asbestos Switchboard Replaced in Ridgehaven',
+        seoTitle: 'Switchboard Upgrade Ridgehaven | JPD',
+        metaDescription:
+            `A Ridgehaven board that was full, had an asbestos panel, and had to make room for an EV charger and a battery. Before, during and after.`,
+        excerpt:
+            'This board had every reason to be replaced in the one enclosure: full, asbestos backed, and in the way of an EV charger and a battery. Here is the job from start to finish.',
+        date: '2026-09-07',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/switchboard_labelled_after_ridgehaven.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_before_full_asbestos_ridgehaven.webp',
+                alt: 'Original Ridgehaven switchboard, every position in use, with a warning contains asbestos sticker on the black panel',
+                caption:
+                    'Before. Every position in use, gear from several different eras, and a warning sticker somebody had already applied to the asbestos panel.',
+            },
+            {
+                src: '/images/switchboard_asbestos_panel_removed_ridgehaven.webp',
+                alt: 'Switchboard enclosure stripped back with circuits hanging loose and the brown asbestos backing panel exposed',
+                caption:
+                    'Everything off, circuits hanging, and the brown asbestos backing panel exposed. The meter and meter isolator stay where they are.',
+            },
+            {
+                src: '/images/switchboard_rcbos_wired_ridgehaven.webp',
+                alt: 'New 17-way enclosure wired with a row of Hager RCBOs, neutral and earth bars, and spare ways blanked off',
+                caption:
+                    'The new gear in and wired, before the cover goes on. Every circuit on its own RCBO, and the spare ways blanked off on the right.',
+            },
+            {
+                src: '/images/switchboard_17_way_spare_ways_ridgehaven.webp',
+                alt: 'Finished 17-way switchboard with every circuit labelled and unused ways remaining at the right',
+                caption:
+                    'Seventeen ways, about twelve used. The room at the right is the part of this job that gets used later.',
+            },
+        ],
+        services: [
+            'switchboard-upgrade-adelaide',
+            'ev-charger-installation-adelaide',
+            'rcd-testing-safety-switches-adelaide',
+        ],
+        suburb: 'electrician-ridgehaven',
+        featuredFor: ['switchboard-upgrade-adelaide'],
+        angles: {
+            'ev-charger-installation-adelaide': {
+                title: 'Making Board Room for an EV Charger in Ridgehaven',
+                blurb: 'The board was full, so the charger had nowhere to go. Seventeen ways went in, and the charger circuit now has somewhere to land.',
+                anchor: 'capacity',
+                image: '/images/switchboard_17_way_spare_ways_ridgehaven.webp',
+            },
+            'rcd-testing-safety-switches-adelaide': {
+                title: 'Every Circuit on Its Own RCBO in Ridgehaven',
+                blurb: 'Shared safety switches replaced with one RCBO per circuit, so a fault on the oven trips the oven rather than half the house.',
+                anchor: 'rcbo',
+                image: '/images/switchboard_rcbos_wired_ridgehaven.webp',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>This board had every reason a switchboard gets replaced, all sitting in the one enclosure. It was full, so there was nowhere to put anything new. It had an asbestos backing panel. And the owners wanted an EV charger and a battery to go alongside the solar they already had.</p>
+            <p>None of it was an emergency. Together it meant the board had reached the end of what it could usefully do, and the choice was to keep working around it or replace it once and stop having the conversation.</p>
+
+            <h3>What We Started With</h3>
+            <p>The first photo below is the board as we found it. Two main switches, because the solar was already installed and a house with solar has two sources of supply. Beyond that, gear from several different eras: an old combined safety switch covering the lights and a couple of power circuits, separate RCDs added later for the spa and the gas heater, and an air conditioning isolator squeezed in beside them.</p>
+            <p>The asbestos was already known about. Somebody had applied a warning sticker at some point, which is the right thing to do. The dark panel the switches are mounted on is the backing board itself.</p>
+            <p>The important thing about that photo is what is not in it, which is anywhere to add a circuit.</p>
+
+            <h3>Why It Could Not Just Be Added To</h3>
+            <p>An EV charger needs its own circuit and its own protection, and cannot share with anything. A battery needs its own protection and isolation as well. That is two more positions at minimum, on a board that had none.</p>
+            <p>There are ways to squeeze extra circuits into a full board, and in the right situation they are perfectly legitimate. This was not the right situation. The board was already carrying thirty years of additions, and putting new work onto it would have meant paying twice: once now, and again when the board was replaced anyway.</p>
+            <p>There is also the asbestos. Undisturbed and in good condition, an asbestos panel is not a hazard, which is covered properly in our guide to <a href="/blog/asbestos-switchboard-adelaide/">asbestos in your switchboard</a>. Drilling fresh holes in one to mount extra gear is the definition of disturbing it. Once the answer to "can we add to this board" involves cutting the panel, the answer is no.</p>
+
+            <h3>Taking the Old Panel Out</h3>
+            <p>The second photo is the middle of the job. Everything comes off, the panel comes out, and the circuits are left hanging while the new enclosure goes in. The meter and the meter isolator stay where they are, since they belong to the network rather than to the house.</p>
+            <p>This is the part of the day the power is off, and it is worth planning around. The old panel is removed and disposed of correctly rather than being left in place behind the new gear, which is a shortcut you do sometimes find.</p>
+
+            <h3 id="rcbo">Why Every Circuit Got Its Own RCBO</h3>
+            <p>Two entirely different things can go wrong on a circuit, and they need different protection.</p>
+            <p>A circuit breaker protects the cable. If a circuit draws more than it should, or something shorts, the breaker opens before the cable in the wall gets hot enough to matter. That is the fire side of the problem.</p>
+            <p>An RCD, which most people call a safety switch, protects people. It watches for current leaking to earth, which is what happens when someone touches something live, and disconnects in a few tens of milliseconds. That is the shock side.</p>
+            <p>An RCBO is both of those in a single device, protecting a single circuit.</p>
+            <p>The old board had neither properly distributed. Some circuits ran through a shared safety switch, some had no RCD protection at all, and the ones that shared a device shared its faults too. A single leak anywhere behind a shared RCD takes out everything on it, which is how you end up with the lights, the power and the oven all going off because of one appliance.</p>
+            <p>Every circuit on this board now has its own RCBO. A fault on the oven trips the oven. Every cable in the house has overload protection and every circuit has shock protection, independently of the others. That is what it means in practice to say the cables, the house and the people are all covered.</p>
+
+            <h3 id="capacity">Room for What Comes Next</h3>
+            <p>A 17-way enclosure went in. That was the decision that mattered most on this job, and it is the one worth arguing about on any board replacement.</p>
+            <p>The house needed about twelve positions for what it already had. Specifying seventeen costs very little more on the day and is the difference between a board that suits this house now and a board that suits it for the next decade.</p>
+            <p>The battery circuit is already in and labelled. The <a href="/ev-charger-installation-adelaide/">EV charger</a> has somewhere to land when it goes in, which means that job is a charger install rather than a charger install with a board replacement attached to it. In the last photo the unused ways are blanked off at the right hand end, which is the part of the picture that gets used later.</p>
+            <p>If you are weighing up solar, a battery, an EV charger or air conditioning, this is the order that saves money: have the board looked at first. There is more on that in <a href="/blog/switchboard-full-no-spare-ways-adelaide/">what a full switchboard actually blocks</a>.</p>
+
+            <h3>Labelled So Somebody Else Can Read It</h3>
+            <p>Every circuit is labelled for what it actually does: three air conditioning circuits, the oven, the heater, the spa, three power circuits and the lights. Both main switches are marked as one of two and two of two, one for the grid supply and one for the solar supply.</p>
+            <p>That last detail matters more than it looks. A house with solar can be fed from two directions, and anyone who needs to isolate the place in a hurry, including an electrician who has never been there, needs to be able to see that immediately rather than work it out.</p>
+
+            <h3>If This Sounds Like Your Board</h3>
+            <p>Full board, asbestos panel, and something new you want to add is an extremely common combination in Ridgehaven and the surrounding suburbs, where a lot of the housing stock is from the 1960s and 70s. None of it is urgent on its own, and all of it is cheaper to deal with in one visit than in three.</p>
+            <p>What the work involves and what moves the price is set out on our <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page, and if you are not sure whether yours is at this point, <a href="/blog/signs-you-need-switchboard-upgrade/">the warning signs guide</a> walks through it with photos of real boards.</p>
+        `,
+        cta: {
+            heading: 'Thinking About Solar, a Battery or an EV Charger?',
+            description:
+                'Have the switchboard checked before you commit to the equipment. If it needs doing, doing it at the same time is meaningfully cheaper than doing it twice.',
+            linkText: 'Book a Switchboard Assessment',
+            href: '/contact',
+        },
+    },
     {
         slug: 'bathroom-renovation-electrical-wynn-vale',
         title: 'Bathroom Renovation Electrical in Wynn Vale',

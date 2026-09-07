@@ -4,6 +4,7 @@ import TrustBadges from './TrustBadges';
 import Accordion from './Accordion';
 import ServiceIcon from './ServiceIcon';
 import RecentJobs from './RecentJobs';
+import FeaturedJob from './FeaturedJob';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
 import { jobsForService } from '@/data/job-reports';
@@ -14,6 +15,12 @@ const PHONE_HREF = 'tel:0435006420';
 
 export default function ServiceLandingPage({ service }: { service: Service }) {
     const { slug, name, icon, h1, intro, sections, priceFactors, faqs, related, description } = service;
+
+    // A job can lead this page instead of sitting in the card grid. Pulled out of
+    // the list as well, so the same job is not shown twice.
+    const jobs = jobsForService(slug);
+    const featured = jobs.find((job) => job.featuredFor?.includes(slug));
+    const gridJobs = featured ? jobs.filter((job) => job.slug !== featured.slug) : jobs;
 
     const serviceSchema = {
         '@context': 'https://schema.org',
@@ -239,10 +246,12 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                 </section>
             )}
 
+            {featured && <FeaturedJob job={featured} serviceSlug={slug} />}
+
             {/* Real jobs, where one is written up for this service. Sits immediately
                 before the CTA so the proof is the last thing read before the ask. */}
             <RecentJobs
-                jobs={jobsForService(slug)}
+                jobs={gridJobs}
                 angleFor={slug}
                 heading="Recent Work"
                 intro={`Real ${name} jobs from around Adelaide, with photos and what was actually involved.`}
