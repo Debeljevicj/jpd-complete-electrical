@@ -17,11 +17,25 @@ export interface BlogPost {
     author: string;
     content: string;
     image: string;
-    /** Extra photos, shown under the article body. Job reports use this, as do the photo-led guides. */
+    /**
+     * Job and guide photos.
+     *
+     * Placement, in order: a `before` and `after` pair leads the article side by
+     * side in place of the single hero image. Anything carrying an `id` is dropped
+     * inline wherever the content has a matching [[photo:id]] token. Whatever is
+     * left falls through to the grid at the end, which is how every post written
+     * before this still renders unchanged.
+     */
     gallery?: {
         src: string;
         alt: string;
         caption?: string;
+        /** Crop bias. Portrait switchboard shots need 'top' or the meter fills the frame. */
+        focus?: 'top' | 'center' | 'bottom';
+        /** Marks the two photos shown side by side at the top of the article. */
+        role?: 'before' | 'after';
+        /** Referenced from the article body as [[photo:id]]. */
+        id?: string;
     }[];
     category: string;
     cta: {

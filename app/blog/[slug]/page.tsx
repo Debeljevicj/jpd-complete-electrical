@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { blogPosts } from '@/data/blog-posts';
+import { blogPosts, type BlogPost } from '@/data/blog-posts';
 import { jobReports } from '@/data/job-reports';
 import { serviceBySlug } from '@/data/services';
 import { suburbBySlug } from '@/data/suburbs';
@@ -70,6 +70,67 @@ function splitArticle(html: string, afterHeadings = 2): { before: string; after:
     };
 }
 
+type Photo = NonNullable<BlogPost['gallery']>[number];
+
+const OBJECT_POSITION: Record<string, string> = {
+    top: 'object-top',
+    center: 'object-center',
+    bottom: 'object-bottom',
+};
+
+/**
+ * Splits article HTML on [[photo:id]] tokens so photos sit beside the paragraph
+ * that discusses them rather than in a heap at the end.
+ *
+ * A token naming a photo that does not exist is dropped rather than printed, so
+ * a typo costs a missing image and not a literal "[[photo:xyz]]" on the page.
+ */
+const PHOTO_TOKEN = /\[\[photo:([a-z0-9-]+)\]\]/i;
+
+/** Ids referenced by a [[photo:id]] token, without spreading an iterator. */
+function referencedPhotoIds(html: string): string[] {
+    const tokens = html.match(new RegExp(PHOTO_TOKEN.source, 'gi')) ?? [];
+    return tokens.map((t) => t.replace(PHOTO_TOKEN, '$1').toLowerCase());
+}
+
+function withPhotos(html: string, gallery: Photo[]): Array<{ html: string } | { photo: Photo }> {
+    const byId: Record<string, Photo> = {};
+    gallery.forEach((p) => {
+        if (p.id) byId[p.id.toLowerCase()] = p;
+    });
+
+    return html
+        .split(new RegExp(PHOTO_TOKEN.source, 'i'))
+        .map((chunk, i) => {
+            if (i % 2 === 0) return chunk ? { html: chunk } : null;
+            const photo = byId[chunk.toLowerCase()];
+            return photo ? { photo } : null;
+        })
+        .filter((seg): seg is { html: string } | { photo: Photo } => seg !== null);
+}
+
+/** A photo dropped into the article body at a [[photo:id]] token. */
+function InlinePhoto({ photo }: { photo: Photo }) {
+    return (
+        <figure className="my-8 md:my-10">
+            <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-md">
+                <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    sizes="(max-width: 896px) 100vw, 896px"
+                    className={`object-cover ${OBJECT_POSITION[photo.focus ?? 'center']}`}
+                />
+            </div>
+            {photo.caption && (
+                <figcaption className="text-sm text-neutral-slate mt-3 leading-relaxed">
+                    {photo.caption}
+                </figcaption>
+            )}
+        </figure>
+    );
+}
+
 export default function BlogPostPage({ params }: Props) {
     const post = blogPosts.find((p) => p.slug === params.slug);
 
@@ -82,6 +143,20 @@ export default function BlogPostPage({ params }: Props) {
     // instead of the one hardcoded maintenance link every post used to share.
     const job = jobReports.find((j) => j.slug === params.slug);
     const articleParts = splitArticle(post.content);
+
+    const gallery = post.gallery ?? [];
+    const before = gallery.find((p) => p.role === 'before');
+    const after = gallery.find((p) => p.role === 'after');
+
+    // Anything placed at the top or dropped inline must not also appear in the
+    // trailing grid, or the article shows the same photo twice.
+    const inlineIds = referencedPhotoIds(post.content);
+    const trailing = gallery.filter(
+        (p) => !p.role && !(p.id && inlineIds.indexOf(p.id.toLowerCase()) !== -1)
+    );
+
+    const segmentsBefore = withPhotos(articleParts.before, gallery);
+    const segmentsAfter = withPhotos(articleParts.after, gallery);
 
     // Article + a real author entity. Google weights first-hand expertise for
     // advice content, and an anonymous post from an unnamed site is the weakest
@@ -151,25 +226,63 @@ export default function BlogPostPage({ params }: Props) {
             </div>
 
             <div className="container-custom max-w-4xl -mt-10 relative z-20">
-                {/* Featured Image */}
-                <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-xl mb-12">
-                    <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                </div>
+                {/* A before and after pair leads the article where the post has one,
+                    because on a job like a switchboard replacement the comparison is
+                    the story. Both boxes share an aspect so they read as a pair, and
+                    they stack on a phone rather than shrinking to two thumbnails. */}
+                {before && after ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-12">
+                        {[before, after].map((photo, i) => (
+                            <figure key={photo.src}>
+                                <div className="relative aspect-[3/4] w-full rounded-xl overflow-hidden shadow-xl">
+                                    <Image
+                                        src={photo.src}
+                                        alt={photo.alt}
+                                        fill
+                                        sizes="(max-width: 640px) 100vw, 50vw"
+                                        className={`object-cover ${OBJECT_POSITION[photo.focus ?? 'center']}`}
+                                        priority={i === 0}
+                                    />
+                                    <span className="absolute top-3 left-3 bg-navy/90 text-white text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full">
+                                        {photo.role}
+                                    </span>
+                                </div>
+                                {photo.caption && (
+                                    <figcaption className="text-sm text-neutral-slate mt-3 leading-relaxed">
+                                        {photo.caption}
+                                    </figcaption>
+                                )}
+                            </figure>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="relative h-[240px] sm:h-[320px] md:h-[400px] w-full rounded-xl overflow-hidden shadow-xl mb-12">
+                        <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            sizes="(max-width: 896px) 100vw, 896px"
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                )}
 
                 {/* Content, split so a CTA sits partway through rather than only at the
                     very bottom. These articles run long and most readers never reach the
                     end, so the only conversion point used to be one almost nobody saw. */}
                 <div className="bg-white">
-                    <div
-                        className={PROSE_CLASSES}
-                        dangerouslySetInnerHTML={{ __html: articleParts.before }}
-                    />
+                    {segmentsBefore.map((seg, i) =>
+                        'photo' in seg ? (
+                            <InlinePhoto key={seg.photo.src} photo={seg.photo} />
+                        ) : (
+                            <div
+                                key={`b${i}`}
+                                className={PROSE_CLASSES}
+                                dangerouslySetInnerHTML={{ __html: seg.html }}
+                            />
+                        )
+                    )}
 
                     {articleParts.after && (
                         <InlineCTA
@@ -181,26 +294,31 @@ export default function BlogPostPage({ params }: Props) {
                         />
                     )}
 
-                    {articleParts.after && (
-                        <div
-                            className={PROSE_CLASSES}
-                            dangerouslySetInnerHTML={{ __html: articleParts.after }}
-                        />
+                    {segmentsAfter.map((seg, i) =>
+                        'photo' in seg ? (
+                            <InlinePhoto key={seg.photo.src} photo={seg.photo} />
+                        ) : (
+                            <div
+                                key={`a${i}`}
+                                className={PROSE_CLASSES}
+                                dangerouslySetInnerHTML={{ __html: seg.html }}
+                            />
+                        )
                     )}
                 </div>
 
-                {/* Job photos */}
-                {post.gallery && post.gallery.length > 0 && (
+                {/* Whatever was not placed at the top or inline. */}
+                {trailing.length > 0 && (
                     <div className="mt-12 grid gap-6 sm:grid-cols-2">
-                        {post.gallery.map((photo) => (
+                        {trailing.map((photo) => (
                             <figure key={photo.src}>
-                                <div className="relative h-[360px] w-full rounded-xl overflow-hidden shadow-md">
+                                <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden shadow-md">
                                     <Image
                                         src={photo.src}
                                         alt={photo.alt}
                                         fill
                                         sizes="(max-width: 640px) 100vw, 50vw"
-                                        className="object-cover"
+                                        className={`object-cover ${OBJECT_POSITION[photo.focus ?? 'center']}`}
                                     />
                                 </div>
                                 {photo.caption && (

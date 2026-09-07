@@ -52,8 +52,19 @@ export default function InlineCTA({
             aria-label="Contact JPD Complete Electrical"
         >
             <div className={boxed ? 'px-6 py-7 md:px-8' : 'container-custom py-8 md:py-10'}>
-                <div className="md:flex md:items-center md:justify-between md:gap-8 max-w-5xl mx-auto">
-                    <div className="mb-5 md:mb-0">
+                {/*
+                    Boxed always stacks. Side by side inside an article column gave the
+                    two nowrap buttons about 590px and crushed the heading into a 150px
+                    ribbon five lines tall. The full-bleed band has the width for a row,
+                    but only from lg, and the text still needs min-w-0 so a long button
+                    label cannot squeeze it again.
+                */}
+                <div
+                    className={`max-w-5xl mx-auto ${
+                        boxed ? '' : 'lg:flex lg:items-center lg:justify-between lg:gap-8'
+                    }`}
+                >
+                    <div className={`mb-5 min-w-0 ${boxed ? '' : 'lg:mb-0'}`}>
                         <h2 className={`text-xl md:text-2xl font-bold ${isGold ? 'text-navy' : 'text-white'}`}>
                             {heading}
                         </h2>
@@ -64,7 +75,7 @@ export default function InlineCTA({
                         )}
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:flex-wrap lg:flex-nowrap lg:shrink-0">
                         <a
                             href={PHONE_HREF}
                             className={`inline-flex items-center justify-center gap-2 min-h-[52px] px-6 rounded-lg font-bold text-lg whitespace-nowrap active:scale-95 transition-transform ${
