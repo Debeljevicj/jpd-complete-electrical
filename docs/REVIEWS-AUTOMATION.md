@@ -44,14 +44,21 @@ API key. Restrict it:
   because GitHub Actions runners have rotating IPs. The API restriction is what
   limits the damage if the key ever leaks.
 
-**3. Find the Place ID.** From the repo, with the key in your shell:
+**3. Find the Place ID.** Run this from the website repo, not the business one.
+PowerShell has no inline `VAR=value cmd` prefix like bash does, so the key is
+set as its own statement:
 
-```bash
-GOOGLE_PLACES_API_KEY=your_key_here npm run refresh-reviews -- --dry-run
+```powershell
+cd "C:\Users\Justin\Documents\Projects\jpd-complete-electrical"
+$env:GOOGLE_PLACES_API_KEY = "paste-your-real-key-here"
+npm run refresh-reviews -- --dry-run
 ```
 
 With no `GOOGLE_PLACE_ID` set it searches for the business, prints the matches
 and the ID to pin. Check it picked the right listing.
+
+The key only lives in that terminal window and disappears when you close it.
+Don't paste it into a file in this repo.
 
 **4. Add them to GitHub.** In the repo → Settings → Secrets and variables →
 Actions:
