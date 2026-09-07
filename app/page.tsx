@@ -10,7 +10,9 @@ import HomeServiceAreas from '@/components/HomeServiceAreas';
 import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
 import TrustBar from '@/components/TrustBar';
-import { Lightbulb, Plug, Fan, Gauge, Building2, HeartPulse, Shield, MessageCircle, Award, Zap, UserPlus } from 'lucide-react';
+import ServiceIcon from '@/components/ServiceIcon';
+import { workCategories, jobsForCategory } from '@/lib/recent-work';
+import { Shield, MessageCircle, Award, Zap, UserPlus } from 'lucide-react';
 
 export default function Home() {
     return (
@@ -111,61 +113,38 @@ export default function Home() {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <SectionHeading centered>Our Services</SectionHeading>
+                    <p className="text-center text-neutral-slate max-w-2xl mx-auto -mt-4 mb-8 text-sm md:text-base">
+                        Tap any of these to see real jobs we have done, with photos.
+                    </p>
+                    {/* Driven off lib/recent-work.ts rather than six hand-written cards, so
+                        the grid, the archive pages and the sitemap cannot drift apart. Each
+                        card links to its own archive of job write-ups. */}
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-                        <Reveal delay={0}>
-                            <ServiceCard
-                                icon={<Lightbulb className="w-8 h-8" />}
-                                title="Downlights & Lighting"
-                                description="Expert installation of downlights, feature lighting, and LED solutions for modern homes."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
-                        <Reveal delay={80}>
-                            <ServiceCard
-                                icon={<Plug className="w-8 h-8" />}
-                                title="Powerpoints & Switches"
-                                description="New installations, upgrades, and relocations for all your power needs."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
-                        <Reveal delay={160}>
-                            <ServiceCard
-                                icon={<Fan className="w-8 h-8" />}
-                                title="Ceiling & Exhaust Fans"
-                                description="Professional fan installation and replacement for optimal ventilation."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
-                        <Reveal delay={0}>
-                            <ServiceCard
-                                icon={<Gauge className="w-8 h-8" />}
-                                title="Switchboard Upgrades"
-                                description="We upgrade outdated switchboards to modern, compliant installations, removing safety hazards and ensuring full RCD protection to Australian Standards."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
-                        <Reveal delay={80}>
-                            <ServiceCard
-                                icon={<Building2 className="w-8 h-8" />}
-                                title="Commercial & Specialty Services"
-                                description="Complete electrical solutions for offices, retail stores, gyms, medical clinics, aged care facilities, and disability housing with full compliance focus."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
-                        <Reveal delay={160}>
-                            <ServiceCard
-                                icon={<Shield className="w-8 h-8" />}
-                                title="Service & Maintenance"
-                                description="Scheduled maintenance, RCD testing, emergency lighting testing, smoke detector servicing, and compliance inspections for all property types."
-                                variant="residential"
-                                compact
-                            />
-                        </Reveal>
+                        {workCategories.map((category, i) => {
+                            const jobCount = jobsForCategory(category).length;
+                            return (
+                                <Reveal key={category.slug} delay={(i % 3) * 80}>
+                                    <ServiceCard
+                                        icon={<ServiceIcon name={category.icon} className="w-8 h-8" />}
+                                        title={category.name}
+                                        description={category.blurb}
+                                        variant="residential"
+                                        href={`/recent-work/${category.slug}`}
+                                        linkLabel={jobCount > 0 ? `${jobCount} recent ${jobCount === 1 ? 'job' : 'jobs'}` : 'See the work'}
+                                        compact
+                                    />
+                                </Reveal>
+                            );
+                        })}
+                    </div>
+
+                    <div className="text-center mt-8">
+                        <Link
+                            href="/services"
+                            className="inline-flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors"
+                        >
+                            Browse every service we offer <span className="text-lg">→</span>
+                        </Link>
                     </div>
                 </div>
             </section>

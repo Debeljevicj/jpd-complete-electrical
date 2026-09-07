@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { suburbs } from '@/data/suburbs';
 import { services } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
+import { workCategories } from '@/lib/recent-work';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE}/gallery/`, changeFrequency: 'monthly', priority: 0.7 },
         { url: `${SITE}/reviews/`, changeFrequency: 'weekly', priority: 0.7 },
         { url: `${SITE}/blog/`, changeFrequency: 'weekly', priority: 0.7 },
+        { url: `${SITE}/recent-work/`, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${SITE}/faq/`, changeFrequency: 'monthly', priority: 0.7 },
     ];
 
@@ -42,6 +44,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: Number((0.6 + 0.2 * (suburb.population / maxPopulation)).toFixed(2)),
     }));
 
+    // The job archives behind the home page service grid. Linked from the home
+    // page, so they need to be crawlable from the sitemap too.
+    const workPages: MetadataRoute.Sitemap = workCategories.map((category) => ({
+        url: `${SITE}/recent-work/${category.slug}/`,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+    }));
+
     const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
         url: `${SITE}/blog/${post.slug}/`,
         lastModified: post.updated ?? post.date,
@@ -49,5 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
     }));
 
-    return [...staticPages, ...servicePages, ...suburbPages, ...blogPages];
+    return [...staticPages, ...servicePages, ...workPages, ...suburbPages, ...blogPages];
 }
