@@ -2,7 +2,8 @@
 
 import { useRef } from 'react';
 import { Star, Facebook, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { reviews } from './ClientReviews';
+import { reviews, averageRating } from '@/lib/reviews';
+import ReviewDate from './ReviewDate';
 
 export default function ReviewsCarousel() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ export default function ReviewsCarousel() {
         <div className="w-full relative group">
             <div className="text-center mb-4 md:mb-12">
                 <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md mb-4 border border-navy/5">
-                    <span className="font-bold text-navy text-xl">5.0</span>
+                    <span className="font-bold text-navy text-xl">{averageRating.toFixed(1)}</span>
                     <div className="flex gap-1">
                         {[1, 2, 3, 4, 5].map((star) => (
                             <Star key={star} className="w-5 h-5 fill-gold text-gold" />
@@ -64,7 +65,7 @@ export default function ReviewsCarousel() {
                     className="flex items-start gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-2 px-1 relative z-10"
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
-                    {reviews.slice().reverse().map((review) => (
+                    {reviews.map((review) => (
                         <div
                             key={review.id}
                             className="flex-shrink-0 w-full sm:w-[calc(50%-8px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start bg-white p-5 md:p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col relative"
@@ -95,7 +96,7 @@ export default function ReviewsCarousel() {
                                                 <Facebook className="w-3 h-3" /> Facebook
                                             </span>
                                         )}
-                                        <span>• {review.date}</span>
+                                        <span>• <ReviewDate publishedAt={review.publishedAt} fallback="Recommended" /></span>
                                     </div>
                                 </div>
                             </div>

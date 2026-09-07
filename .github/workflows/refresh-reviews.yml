@@ -1,0 +1,57 @@
+name: Refresh Google reviews
+
+# Monday morning, Adelaide time.
+#
+# GitHub cron is UTC only and does not follow daylight saving, so a fixed UTC
+# time drifts an hour twice a year. 20:30 UTC Sunday is chosen because it lands
+# on Monday morning either way: 06:00 ACST in winter, 07:00 ACDT in summer.
+# Nothing here is time-critical, so an hour of drift does not matter.
+on:
+  schedule:
+    - cron: '30 20 * * 0'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Fetch and report without committing'
+        type: boolean
+        default: false
+
+concurrency:
+  group: refresh-reviews
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch new reviews
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
+        run: |
+          node scripts/refresh-reviews.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit if anything changed
+        if: ${{ !inputs.dry_run }}
+        run: |
+          if git diff --quiet -- data/reviews.json; then
+            echo "No new reviews this week."
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/reviews.json
+          git commit -m "Add new Google reviews (automated weekly refresh)"
+          git push
+
+          echo "Pushed. Cloudflare Pages will rebuild from this commit."
