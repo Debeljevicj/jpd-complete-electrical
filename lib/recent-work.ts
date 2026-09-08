@@ -141,12 +141,19 @@ export function jobsForCategory(category: WorkCategory): JobReport[] {
         .sort((a, b) => (b.updated ?? b.date).localeCompare(a.updated ?? a.date));
 }
 
-/** The service pages a category covers, for the "read more about" links. */
+/**
+ * The services a category covers, for the summary block near the top of the
+ * archive page.
+ *
+ * Carries the icon and the service's own intro paragraph as well as the blurb,
+ * so the summary can say what the work actually involves rather than being a
+ * bare list of links.
+ */
 export function servicesForCategory(category: WorkCategory) {
     return category.services
         .map((slug) => serviceBySlug[slug])
         .filter(Boolean)
-        .map(({ slug, name, blurb }) => ({ slug, name, blurb }));
+        .map(({ slug, name, blurb, icon, intro }) => ({ slug, name, blurb, icon, intro }));
 }
 
 /**
