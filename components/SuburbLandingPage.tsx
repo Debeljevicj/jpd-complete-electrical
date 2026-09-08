@@ -187,7 +187,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             <InlineCTA
                 tone="gold"
                 heading={`Need an electrician in ${name}?`}
-                body={`We are based in Wynn Vale, so ${name} is a short drive rather than a trip across town. Free quotes, fixed prices.`}
+                body={`We're based in Wynn Vale, so ${name} is a short drive rather than a trip across town. Free quotes, fixed prices.`}
             />
 
             {/* Services */}
@@ -231,7 +231,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                 it should not have to keep going to act on it. */}
             <InlineCTA
                 heading="Found the job you need doing?"
-                body="Tell us what is going on and we will give you a straight answer on what it involves and what it costs."
+                body="Tell us what's going on and we'll give you a straight answer on what it involves and what it costs."
             />
 
             {/* What we see locally */}
@@ -270,8 +270,8 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                     <div className="max-w-3xl">
                         <h2 className="text-2xl md:text-3xl font-bold mb-5">Emergency Electrician in {name}</h2>
                         <p className="text-lg text-white/85 leading-relaxed mb-4">
-                            Some electrical problems can wait until next week and some genuinely cannot. If you have lost
-                            power completely, have a breaker or safety switch that will not stay on, can smell burning
+                            Some electrical problems can wait until next week and some genuinely can't. If you have lost
+                            power completely, have a breaker or safety switch that won't stay on, can smell burning
                             near the switchboard, have a sparking outlet, or have had water get into anything electrical,
                             call us straight away on{' '}
                             <a href={PHONE_HREF} className="text-gold font-semibold underline underline-offset-4">
@@ -284,7 +284,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                             board first, then call. We would rather you did that than waited for us with a hazard live.
                         </p>
                         <p className="text-lg text-white/85 leading-relaxed mb-8">
-                            We are based in Wynn Vale, so {name} is a short drive rather than a trip across town. We will
+                            We're based in Wynn Vale, so {name} is a short drive rather than a trip across town. We will
                             also tell you honestly on the phone whether it needs someone right now or whether it can
                             safely hold until the morning, because a callout you did not need is not a good outcome for
                             either of us.

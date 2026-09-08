@@ -40,7 +40,7 @@ export default function ServicesPage() {
                         <p className="text-neutral-slate text-lg leading-relaxed">
                             Each of these has its own page covering what the job actually involves, what drives the
                             price, and the questions we get asked most. No headline figures that turn into something
-                            else once we are on site.
+                            else once we're on site.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

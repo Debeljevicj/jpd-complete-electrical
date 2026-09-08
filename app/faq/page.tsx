@@ -66,7 +66,7 @@ export default function FaqPage() {
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
                             Costs, callout fees, licensing, safety switches, switchboards and the questions that come up
-                            on nearly every job. If yours is not here, ring and ask.
+                            on nearly every job. If yours isn't here, ring and ask.
                         </p>
                         <a
                             href={PHONE_HREF}
@@ -127,7 +127,7 @@ export default function FaqPage() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Not Sure?</h2>
                     <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
                         Ring and ask. We would rather answer a question on the phone for free than have you guess, and
-                        we will tell you honestly if you do not need us.
+                        we'll tell you honestly if you don't need us.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

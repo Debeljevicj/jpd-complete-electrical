@@ -307,7 +307,7 @@ export default function BlogPostPage({ params }: Props) {
                     )}
                 </div>
 
-                {/* Whatever was not placed at the top or inline. */}
+                {/* Whatever wasn't placed at the top or inline. */}
                 {trailing.length > 0 && (
                     <div className="mt-12 grid gap-6 sm:grid-cols-2">
                         {trailing.map((photo) => (

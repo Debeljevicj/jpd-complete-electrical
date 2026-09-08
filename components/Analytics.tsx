@@ -13,7 +13,7 @@ declare global {
 }
 
 /**
- * Fires a GA4 event. Safe to call when analytics is off or the script has not
+ * Fires a GA4 event. Safe to call when analytics is off or the script hasn't
  * loaded yet, which matters because the phone links work regardless and must
  * never depend on analytics being present.
  */

@@ -87,7 +87,7 @@ export default function AboutPage() {
                             <div>
                                 <h3 className="text-xl font-bold text-navy mb-1">Integrity</h3>
                                 <p className="text-neutral-slate">
-                                    We do what we say we will. Honest, transparent, and accountable in everything we do.
+                                    We do what we say we'll. Honest, transparent, and accountable in everything we do.
                                 </p>
                             </div>
                         </div>

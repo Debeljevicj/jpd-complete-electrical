@@ -146,7 +146,7 @@ export default function RecentWorkCategoryPage({ params }: Props) {
                         // Nothing written up yet under this category. Say so plainly and
                         // send people to the service page, rather than showing an empty grid.
                         <p className="text-neutral-slate max-w-2xl">
-                            We have not written up a job in this category yet. The service pages
+                            We haven't written up a job in this category yet. The service pages
                             below cover what the work involves, or give Justin a call and ask.
                         </p>
                     )}

@@ -11,22 +11,22 @@ export const projectServices: Service[] = [
         description: 'Oven, cooktop and rangehood installation in Adelaide. Hardwired connections and the dedicated circuit induction needs. Licensed electrician.',
         h1: 'Oven, Cooktop and Rangehood Installation',
         intro:
-            'We connect ovens, cooktops and rangehoods, including hardwired installs and the dedicated circuit an induction cooktop almost always needs. Tell us what you have bought before delivery day and we will tell you what it actually needs.',
+            'We connect ovens, cooktops and rangehoods, including hardwired installs and the dedicated circuit an induction cooktop almost always needs. Tell us what you have bought before delivery day and we\'ll tell you what it actually needs.',
         sections: [
             {
                 heading: 'The Induction Problem Nobody Warns You About',
                 body: [
                     'This is the single most common surprise in kitchen appliance work, and it catches people out constantly.',
-                    'You have had a gas cooktop and an electric oven. You buy an induction cooktop. The appliance retailer arranges delivery and installation. The installer arrives, looks at the existing oven point, and tells you it will not do the job.',
-                    'They are usually right. A typical four-zone induction cooktop can draw well over 30 amps at full tilt, and it is hardwired rather than plugged in. The circuit feeding your old oven was very often not sized for that on top of the oven, so the cooktop needs its own dedicated circuit run from the switchboard.',
-                    'If the switchboard is full, and on a 1980s board in Wynn Vale or Golden Grove it frequently is, that becomes a switchboard conversation as well. None of this is a problem if you know about it two weeks before delivery. It is a considerable problem if you find out on the day, with a new kitchen and no way to cook.',
-                    'So: tell us the make and model before you buy, or at least before it is delivered. We will look at the specification and your board and give you a straight answer.',
+                    'You have had a gas cooktop and an electric oven. You buy an induction cooktop. The appliance retailer arranges delivery and installation. The installer arrives, looks at the existing oven point, and tells you it won\'t do the job.',
+                    'They\'re usually right. A typical four-zone induction cooktop can draw well over 30 amps at full tilt, and it\'s hardwired rather than plugged in. The circuit feeding your old oven was very often not sized for that on top of the oven, so the cooktop needs its own dedicated circuit run from the switchboard.',
+                    'If the switchboard is full, and on a 1980s board in Wynn Vale or Golden Grove it frequently is, that becomes a switchboard conversation as well. None of this is a problem if you know about it two weeks before delivery. It\'s a considerable problem if you find out on the day, with a new kitchen and no way to cook.',
+                    'So: tell us the make and model before you buy, or at least before it\'s delivered. We\'ll look at the specification and your board and give you a straight answer.',
                 ],
             },
             {
                 heading: 'What We Install',
                 body: [
-                    'We handle the electrical side of kitchen appliance installation, whether that is a straight replacement or part of a new kitchen.',
+                    'We handle the electrical side of kitchen appliance installation, whether that\'s a straight replacement or part of a new kitchen.',
                 ],
                 bullets: [
                     'Wall ovens, under-bench ovens and double ovens, plugged or hardwired',
@@ -41,16 +41,16 @@ export const projectServices: Service[] = [
             {
                 heading: 'Customer-Supplied Appliances',
                 body: [
-                    'We are happy to install an appliance you have bought yourself, from anywhere, as long as it is a unit approved for sale and use in Australia. There is no markup game here and no requirement to buy through us.',
+                    'We\'re happy to install an appliance you have bought yourself, from anywhere, as long as it is a unit approved for sale and use in Australia. There\'s no markup game here and no requirement to buy through us.',
                     'What we do ask is that the appliance is on site and unpacked before we arrive, and that you have the installation instructions. Manufacturers vary in what they require for clearances, isolation and connection, and the instructions are what we work to.',
-                    'One caution worth stating: appliances bought overseas or from grey-market importers sometimes are not approved for Australian use, and we cannot connect those. It is rare, but it does happen, and it is better to know before you have paid for it.',
+                    'One caution worth stating: appliances bought overseas or from grey-market importers sometimes aren\'t approved for Australian use, and we can\'t connect those. It\'s rare, but it does happen, and it\'s better to know before you have paid for it.',
                 ],
             },
             {
                 heading: 'Timing Around a Kitchen Renovation',
                 body: [
                     'In a kitchen renovation the electrical work happens in two visits, and getting the sequence right saves everyone money.',
-                    'The rough-in happens once the old kitchen is out and before the plaster and the cabinetry go in. That is when we run circuits, position outlets, set out under-bench and joinery lighting, and put the cooktop and oven supplies where the new layout needs them.',
+                    'The rough-in happens once the old kitchen is out and before the plaster and the cabinetry go in. That\'s when we run circuits, position outlets, set out under-bench and joinery lighting, and put the cooktop and oven supplies where the new layout needs them.',
                     'The fit-off happens once the cabinetry and benchtop are in. Outlets and switches get fitted, appliances get connected, lighting gets terminated and everything gets tested.',
                     'The mistake we see most is being called in after the cabinetry is installed, which is how you end up with a powerpoint behind a fixed panel or an isolation switch you have to empty a cupboard to reach. Get us in at planning stage and those decisions get made on a drawing rather than with a drill.',
                 ],
@@ -61,7 +61,7 @@ export const projectServices: Service[] = [
             'The distance from the switchboard to the kitchen for any new circuit',
             'Whether the switchboard has a spare way or is full',
             'Whether the appliance is plugged or hardwired',
-            'Whether it is a straight swap or part of a kitchen renovation with rough-in and fit-off',
+            'Whether it\'s a straight swap or part of a kitchen renovation with rough-in and fit-off',
             'Any additional work such as moving the isolation switch or adding outlets for other appliances',
         ],
         faqs: [
@@ -71,11 +71,11 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'Can you install an oven or cooktop I bought myself?',
-                answer: 'Yes, as long as it is approved for sale and use in Australia. There is no requirement to buy through us. Just have it on site and unpacked with the installation instructions available before we arrive.',
+                answer: 'Yes, as long as it is approved for sale and use in Australia. There\'s no requirement to buy through us. Just have it on site and unpacked with the installation instructions available before we arrive.',
             },
             {
-                question: 'I am going from gas to induction. What is involved?',
-                answer: 'Electrically it is a new dedicated circuit from the switchboard to the cooktop, sized for the appliance, plus an isolation switch somewhere accessible. If the board is full it may also need upgrading. The gas side needs a licensed gas fitter to disconnect and cap the supply, which is separate work.',
+                question: 'I\'m going from gas to induction. What\'s involved?',
+                answer: 'Electrically it\'s a new dedicated circuit from the switchboard to the cooktop, sized for the appliance, plus an isolation switch somewhere accessible. If the board is full it may also need upgrading. The gas side needs a licensed gas fitter to disconnect and cap the supply, which is separate work.',
             },
             {
                 question: 'How much does it cost to install an oven?',
@@ -87,7 +87,7 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'Does the rangehood need its own point?',
-                answer: 'It needs a point positioned where the rangehood can reach it and where it stays accessible, which usually means inside the cabinetry above the unit. It is a small detail that is very annoying to fix once the joinery is in, so it is worth setting out at rough-in.',
+                answer: 'It needs a point positioned where the rangehood can reach it and where it stays accessible, which usually means inside the cabinetry above the unit. It\'s a small detail that\'s very annoying to fix once the joinery is in, so it\'s worth setting out at rough-in.',
             },
         ],
         related: ['renovation-electrician-adelaide', 'switchboard-upgrade-adelaide', 'powerpoint-installation-adelaide'],
@@ -101,7 +101,7 @@ export const projectServices: Service[] = [
         description: 'Renovation electrician for Adelaide. Kitchen, bathroom and extension wiring, rough-in and fit-off, switchboard upgrades. Homeowners and builders.',
         h1: 'Renovation Electrician, Adelaide',
         intro:
-            'Kitchens, bathrooms, extensions and whole-home renovations. We handle the rough-in before the plaster goes up and the fit-off once the surfaces are finished, and we make the decisions that matter while they are still cheap to make.',
+            'Kitchens, bathrooms, extensions and whole-home renovations. We handle the rough-in before the plaster goes up and the fit-off once the surfaces are finished, and we make the decisions that matter while they\'re still cheap to make.',
         sections: [
             {
                 heading: 'Get the Electrician In Before the Plasterer',
@@ -109,28 +109,28 @@ export const projectServices: Service[] = [
                     'Almost every expensive electrical regret in a renovation comes from the same cause: the electrical layout was decided after the walls were closed up.',
                     'Once plaster is on and cabinetry is in, moving a powerpoint means cutting and patching. Adding a light means either a surface fitting or a repair. Running strip lighting into joinery is off the table entirely. What would have been a ten-minute decision at rough-in becomes a trades-and-patching exercise costing many times more.',
                     'So the useful sequence is: talk to us at planning stage, before demolition. We walk the plan with you, mark up where the outlets, switches, lights and appliance circuits go, flag anything that needs a bigger circuit or a board upgrade, and coordinate with your builder and cabinetmaker.',
-                    'That conversation costs nothing and it is where most of the value in a renovation electrical job actually sits.',
+                    'That conversation costs nothing and it\'s where most of the value in a renovation electrical job actually sits.',
                 ],
             },
             {
                 heading: 'The Two-Visit Structure',
                 body: [
                     'Renovation electrical work happens in two distinct stages, and understanding them makes scheduling far easier for everyone.',
-                    'Rough-in is after demolition and framing, before plaster and cabinetry. All the cable gets run, outlet and switch positions get set out, light points get located, appliance and dedicated circuits get pulled in, and anything going into joinery gets prepared. This stage has to happen before the walls close, and it is where the layout becomes permanent.',
+                    'Rough-in is after demolition and framing, before plaster and cabinetry. All the cable gets run, outlet and switch positions get set out, light points get located, appliance and dedicated circuits get pulled in, and anything going into joinery gets prepared. This stage has to happen before the walls close, and it\'s where the layout becomes permanent.',
                     'Fit-off is after the plaster, painting, flooring and cabinetry are done. Outlets, switches and light fittings get installed and terminated, appliances get connected, and the whole lot gets tested and certified.',
-                    'In between, we are off site and other trades work. We coordinate the timing with your builder so we are not the trade holding up the job, which in our experience is the thing that actually determines whether a renovation runs to schedule.',
+                    'In between, we\'re off site and other trades work. We coordinate the timing with your builder so we aren\'t the trade holding up the job, which in our experience is the thing that actually determines whether a renovation runs to schedule.',
                 ],
             },
             {
                 heading: 'What Renovations Usually Uncover',
                 body: [
-                    'Opening up an older house tends to reveal things, and across the 1960s to 1980s housing stock in this part of Adelaide there is a fairly predictable list.',
+                    'Opening up an older house tends to reveal things, and across the 1960s to 1980s housing stock in this part of Adelaide there\'s a fairly predictable list.',
                 ],
                 bullets: [
                     'A switchboard that has no spare capacity for the new circuits the renovation needs',
                     'Rewireable fuses or an absence of safety switches on the existing installation',
                     'Wiring that has been extended informally over the years, sometimes without junction boxes',
-                    'Old rubber-insulated cable that has gone brittle and should not be reused',
+                    'Old rubber-insulated cable that has gone brittle and shouldn\'t be reused',
                     'Undersized circuits feeding areas that are about to gain a lot more load',
                     'Downlight transformers sitting in the ceiling space that need removing',
                     'Asbestos-containing materials in older switchboard panels or eaves, which changes how the work has to be handled',
@@ -140,8 +140,8 @@ export const projectServices: Service[] = [
                 heading: 'Renovation Work Where Standards Change',
                 body: [
                     'One thing worth understanding: existing installations are generally allowed to remain as they were installed, but new and altered work has to meet current standards.',
-                    'In practice that means when you renovate a bathroom or a kitchen, the new circuits serving it need current-standard protection, which includes RCD protection. Bathrooms also have zone requirements governing what fittings can go where in relation to the bath and shower, which is why a light or a heat lamp cannot simply go wherever it looks best.',
-                    'This is a good thing rather than an obstacle, and it is often the moment when a house finally gets the safety switch protection it should have had for thirty years. But it does mean a renovation sometimes triggers a switchboard upgrade, and we would rather tell you that at quote stage than mid-job.',
+                    'In practice that means when you renovate a bathroom or a kitchen, the new circuits serving it need current-standard protection, which includes RCD protection. Bathrooms also have zone requirements governing what fittings can go where in relation to the bath and shower, which is why a light or a heat lamp can\'t simply go wherever it looks best.',
+                    'This is a good thing rather than an obstacle, and it\'s often the moment when a house finally gets the safety switch protection it should have had for thirty years. But it does mean a renovation sometimes triggers a switchboard upgrade, and we would rather tell you that at quote stage than mid-job.',
                 ],
             },
         ],
@@ -150,17 +150,17 @@ export const projectServices: Service[] = [
             'Whether the switchboard can carry the new work or needs upgrading',
             'How much of the existing wiring is being reused versus replaced',
             'The number of new circuits, outlets, light points and lighting features',
-            'Whether the house is single or two-storey, and whether there is accessible roof space',
+            'Whether the house is single or two-storey, and whether there\'s accessible roof space',
             'Access and site conditions, including anything requiring asbestos-aware handling',
         ],
         faqs: [
             {
                 question: 'When should I bring an electrician into my renovation?',
-                answer: 'At planning stage, before demolition. That is when the layout decisions are free. Once plaster is on and cabinetry is in, the same decisions cost many times more and some become impossible. The planning conversation costs you nothing.',
+                answer: 'At planning stage, before demolition. That\'s when the layout decisions are free. Once plaster is on and cabinetry is in, the same decisions cost many times more and some become impossible. The planning conversation costs you nothing.',
             },
             {
                 question: 'Do I have to upgrade my switchboard when I renovate?',
-                answer: 'Not automatically, but often in practice. New and altered work has to meet current standards, which includes RCD protection on the new circuits. If the existing board has no spare capacity or no safety switches, upgrading it is usually the sensible answer. We flag it at quote stage rather than mid-job.',
+                answer: 'Not automatically, but often in practice. New and altered work has to meet current standards, which includes RCD protection on the new circuits. If the existing board has no spare capacity or no safety switches, upgrading it\'s usually the sensible answer. We flag it at quote stage rather than mid-job.',
             },
             {
                 question: 'Can you work around my builder\'s schedule?',
@@ -168,11 +168,11 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'Do I need a full rewire when renovating an older home?',
-                answer: 'Usually not the whole house. More often it is the renovated area rewired to current standards, the switchboard upgraded, and the rest of the existing wiring tested and left in place if it is sound. We test rather than assume, and we will not push a full rewire that the results do not support.',
+                answer: 'Usually not the whole house. More often it\'s the renovated area rewired to current standards, the switchboard upgraded, and the rest of the existing wiring tested and left in place if it\'s sound. We test rather than assume, and we won\'t push a full rewire that the results don\'t support.',
             },
             {
                 question: 'Can I supply my own light fittings and fixtures?',
-                answer: 'Yes, provided they are approved for sale and use in Australia. Have them on site before fit-off with any instructions. For anything unusual, send us the details early so we can check the fitting requirements before we are on the tools.',
+                answer: 'Yes, provided they\'re approved for sale and use in Australia. Have them on site before fit-off with any instructions. For anything unusual, send us the details early so we can check the fitting requirements before we\'re on the tools.',
             },
             {
                 question: 'What about bathroom renovations specifically?',
@@ -185,27 +185,27 @@ export const projectServices: Service[] = [
         slug: 'electrician-for-builders-adelaide',
         name: 'Electrical for Builders',
         icon: 'builder',
-        blurb: 'A subcontractor who turns up on the day, does the rough-in clean, and does not hold up your next trade.',
+        blurb: 'A subcontractor who turns up on the day, does the rough-in clean, and doesn\'t hold up your next trade.',
         title: 'Electrician for Builders Adelaide | Reliable Subcontractor',
         description: 'Electrical subcontracting for Adelaide builders. New builds, extensions, renovations and fitouts. On site when scheduled, paperwork back on time.',
         h1: 'Electrical Subcontracting for Builders',
         intro:
-            'If you build or renovate for a living, you do not need a sales pitch. You need a sparky who turns up on the day he said, does a rough-in that the plasterer is not cursing, and gets the paperwork back to you before you have to chase it.',
+            'If you build or renovate for a living, you don\'t need a sales pitch. You need a sparky who turns up on the day he said, does a rough-in that the plasterer isn\'t cursing, and gets the paperwork back to you before you have to chase it.',
         sections: [
             {
                 heading: 'What Builders Actually Need From an Electrician',
                 body: [
-                    'Every builder we work with tells us the same thing, and it is never about price first. It is about whether the trade shows up.',
-                    'A rough-in that slips by three days pushes the plasterer, which pushes the painter, which pushes handover. The cost of that is not in the electrical quote, it is in the whole program. That is the thing we optimise for.',
+                    'Every builder we work with tells us the same thing, and it\'s never about price first. It\'s about whether the trade shows up.',
+                    'A rough-in that slips by three days pushes the plasterer, which pushes the painter, which pushes handover. The cost of that isn\'t in the electrical quote, it\'s in the whole program. That\'s the thing we optimise for.',
                 ],
                 bullets: [
                     'On site the day we said, or a phone call in advance if something genuinely changes',
                     'A rough-in set out to the plans, with cables dressed and boxes at consistent heights',
-                    'Clear marking so the plasterer and the fixing carpenter know what is what',
+                    'Clear marking so the plasterer and the fixing carpenter know what\'s what',
                     'Site left clean, offcuts and packaging taken away rather than left for someone else',
                     'Certificates of Compliance and test results back promptly, not chased at handover',
                     'Variations priced and confirmed in writing before the work happens, not discovered on the invoice',
-                    'Someone who answers the phone on site, because that is where the questions come up',
+                    'Someone who answers the phone on site, because that\'s where the questions come up',
                 ],
             },
             {
@@ -227,10 +227,10 @@ export const projectServices: Service[] = [
             {
                 heading: 'How We Price and Run a Job',
                 body: [
-                    'We quote from plans where they exist and from a site walk where they do not. The quote states what is included, what is excluded and what we have assumed, because a quote that is vague about scope is a dispute waiting to happen.',
-                    'Provisional sums and prime cost items get identified upfront. If your client has not selected fittings yet, we allow a sum and tell you what it is based on, rather than quoting low and adjusting later.',
-                    'Variations get priced and confirmed before we do the work. If the client asks us for something extra while we are on site, we tell them it is a variation, we tell you, and nobody gets a surprise at invoice time. That protects you as much as it protects us.',
-                    'Certificates of Compliance and test results come back promptly. If your client or the certifier needs documentation, you should not have to chase us for it.',
+                    'We quote from plans where they exist and from a site walk where they don\'t. The quote states what\'s included, what\'s excluded and what we have assumed, because a quote that\'s vague about scope is a dispute waiting to happen.',
+                    'Provisional sums and prime cost items get identified upfront. If your client hasn\'t selected fittings yet, we allow a sum and tell you what it is based on, rather than quoting low and adjusting later.',
+                    'Variations get priced and confirmed before we do the work. If the client asks us for something extra while we\'re on site, we tell them it\'s a variation, we tell you, and nobody gets a surprise at invoice time. That protects you as much as it protects us.',
+                    'Certificates of Compliance and test results come back promptly. If your client or the certifier needs documentation, you shouldn\'t have to chase us for it.',
                 ],
             },
             {
@@ -257,11 +257,11 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'Can you quote from plans?',
-                answer: 'Yes. Send the drawings and the electrical layout if there is one, along with the specification level you are working to. We will come back with a quote that states inclusions, exclusions and assumptions clearly so there is no argument about scope later.',
+                answer: 'Yes. Send the drawings and the electrical layout if there\'s one, along with the specification level you\'re working to. We\'ll come back with a quote that states inclusions, exclusions and assumptions clearly so there\'s no argument about scope later.',
             },
             {
                 question: 'How do you handle variations?',
-                answer: 'Priced and confirmed in writing before the work is done. If your client asks us directly for something extra on site, we tell them it is a variation and we tell you. Nobody finds out at invoice stage.',
+                answer: 'Priced and confirmed in writing before the work is done. If your client asks us directly for something extra on site, we tell them it\'s a variation and we tell you. Nobody finds out at invoice stage.',
             },
             {
                 question: 'Do you do commercial and retail fitouts?',
@@ -269,11 +269,11 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'How quickly do you turn around compliance paperwork?',
-                answer: 'Certificates of Compliance and test results go out promptly once the work is complete and tested. If a certifier or a client needs documentation for handover, chasing us for it should not be on your list.',
+                answer: 'Certificates of Compliance and test results go out promptly once the work is complete and tested. If a certifier or a client needs documentation for handover, chasing us for it shouldn\'t be on your list.',
             },
             {
                 question: 'Can you handle temporary builder\'s supply?',
-                answer: 'Yes. Temporary site supply and site power, set up at the start and removed at the end. It is straightforward work and it is one less thing for you to arrange separately.',
+                answer: 'Yes. Temporary site supply and site power, set up at the start and removed at the end. It\'s straightforward work and it\'s one less thing for you to arrange separately.',
             },
         ],
         related: ['renovation-electrician-adelaide', 'switchboard-upgrade-adelaide', 'test-and-tag-adelaide'],
@@ -287,7 +287,7 @@ export const projectServices: Service[] = [
         description: 'Thermal imaging inspections of switchboards across Adelaide. Finds overheating connections under live load, with a photo report. No shutdown.',
         h1: 'Thermal Imaging Electrical Inspections',
         intro:
-            'A loose or degraded connection inside a switchboard heats up under load long before it fails. A thermal scan finds it while it is still a repair rather than a fire, and it is done live with nothing shut down.',
+            'A loose or degraded connection inside a switchboard heats up under load long before it fails. A thermal scan finds it while it\'s still a repair rather than a fire, and it\'s done live with nothing shut down.',
         sections: [
             {
                 heading: 'What a Thermal Scan Finds That Nothing Else Does',
@@ -295,16 +295,16 @@ export const projectServices: Service[] = [
                     'Electrical connections degrade slowly. A terminal that was tightened correctly ten years ago can loosen through thermal cycling and vibration, and as the contact area reduces, resistance rises and the connection starts generating heat.',
                     'From the outside, nothing looks wrong. The board looks normal, the lights work, nothing trips. The heat builds under load, and the failure mode when it finally comes is either an outage or a fire.',
                     'A thermal camera shows that heat directly. We scan the board under normal load and see immediately which terminals, breakers or busbar connections are running hotter than they should be relative to everything around them.',
-                    'Crucially, this happens with the installation live and running. Nothing gets shut down, which is why it works for businesses that cannot afford an outage just to have someone look.',
+                    'Crucially, this happens with the installation live and running. Nothing gets shut down, which is why it works for businesses that can\'t afford an outage just to have someone look.',
                 ],
             },
             {
                 heading: 'What We Actually Look For',
                 body: [
                     'Reading a thermal image well is more than pointing a camera and calling anything warm a fault. Plenty of components run hot legitimately, and a report that flags every warm contactor is noise rather than information.',
-                    'What matters is comparison and context. A terminal running significantly hotter than the identical terminal on the adjacent phase carrying the same load is a finding. A contactor running warm because contactors run warm is not.',
+                    'What matters is comparison and context. A terminal running significantly hotter than the identical terminal on the adjacent phase carrying the same load is a finding. A contactor running warm because contactors run warm isn\'t.',
                     'So we look at phase-to-phase comparison across the same circuit, at how a component compares to its identical neighbours, at the load being drawn at the time of the scan, and at whether a temperature makes sense for that type of component.',
-                    'You get a report with the thermal image, a matching standard photo so you can see what you are actually looking at, the location, and a plain-English assessment of what it means and how urgent it is.',
+                    'You get a report with the thermal image, a matching standard photo so you can see what you\'re actually looking at, the location, and a plain-English assessment of what it means and how urgent it is.',
                 ],
             },
             {
@@ -314,7 +314,7 @@ export const projectServices: Service[] = [
                 ],
                 bullets: [
                     'Businesses where an outage stops trading or production',
-                    'Medical, dental and allied health premises with equipment that cannot lose supply',
+                    'Medical, dental and allied health premises with equipment that can\'t lose supply',
                     'Disability and aged care accommodation',
                     'Rental portfolios and commercial property, as part of a maintenance program',
                     'Any installation with heavy or continuous load, including workshops and light industrial',
@@ -336,7 +336,7 @@ export const projectServices: Service[] = [
         priceFactors: [
             'The number of switchboards and distribution boards to be scanned',
             'Site size and how many locations need attending',
-            'Whether it is a one-off inspection or a scheduled maintenance program',
+            'Whether it\'s a one-off inspection or a scheduled maintenance program',
             'Whether a formal written report with images is required',
             'Whether RCD testing or other compliance work is done in the same visit',
             'Any remedial work identified, which is quoted separately once you have seen the findings',
@@ -344,11 +344,11 @@ export const projectServices: Service[] = [
         faqs: [
             {
                 question: 'Does the power need to be off for a thermal scan?',
-                answer: 'No, the opposite. The installation needs to be live and under normal load, because heat only shows up when current is flowing. That is one of the main advantages for businesses, since there is no shutdown required.',
+                answer: 'No, the opposite. The installation needs to be live and under normal load, because heat only shows up when current is flowing. That\'s one of the main advantages for businesses, since there\'s no shutdown required.',
             },
             {
                 question: 'How often should thermal imaging be done?',
-                answer: 'Annually is the common interval for commercial and higher-consequence installations, often aligned with other compliance testing. For a home it is not routine maintenance, but it is well worth doing once on an older board or if there has been any history of tripping or heat marks.',
+                answer: 'Annually is the common interval for commercial and higher-consequence installations, often aligned with other compliance testing. For a home it isn\'t routine maintenance, but it\'s well worth doing once on an older board or if there has been any history of tripping or heat marks.',
             },
             {
                 question: 'What do I get afterwards?',
@@ -356,15 +356,15 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'Is everything that shows up hot a fault?',
-                answer: 'No, and a report that says so is not worth much. Plenty of components run warm legitimately. What matters is a connection running hotter than its identical neighbour carrying the same load. We assess in context rather than flagging everything above a temperature threshold.',
+                answer: 'No, and a report that says so isn\'t worth much. Plenty of components run warm legitimately. What matters is a connection running hotter than its identical neighbour carrying the same load. We assess in context rather than flagging everything above a temperature threshold.',
             },
             {
                 question: 'Can you do it at the same time as RCD testing?',
-                answer: 'Yes, and it is the sensible way to do it. The two checks cover completely different failure modes, and doing both in one visit gives you a full picture of the installation for one attendance rather than two.',
+                answer: 'Yes, and it\'s the sensible way to do it. The two checks cover completely different failure modes, and doing both in one visit gives you a full picture of the installation for one attendance rather than two.',
             },
             {
                 question: 'Is it worth it for a normal house?',
-                answer: 'It is not routine home maintenance. It is genuinely worth doing once if you have an older switchboard that has never been opened, a history of nuisance tripping, or if you have recently added a big load like solar or EV charging.',
+                answer: 'It isn\'t routine home maintenance. It\'s genuinely worth doing once if you have an older switchboard that has never been opened, a history of nuisance tripping, or if you have recently added a big load like solar or EV charging.',
             },
         ],
         related: ['rcd-testing-safety-switches-adelaide', 'switchboard-upgrade-adelaide', 'test-and-tag-adelaide'],
@@ -401,16 +401,16 @@ export const projectServices: Service[] = [
                 body: [
                     'Each item gets a visual inspection first, which is where the majority of genuine failures are found. Damaged leads, cracked plugs, exposed conductors, strained cord grips, missing pins and damage to the housing.',
                     'Then electrical testing appropriate to the class of equipment: earth continuity for earthed items, insulation resistance, and polarity where relevant. Portable RCDs additionally get a trip-time test.',
-                    'Items that pass get a durable tag showing the test date, the retest date and who tested it. Items that fail come off the floor and get either tagged out or repaired, depending on what is wrong and whether repair is sensible.',
+                    'Items that pass get a durable tag showing the test date, the retest date and who tested it. Items that fail come off the floor and get either tagged out or repaired, depending on what\'s wrong and whether repair is sensible.',
                     'The register is the part that matters for compliance. You get a full record of every item, its location, its result and its next test date, so when someone asks for evidence you produce a document rather than a shrug.',
                 ],
             },
             {
                 heading: 'How Often It Needs Doing',
                 body: [
-                    'Retest intervals depend on the environment and the type of equipment, and they are set out in the relevant standard rather than being a matter of opinion.',
-                    'Broadly, the more hostile the environment, the shorter the interval. A construction site where leads get dragged across concrete and driven over is at the short end. An office where a monitor sits on a desk and is never moved is at the long end. Hire equipment, which gets used by people who do not own it, has its own requirements.',
-                    'Rather than quoting a table of intervals that might not match your situation, we look at what your workplace actually does and set a schedule to suit, then remind you when it is due. Most clients want the reminder more than they want the table.',
+                    'Retest intervals depend on the environment and the type of equipment, and they\'re set out in the relevant standard rather than being a matter of opinion.',
+                    'Broadly, the more hostile the environment, the shorter the interval. A construction site where leads get dragged across concrete and driven over is at the short end. An office where a monitor sits on a desk and is never moved is at the long end. Hire equipment, which gets used by people who don\'t own it, has its own requirements.',
+                    'Rather than quoting a table of intervals that might not match your situation, we look at what your workplace actually does and set a schedule to suit, then remind you when it\'s due. Most clients want the reminder more than they want the table.',
                     'We service sites across Modbury, Ridgehaven and the surrounding light industrial and commercial areas regularly, so fitting a site into an existing run usually means a shorter wait and a better price.',
                 ],
             },
@@ -418,16 +418,16 @@ export const projectServices: Service[] = [
                 heading: 'Why Businesses Actually Book It',
                 body: [
                     'Three reasons come up, in roughly this order.',
-                    'The first is that a client, a principal contractor or an auditor has asked for evidence and there is not any. This is the most common trigger and it is always more stressful than getting ahead of it would have been.',
-                    'The second is insurance. If there is an incident involving a piece of equipment, the question of whether it was tested and recorded comes up quickly, and the answer matters.',
-                    'The third, and the one that is genuinely worth it on its own merits, is that leads and tools do fail. In a workshop, a damaged lead is not a paperwork problem, it is a person getting a shock. The visual inspection alone catches things that would otherwise stay in service until something happened.',
+                    'The first is that a client, a principal contractor or an auditor has asked for evidence and there isn\'t any. This is the most common trigger and it\'s always more stressful than getting ahead of it would have been.',
+                    'The second is insurance. If there\'s an incident involving a piece of equipment, the question of whether it was tested and recorded comes up quickly, and the answer matters.',
+                    'The third, and the one that\'s genuinely worth it on its own merits, is that leads and tools do fail. In a workshop, a damaged lead isn\'t a paperwork problem, it\'s a person getting a shock. The visual inspection alone catches things that would otherwise stay in service until something happened.',
                 ],
             },
         ],
         priceFactors: [
             'The number of items, with per-item cost dropping as volume rises',
             'Site location and whether it fits into an existing run through the area',
-            'Whether it is a one-off or a scheduled recurring service',
+            'Whether it\'s a one-off or a scheduled recurring service',
             'Whether testing needs to happen outside business hours',
             'Whether failed items are to be repaired, replaced or simply tagged out',
             'The number of separate sites or locations under one client',
@@ -447,15 +447,15 @@ export const projectServices: Service[] = [
             },
             {
                 question: 'What happens if an item fails?',
-                answer: 'It comes out of service. Depending on what is wrong we either repair it, usually the case with a damaged lead or plug, or tag it out for disposal. Either way it is recorded in the register so there is a trail.',
+                answer: 'It comes out of service. Depending on what\'s wrong we either repair it, usually the case with a damaged lead or plug, or tag it out for disposal. Either way it\'s recorded in the register so there\'s a trail.',
             },
             {
                 question: 'Can you test after hours?',
-                answer: 'Yes. For retail and offices it is often easier, since we are not working around staff and customers. It costs a little more but it is usually worth it if testing during the day would disrupt trading.',
+                answer: 'Yes. For retail and offices it\'s often easier, since we aren\'t working around staff and customers. It costs a little more but it\'s usually worth it if testing during the day would disrupt trading.',
             },
             {
                 question: 'Do you do construction sites?',
-                answer: 'Yes, including the shorter retest intervals construction environments require, portable RCD testing, and site equipment. Leads on a construction site take a beating and the failure rate is genuinely high, so it is one of the environments where testing finds real problems rather than just generating paperwork.',
+                answer: 'Yes, including the shorter retest intervals construction environments require, portable RCD testing, and site equipment. Leads on a construction site take a beating and the failure rate is genuinely high, so it\'s one of the environments where testing finds real problems rather than just generating paperwork.',
             },
         ],
         related: ['rcd-testing-safety-switches-adelaide', 'thermal-imaging-adelaide', 'electrician-for-builders-adelaide'],

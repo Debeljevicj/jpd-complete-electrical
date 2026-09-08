@@ -24,12 +24,12 @@ export default function HomeServiceAreas() {
                         What Areas Do We Service?
                     </h2>
                     <p className="text-neutral-slate text-lg leading-relaxed mb-4">
-                        All of Adelaide. We are based in Wynn Vale, so the north-east is where we work most days and
+                        All of Adelaide. We're based in Wynn Vale, so the north-east is where we work most days and
                         where we can usually get to you fastest, but we take jobs right across the metro area and into
                         regional South Australia when it makes sense.
                     </p>
                     <p className="text-neutral-slate text-lg leading-relaxed">
-                        These are the suburbs we are in most often. Each one has a page covering the housing stock and
+                        These are the suburbs we're in most often. Each one has a page covering the housing stock and
                         the electrical work that actually comes up there.
                     </p>
                 </div>
@@ -48,8 +48,8 @@ export default function HomeServiceAreas() {
 
                 <div className="bg-neutral-offwhite rounded-xl p-6 md:p-8 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
                     <p className="text-neutral-slate leading-relaxed">
-                        <span className="font-bold text-navy">Not on the list?</span> That is not a boundary, it is just
-                        where we are most often. Give us a ring and we will tell you straight away whether we can get to
+                        <span className="font-bold text-navy">Not on the list?</span> That isn't a boundary, it's just
+                        where we're most often. Give us a ring and we'll tell you straight away whether we can get to
                         you.
                     </p>
                     <Link

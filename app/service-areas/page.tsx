@@ -28,31 +28,31 @@ export const metadata: Metadata = {
 const faqs = [
     {
         question: 'How do I find a good electrician near me?',
-        answer: 'Check three things before anything else. That they hold a current electrical contractor licence, that they carry public liability insurance, and that they provide a Certificate of Compliance for Electrical Work when the job is done. After that, look at whether they are genuinely local, because a business based an hour away either charges you for the travel or deprioritises your job when something closer comes up.',
+        answer: 'Check three things before anything else. That they hold a current electrical contractor licence, that they carry public liability insurance, and that they provide a Certificate of Compliance for Electrical Work when the job is done. After that, look at whether they\'re genuinely local, because a business based an hour away either charges you for the travel or deprioritises your job when something closer comes up.',
     },
     {
         question: 'Which suburbs does JPD Complete Electrical cover?',
-        answer: 'All of Adelaide. We are based in Wynn Vale, so the north-east is where we work most days: Golden Grove, Greenwith, Hope Valley, Wynn Vale, Highbury, Modbury, Redwood Park, Ridgehaven, St Agnes, Fairview Park, Holden Hill, Gulfview Heights, Tea Tree Gully, Banksia Park and Vista, plus the suburbs immediately around them. Beyond that we cover the wider metro area and take regional work when it makes sense.',
+        answer: 'All of Adelaide. We\'re based in Wynn Vale, so the north-east is where we work most days: Golden Grove, Greenwith, Hope Valley, Wynn Vale, Highbury, Modbury, Redwood Park, Ridgehaven, St Agnes, Fairview Park, Holden Hill, Gulfview Heights, Tea Tree Gully, Banksia Park and Vista, plus the suburbs immediately around them. Beyond that we cover the wider metro area and take regional work when it makes sense.',
     },
     {
         question: 'Do you charge a callout fee?',
-        answer: 'Quotes are free. For repair and fault-finding work there is a callout that covers attendance and the first period on site, and we tell you what it is on the phone before we come out rather than after we arrive. Because we work in a tight patch, we are not padding that number with an hour of travel.',
+        answer: 'Quotes are free. For repair and fault-finding work there\'s a callout that covers attendance and the first period on site, and we tell you what it is on the phone before we come out rather than after we arrive. Because we work in a tight patch, we aren\'t padding that number with an hour of travel.',
     },
     {
         question: 'Will you come out for a small job?',
-        answer: 'Yes. A single powerpoint, a dead light, a fan swap. Being based in the middle of the area we service means a small job in Wynn Vale, Golden Grove or Modbury is not half a day gone in the van, so we are happy to take them on.',
+        answer: 'Yes. A single powerpoint, a dead light, a fan swap. Being based in the middle of the area we service means a small job in Wynn Vale, Golden Grove or Modbury isn\'t half a day gone in the van, so we\'re happy to take them on.',
     },
     {
-        question: 'What if I am just outside the suburbs listed?',
+        question: 'What if I\'m just outside the suburbs listed?',
         answer: 'Then we still want the call. We service all of Adelaide. The suburbs listed are where we work most often and where we can get to you quickest, not a boundary. We regularly work in Surrey Downs, Salisbury Heights, Modbury North and Heights, Yatala Vale, Para Vista, Valley View, Dernancourt and Athelstone, right across the rest of the metro area, and into regional South Australia when it makes sense.',
     },
     {
         question: 'Are you available for emergency callouts?',
-        answer: 'Yes. Call 0435 006 420 for loss of power, breakers that will not stay on, burning smells, sparking outlets or water in a switchboard. We will tell you honestly whether it needs someone now or whether it can safely wait until morning.',
+        answer: 'Yes. Call 0435 006 420 for loss of power, breakers that won\'t stay on, burning smells, sparking outlets or water in a switchboard. We\'ll tell you honestly whether it needs someone now or whether it can safely wait until morning.',
     },
     {
         question: 'Do you work with property managers and landlords?',
-        answer: 'Yes, across the whole area. Safety switch testing with written reports, smoke alarm compliance, and repairs off condition reports, with documentation you can put on file and turnaround that does not hold up a tenancy.',
+        answer: 'Yes, across the whole area. Safety switch testing with written reports, smoke alarm compliance, and repairs off condition reports, with documentation you can put on file and turnaround that doesn\'t hold up a tenancy.',
     },
     {
         question: 'Do you take on work for builders?',
@@ -107,8 +107,8 @@ export default function ServiceAreasPage() {
                             Electrician Near Me in Adelaide&apos;s North-East
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                            If you are searching for an electrician near you and you live anywhere around Golden Grove,
-                            Modbury, Tea Tree Gully or the foothills, we are probably closer than whoever came up first.
+                            If you're searching for an electrician near you and you live anywhere around Golden Grove,
+                            Modbury, Tea Tree Gully or the foothills, we're probably closer than whoever came up first.
                             JPD Complete Electrical is owner-operated out of Wynn Vale, right in the middle of the patch.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -144,8 +144,8 @@ export default function ServiceAreasPage() {
                             Why &ldquo;Near Me&rdquo; Actually Matters With Electrical Work
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed mb-4">
-                            Plenty of electrical companies advertise across all of Adelaide. That is fine for a booked
-                            job weeks out. It is much less fine when your power has gone off on a Thursday night, or
+                            Plenty of electrical companies advertise across all of Adelaide. That's fine for a booked
+                            job weeks out. It's much less fine when your power has gone off on a Thursday night, or
                             when a tenant is waiting and the property manager needs it done this week.
                         </p>
                         <p className="text-neutral-slate text-lg leading-relaxed mb-4">
@@ -156,8 +156,8 @@ export default function ServiceAreasPage() {
                         <p className="text-neutral-slate text-lg leading-relaxed">
                             It also means we know the housing. The switchboard in a 1970s Hope Valley home is a known
                             quantity. So is the full-but-serviceable board in a 1990s Greenwith house that now needs an
-                            EV charger on it. That is the difference between an electrician who works in your suburb and
-                            one who is visiting it.
+                            EV charger on it. That's the difference between an electrician who works in your suburb and
+                            one who's visiting it.
                         </p>
                     </div>
                 </div>

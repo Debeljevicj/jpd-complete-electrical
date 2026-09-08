@@ -91,9 +91,9 @@ export const workCategories: WorkCategory[] = [
         name: 'Fault Finding & Emergency',
         icon: 'emergency',
         blurb:
-            'Power out, a breaker that will not stay in, or something burning. Diagnosed and made safe, then fixed properly.',
+            'Power out, a breaker that won\'t stay in, or something burning. Diagnosed and made safe, then fixed properly.',
         intro:
-            'Faults do not announce what they are. These are jobs where the work was finding the problem first: tripping circuits, dead power, and things that had been quietly failing for years.',
+            'Faults don\'t announce what they are. These are jobs where the work was finding the problem first: tripping circuits, dead power, and things that had been quietly failing for years.',
         title: 'Electrical Fault Finding Jobs in Adelaide | JPD',
         description:
             'Real fault finding and emergency electrical jobs across Adelaide: tripping safety switches, dead circuits and faults traced to the source.',

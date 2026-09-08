@@ -43,30 +43,30 @@ const whatHappensNext = [
     {
         icon: AlertTriangle,
         title: 'We tell you if it can wait',
-        body: 'If what you have described is not urgent, we will say so. A callout you did not need is not a good outcome for either of us.',
+        body: 'If what you have described isn\'t urgent, we\'ll say so. A callout you didn\'t need isn\'t a good outcome for either of us.',
     },
 ];
 
 const contactFaqs = [
     {
         question: 'What information should I have ready?',
-        answer: 'The address, a rough description of the problem or the job, and if it is a fault, when it started and whether anything changed just before. For quotes on switchboards or EV chargers, a photo of your switchboard with the cover open tells us most of what we need.',
+        answer: 'The address, a rough description of the problem or the job, and if it\'s a fault, when it started and whether anything changed just before. For quotes on switchboards or EV chargers, a photo of your switchboard with the cover open tells us most of what we need.',
     },
     {
         question: 'How quickly will you respond to an enquiry?',
-        answer: 'Enquiries sent through this form come straight to us and we usually reply the same day. If it is urgent, ring 0435 006 420 rather than filling in the form, because the phone is faster.',
+        answer: 'Enquiries sent through this form come straight to us and we usually reply the same day. If it\'s urgent, ring 0435 006 420 rather than filling in the form, because the phone is faster.',
     },
     {
         question: 'Do you charge for quotes?',
-        answer: 'No. Quotes are free and there is no obligation. We state what is included, what is excluded and what we have assumed, so you can compare like for like against anyone else you have asked.',
+        answer: 'No. Quotes are free and there\'s no obligation. We state what\'s included, what\'s excluded and what we have assumed, so you can compare like for like against anyone else you have asked.',
     },
     {
         question: 'What are your hours?',
-        answer: 'Standard work is weekdays. Emergency callouts are handled outside those hours, at a higher rate that we tell you on the phone before we come out. If you are not sure whether your problem qualifies, ring and describe it.',
+        answer: 'Standard work is weekdays. Emergency callouts are handled outside those hours, at a higher rate that we tell you on the phone before we come out. If you aren\'t sure whether your problem qualifies, ring and describe it.',
     },
     {
         question: 'Do you service my suburb?',
-        answer: 'We service all of Adelaide. We are based in Wynn Vale, so Adelaide\'s north-east is where we can usually get to you fastest, but we work right across the metro area and take regional work when it makes sense.',
+        answer: 'We service all of Adelaide. We\'re based in Wynn Vale, so Adelaide\'s north-east is where we can usually get to you fastest, but we work right across the metro area and take regional work when it makes sense.',
     },
 ];
 
@@ -125,9 +125,9 @@ export default function ContactPage() {
                     <div className="max-w-3xl">
                         <h2 className="text-2xl md:text-3xl font-bold mb-5">Is It an Emergency?</h2>
                         <p className="text-lg text-white/85 leading-relaxed mb-4">
-                            If you have lost power completely, have a breaker or safety switch that will not stay on,
+                            If you have lost power completely, have a breaker or safety switch that won't stay on,
                             can smell burning near the switchboard, have a sparking outlet, or have had water get into
-                            anything electrical, do not use the form. Ring{' '}
+                            anything electrical, don't use the form. Ring{' '}
                             <a href={PHONE_HREF} className="text-gold font-semibold underline underline-offset-4">
                                 {PHONE}
                             </a>
@@ -135,8 +135,8 @@ export default function ContactPage() {
                         </p>
                         <p className="text-lg text-white/85 leading-relaxed mb-4">
                             If something is visibly wrong, turn the main switch off at the board first, then call. And
-                            if your neighbours have lost power too, that is a network fault: ring SA Power Networks on
-                            13 13 66, because it is not something we can fix.
+                            if your neighbours have lost power too, that's a network fault: ring SA Power Networks on
+                            13 13 66, because it isn't something we can fix.
                         </p>
                         <a href={PHONE_HREF} className="btn btn-gold text-lg px-8 py-3.5 inline-flex items-center gap-2">
                             <Phone className="w-5 h-5" />
@@ -171,7 +171,7 @@ export default function ContactPage() {
                             Where We Work
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed">
-                            All of Adelaide. These are the suburbs we are in most often, each with a page on the
+                            All of Adelaide. These are the suburbs we're in most often, each with a page on the
                             electrical work that actually comes up there.
                         </p>
                     </div>

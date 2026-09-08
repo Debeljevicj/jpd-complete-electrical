@@ -145,8 +145,8 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                             <h2 className="text-2xl md:text-3xl font-bold">What Drives the Price</h2>
                         </div>
                         <p className="text-lg text-white/85 leading-relaxed mb-6">
-                            We are not going to publish a headline figure that turns into something else once we are on
-                            site. What we will do is tell you exactly what moves the number, so you can see where your
+                            We aren't going to publish a headline figure that turns into something else once we're on
+                            site. What we'll do is tell you exactly what moves the number, so you can see where your
                             job is likely to sit before you call.
                         </p>
                         <ul className="space-y-3 mb-8">
@@ -158,7 +158,7 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                             ))}
                         </ul>
                         <p className="text-lg text-white/85 leading-relaxed mb-8">
-                            Quotes are free, fixed, and state what is included and excluded. If we think something might
+                            Quotes are free, fixed, and state what's included and excluded. If we think something might
                             turn up once we open things up, you hear about it before we start rather than on the invoice.
                         </p>
                         <a href={PHONE_HREF} className="btn btn-gold text-lg px-8 py-3.5 inline-flex items-center gap-2">
@@ -177,7 +177,7 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                             Where We Do This Work
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed">
-                            We service all of Adelaide. Being based in Wynn Vale, these are the suburbs we are in most
+                            We service all of Adelaide. Being based in Wynn Vale, these are the suburbs we're in most
                             often and where we can usually get to you fastest. Pick yours for local detail, and if you
                             are somewhere else in the metro area, just call and ask.
                         </p>
