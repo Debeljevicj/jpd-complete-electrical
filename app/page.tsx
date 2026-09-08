@@ -11,7 +11,7 @@ import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
 import TrustBar from '@/components/TrustBar';
 import ServiceIcon from '@/components/ServiceIcon';
-import { workCategories, jobsForCategory } from '@/lib/recent-work';
+import { workCategories, jobsForCategory, latestJobs } from '@/lib/recent-work';
 import { Shield, MessageCircle, Award, Zap, UserPlus } from 'lucide-react';
 
 export default function Home() {
@@ -216,63 +216,55 @@ export default function Home() {
             {/* Process Steps - How We Work */}
             <ProcessSteps />
 
-            {/* Featured Projects */}
+            {/* Recent jobs. These were three hardcoded cards with a stock photo, a
+                paragraph and no link. They are now the three most recent job write-ups,
+                each one going to the full article, so the section argues for the work
+                with real jobs instead of describing it. */}
             <section className="section-padding bg-neutral-offwhite">
                 <div className="container-custom">
-                    <SectionHeading centered>Featured Projects</SectionHeading>
+                    <SectionHeading centered>Recent Jobs</SectionHeading>
+                    <p className="text-center text-neutral-slate max-w-2xl mx-auto -mt-4 mb-8 text-sm md:text-base">
+                        Real jobs from around Adelaide, written up with photos of what was there
+                        before and what it looked like when we left.
+                    </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <Reveal delay={0} className="card overflow-hidden p-0 group">
-                            <div className="relative h-48 md:h-64 overflow-hidden">
-                                <Image
-                                    src="/images/solar_system_6kw.webp"
-                                    alt="6.6kW Solar System Installation"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    loading="lazy"
-                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-navy mb-2">Solar System Installation</h3>
-                                <p className="text-neutral-slate">High-efficiency 6.6kW solar system installation helping homeowners reduce energy bills and carbon footprint.</p>
-                            </div>
-                        </Reveal>
-                        <Reveal delay={100} className="card overflow-hidden p-0 group">
-                            <div className="relative h-48 md:h-64 overflow-hidden">
-                                <Image
-                                    src="/images/kitchen_led_strip.webp"
-                                    alt="Kitchen LED Strip Lighting"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    loading="lazy"
-                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-navy mb-2">Kitchen LED Lighting</h3>
-                                <p className="text-neutral-slate">Modern LED strip lighting installation adding ambiance and functionality to a contemporary kitchen renovation.</p>
-                            </div>
-                        </Reveal>
-                        <Reveal delay={200} className="card overflow-hidden p-0 group">
-                            <div className="relative h-48 md:h-64 overflow-hidden">
-                                <Image
-                                    src="/images/medical_clinic_upgrade.webp"
-                                    alt="Medical Clinic Upgrade"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    loading="lazy"
-                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-navy mb-2">Medical Clinic Upgrade</h3>
-                                <p className="text-neutral-slate">Full medical clinic electrical upgrade including ceiling-mounted TV installation, 15-camera CCTV system, medical examination lighting across treatment rooms, and scheduled patient-area compliance inspections.</p>
-                            </div>
-                        </Reveal>
+                        {latestJobs(3).map((job, i) => (
+                            <Reveal key={job.slug} delay={i * 100} className="h-full">
+                                <Link
+                                    href={`/blog/${job.slug}`}
+                                    className="card overflow-hidden p-0 group flex flex-col h-full hover:shadow-lg transition-shadow"
+                                >
+                                    <div className="relative h-48 md:h-64 overflow-hidden">
+                                        <Image
+                                            src={job.image}
+                                            alt={job.title}
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            loading="lazy"
+                                            className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                    </div>
+                                    <div className="p-6 flex flex-col flex-1">
+                                        <h3 className="text-xl font-bold text-navy mb-2 group-hover:text-gold transition-colors">
+                                            {job.title}
+                                        </h3>
+                                        <p className="text-neutral-slate text-sm leading-relaxed flex-1">
+                                            {job.excerpt}
+                                        </p>
+                                        <span className="inline-flex items-center gap-2 text-navy font-bold text-sm mt-4 group-hover:text-gold transition-colors">
+                                            Read the job <span className="text-lg">→</span>
+                                        </span>
+                                    </div>
+                                </Link>
+                            </Reveal>
+                        ))}
                     </div>
-                    <div className="text-center mt-8">
-                        <Link href="/gallery" className="btn btn-primary">
-                            View All Projects
+                    <div className="text-center mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+                        <Link href="/recent-work" className="btn btn-primary">
+                            View All Recent Work
+                        </Link>
+                        <Link href="/gallery" className="btn btn-outline">
+                            Photo Gallery
                         </Link>
                     </div>
                 </div>

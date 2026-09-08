@@ -149,6 +149,20 @@ export function servicesForCategory(category: WorkCategory) {
         .map(({ slug, name, blurb }) => ({ slug, name, blurb }));
 }
 
+/**
+ * The most recently written-up jobs, for the home page.
+ *
+ * Replaces three hardcoded "Featured Projects" cards that showed a stock photo
+ * and a paragraph and linked nowhere. These are real write-ups, so the card can
+ * take you to the job.
+ */
+export function latestJobs(count = 3): JobReport[] {
+    return jobReports
+        .slice()
+        .sort((a, b) => (b.updated ?? b.date).localeCompare(a.updated ?? a.date))
+        .slice(0, count);
+}
+
 /** Categories that have at least one job written up, so no card leads to an empty page. */
 export const populatedWorkCategories = workCategories.filter(
     (c) => jobsForCategory(c).length > 0
