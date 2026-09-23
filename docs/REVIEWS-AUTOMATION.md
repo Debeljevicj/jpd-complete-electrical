@@ -4,6 +4,32 @@ Reviews live in `data/reviews.json`. A GitHub Action pulls new ones from Google
 every Monday morning, commits them, and Cloudflare rebuilds the site from that
 commit. The site stays fully static, so nothing changes for SEO.
 
+## Status, 23 Sep 2026: this can't work as built
+
+The workflow has failed every Monday since it was added. Disable it with
+`gh workflow disable refresh-reviews.yml` until the route below is built.
+Two separate problems:
+
+1. **Setup was never done.** The repo has no `GOOGLE_PLACES_API_KEY` secret
+   and no `GOOGLE_PLACE_ID` variable, so the script exits at its first check.
+2. **The Places API can't see the JPD listing at all.** The business is a
+   service-area profile with its address hidden. Its Place ID is
+   `ChIJLbCKprmlBYURbYsIZU23upI` (decodes to the CID in the Maps URL,
+   `0x8505a5b9a68ab02d:0x92bab74d65088b6d`). Text search, nearby search and
+   autocomplete all return `ZERO_RESULTS` for it, and Place Details on the ID
+   returns `NOT_FOUND`, while a control listing (Bunnings Mile End) works on the
+   same key. That's the known Places behaviour for hidden-address service-area
+   businesses, so adding a key wouldn't have fixed it.
+
+The supported route for a hidden-address profile is the **Business Profile
+API** (`mybusiness.googleapis.com/v4/accounts/{a}/locations/{l}/reviews`),
+which is the owner's own data: every review, reviewer name, star rating,
+comment and `createTime`, not a five-review sample. It needs Google to approve
+API access for the Cloud project (a form, reviewed within about 14 days) and a
+one-time OAuth consent as the profile owner, with the refresh token stored as a
+GitHub secret. The setup steps below are for the Places route and are kept for
+the record only.
+
 ## The parts
 
 | File | What it does |
