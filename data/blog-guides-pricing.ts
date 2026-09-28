@@ -55,6 +55,28 @@ export const pricingPosts: BlogPost[] = [
             <p>Free quotes, fixed prices on planned work, and a written scope that states inclusions, exclusions and assumptions. For fault finding we tell you the callout on the phone before we come out rather than after we arrive.</p>
             <p>If we think something might turn up once we open a wall or take a board off, you hear about it at quote stage. That isn't us hedging, it's us refusing to give you a comfortable number now and an uncomfortable conversation later.</p>
         `,
+        faqs: [
+            {
+                question: 'Should an electrician\'s quote include GST?',
+                answer: 'Yes, if you\'re a household. Under the ACCC\'s pricing rules, prices shown to consumers should be a single total that includes GST and any unavoidable fees, not a figure with GST added on top. Businesses dealing only with other businesses can show prices excluding GST. If a quote to you as a homeowner shows GST separately at the end, ask for the total, and make sure you\'re comparing totals when you line quotes up side by side.',
+            },
+            {
+                question: 'Can an electrician charge more than their quote?',
+                answer: 'Not for the same work if you agreed a fixed price. A fixed-price quote is the price for the scope it describes, so the number should only change if the scope changes, such as you adding work or something turning up that the quote specifically excluded, and that should be agreed with you before it\'s done. An estimate is different: it\'s a best guess and the final bill can move. Get any change to the price confirmed in writing before the extra work starts.',
+            },
+            {
+                question: 'Is it cheaper to get several electrical jobs done in one visit?',
+                answer: 'Usually, yes. Every visit carries costs that don\'t depend on the size of the job: travel, setting up, getting into the roof space, isolating circuits and testing at the end. Bundle the loose powerpoint, the new outdoor light and the extra downlight into one booking and you pay for those once instead of three times. Keep a running list of small electrical jobs around the house and book them together, especially if one already needs someone in the ceiling.',
+            },
+            {
+                question: 'Why does a small electrical job cost so much?',
+                answer: 'Because most of the cost of a small job is getting there and doing it properly, not the minutes on the tools. A licensed electrician is running a vehicle, stock, insurance, calibrated test equipment and licensing, and in South Australia has to issue a Certificate of Compliance for any electrical work, whether the job takes twenty minutes or two hours. That\'s why small jobs usually carry a minimum charge or callout, and why grouping them is the easiest way to get better value.',
+            },
+            {
+                question: 'Can I claim electrical repairs on a rental property at tax time?',
+                answer: 'Often, if it\'s a genuine repair. The ATO treats fixing wear and tear or damage that happened while the property was rented as a repair you can generally claim in the same year. Improvements, like adding circuits as part of a renovation, and replacing a whole unit such as a complete appliance, are capital and claimed over several years instead. Fixing defects that existed when you bought the place counts as an initial repair, which is also capital. Ask for an itemised invoice so your accountant can split it.',
+            },
+        ],
         cta: {
             heading: 'Get a Quote You Can Actually Compare',
             description:
@@ -123,6 +145,28 @@ export const pricingPosts: BlogPost[] = [
             </ul>
             <p>None of that's a high bar. It's just worth knowing what the bar is before you pick.</p>
         `,
+        faqs: [
+            {
+                question: 'What\'s the difference between an electrical contractor licence and an electrician\'s registration in SA?',
+                answer: 'The registration covers the person and the contractor licence covers the business. In South Australia anyone who physically does electrical work has to be registered as an electrician, and any individual, partner or company running a business that carries out or organises electrical work has to hold a contractor licence. A sole trader doing their own work needs both. You can look either up on the Consumer and Business Services licence search, so check the business and the person who\'ll actually turn up.',
+            },
+            {
+                question: 'How do I complain about an electrician in South Australia?',
+                answer: 'It depends on the problem. If it\'s about safety or whether the work complies with the standards, complain to the Office of the Technical Regulator, which can audit the installation and the electrician. If it\'s a dispute about payment, quality of work or work that wasn\'t finished, Consumer and Business Services can help, including through conciliation. Either way, raise it with the electrician in writing first and give them a reasonable chance to fix it. Anything immediately dangerous should be switched off and reported straight away.',
+            },
+            {
+                question: 'How long does an electrician have to give me the Certificate of Compliance in SA?',
+                answer: '30 days. In South Australia the electrical certificate of compliance has to be certified before the installation is made available to be switched on, then submitted and provided to the owner or operator within 30 days. It\'s an electronic certificate, usually emailed to you from the Office of the Technical Regulator\'s eCoC system, and it can be posted if you don\'t use email. If a month has gone by and you\'ve heard nothing, ask for it, because it\'s your record the work was done and tested by a licensed electrician.',
+            },
+            {
+                question: 'What warranty should I expect on electrical work?',
+                answer: 'Whatever warranty the electrician offers, you\'re also covered by the consumer guarantees in the Australian Consumer Law, which a business can\'t take away. Services must be carried out with due care and skill, be fit for any purpose you made clear, and be delivered within a reasonable time if no date was agreed. The guarantees don\'t have a fixed expiry date. It depends on the circumstances. Products installed, like fittings and chargers, also carry their own manufacturer\'s warranty, so keep the invoice showing brands and models.',
+            },
+            {
+                question: 'Can any electrician install solar panels or a home battery?',
+                answer: 'Not if you want the federal discount. To create small-scale technology certificates, which provide the upfront discount on rooftop solar and home batteries, the system has to be designed and installed by someone accredited by Solar Accreditation Australia, and that installer also needs an unrestricted electrical licence. A licensed electrician without the accreditation can still do related work, like a switchboard upgrade or new circuits, but check the accreditation before you sign up for a solar or battery install.',
+            },
+        ],
         cta: {
             heading: 'Licensed, Insured, Owner-Operated',
             description:
@@ -187,6 +231,28 @@ export const pricingPosts: BlogPost[] = [
             </ul>
             <p>And the one that matters most: never bypass, disable or remove a safety switch to stop it tripping. It's the only device in your house specifically designed to stop an electric shock from killing someone. If it's going off, something is wrong, and the answer is to find out what.</p>
         `,
+        faqs: [
+            {
+                question: 'Why does my safety switch trip in the middle of the night?',
+                answer: 'Usually because something switches on overnight. In South Australia many electric hot water systems run on an off-peak controlled load that heats overnight, and a failing element will trip the safety switch when it kicks in. Fridge and freezer defrost heaters, timers on pool pumps or heaters, and dew getting into outdoor fittings are the other usual suspects. Note the time it trips and what\'s scheduled around then, because it narrows the search a lot.',
+            },
+            {
+                question: 'Why does the power trip when I turn on one particular light?',
+                answer: 'Usually there\'s a fault in that light, its switch or the cable feeding it. If the safety switch trips, suspect water in an outdoor or bathroom fitting, or damaged cable. If a breaker trips instantly, that points to a short circuit in the fitting or at the switch. Either way, leave that light off and get it checked. Unlike an appliance, you can\'t just unplug a light fitting to rule it out, so this one isn\'t a DIY diagnosis.',
+            },
+            {
+                question: 'Can a storm make my safety switch trip even if nothing\'s wrong?',
+                answer: 'Yes. Lightning and network disturbances can cause voltage spikes that trip a safety switch without leaving a fault behind, and if it resets and stays on, that\'s likely what happened. Tripping whenever it rains, even without lightning, is different: it usually means water is getting in somewhere. And if it won\'t reset after a storm, treat it as a fault, because storms regularly damage outdoor fittings, cables and the supply to the house.',
+            },
+            {
+                question: 'Can the safety switch itself be faulty?',
+                answer: 'It can, but it\'s less common than people hope. RCDs do age and can fail or become erratic, and the only way to know is testing with an instrument. More often the device is fine and lots of small leakage is adding up. Computers, TVs and other appliances with filters each leak a little current to earth, and on one RCD covering many circuits, that can be enough to trip it. Spreading circuits across RCBOs usually cures it.',
+            },
+            {
+                question: 'Can I run the fridge off an extension lead while a circuit won\'t stay on?',
+                answer: 'Yes, as a short-term fix, as long as the fridge isn\'t what\'s tripping it and the outlet you use is protected by a safety switch. Run the lead where it won\'t get pinched or trip anyone, and don\'t chain power boards together. If the fridge trips the new circuit as well, the fridge is the fault. Never plug a suspect appliance into an outlet without RCD protection just to keep it running.',
+            },
+        ],
         cta: {
             heading: 'Still Tripping After You Have Checked?',
             description:

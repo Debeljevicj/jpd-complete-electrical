@@ -72,6 +72,28 @@ export const localPosts: BlogPost[] = [
             <h3>Save Both Numbers</h3>
             <p>SA Power Networks faults and emergencies: <strong>13 13 66</strong>. Us: <strong>0435 006 420</strong>. Put both in your phone now rather than looking them up in the dark.</p>
         `,
+        faqs: [
+            {
+                question: 'Does my solar keep working in a blackout?',
+                answer: 'Not on its own. A standard grid-connected solar system shuts its inverter down automatically when the grid goes off, even in full sun, so it can\'t feed power into lines that crews may be working on. To keep anything running during an outage you need a battery or inverter set up for backup, and usually only selected circuits are covered. If you aren\'t sure what yours does, check the installer\'s paperwork before you rely on it.',
+            },
+            {
+                question: 'Can I get compensation from SA Power Networks for a long power outage?',
+                answer: 'Possibly, and you don\'t need to apply. SA Power Networks makes Guaranteed Service Level payments to customers who\'ve had more than 20 hours of interruptions, or more than nine outages, in a financial year. The money is credited through your electricity retailer\'s bill after the financial year ends. Outages caused by a fault in your own installation, notified planned work and some emergencies such as bushfires don\'t count.',
+            },
+            {
+                question: 'Will SA Power Networks pay for appliances damaged when the power came back on?',
+                answer: 'Sometimes. If you think a problem on their network damaged your property, you can lodge a damage claim with SA Power Networks, including the date and time, your costs and ideally a report from a qualified repairer. Keep the damaged items until the claim\'s assessed. They don\'t pay for damage caused by faults in your own installation, severe weather or lightning, animals or third parties, so check your home insurance as well.',
+            },
+            {
+                question: 'Why does my power go off for a few seconds and then come straight back on?',
+                answer: 'That\'s usually the network clearing a temporary fault. Protection equipment on the lines, called reclosers, switches off when something like a branch or an animal touches a line, then switches back on automatically, so most of those faults become a blip rather than an outage. If the whole street blinks, it\'s the network. If only your house does it, or lights flicker constantly, there may be a loose connection and it needs checking.',
+            },
+            {
+                question: 'What should I switch off during a power outage?',
+                answer: 'Switch off anything that could start a fire or be damaged when the power returns, such as heaters, ovens, irons and computers, and leave one light switched on so you know when it\'s back. Keep the fridge and freezer closed. When the supply comes back, turn things on gradually rather than all at once. If you turned the main switch off because you suspected a fault on your side, leave it off until that\'s been checked.',
+            },
+        ],
         cta: {
             heading: 'Worked Out It\'s Your Side?',
             description:
@@ -131,6 +153,28 @@ export const localPosts: BlogPost[] = [
             <p>Get it priced before you settle rather than after. A quote for the electrical work is a negotiating position if you're still in the process, and a budget if you have already committed. Either is better than a surprise in month two.</p>
             <p>And prioritise honestly. If the board has no safety switches, that's the first job regardless of anything else on the list, because it's the only thing there that's about somebody getting hurt rather than about convenience.</p>
         `,
+        faqs: [
+            {
+                question: 'Do I have to upgrade the smoke alarms after buying a house in South Australia?',
+                answer: 'You have six months from the title transfer to make sure the house has the correct smoke alarms. In South Australia that applies to any property bought from 1 February 1998, and the alarms must be either 240 volt mains-powered or 10-year non-removable lithium battery units. Homes built from 1 January 1995 need mains-powered alarms under the Building Code. Fines apply if alarms aren\'t installed, so check what\'s fitted, and the manufacture dates on them, when you inspect.',
+            },
+            {
+                question: 'Can I get copies of old electrical certificates for a house I\'ve bought in SA?',
+                answer: 'Yes, it\'s worth asking. The Office of the Technical Regulator says new property owners can request copies of previously issued certificates of compliance from the previous owners, or by contacting the OTR directly. Certificates are now lodged electronically, so recent work should be on record. They show what was done, when, and by which licensed electrician, which helps when you\'re planning upgrades or trying to work out whether a newer circuit or board was done properly.',
+            },
+            {
+                question: 'Can I get an electrical inspection done during the cooling-off period in SA?',
+                answer: 'You can, but the window is tight. In South Australia the cooling-off period is two clear business days, starting from when you receive the Form 1 vendor\'s statement or sign the contract, whichever is later, and there\'s no cooling-off period at auction. That\'s not much time to book and complete an inspection. The safer route is getting it done before you sign, or asking your conveyancer about making the contract subject to a satisfactory inspection. If you do cool off, you don\'t have to give a reason.',
+            },
+            {
+                question: 'Could a house built around 2012 have faulty wiring?',
+                answer: 'It\'s possible. Infinity and Olsent branded cable, recalled nationally because its insulation can become prematurely brittle, was installed in South Australia in 2012 and 2013, in new homes, renovations, air conditioning circuits and powerpoints. Brittle insulation can cause electric shock or fire if it\'s disturbed. The cable is printed INFINITY or OLSENT every metre, but the ACCC advises against inspecting it yourself. If the house was built or had electrical work done in that window, ask the vendor or get a licensed electrician to check.',
+            },
+            {
+                question: 'What should I check about the solar system on a house I\'m buying?',
+                answer: 'Find out how old the inverter is, whether it\'s actually working (the display or app should show recent generation), and whether there\'s a Certificate of Compliance and installation paperwork. The inverter is usually the first part of a system to need replacing, and that matters in South Australia: if the inverter is replaced, the system then has to be capable of remote disconnection under the state\'s smarter homes rules. Repairs and replacements under warranty are exempt.',
+            },
+        ],
         cta: {
             heading: 'Book a Pre-Purchase Electrical Inspection',
             description:
@@ -199,6 +243,28 @@ export const localPosts: BlogPost[] = [
             <p>Worth being straight about this. A switchboard upgrade doesn't rewire your house, add powerpoints, or fix a circuit that was undersized to begin with. It replaces the protection and the distribution, not the cabling behind it.</p>
             <p>What it does do is give you shock protection on every circuit, capacity to add things later, and a board where a fault is contained and identifiable. On a house that still has ceramic fuses, it's the single highest-value electrical job available.</p>
         `,
+        faqs: [
+            {
+                question: 'Will the food in my fridge and freezer be OK while the power\'s off for a switchboard upgrade?',
+                answer: 'The freezer usually will, as long as the door stays shut: Food Standards Australia New Zealand says a closed freezer shouldn\'t defrost for around 24 hours. The fridge is the one to plan for. SA Health\'s advice is that perishable food like meat, dairy and cooked leftovers that\'s been above 5°C for more than four hours may not be safe to eat. If the power will be off most of the day, run the fridge down beforehand or move the essentials into an esky with ice.',
+            },
+            {
+                question: 'Why does my new switchboard trip more than the old one did?',
+                answer: 'Usually because it\'s now catching faults the old board couldn\'t see. Older boards often had no safety switch on the lighting circuits, or none at all, so a leaky appliance, a damp outdoor light or tired wiring could sit there unnoticed for years. Once every circuit has RCD protection, those faults trip it, and that\'s the new board doing its job. Unplug and reset to find an appliance, and if it\'s the fixed wiring, get the circuit tested.',
+            },
+            {
+                question: 'Does SA Power Networks need to be involved in a switchboard upgrade?',
+                answer: 'Sometimes. If the board can be isolated at a main switch upstream of it, the electrician can usually do the job without them. If the work involves the meter panel or the incoming mains, the supply has to be isolated at the service fuse, which is SA Power Networks\' equipment. In South Australia an electrician can only pull it with SA Power Networks\' authorisation, and only SA Power Networks can re-energise the supply afterwards, so their booking can set the date.',
+            },
+            {
+                question: 'What happens to my solar system when the switchboard is replaced?',
+                answer: 'It gets shut down, moved across and brought back online. The system is isolated using its shutdown procedure, then the solar main switch and the inverter circuit are transferred to the new board like any other circuit. Once the board is live and tested, the system is restarted in the right order. Mention solar or a battery before you get a quote, because both need their own protection and isolation on the new board and that affects the layout.',
+            },
+            {
+                question: 'Should I get surge protection fitted when my switchboard is upgraded?',
+                answer: 'It\'s worth considering, and the upgrade is the easiest time to add it because the board is already being built. A surge protection device at the switchboard limits voltage spikes from the network or nearby lightning before they reach your circuits. It isn\'t a guarantee, because a close strike can still do damage, and sensitive gear like computers benefits from a surge protected power board as a second layer. Ask for it as a separate line item so you can decide.',
+            },
+        ],
         cta: {
             heading: 'Get a Switchboard Upgrade Quote',
             description:
@@ -258,6 +324,28 @@ export const localPosts: BlogPost[] = [
             <p>Blade size should match the room rather than the ceiling. A large fan turning slowly moves air more comfortably and much more quietly than a small one working hard.</p>
             <p>And whatever you buy needs fixing into something structural. A fan is a moving load and plasterboard alone won't hold it, which is a job for someone who's going to get above the ceiling and do it properly.</p>
         `,
+        faqs: [
+            {
+                question: 'Which way should my ceiling fan spin in summer?',
+                answer: 'In summer, use the setting that pushes air straight down onto you, because that downdraft is what creates the wind-chill effect that makes you feel cooler. Which way that is varies between fans, so rather than going by clockwise or anticlockwise, stand under it on high. If you can feel a strong breeze, it\'s on the summer setting. If the air barely seems to move, it\'s probably in reverse, which is the winter setting.',
+            },
+            {
+                question: 'How much does it cost to run a ceiling fan all night?',
+                answer: 'Only cents. As a worked example, a DC-motor fan drawing about 30 watts for 8 hours uses 0.24 kWh. At 40 cents per kWh, a round figure you should swap for the rate on your own bill, that\'s about 10 cents a night. An older AC-motor fan drawing 75 watts on high uses 0.6 kWh over the same 8 hours, about 24 cents. On a lower speed both use less. A split system running all night is a completely different order of cost.',
+            },
+            {
+                question: 'Is evaporative cooling cheaper to run than a split system?',
+                answer: 'It can be, because an evaporative cooler only runs a fan and a small water pump rather than a compressor, and it works best in dry conditions like a typical Adelaide summer. The trade-offs are that it needs windows or doors partly open, it struggles on humid days, a ducted unit can use 25 litres of water or more an hour on hot days, and it brings outside air in, which is a problem when there\'s smoke about. Some older units have large, inefficient fan motors, so running costs vary a lot by model.',
+            },
+            {
+                question: 'Can I put a ceiling fan in a room with a low ceiling?',
+                answer: 'Usually, as long as the blades end up at least 2.1 metres above the floor, which is the minimum fan manufacturers such as Hunter Pacific specify in their installation instructions. On a standard 2.4 metre ceiling, that means choosing a low-profile or close-mount fan rather than one hanging on a long rod. If the ceiling is lower than that, a ceiling fan generally isn\'t an option and a wall or pedestal fan is the safer choice. Raked ceilings are the opposite problem, and usually need a longer rod.',
+            },
+            {
+                question: 'Is it cheaper to run the air con during the day if I have solar?',
+                answer: 'Often, yes. Using your own solar only costs you the feed-in credit you\'d otherwise get, which is usually well below what you pay to buy power from the grid. Running the air con through the middle of the day to cool the house down before evening, when the panels drop off and SA Power Networks\' peak network period starts at 4pm, shifts a big chunk of cooling onto your own solar. Close blinds and internal doors so the house holds onto that cool.',
+            },
+        ],
         cta: {
             heading: 'Get Ceiling Fans Installed Before Summer',
             description:

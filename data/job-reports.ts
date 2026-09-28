@@ -165,6 +165,24 @@ export const jobReports: JobReport[] = [
             <p>Full board, asbestos panel, and something new you want to add is an extremely common combination in Ridgehaven and the surrounding suburbs, where a lot of the housing stock is from the 1960s and 70s. None of it's urgent on its own, and all of it's cheaper to deal with in one visit than in three.</p>
             <p>What the work involves and what moves the price is set out on our <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page, and if you aren't sure whether yours is at this point, <a href="/blog/signs-you-need-switchboard-upgrade/">the warning signs guide</a> walks through it with photos of real boards.</p>
         `,
+        faqs: [
+            {
+                question: 'Why does a house with solar have two main switches?',
+                answer: 'Because a house with solar can be fed from two directions: the grid, and the solar inverter. Each supply gets its own main switch, labelled to show which one it isolates. That way anyone shutting the place down, including an electrician or firefighter who\'s never been there, can see there are two sources and turn both off. If your labels are faded, missing or just say "main switch" twice, that\'s worth fixing next time an electrician\'s at the board.',
+            },
+            {
+                question: 'Can solar and a home battery both connect to the same switchboard?',
+                answer: 'Usually, yes. A battery with its own inverter needs its own protection and its own labelled main switch at the board, which is why adding one takes switchboard space even when solar\'s already there. The inverter installation standard also limits how a board can take several inverter supplies, so if more gear is coming later, it\'s worth planning the layout for it now rather than finding the board can\'t take it.',
+            },
+            {
+                question: 'Should the old asbestos panel be removed when my switchboard is replaced?',
+                answer: 'In most cases, yes. Mounting a new enclosure over the old panel usually means drilling or fixing into it or right beside it, which is exactly the disturbance you\'re trying to avoid, and it leaves the next person to inherit it. Taking the sheet out whole, under proper controls, finishes the problem.',
+            },
+            {
+                question: 'Does a switchboard replacement include checking the earth stake?',
+                answer: 'It should. The main earth, meaning the earth stake and the cable that connects it to the board, is what makes every circuit breaker and safety switch work properly during a fault. When a board\'s replaced, earthing continuity is part of the testing done before the power goes back on. On older houses the stake can be corroded, buried under paving or connected with an undersized cable, and if the test shows a problem it needs fixing before the new board\'s energised.',
+            },
+        ],
         cta: {
             heading: 'Thinking About Solar, a Battery or an EV Charger?',
             description:
@@ -257,6 +275,24 @@ export const jobReports: JobReport[] = [
             <p><strong>Check the switchboard while you're at it.</strong> Adding circuits to a bathroom is a sensible moment to look at whether the board can carry them and whether it has proper RCD protection. If yours has ceramic fuses or a single safety switch covering the whole house, our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page is worth a read before you set the budget.</p>
             <p>We're based in Wynn Vale and work right across the north-eastern suburbs. There's more about what we do locally on our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page, and on <a href="/renovation-electrician-adelaide/">renovation electrical</a> generally.</p>
         `,
+        faqs: [
+            {
+                question: 'Does a bathroom exhaust fan have to vent outside in Australia?',
+                answer: 'Yes. The National Construction Code says exhaust from a bathroom has to discharge to outdoor air, either directly or through a duct, so venting into the roof space doesn\'t meet it. In practice that means ducting to an eave, a wall vent or a roof cowl. Wet air dumped into the roof condenses on the timber and insulation, which is where mould and rot start without anyone seeing it.',
+            },
+            {
+                question: 'How powerful should a bathroom exhaust fan be?',
+                answer: 'The National Construction Code sets a minimum of 25 litres per second for a bathroom exhaust fan. That\'s a floor, not a target. A long duct run, bends and the vent at the end all cut the real airflow, so a fan that only just meets 25 L/s on the box can fall short once it\'s installed. It\'s worth checking the fan\'s rated airflow against the duct length before you buy.',
+            },
+            {
+                question: 'Can a heat lamp go directly above the shower?',
+                answer: 'Usually not. The wiring rules restrict what can be installed in the zones around a bath or shower, and IXL\'s instructions for its Tastic units say that in some installations no part of the unit can sit directly above a bath or shower recess. Heat lamps warm you by radiant heat, so they belong over where you dry off anyway. That\'s why a separate exhaust fan over the shower is often the better layout.',
+            },
+            {
+                question: 'Does a bathroom exhaust fan need a run-on timer?',
+                answer: 'It does in some cases. Under the National Construction Code, if a bathroom doesn\'t have enough natural ventilation (such as a big enough openable window) and the fan doesn\'t run continuously, the fan has to be interlocked with the light switch and keep running for 10 minutes after the light goes off. Even where it isn\'t required, a run-on timer is worth having, because most of the steam is still in the room when you walk out.',
+            },
+        ],
         cta: {
             heading: 'Renovating a Bathroom?',
             description:
@@ -347,6 +383,24 @@ export const jobReports: JobReport[] = [
             <p>Worth acting on: repeated tripping with no obvious cause, tripping that gets worse when it rains, a burning or hot-plastic smell, or lights that dim and flicker together. Worth checking without urgency: a house built before the mid-1960s that has never been rewired, particularly if you're about to renovate or you have just bought it.</p>
             <p>You don't need to go into the roof to look. A licensed electrician can test the circuits from the board and the points, which is both safer and more informative than seeing one length of cable. If something is already tripping, our <a href="/emergency-electrician-adelaide/">fault finding</a> page covers how we go about it.</p>
         `,
+        faqs: [
+            {
+                question: 'How can I tell if my house has old rubber or cotton-braided wiring?',
+                answer: 'The biggest clue is age. A house built before the mid-1960s that has never been rewired is a candidate. Old rubber (VIR) cable has black rubber insulation, often with a cloth braid over it and sometimes a lead sheath, and the rubber goes hard and cracks with age. You may see it in the roof space or where cables enter the switchboard, but don\'t handle it. Only testing tells you what condition it\'s actually in.',
+            },
+            {
+                question: 'Is old rubber wiring dangerous if it still works?',
+                answer: 'It can be. Working and safe aren\'t the same thing. As rubber insulation ages it goes brittle, and a knock or a bit of movement can crack it off and leave live copper exposed, which is a shock and fire risk. It can carry on powering things for years while that\'s happening. Tripping safety switches, a hot-plastic smell or lights dimming together are the signs to act on. Otherwise, an insulation resistance test shows how much life it has left.',
+            },
+            {
+                question: 'Is it safe to go into the roof space if my house has old wiring?',
+                answer: 'Only with care. Turn the power off at the main switch first, and if you have solar, follow the shutdown procedure on the board. Even then, don\'t touch any cables, because some can still be live, like the incoming service cable and solar cabling. Old rubber cable is brittle, so standing on it, dragging insulation batts over it or moving it can crack the insulation. If you see bare copper or crumbling cable, back out and get an electrician to look.',
+            },
+            {
+                question: 'Can a house be rewired without ripping out the walls?',
+                answer: 'Often, mostly. In a lot of older homes, new cable can be run through the roof space and under timber floors, then dropped down wall cavities to each switch and powerpoint through small cut-ins. Solid brick or stone walls, common in older Adelaide homes, are harder and may need chasing, surface conduit or ducting in places. Expect some patching and painting. It\'s rarely the gutted-house job people picture, especially on a partial rewire.',
+            },
+        ],
         cta: {
             heading: 'Circuits Tripping in an Older Home?',
             description:
@@ -410,6 +464,24 @@ export const jobReports: JobReport[] = [
             <p>Whether that turns into a full <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> depends on what the rest of the board looks like. On a modern board it's usually a repair. On an older one, replacing a burnt main switch on a board that's already at the end of its life is money spent twice.</p>
             <p>We cover Tea Tree Gully and the surrounding north-eastern suburbs, and there's more about what we do locally on our <a href="/electrician-tea-tree-gully/">Tea Tree Gully electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Is a burnt main switch my responsibility or SA Power Networks\'?',
+                answer: 'The main switch is yours. SA Power Networks looks after the network up to the connection point at your property, and the switchboard and everything past that point belong to the owner, apart from the meter itself, which isn\'t yours either. So a burnt main switch needs a licensed electrician, not a network fault call. If the damage runs back towards the meter or the service fuse, the electrician will tell you if SA Power Networks needs to be involved.',
+            },
+            {
+                question: 'Who pays if earlier solar work caused my main switch to burn?',
+                answer: 'It depends on what caused it, and that has to be established first. Under Australian Consumer Law, services have to be done with acceptable care and skill, and if a problem comes from work that wasn\'t, you may be entitled to a remedy, which can include compensation for foreseeable damage. Get the electrician who finds it to photograph and write up what they found, then raise it with the original installer. If you can\'t sort it out, Consumer and Business Services can help.',
+            },
+            {
+                question: 'How do I find out who did earlier electrical work in my switchboard?',
+                answer: 'Look for the Certificate of Compliance. In South Australia electricians have to give you an electronic Certificate of Compliance for most of their work, and it goes to the owner and the Technical Regulator within 30 days of the work being ready to switch on. It names the contractor and their licence. If you bought the house, ask the previous owner or the installer for copies. A solar installer should also have left paperwork with the system.',
+            },
+            {
+                question: 'Could a loose connection at the main switch make my lights flicker?',
+                answer: 'Yes, it can. Everything in the house passes through the main switch, so a poor connection there can show up as lights flickering or dimming across the whole house, often when something big like the oven or air conditioner kicks in. Flickering on one light is usually that light or its globe. Flickering everywhere, especially with a warm or hot-plastic smell near the board, points to a connection problem and needs looking at promptly. Plenty of loose connections give no warning at all, though.',
+            },
+        ],
         cta: {
             heading: 'Smelling Something at the Switchboard?',
             description:
@@ -483,6 +555,24 @@ export const jobReports: JobReport[] = [
             <p>We did a similar pair of <a href="/blog/outdoor-strip-heaters-golden-grove/">outdoor strip heaters in Golden Grove</a>, which is worth a look if you want to see how the same equipment lands in a different setting. Norwood and Golden Grove are at opposite ends of the metro area but the cold evenings arrive at both of them at the same time, and the job is much the same either way.</p>
             <p>We cover Norwood and metropolitan Adelaide generally. There's more on adding new circuits and outlets on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How many outdoor strip heaters do I need for my alfresco?',
+                answer: 'Size them to where people sit, not to the whole slab. Heatstrip\'s own selection guide works on about 500 watts per square metre for a protected outdoor area, which puts a 2400 watt unit at roughly 4.8 square metres of coverage, around one table setting. Angled wall mounting cuts that by up to 40 percent. Most alfrescos are better served by one heater per seating zone than one big unit in the middle.',
+            },
+            {
+                question: 'Will a strip heater work if my alfresco is open on the sides?',
+                answer: 'It will, but less well, and the model matters. Radiant heat isn\'t blown away like warm air, but wind still cools you, so the useful coverage shrinks in an exposed spot. Heatstrip, for example, rates its Classic and Elegance models for protected outdoor areas and its Intense model for exposed outdoor areas. If your alfresco catches the wind, pick a heater rated for that, or add café blinds on the windy side.',
+            },
+            {
+                question: 'Can outdoor heaters run off a remote or timer instead of a wall switch?',
+                answer: 'Yes, depending on the model. Some Heatstrip models come with a remote giving on and off, three heat levels and a timer, and others add app control. A remote doesn\'t remove the wiring, though: the heater still needs its own supply and a way to isolate it, so decide before the cabling goes in. Heatstrip quotes about 15 minutes for its Classic with remote to reach full heat, so a timer that starts it early is handy.',
+            },
+            {
+                question: 'Are electric strip heaters better than gas heaters for a covered alfresco?',
+                answer: 'For a covered or partly enclosed alfresco, usually yes. Gas heaters produce carbon monoxide, and the ACCC warns against using gas products in areas that aren\'t well ventilated, such as enclosed patios. An electric radiant heater burns nothing, so it\'s fine with the blinds down, and there\'s no gas bottle to swap. The trade-off is that electric heaters need proper circuits, which is where most of the installation work goes.',
+            },
+        ],
         cta: {
             heading: 'Want the Alfresco Usable in Winter?',
             description:
@@ -534,6 +624,24 @@ export const jobReports: JobReport[] = [
             <p>Get those four right and the install is straightforward. Get them wrong and the fix involves patching a wall in a room full of patients.</p>
             <p>We do commercial fitout work across metropolitan Adelaide, including Gillman and the Port area. There's more on adding outlets and circuits on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Do I need an electrician to install a powerpoint behind a wall-mounted TV?',
+                answer: 'Yes. In South Australia, installing a new powerpoint or extending a circuit is electrical work, and it has to be done by a licensed electrical worker registered under the Plumbers, Gas Fitters and Electricians Act. A handyman can hang the bracket and the screen, but running a new outlet behind it isn\'t a DIY or handyman job, in a home or in a commercial fitout.',
+            },
+            {
+                question: 'Can you mount a TV on a steel stud wall?',
+                answer: 'Yes, but not the same way as timber. Steel studs are thin-walled, so ordinary wood screws or plasterboard anchors aren\'t enough for a heavy screen, especially on a full-motion arm that levers the fixings out of the wall. The usual answers are fixings rated for steel stud, a backing plate that spreads the load across two studs, or noggins or backing installed in the cavity before the wall is sheeted.',
+            },
+            {
+                question: 'What is a recessed TV powerpoint?',
+                answer: 'It\'s an outlet set into a recessed box so the plug sits behind the face of the wall instead of sticking out of it. That lets a slim screen on a flat or tilt bracket sit close to the wall without the plug pushing it off, and many have room for AV or data outlets alongside the power. On a full-motion arm it matters less, because the screen stands off the wall anyway.',
+            },
+            {
+                question: 'Can the HDMI and data cables be hidden in the wall behind a TV?',
+                answer: 'Yes, and in a waiting room it\'s worth doing. The usual approach is a conduit or cable pathway in the wall from behind the screen to a wall plate near the media player or network point, so cables can be pulled through or replaced later. Data cabling that connects to the telecommunications network is regulated by the ACMA and has to be installed by an ACMA registered cabler.',
+            },
+        ],
         cta: {
             heading: 'Fitting Out a Commercial Space?',
             description:
@@ -596,6 +704,24 @@ export const jobReports: JobReport[] = [
             <p>Two things are worth doing before you need them. First, find out whether your board has spare capacity, because that determines whether the next addition is a small job or a large one. Second, if you're ever opening a trench, put in more conduit than you need and leave a draw wire.</p>
             <p>On a commercial site there are also obligations a home doesn't have around testing and maintaining the installation, which is worth being on top of rather than discovering during an insurance claim. We do this work for clubs, small commercial sites and homes across the northern and north-eastern suburbs. There's more on <a href="/powerpoint-installation-adelaide/">power and extra circuits</a> and on <a href="/test-and-tag-adelaide/">test and tag</a> if that's relevant to your site.</p>
         `,
+        faqs: [
+            {
+                question: 'Do I need to use Before You Dig before trenching to a shed?',
+                answer: 'Yes, and it\'s free. Before You Dig Australia recommends lodging an enquiry before any excavation, including on private property, because gas, electricity and telecommunications cables can run under it. The catch is that the plans mainly show network assets, so cables and pipes installed privately, like an existing supply to another building or irrigation lines, usually won\'t appear. Those need locating separately, and on a big site that\'s often where the real risk is.',
+            },
+            {
+                question: 'Who can legally run a data cable to a shed?',
+                answer: 'A registered cabler. In Australia, data and phone cabling has to be done by a cabler registered under the ACMA\'s rules, or by someone they properly supervise, much like power has to be done by a licensed electrician. Plenty of electricians hold both, which suits a shed job, because the power and data share the trench but need to be kept apart in it. After the job, the cabler has to give you a cabling advice form.',
+            },
+            {
+                question: 'What if my shed is too far away for an ethernet cable?',
+                answer: 'Use fibre or a wireless link instead. A copper ethernet run is limited to about 100 metres end to end. Fibre optic cable goes much further and isn\'t affected by electrical interference, so it suits long runs across a big site, with a small converter at each end. Where trenching isn\'t practical at all, a point to point wireless bridge between the two buildings is the other option, as long as there\'s a clear line of sight.',
+            },
+            {
+                question: 'What are the best lights for a working shed?',
+                answer: 'Sealed LED fittings rated for dust and moisture, and tough enough to take a knock. An IP65 rating means dust tight and protected against water jets, which suits a shed that\'s dusty and sometimes hosed out. An IK rating measures impact resistance on a scale up to IK10, which matters where ladders and long tools get swung around. High bay fittings suit tall roofs, battens suit lower ones, and a separate fitting over the bench handles task lighting.',
+            },
+        ],
         cta: {
             heading: 'Shed, Workshop or Commercial Site?',
             description:
@@ -667,6 +793,24 @@ export const jobReports: JobReport[] = [
             <p>Walk around it after dark first and note what you can't see and what you would like to look at. Those are two different lists and they want different fittings.</p>
             <p>Then decide which areas you pass through and which you sit in, because that determines what goes on a sensor and what goes on a switch. Get both right and you end up with a house that looks better at night than it does in the day. There's more on what we do locally on our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'What IP rating do outdoor lights need?',
+                answer: 'There isn\'t one number for everywhere outside. It depends on how much water and dust that exact spot gets. The first digit of an IP rating covers solids and the second covers water: 4 means splashing from any direction, 5 means water jets, 6 means powerful jets and 7 means temporary immersion. A fitting under a deep eave sees far less than one on an exposed wall or in a garden bed hit by sprinklers, so match the rating to the spot, not just to the word outdoor.',
+            },
+            {
+                question: 'Are 12 volt garden lights better than 240 volt ones?',
+                answer: 'They suit different jobs. Low voltage garden lights run at 12 or 24 volts from a transformer, so a nicked cable in a garden bed is a much lower shock risk, and plug-in kits are made for homeowners to set up from an existing outdoor powerpoint. The trade-off is voltage drop, which dims the lights at the far end of a long run. 240 volt fittings suit longer runs and brighter floods, but that\'s fixed wiring, and in South Australia any work on wiring connected to the mains has to be done by a licensed electrician.',
+            },
+            {
+                question: 'What\'s the difference between a sensor light and a dusk to dawn light?',
+                answer: 'A sensor light uses a motion detector, usually a PIR that picks up moving body heat, and switches on for a set time when something warm moves in front of it. A dusk to dawn light uses a photocell and stays on all night once it gets dark. Sensors suit paths and approaches you pass through, and dusk to dawn suits spots you want lit all evening. Most sensors also have a daylight setting so they only trigger after dark, and a timer is another option for feature lighting.',
+            },
+            {
+                question: 'Can my neighbour complain about my outdoor lights in South Australia?',
+                answer: 'Yes. Since April 2024, South Australian councils have been able to deal with light nuisance under the Local Nuisance and Litter Control Act, and the EPA\'s own example is an outside floodlight shining into a neighbour\'s window. The practical fix is aiming lights down at what you actually want lit, using shielded fittings near boundaries, and checking the spill from the neighbour\'s side before the job\'s finished.',
+            },
+        ],
         cta: {
             heading: 'Want the Outside to Look as Good as the Inside?',
             description:
@@ -729,6 +873,24 @@ export const jobReports: JobReport[] = [
             <p>Decide on dimming first, because it affects the lamp, the switch and the wiring, and retro-fitting it's more work than including it. For anything heavy or anything in a void or a stairwell, sort out how it gets installed and how it gets serviced before you buy it.</p>
             <p>Feature fittings are usually the most expensive lights in a house and the ones people are most pleased with afterwards, which is a good reason to spend a bit of time on the boring questions first. There's more on our <a href="/feature-lighting-led-strip-adelaide/">feature lighting</a> page, and on what we do locally on our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'What kind of dimmer do LED lights need?',
+                answer: 'Usually a trailing edge dimmer, which is the type designed for the electronics inside LED lamps and drivers. Older leading edge dimmers were built for incandescent and halogen loads, and their minimum load is often more than a couple of LED lamps draw, which is where flicker, buzzing and faint glowing when off come from. The lamp also has to be marked dimmable, and ideally listed as compatible with that dimmer. Dimmer makers publish compatibility lists, so check both sides before anything\'s bought.',
+            },
+            {
+                question: 'How do I know if a light fitting I bought online is legal to install in Australia?',
+                answer: 'Check for Australian safety approval before install day. Look for the Regulatory Compliance Mark (RCM) on the fitting or its driver, ask the seller for the compliance certificate, and check the certificate matches the model and markings you\'ve actually got. The South Australian Government also points buyers to the national certification database. Products certified only overseas can be unsafe here, for example because they weren\'t tested to our voltage, and your insurance might not cover damage from an appliance that isn\'t approved for use in Australia.',
+            },
+            {
+                question: 'How low can a chandelier hang over a staircase?',
+                answer: 'Keep the bottom of it above head height for anyone using the stairs. The building code requires 2 metres of headroom over a stairway, measured straight up from the line joining the front edges of the treads. It doesn\'t specifically mention light fittings, but it\'s a sensible minimum for where a chandelier can reach, and more is better when someone\'s carrying furniture up. Because the stairs slope, measure the drop from the treads directly under the fitting, not from the landing.',
+            },
+            {
+                question: 'Can bedside wall lights be switched from both the bed and the door?',
+                answer: 'Yes. It\'s called two-way switching, where a switch at the door and one beside the bed both control the same lights. It\'s easiest to include while the wiring\'s being planned, because it needs extra cable run between the two switch positions. If you want dimming as well, it needs a dimmer that supports a second control point, or a smart dimmer with a remote switch, so decide that at the same time as the lamps and the dimmer.',
+            },
+        ],
         cta: {
             heading: 'Bought a Fitting You Want Installed Properly?',
             description:
@@ -794,6 +956,24 @@ export const jobReports: JobReport[] = [
             <p>Two things at the start. Send the appliance list with model numbers to your electrician, and ask whether the board has capacity for the lot rather than just for the cooktop.</p>
             <p>Then spend five minutes on where you'll actually be standing when you use the room, and put light on those surfaces. It's the cheapest thing on the list and the one you'll notice every single day. There's more on what we do locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How many circuits does a new kitchen need?',
+                answer: 'There\'s no single number, because it comes from the appliance list. As a rule of thumb the oven and the cooktop get their own circuits, and the dishwasher, rangehood, microwave and fridge get their own outlets inside the cabinetry. The bench outlets are best split across more than one circuit so the kettle, toaster and coffee machine can run together without tripping. A modern kitchen usually ends up with more circuits than the one it replaced.',
+            },
+            {
+                question: 'Can a dishwasher plug into a double adaptor or extension lead?',
+                answer: 'No. Manufacturers such as Smeg say not to use adaptors or shunt connections on a dishwasher because of the risk of overheating, and that the plug has to stay accessible after installation. A dishwasher heats its own water and can run for well over an hour, so it wants its own outlet, usually in the cabinet beside it, where you can reach it without pulling the machine out.',
+            },
+            {
+                question: 'Should kitchen lights be on separate switches?',
+                answer: 'Yes, it\'s worth doing. Putting the general ceiling lights, the bench or under-cabinet lights and any pendants over an island on separate switches lets you light the kitchen as a workspace when you\'re cooking, or just softly at night. It costs very little at rough-in, because it\'s mostly a bigger switch plate and a few extra cables. Adding it once the ceiling is closed and the splashback is on is a much bigger job.',
+            },
+            {
+                question: 'Can my house\'s power supply handle a fully electric kitchen?',
+                answer: 'Often yes, but it needs checking rather than assuming. An electrician works out the likely maximum demand of the house with the new appliances added, then compares it with what the switchboard, main switch and incoming supply can carry. Induction cooktops and ovens are big loads, and if the house also has ducted air conditioning, electric hot water or an EV charger, the total can get close to the limit. That\'s best found while you\'re still choosing appliances.',
+            },
+        ],
         cta: {
             heading: 'Planning a Kitchen Renovation?',
             description:
@@ -835,6 +1015,24 @@ export const jobReports: JobReport[] = [
             <p>It's also worth doing outdoor heating at the same time as anything else out there. An outdoor area that gains heating usually also wants lighting, fans and weatherproof outlets, and those together are well beyond what one existing outdoor circuit can carry. Doing them in one visit costs far less than adding each one separately, and it means the whole area gets designed as a whole.</p>
             <p>For what it is worth, this is a job that pays for itself in use rather than in resale. Cold evenings around Greenwith and Golden Grove are the difference between an outdoor area you use three seasons a year and one you use all four. There's more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How high should outdoor strip heaters be mounted?',
+                answer: 'Most manufacturers give about 2.3 to 2.5 metres as ideal, with around 2.1 metres minimum and 2.7 metres maximum. Lucci\'s Thermastrip instructions set exactly those figures, plus at least 150 mm clearance to the ceiling and 500 mm to walls. Too high and the heat thins out before it reaches anyone. Too low and it\'s uncomfortable to sit under. Always follow the specific heater\'s manual, as figures vary between models.',
+            },
+            {
+                question: 'Can outdoor strip heaters get wet?',
+                answer: 'Many are built for it, but check the rating. Heaters such as Lucci\'s Thermastrip and Heatstrip\'s Classic are IP55 rated, which covers water from any direction, so rain blowing under a pergola won\'t hurt them. That doesn\'t make every model suitable for a fully exposed position, so check what the manufacturer says the heater is rated for. The switch and any fittings on that circuit need to be rated for outdoors as well.',
+            },
+            {
+                question: 'Do outdoor heater circuits need a safety switch?',
+                answer: 'Yes. Under the current wiring rules, every final subcircuit in a home needs 30 mA RCD protection, and that includes a new circuit run out to an outdoor heater. Outdoors is exactly where you want it, with rain, hosing down and people touching things with wet hands. If the switchboard has no room for RCD protection or no spare ways for the new circuits, that becomes part of the heater job.',
+            },
+            {
+                question: 'How much power does a 3.2 kW outdoor heater use?',
+                answer: 'About 3.2 kilowatt-hours for every hour it runs at full output, so two of them going for a three-hour evening use around 19 kWh. To work out what that costs you, multiply by the per-kWh rate on your power bill. Running only the heater over the table you\'re actually using halves it, which is one of the quiet benefits of having each heater on its own circuit and switch.',
+            },
+        ],
         cta: {
             heading: 'Want to Use Your Outdoor Area in Winter?',
             description:
@@ -893,6 +1091,24 @@ export const jobReports: JobReport[] = [
             <p>Walk the site first and decide what you actually want to see. Approaches, entry points, and anywhere a vehicle, stock or equipment is left. That list drives the camera count, and the camera count drives the cabling, which is where the work actually is.</p>
             <p>Then find out what your walls are. If the building is solid brick, expect the cabling to be a bigger part of the job than the cameras, and get someone who will tell you where the conduit is going to run before they start rather than after. We do this work for homes and small commercial sites across the north-east, and there's more on what we cover locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Can my business security cameras record audio in South Australia?',
+                answer: 'Usually you should switch the audio off. Under the Surveillance Devices Act 2016 (SA), it\'s an offence to use a device to record a private conversation without the consent of all the principal parties, with narrow exceptions such as protecting your lawful interests. Plenty of cameras ship with the microphone switched on, so it\'s worth checking the settings after install rather than assuming the system is video only.',
+            },
+            {
+                question: 'Do I need to tell staff there are cameras at my workplace in SA?',
+                answer: 'It\'s strongly advised. The Law Handbook\'s guidance is that South Australian workplaces should either have a clear surveillance policy available to all employees or get their consent before using surveillance devices, to stay on the right side of the Surveillance Devices Act 2016. Without that, relying on footage in a disciplinary matter can run into evidence problems. Visible cameras help too, because a camera people know about deters as well as records.',
+            },
+            {
+                question: 'How long do security camera recorders keep footage?',
+                answer: 'It depends on the hard drive size, how many cameras there are, the resolution, and whether they record continuously or only on motion. A recorder keeps writing until the drive is full, then records over the oldest footage, so one system might hold weeks and another only days. Check the retention when it\'s set up, and if something happens, export the footage straight away before it\'s overwritten.',
+            },
+            {
+                question: 'Are wired security cameras better than wi-fi cameras for a business?',
+                answer: 'For a business, usually yes. Wired PoE cameras take power and data down one cable, so there\'s no battery to charge and no relying on a wi-fi signal reaching the far corner of a yard or car park. They\'re also less affected by interference or the router dropping out. Wi-fi cameras are quicker to fit and suit a spot where cable genuinely can\'t go, but across a multi-camera commercial site cabled is more reliable.',
+            },
+        ],
         cta: {
             heading: 'Thinking About Cameras?',
             description:
@@ -974,6 +1190,24 @@ export const jobReports: JobReport[] = [
             <p>Two things and you avoid most of the trouble. Send the appliance model numbers to your electrician early, and ask whether the switchboard has the capacity for what you have chosen.</p>
             <p>If you're going gas to induction, assume a new circuit and budget for it rather than hoping. And if lighting is part of the same job, do it in the same run of work while the ceilings and walls are already open. Our <a href="/oven-cooktop-installation-adelaide/">oven and cooktop installation</a> page has more on the connection side, and there's more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Who disconnects the gas when I switch to an induction cooktop?',
+                answer: 'A licensed gas fitter. In South Australia gas fitting work has to be done by someone registered to do it, so an electrician can\'t cap off the gas line unless they also hold gas fitting registration. On a renovation it\'s easiest to have the gas fitter cap the cooktop supply while the old kitchen is coming out, so the electrical rough-in for the new induction circuit can follow straight after.',
+            },
+            {
+                question: 'Does an induction cooktop need an isolation switch?',
+                answer: 'Yes. The wiring rules require a cooking appliance with an open cooking surface to have a switch mounted near it, in a visible and readily accessible position, and it can\'t be on the appliance itself. In practice that\'s a switch on the wall or cabinetry within 2 metres of the cooktop, sensibly somewhere you don\'t have to reach over the hotplates. It\'s what lets the cooktop be isolated safely for a repair or replacement.',
+            },
+            {
+                question: 'Can the oven and cooktop be on the same circuit?',
+                answer: 'Sometimes, and plenty of older kitchens are wired that way, but with induction it usually doesn\'t work. A typical four-zone induction cooktop can draw well over 30 amps at full output on its own, so adding an oven to the same circuit generally means splitting them. The answer comes from the combined rating of both appliances and the manufacturers\' instructions, which is why the model numbers matter before anything is ordered.',
+            },
+            {
+                question: 'Does a built-in oven plug in or need to be hardwired?',
+                answer: 'It depends on the oven. Some built-in ovens come with a standard 10 amp plug, some have a 15 amp plug that needs a matching 15 amp outlet because its wider earth pin won\'t fit a normal powerpoint, and larger or pyrolytic models are often hardwired. The rating plate and installation manual tell you which. In a cabinet tower the outlet or isolator also has to stay reachable, not sealed in behind the oven.',
+            },
+        ],
         cta: {
             heading: 'Planning a New Kitchen?',
             description:
@@ -1066,6 +1300,24 @@ export const jobReports: JobReport[] = [
             <p>Do the three together, and get the electrical decided before the painter books in. The order that saves money is: agree the lighting layout and the switch and outlet positions, do the electrical, then plaster patching, then paint, then floors last so they don't get worked over.</p>
             <p>If you're only doing one of the three, lighting is the one that changes the feel of a house most for the least disruption, because it doesn't require you to move out or empty rooms. If you're doing all three, say so at the quoting stage, because it changes how the job is sequenced and usually reduces what it costs. There's more on renovation sequencing on our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page, and on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Will forty LED downlights overload my lighting circuits?',
+                answer: 'Not on load alone. An LED downlight typically draws around 7 to 12 watts, so forty of them is only a few hundred watts, well within what a normal lighting circuit carries. The real questions are how they\'re split across circuits, so one fault doesn\'t black out half the house, and the dimmers, because every LED dimmer has a maximum rated load and a big open-plan area may need its lights shared across more than one dimmer.',
+            },
+            {
+                question: 'Can I change my own light switches and powerpoints in South Australia?',
+                answer: 'No. In South Australia, the electrical jobs a homeowner can do are limited to things like replacing light globes and fuses, resetting circuit breakers, testing safety switches and changing smoke alarm batteries. Swapping a switch or powerpoint means working on wiring connected to the mains, which by law has to be done by a licensed electrician, and you should get an electronic certificate of compliance for it. Without one, an insurer could refuse a claim if that work causes a fire or damage.',
+            },
+            {
+                question: 'Why is my light switch or powerpoint going brown?',
+                answer: 'Brown or scorched marks around a switch or powerpoint usually mean heat, and heat at a fitting usually means a loose or poor connection behind the plate, or more load than it\'s built for. That\'s different from the even yellowing old plastic gets from age and sunlight. If it\'s scorched, warm to touch, smells hot or crackles, stop using it and get it checked, because heat over time is what breaks down the insulation on the cables behind it.',
+            },
+            {
+                question: 'Is it worth changing single powerpoints to doubles while they\'re being replaced?',
+                answer: 'Usually, yes. When every plate is coming off anyway, turning a single into a double in the same spot is normally straightforward, and most rooms now have far more plugged in than when the house was built. Adding powerpoints in new positions is a bigger step, because it means running cable and checking the circuit can take the extra load. Either way, decide it before the painter starts, so any patching gets painted with everything else.',
+            },
+        ],
         cta: {
             heading: 'Renovating, or Just Want It to Feel New?',
             description:
@@ -1142,6 +1394,24 @@ export const jobReports: JobReport[] = [
             <p>None of this is a reason to panic. Plenty of old boards are working exactly as designed, and an upgrade is planned work rather than an emergency unless you're seeing heat.</p>
             <p>The sensible trigger is when you're about to do something else. A renovation, an EV charger, air conditioning or a pool all need capacity and protection the old board may not have, and doing the board at the same time avoids paying twice for access. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers what the work actually involves, and there's more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'What does "earth leakage main switch" on my switchboard mean?',
+                answer: 'It\'s a main switch with a safety switch (RCD) built in. It isolates the whole house like any main switch, and it also trips if it detects current leaking to earth anywhere downstream. So every circuit in the house shares that one safety switch. It\'s far better than no shock protection, but one faulty appliance or wet outdoor light anywhere takes out the entire house, and you get no clue about which circuit caused it.',
+            },
+            {
+                question: 'What\'s the difference between a fuse and a circuit breaker?',
+                answer: 'Both do the same basic job: they cut the power when a circuit draws too much current, so the cable in the wall doesn\'t overheat. A rewireable fuse does it by melting a piece of fuse wire, which then has to be replaced. A circuit breaker trips and can be reset. Breakers are more consistent, and they can\'t be "repaired" with the wrong wire. Neither one protects a person from electric shock. That\'s what a safety switch is for.',
+            },
+            {
+                question: 'Is it OK to put thicker fuse wire in if a fuse keeps blowing?',
+                answer: 'No. The fuse wire rating is matched to the cable it protects. Thicker wire means the fuse won\'t blow until the current is well past what the cable can handle, so the cable in your wall overheats instead. That\'s how an old fuse board quietly stops protecting anything. A fuse that keeps blowing is telling you the circuit is overloaded or there\'s a fault on it, and a licensed electrician needs to find out which.',
+            },
+            {
+                question: 'How do I work out what each circuit on my switchboard controls?',
+                answer: 'Switch the circuit breakers or safety switches off one at a time and walk the house to see what\'s lost power, using a lamp or phone charger to check powerpoints. Write it down and label each one. Don\'t open the switchboard cover or pull out fuses to do it. Warn the household first, and check the fridge, freezer and anything medical comes back on. If a circuit feeds something you can\'t find, that\'s worth mentioning to your electrician.',
+            },
+        ],
         cta: {
             heading: 'Not Sure About Your Board?',
             description:
@@ -1194,6 +1464,24 @@ export const jobReports: JobReport[] = [
             <p>Sort the charger choice and the location before you book the electrical, because both change the job. We install customer-supplied units like this one and we can supply a range of brands, so if you haven't bought yet that's worth a conversation first rather than after.</p>
             <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There's more on our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Do I need body corporate approval to install an EV charger in my apartment?',
+                answer: 'Yes. In South Australia, installing an EV charger in an apartment or strata complex needs formal approval from the strata or community corporation. The cable run and mounting usually affect common property, so get approval in writing before booking the electrical work, and check your by-laws for conditions. Newer apartment buildings may be easier: the 2022 National Construction Code requires EV-ready infrastructure in new apartment and commercial buildings, though not the chargers themselves.',
+            },
+            {
+                question: 'Can my apartment EV charger run off the building\'s common power?',
+                answer: 'Not unless the corporation has agreed a way to meter it and bill it. Common property power is paid for by all the owners, so a charger on it means your car\'s charging on everyone\'s bill. The usual approach is to supply the charger from your own unit\'s meter, or through a separately metered arrangement the corporation\'s approved. Sort out which one before the job\'s quoted, because it decides where the cable has to run from.',
+            },
+            {
+                question: 'Do EV chargers in South Australia have to be smart chargers?',
+                answer: 'New hard-wired chargers in South Australia have to meet the Technical Regulator\'s EV charger standard, in force since 1 July 2024. The charger model must be on the regulator\'s registered equipment list and capable of demand response, meaning it can be remotely told to pause or reduce charging. That\'s worth checking before you buy one online, because a charger that isn\'t on the list can\'t legally be installed here.',
+            },
+            {
+                question: 'Are there rebates for EV chargers in South Australia?',
+                answer: 'The main one is through the Retailer Energy Productivity Scheme, which offers incentives for connecting a new or existing home charger to an approved demand response aggregator. It\'s for residential and small business customers, and it\'s delivered through energy retailers and activity providers listed by ESCOSA. Offers change often, so check the current providers before buying.',
+            },
+        ],
         cta: {
             heading: 'Thinking About an EV Charger?',
             description:
@@ -1264,6 +1552,24 @@ export const jobReports: JobReport[] = [
             <p>So the media wall is a conversation to have at the same time as the lighting plan, even if the TV itself isn't being bought for another six months. Deciding the wall, the height and roughly the screen size early costs nothing. Deciding it late costs a plasterer.</p>
             <p>If you're planning a renovation, our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page covers how the electrical sequences with the other trades, and there's more on what we do locally on our <a href="/electrician-hope-valley/">Hope Valley electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Can I run my TV\'s power cord inside the wall?',
+                answer: 'No. Don\'t feed a TV power lead or an extension lead down inside the wall cavity. Flexible leads aren\'t made to be hidden where nobody can see damage or heat, and South Australian safety advice is not to use leads and power boards as a substitute for permanent power outlets. The proper way is a powerpoint behind the screen, installed by a licensed electrician, with the HDMI and antenna cables run separately through the wall.',
+            },
+            {
+                question: 'Should the powerpoint for a wall-mounted TV go behind the screen or below it?',
+                answer: 'Behind the screen, in most cases. A powerpoint the screen covers means no cords hanging down the wall, and the only thing you see is the TV. The position has to allow for the bracket, though, so the plug doesn\'t foul the wall plate or stop the screen sitting where it should, which is why the bracket gets chosen first. A powerpoint down near the cabinet leaves a visible lead or a cable cover running up the wall.',
+            },
+            {
+                question: 'Do I need an electrician to wall mount a TV?',
+                answer: 'Not for the mount itself. In South Australia, installing a TV or antenna is on the short list of jobs you can do yourself if you have the skills. What does need a licensed electrician is anything involving fixed wiring, like adding or moving the powerpoint behind the screen. And if you want a data point behind the TV for wired internet, that\'s communications cabling, which has to be done by a registered cabler under the ACMA\'s rules.',
+            },
+            {
+                question: 'What are tri-colour downlights?',
+                answer: 'They\'re LED downlights with a small selector switch, usually on the fitting or its driver, that sets the colour to warm white, cool white or daylight, commonly 3000K, 4000K and 5700K. They make it easy to keep every room matching, because the whole house can use one product set the same way. The catch is that the setting is normally chosen when it\'s installed, so decide the colour before install day rather than discovering a mix afterwards.',
+            },
+        ],
         cta: {
             heading: 'Planning a Renovation?',
             description:
@@ -1323,6 +1629,24 @@ export const jobReports: JobReport[] = [
             <p>Electrical equipment sold for use in Australia has to meet Australian requirements, and an electrician can't install something that doesn't. It isn't a formality. The part that fails first in cheap LED is almost always the driver, and when a driver fails inside a linked array you're troubleshooting the whole run rather than swapping a globe. If you're buying your own, buy something with a driver you can still get in five years.</p>
             <p>If you're unsure about a fitting you have already bought, send us the details before the install day rather than finding out on it. More on this kind of work is on our <a href="/feature-lighting-led-strip-adelaide/">feature lighting and LED strip</a> page, and on what we cover locally on our <a href="/electrician-fairview-park/">Fairview Park electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Can I install hex garage lights myself?',
+                answer: 'Only if the kit simply plugs into an existing powerpoint and is approved for use in Australia. In South Australia, anything that connects to fixed wiring, including hardwiring the array into a lighting circuit or adding a ceiling powerpoint to plug it into, has to be done by a licensed electrician. A lot of hex kits sold online ship from overseas, so check for Australian safety approval and the right plug before you buy, not on install day.',
+            },
+            {
+                question: 'What\'s the best light colour and CRI for car detailing?',
+                answer: 'Look for a high CRI first, then a cool colour temperature. CRI measures how accurately a light shows colours compared with a reference like daylight, on a scale up to 100, and Australia\'s Energy Rating guidance rates 90 plus as excellent where colour matters. Cooler light, around 5000K to 6500K, sits in the daylight range and suits detailed work. Specialist paint inspection lamps are rated well above CRI 90, which is why many detailers pair ceiling lighting with a handheld inspection light.',
+            },
+            {
+                question: 'Can part of a hex light array be switched on separately?',
+                answer: 'Only if it\'s designed that way from the start. A hex array is linked modules fed from one or more drivers, and everything on a driver lights up together. If you want, say, just the section over the workbench on its own, the array has to be split across separate drivers with separate switching, and that\'s decided with the layout. It\'s hard to change later, because the links are hidden inside a finished pattern on the ceiling.',
+            },
+            {
+                question: 'How do I compare how bright different hex light kits are?',
+                answer: 'Compare lumens, not watts or the number of hexagons. Lumens are the actual light output, while watts only tell you how much power the kit uses, and two kits covering the same ceiling can differ a lot. Check the colour temperature and CRI on the same spec sheet, and whether the drivers are listed by model so you can get a replacement later. If a listing doesn\'t give lumens at all, that\'s a reason to keep looking.',
+            },
+        ],
         cta: {
             heading: 'Want Lighting You Can Actually Work Under?',
             description:
@@ -1367,6 +1691,24 @@ export const jobReports: JobReport[] = [
             <p>Work out the fan and the fixing points before you buy, particularly under a raked or gabled roof, because the downrod and the mount depend on the structure and the ceiling height. Check the fan is rated for outdoor use even if it will be under cover.</p>
             <p>Then think about the circuit and the switching. An outdoor entertaining area that gains fans usually also wants lighting, weatherproof powerpoints and sometimes heating, and those together are more than an existing outdoor light circuit was built for. It's much cheaper to allow for that in one visit than to add each piece separately. More on our <a href="/ceiling-fan-installation-adelaide/">ceiling fan installation</a> page, and on what we do locally on our <a href="/electrician-ridgehaven/">Ridgehaven electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How high does a ceiling fan need to be off the floor?',
+                answer: 'At least 2.1 metres from the floor to the blades, which is the minimum fan makers here specify. Under a raked or gabled pergola roof, that\'s why the downrod length matters. Measure from whatever people actually stand on, not just the paving: a step, a deck or gym equipment underneath all cut the real clearance. The blade tips also need space from walls and beams, commonly around 300 millimetres, so check the fan\'s own instructions.',
+            },
+            {
+                question: 'Do outdoor ceiling fans have to be fully undercover?',
+                answer: 'Most do. An outdoor rating usually means the fan copes with damp air, not direct rain. Beacon, for example, specifies its alfresco rated fans for areas that are fully undercover with at least two walls, and even its coastal rated fans need protection from direct rain and strong wind. A pergola with open sides or a slatted roof may need a fan with a higher IP rating, so check the maker\'s installation conditions against the exact spot.',
+            },
+            {
+                question: 'Can I put a ceiling fan near a spa?',
+                answer: 'Possibly, but it has to be measured up first. The wiring rules set zones around pools and spas that limit what electrical equipment can go close to the water, and conductive metal structures within arm\'s reach can need bonding. Whether a fan can go near your spa depends on the spa, the distance from the water and the fan\'s rating, so check before buying the fan or picking the mounting point. It\'s far easier to move a fan on paper than after it\'s wired.',
+            },
+            {
+                question: 'How is a fan wired on a pergola with no ceiling?',
+                answer: 'Carefully, because there\'s nowhere to hide the cable. On an open pergola it\'s usually run along or through the timber, or in conduit fixed to the structure, and it has to be protected from sunlight and knocks because it\'s permanently exposed. Any wall control or switch outside also needs to suit the weather. Planning the cable route before the fan goes up is what stops it looking like an afterthought.',
+            },
+        ],
         cta: {
             heading: 'Want to Actually Use Your Outdoor Area?',
             description:
@@ -1411,6 +1753,24 @@ export const jobReports: JobReport[] = [
             <p>Hot water systems rarely fail conveniently. If yours is getting old, it's worth finding out now what a replacement would need, because the decision usually gets made in a hurry on a cold morning.</p>
             <p>Two minutes of checking, whether there's an outlet near the unit and whether it's weatherproof, is the difference between a one-day changeover and a three-day one. More on this kind of work is on our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'Will gas continuous flow hot water work in a blackout?',
+                answer: 'Most won\'t. A gas continuous flow unit uses power for its controls, flow sensing and electronic ignition, so when the power goes out, so does your hot water, even though the gas is still on. There are a few gas-only instantaneous models that don\'t need electricity, like Rinnai\'s Flowmaster, but they\'re the exception. If blackouts matter to you, check the spec sheet before choosing a model.',
+            },
+            {
+                question: 'Can a gas hot water unit be hard-wired instead of plugged in?',
+                answer: 'Generally they\'re made to plug in. Manufacturers supply the unit with a short lead and plug. Rinnai\'s Infinity installation manual, for example, asks for a 10 amp earthed powerpoint next to the unit, weatherproof if outdoors, and clear of the gas and water connections, the flue and the relief valve, with a 1.5 metre lead. Check the manual for your model, because the outlet position is part of the installation instructions.',
+            },
+            {
+                question: 'Does a gas hot water unit need its own circuit?',
+                answer: 'Not usually its own circuit, but it does need its own powerpoint. The electrical draw of a gas continuous flow unit is small, so it can often go on an existing power circuit that has capacity and is in good condition. What it shouldn\'t be is plugged into a double adaptor, power board or extension lead. Manufacturers such as Rinnai specify a dedicated outlet, and it should be on an RCD-protected circuit like any other outlet.',
+            },
+            {
+                question: 'Should I switch off power to my continuous flow unit when I go away?',
+                answer: 'Generally, no. Outdoor gas continuous flow units usually have built-in frost protection, and it only works while the unit has power. Switch it off on a cold night and water left inside can freeze and damage the heat exchanger. If you really must turn it off during freezing weather, the manufacturer\'s instructions usually say to turn off the water and gas and drain the unit first. Check your model\'s manual.',
+            },
+        ],
         cta: {
             heading: 'Replacing a Hot Water System?',
             description:
@@ -1475,6 +1835,24 @@ export const jobReports: JobReport[] = [
             <p>Note the pattern before you call. Does it trip at a particular time of day, after rain, when a specific light or appliance comes on, or at random? That pattern is genuinely useful diagnostic information and it can save an hour of testing.</p>
             <p>For clubs, schools and businesses there's a second reason not to leave it: lighting that fails without warning is a safety and liability problem before it's an inconvenience. If it needs sorting the same day, that's what our <a href="/emergency-electrician-adelaide/">emergency electrician</a> service is for, and we cover Golden Grove and the surrounding suburbs from Wynn Vale. There's more on what we do locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How do you find a fault in an underground cable without digging it all up?',
+                answer: 'By testing and measuring, not guessing. The circuit is isolated and tested to confirm which conductors are faulty, then split at any accessible points, like pits, junction boxes or light poles, to narrow the fault down to one section. A cable locator traces the route above ground. For some fault types, a time domain reflectometer sends a pulse down the cable and measures how far away the fault is. The aim is to dig once, in the right place.',
+            },
+            {
+                question: 'Can a damaged underground cable be repaired, or does it have to be replaced?',
+                answer: 'It can often be repaired. The damaged section is cut out and a new joint made, sealed so water can\'t get to the copper. For underground work that usually means a resin joint: the joint sits in a shell filled with resin that sets into a solid, watertight block, and these kits are made for direct burial. Replacement makes more sense when the cable is damaged in several places, is old and deteriorating along its length, or when a new run would cost less.',
+            },
+            {
+                question: 'Will Before You Dig show the power cables on my own property?',
+                answer: 'Usually not. Before You Dig Australia is free and shows the network assets of its members, like SA Power Networks, NBN and gas mains. Private cables aren\'t on those plans, including power run out to a shed, garden lights, a pool or a sports ground\'s lighting towers. For those, check the meter box or switchboard for a diagram, look for conduits running into the ground, and get an electrician or private cable locator to trace them before digging.',
+            },
+            {
+                question: 'Can an underground cable be damaged without anything tripping straight away?',
+                answer: 'Yes, and it\'s common. Digging, driven pegs, tree roots or heavy machinery can crack the conduit or nick the cable\'s sheath without touching the copper, so everything keeps working. The damage shows up later, once water gets in and starts corroding the conductors. Then leakage to earth builds until the safety switch starts tripping, usually worse after rain. That\'s why a fault can appear months after the work that caused it.',
+            },
+        ],
         cta: {
             heading: 'Circuit Tripping and Nobody Can Find Why?',
             description:
@@ -1526,6 +1904,24 @@ export const jobReports: JobReport[] = [
             <p>Get your electrician involved at the design stage rather than at the fit-out stage. By the time the stone is on site, every decision that mattered has already been made, and the only question left is whether it was made correctly.</p>
             <p>If you're choosing flush outlets, confirm the exact product early, because the cutout dimension is product specific and the stonemason needs it before fabrication. More on outlets and circuits is on our <a href="/powerpoint-installation-adelaide/">powerpoints page</a>, and on planning electrical for a whole renovation on our <a href="/renovation-electrician-adelaide/">renovation electrician</a> page. We work across Golden Grove and the surrounding suburbs, see our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page for what else we cover locally.</p>
         `,
+        faqs: [
+            {
+                question: 'What is a Zetr powerpoint?',
+                answer: 'Zetr is an Australian-designed range of architectural powerpoints and switches, established in 2017. Its flush range is designed to sit level with the surface instead of on top of it, on substrates from plasterboard through to stone, and it comes in finishes including matt black. Like any fixed powerpoint it has to be installed by a licensed electrician, and the flush versions need the cutout planned before the surface is finished.',
+            },
+            {
+                question: 'Can a flush powerpoint be added to a stone splashback that\'s already installed?',
+                answer: 'Sometimes, but it\'s the risky way round. The cutout has to be made in place, on a slab that\'s already fixed to the wall, and there has to be a way to get a cable in behind the stone. If the cut chips or wanders there\'s no neat fix, and a replacement piece of natural stone won\'t match the veining next to it. Planning the cutout before the slab is fabricated is far safer, which is why outlets get decided at the design stage.',
+            },
+            {
+                question: 'How close can a powerpoint be to a cooktop?',
+                answer: 'Under the current wiring rules, socket outlets and light switches can\'t be installed within 150 mm horizontally of a cooktop, and that exclusion zone runs upward to a height set by the kitchen layout. The idea is that nobody has to reach past hot cookware to plug something in. On a stone splashback the zone needs to be marked out on the plan before the stonemason cuts anything.',
+            },
+            {
+                question: 'Are designer or black powerpoints legal in Australia?',
+                answer: 'Yes, as long as they\'re approved for sale here. A fixed powerpoint is a level 3 product under the national Electrical Equipment Safety System, so it has to be certified, registered by an Australian responsible supplier and carry the RCM mark. The colour or finish makes no difference. Be wary of cheap outlets bought online from overseas without the RCM mark, because a sparky shouldn\'t install them.',
+            },
+        ],
         cta: {
             heading: 'Planning a Premium Kitchen?',
             description:
@@ -1614,6 +2010,24 @@ export const jobReports: JobReport[] = [
             <p>Talk to your electrician while the yard is still open. Once the paving is down and the fence is up, trenching a supply out to the equipment becomes a much bigger and more expensive job than it needed to be. The cheapest time to run underground cable is when there's already a hole in the ground.</p>
             <p>Get the equipment list from your pool builder first, including whether a heater is coming later. It's far easier to install a board with room in it than to go back and add capacity to a full one. We do this work across Golden Grove and the surrounding suburbs, and you can see the rest of what we cover locally on our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How deep does underground power to a pool need to be?',
+                answer: 'For a typical domestic run in heavy-duty orange conduit under lawn or garden, expect about 500 mm of cover, with orange warning tape laid in the trench above it so anyone digging later finds the tape before the cable. The exact depth depends on how the cable\'s protected and what\'s on top, like concrete or a driveway, so your electrician sets it for each section of the route. Trench depth is one of the things that gets checked, so don\'t backfill early.',
+            },
+            {
+                question: 'How close to a pool can powerpoints and pool equipment go?',
+                answer: 'The wiring rules set zones around a pool. Zone 1 runs 2 metres out from the water\'s edge, and general electrical equipment like switchboards and meter boxes can\'t go in it. Zone 2 extends a further 1.5 metres, and what can go there is restricted too, depending on how it\'s protected and its water rating. A proper splash barrier can reduce the zones in some cases. That\'s why the pump, subboard and outlets get positioned before anything\'s mounted.',
+            },
+            {
+                question: 'Does a new pool need to be electrically bonded?',
+                answer: 'Usually, yes. The wiring rules require equipotential bonding of pool reinforcing steel and other conductive parts within arm\'s reach (1.25 metres) of the pool edge, like metal fencing or spigots, so there\'s no dangerous voltage difference if a fault ever happens. Only a licensed electrician can install it, and it has to be done while the steel is still exposed, before the concrete\'s poured or sprayed. That\'s why the electrician should be booked with the pool builder, not after.',
+            },
+            {
+                question: 'What size cable do I need to run power out to my pool?',
+                answer: 'It depends on three things: the total load of everything at the pool end, the length of the run, and how the cable\'s installed. Distance matters most, because a long run to the back of the block causes voltage drop, and the cable often has to be larger than the load alone suggests. Add any equipment you might install later, like a heat pump heater, and size for that now. Upsizing the cable is cheap while the trench is open.',
+            },
+        ],
         cta: {
             heading: 'Putting In a Pool?',
             description:
@@ -1692,6 +2106,24 @@ export const jobReports: JobReport[] = [
             <p>The second is timing. All of the cabling in this job went in during first fix, before the plasterer and well before the tiler. The fittings, the mirror, the fan and the downlights went on at second fix once the room was finished. Bathroom renovations go wrong when the electrical is treated as something to sort out at the end, because by then the walls are closed.</p>
             <p>We work across Redwood Park and the surrounding north-eastern suburbs, and this is a common job here given the age of the housing. If you want to see what else we do locally, have a look at our <a href="/electrician-redwood-park/">Redwood Park electrician</a> page.</p>
         `,
+        faqs: [
+            {
+                question: 'How far does a powerpoint have to be from a bathroom basin or shower?',
+                answer: 'It depends on the fixture. Around a bath or a screened shower, the restricted zone extends 0.6 metres out and up to 2.25 metres high, and it\'s bigger around an open shower with no screen. Basins have a smaller zone of their own. The wiring rules limit what can go inside those zones, and powerpoints generally need to sit outside them, which is why their positions get set out on the plan before any tiling starts.',
+            },
+            {
+                question: 'Does a backlit bathroom mirror need to be hardwired?',
+                answer: 'Many do. Most backlit and demister mirrors are made to connect to a concealed supply behind the glass, and in South Australia that connection is electrical work that has to be done by a licensed electrician. Some come with a plug instead, which means you need a powerpoint the mirror hides that\'s still outside the wet zones. Either way, check the mirror\'s instructions for the supply position before the wall is tiled.',
+            },
+            {
+                question: 'Can a heated towel rail be hardwired instead of plugged in?',
+                answer: 'Yes, and in a renovation it\'s usually the neater option. A plug-in rail needs a powerpoint nearby, while a hardwired rail connects to a concealed supply, often through a wall switch or a timer so it isn\'t left on all day. Thermogroup, one of the main Australian towel rail brands, notes that a hardwired rail needs an electrician to connect it. The supply position has to be decided at rough-in, before tiling.',
+            },
+            {
+                question: 'Do I need a safety switch on the bathroom circuits when I renovate an older house?',
+                answer: 'Yes, on the circuits being altered. Under the current wiring rules, any alteration to an existing final subcircuit needs 30 mA RCD protection, and that includes adding a combined fan, light and heat unit or an exhaust fan to an old lighting circuit. In a house built around 1980 the lighting often has no RCD at all, so this is commonly where a bathroom renovation turns into a switchboard conversation too.',
+            },
+        ],
         cta: {
             heading: 'Planning a Bathroom Renovation?',
             description:

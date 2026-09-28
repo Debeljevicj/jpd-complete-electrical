@@ -2,6 +2,7 @@ import { pricingPosts } from './blog-guides-pricing';
 import { upgradePosts } from './blog-guides-upgrades';
 import { localPosts } from './blog-guides-local';
 import { jobReports } from './job-reports';
+import type { Faq } from './faqs';
 
 export interface BlogPost {
     slug: string;
@@ -38,6 +39,17 @@ export interface BlogPost {
         id?: string;
     }[];
     category: string;
+    /**
+     * Questions answered at the foot of the article, emitted as FAQPage schema.
+     *
+     * Required on purpose: every post carries one, so a new post that forgets it
+     * fails the build rather than going live without. Guides take five, job
+     * reports four (test/blog-faqs.test.mjs holds the floor at three). Each one
+     * adds a question the article body doesn't already answer, avoids repeating
+     * a question from /faq or the matching service page, and states nothing
+     * about prices, timeframes or policy that the post or /faq doesn't already.
+     */
+    faqs: Faq[];
     cta: {
         heading: string;
         description: string;
@@ -76,6 +88,28 @@ const legacyPosts: BlogPost[] = [
             <h3>How We Run It</h3>
             <p>For most properties, RCD testing and a thermal scan are done in the same visit. You get a straightforward pass/fail on your safety switches and a report showing exactly what the thermal camera picked up, with photos. If something's running hot, you'll know precisely which connection or circuit before it becomes an emergency callout.</p>
         `,
+        faqs: [
+            {
+                question: 'How fast should a safety switch trip when it\'s tested?',
+                answer: 'A standard 30 mA household safety switch should trip within 300 milliseconds at its rated leakage current, and a healthy one is usually much quicker. A proper instrument test also checks it at a higher test current, where the allowed time is far shorter. The results are recorded for each device, so you can see whether it passed and by how much. A slow trip fails the test, even if the test button works fine.',
+            },
+            {
+                question: 'Does RCD testing turn the power off?',
+                answer: 'Briefly, yes. Each safety switch has to actually trip during the test, so the circuits it protects go off for a moment and come back on when it\'s reset. That means clocks reset, computers without battery backup shut down and some equipment needs restarting. In a business, plan around servers, medical equipment and anything mid-cycle, and tell the electrician beforehand about anything that mustn\'t lose power without warning.',
+            },
+            {
+                question: 'What happens if a safety switch fails the test?',
+                answer: 'It needs replacing, because a safety switch that doesn\'t trip in time isn\'t protecting anyone. There\'s no adjustment that brings a failed RCD back into spec. Depending on the board, it might be a straight swap for a new RCD or RCBO, or it might raise the bigger question of whether an old board with one or two shared devices is worth upgrading. Either way, the failed result should be shown in the report.',
+            },
+            {
+                question: 'Do businesses in South Australia have to test their safety switches?',
+                answer: 'Yes. Under the Work Health and Safety Regulations, which apply in South Australia, whoever manages or controls a workplace must take reasonable steps to have the RCDs used there tested regularly by a competent person. How often depends on the environment, because a construction site, a factory and an office carry very different risks. SafeWork SA\'s code of practice on managing electrical risks in the workplace sets out the detail.',
+            },
+            {
+                question: 'Can thermal imaging find electrical problems inside the walls?',
+                answer: 'Sometimes, but it\'s mainly a switchboard and connection tool. A thermal camera sees surface temperature, so it picks up hot terminals, breakers and cables it can see directly. It can show a warm spot on a wall or a powerpoint cover if something behind it is heating badly. It can\'t see a fault that isn\'t producing heat at the time of the scan, which is why it\'s paired with testing rather than replacing it.',
+            },
+        ],
         cta: {
             heading: 'Book an RCD Test & Thermal Imaging Scan',
             description: "Protect your property with a combined RCD safety switch test and thermal imaging inspection from JPD Complete Electrical, Adelaide's licensed local electrician.",
@@ -132,6 +166,28 @@ const legacyPosts: BlogPost[] = [
             <h3>The Honest Summary</h3>
             <p>Testing your RCDs quarterly, keeping cords sensible, and not chaining power boards covers a lot of ground for no cost. Beyond that, the two things genuinely worth paying for are a proper instrument test of your safety switches and an assessment of an old switchboard. Both are quick, neither is expensive relative to what they protect against, and together they cover the failure modes that actually hurt people.</p>
         `,
+        faqs: [
+            {
+                question: 'Can I do my own electrical work in South Australia?',
+                answer: 'Not on the fixed wiring. In South Australia anyone who physically does electrical work has to be registered as an electrician, and the business has to hold a contractor licence. Only a licensed worker can certify the work on a Certificate of Compliance, which is a legal document. Changing a globe, resetting a breaker or plugging in an appliance is fine. Replacing a light fitting, powerpoint, switch or ceiling fan isn\'t, even when it looks like a straight swap.',
+            },
+            {
+                question: 'What should I do if someone gets an electric shock at home?',
+                answer: 'Don\'t touch them until the power is off, because they may still be in contact with the current. Switch off at the main switch, or if you can\'t, separate them from the source with something dry like a wooden broom handle. Call 000 if they\'ve lost consciousness, are struggling to breathe or have an irregular heartbeat, and start CPR if they aren\'t breathing normally. Cool any burns under running water for at least 20 minutes. Anyone who\'s had a shock should get their heart checked, even if they feel fine.',
+            },
+            {
+                question: 'Do I have to report an electric shock at home in South Australia?',
+                answer: 'Yes. In South Australia any incident involving electricity that causes an electric shock, an electrical burn or a fire the emergency services attend has to be reported to the Office of the Technical Regulator, and the occupier of the premises is one of the people who can be responsible for reporting it. If someone needed medical help, it must be reported within one working day. Other incidents have 10 working days. That includes a tingle from a tap or appliance, which also means something is faulty.',
+            },
+            {
+                question: 'How do I check if an appliance in my house has been recalled?',
+                answer: 'Search the ACCC\'s Product Safety Australia recalls register at productsafety.gov.au, which can be searched by brand, product type or keyword. You can also sign up for its email alerts. Have the brand and model number from the appliance\'s label handy, since recalls often cover specific models or batch dates. If something you own is listed, stop using it and follow the recall instructions, which usually involve a refund, repair or replacement from the supplier.',
+            },
+            {
+                question: 'Is it safe to charge an e-bike or e-scooter inside overnight?',
+                answer: 'It\'s not recommended. SA\'s Metropolitan Fire Service advises charging e-bikes and e-scooters outside and away from anything combustible where possible, on a hard surface that can\'t burn like concrete or tiles, and only while you\'re home to keep an eye on it. Use the charger supplied with the device or one the manufacturer recommends, unplug it once charging\'s finished, and don\'t charge a battery that\'s swollen, damaged or has been wet. Lithium-ion battery fires can start without warning.',
+            },
+        ],
         cta: {
             heading: 'Get a Full Electrical Safety Check',
             description: 'Have a licensed Adelaide electrician run through the checks covered here properly, including a professional RCD test, so you know exactly where your home stands.',
@@ -186,6 +242,28 @@ const legacyPosts: BlogPost[] = [
             <h3>The Short Version</h3>
             <p>On a full house of halogens the energy saving usually pays for the upgrade within a few years, the fire risk in the roof space goes away, and the maintenance stops. The savings make it sensible. The heat is the reason not to put it off.</p>
         `,
+        faqs: [
+            {
+                question: 'How many lumens do I need to replace a halogen downlight?',
+                answer: 'For a standard 12 volt MR16 halogen of 37 to 50 watts, the government\'s Energy Rating guidance is an LED of at least 621 lumens. For a 50 watt mains voltage GU10 halogen, it\'s at least 345 lumens. Compare lumens, not watts, because an LED makes the same light on a fraction of the power. Many LED downlights sold for homes are rated well above those figures, so ending up too bright is as common as too dim, and a compatible dimmer sorts that out.',
+            },
+            {
+                question: 'What CRI should I look for in LED downlights?',
+                answer: 'Look for a CRI of at least 80 in general living areas, and 90 or above in kitchens, bathrooms and anywhere colour matters, like a vanity mirror or a bench where you prepare food. CRI, the colour rendering index, measures how naturally a light shows colours compared with a reference such as daylight, on a scale up to 100. Energy Rating guidance rates 80 to 90 as good for normal tasks and 90 plus as excellent where colour is important. It\'s usually printed on the box or spec sheet.',
+            },
+            {
+                question: 'Why do my LED lights glow faintly after I switch them off?',
+                answer: 'Usually a tiny amount of current is still reaching the fitting, and an LED turns that into a visible glow where a halogen never would. Common causes are an illuminated or smart switch that trickles power through the light to run its own electronics, cables running alongside each other and inducing a small voltage, or a switch that breaks the neutral instead of the active. The first two are nuisances. The last one is a wiring fault, because the fitting stays live when it\'s off, so get it checked.',
+            },
+            {
+                question: 'Is it worth replacing old fluorescent tube lights with LED?',
+                answer: 'Usually, yes. LED battens use less power, come on instantly and don\'t contain mercury the way fluorescent tubes do. The cleanest job is replacing the whole fitting with an LED batten rather than putting LED tubes into the old one, because the old fitting\'s ballast and starter are often the parts that are failing anyway. If you\'re matching brightness, Energy Rating\'s guidance is an LED of at least 1,600 lumens to replace a 1200 mm T8 tube. Garages, laundries and kitchens are the usual candidates.',
+            },
+            {
+                question: 'How do I get rid of old light globes and fluorescent tubes in Adelaide?',
+                answer: 'Don\'t put them in the yellow recycling bin. Which Bin SA classes light globes as hazardous, and fluorescent tubes and compact fluorescents contain mercury, so they need a specialist recycler. Globes can be dropped off through the Backlight program at participating Mitre 10, True Value Hardware and IKEA stores, and some councils and lighting shops take them too. Check what a drop-off point accepts before taking long tubes. As a last resort, Which Bin SA says globes can go in the general waste bin, bagged so nobody gets cut.',
+            },
+        ],
         cta: {
             heading: 'Upgrade to LED Lighting',
             description: 'Start saving on your energy bill with a professional LED downlight upgrade, installed cleanly and safely by JPD Complete Electrical.',
@@ -286,6 +364,28 @@ const legacyPosts: BlogPost[] = [
             <h3>If Any of This Sounds Like Your Place</h3>
             <p>Scorch marks or a burning smell means turn off the main switch and call now. Everything else on this list is worth an assessment rather than an emergency, and the assessment is the cheap part. The expensive version is waiting until the board makes the decision for you.</p>
         `,
+        faqs: [
+            {
+                question: 'Is it normal for my switchboard to buzz or hum?',
+                answer: 'A faint, steady hum from an off-peak relay, timer or contactor can be normal, but a switchboard shouldn\'t crackle, fizz or buzz loudly. That kind of noise usually means a loose or arcing connection or a breaker that\'s failing, and arcing makes heat. If the noise comes with warmth, a smell or flickering lights, turn off the main switch and get it looked at. If it\'s a quiet hum you\'ve always heard, mention it next time an electrician\'s there.',
+            },
+            {
+                question: 'When did safety switches become compulsory in Australian homes?',
+                answer: 'Safety switches have been required on the power circuits of new Australian homes since around 1991, and later editions of the Wiring Rules extended that to lighting circuits and tightened how circuits are shared between devices. Those rules apply to new work, not retrospectively. So an older house can have a board that was never touched and has little or no shock protection, which is why the age of the board is such a useful first clue.',
+            },
+            {
+                question: 'How many safety switches should a house have?',
+                answer: 'Enough that no single fault can black out the whole house, and ideally one per circuit. Since the 2007 edition of the Wiring Rules, a new domestic board using shared RCDs has needed at least two of them, with no more than three circuits on any one. Many boards now go further and fit an RCBO on every circuit, so each has its own protection. One RCD covering everything, or none on the lights, falls well short of that.',
+            },
+            {
+                question: 'Can I swap my old ceramic fuses for circuit breakers myself?',
+                answer: 'No. In South Australia, work inside a switchboard is electrical work, and only a licensed electrician can do it. Even where a breaker would physically fit, it means working around live parts that the main switch doesn\'t isolate. It also doesn\'t add any shock protection. A fuse board with breakers in it is still a board without safety switches, so it rarely fixes the reason you were thinking about the board in the first place.',
+            },
+            {
+                question: 'Will a new switchboard lower my power bill?',
+                answer: 'No. A switchboard distributes power and protects the circuits, and it doesn\'t change how much electricity your appliances use. What it can do is make it practical to add things that do affect the bill, like solar, a battery or a heat pump hot water system, which each need their own circuit. If someone sells a switchboard upgrade to you as an energy saving measure on its own, be sceptical.',
+            },
+        ],
         cta: {
             heading: 'Book a Switchboard Upgrade',
             description: 'If any of these warning signs sound familiar, get your switchboard assessed by a licensed Adelaide electrician before it turns into an emergency.',

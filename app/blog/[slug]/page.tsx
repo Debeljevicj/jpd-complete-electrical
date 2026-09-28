@@ -8,6 +8,7 @@ import { suburbBySlug } from '@/data/suburbs';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
+import Accordion from '@/components/Accordion';
 
 interface Props {
     params: {
@@ -184,6 +185,20 @@ export default function BlogPostPage({ params }: Props) {
         articleSection: post.category,
     };
 
+    // Google stopped showing FAQ rich results for most sites in 2023, so this
+    // isn't about the dropdowns in search. Bing still reads it, and assistants
+    // that quote the site pick up a question and its answer as a clean pair.
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        '@id': `${SITE}/blog/${post.slug}/#faq`,
+        mainEntity: post.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+    };
+
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
@@ -198,7 +213,7 @@ export default function BlogPostPage({ params }: Props) {
         <article className="bg-white min-h-screen pb-20">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }}
             />
             {/* Hero / Header */}
             <div className="bg-navy text-white py-16 relative">
@@ -330,6 +345,15 @@ export default function BlogPostPage({ params }: Props) {
                         ))}
                     </div>
                 )}
+
+                {/* FAQs sit after the article and its photos, before the links out, so
+                    the questions read as the end of the piece rather than an appendix. */}
+                <section id="faq" className="mt-14 scroll-mt-24" aria-labelledby="faq-heading">
+                    <h2 id="faq-heading" className="text-2xl md:text-3xl font-bold text-navy mb-6">
+                        Frequently Asked Questions
+                    </h2>
+                    <Accordion items={post.faqs} />
+                </section>
 
                 {/* Related pages */}
                 <div className="mt-10 pt-6 border-t border-gray-100 space-y-2">

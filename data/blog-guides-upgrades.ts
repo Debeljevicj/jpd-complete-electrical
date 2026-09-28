@@ -61,6 +61,28 @@ export const upgradePosts: BlogPost[] = [
             </ul>
             <p>With those five things we can tell you most of what you need to know before anyone drives anywhere.</p>
         `,
+        faqs: [
+            {
+                question: 'Can I charge my EV from a normal powerpoint?',
+                answer: 'Yes. Using the charging cable that comes with most EVs, a standard powerpoint delivers at most about 2.4 kW. That\'s slow, and a full charge from low can take up to a day, but the average Australian drives about 33 km a day, which a night on a powerpoint can often cover. Plug straight into the wall, never into an extension lead or power board. It\'s a heavy load for hours on end, so have an electrician check the outlet and circuit are up to it, especially in an older house.',
+            },
+            {
+                question: 'Does a home EV charger have to be a smart charger in South Australia?',
+                answer: 'In practice, yes. Since 1 July 2024, a hard-wired EV charger must be a model registered with the Technical Regulator that can respond to demand response instructions, such as stopping or limiting the charge rate, typically through the OCPP protocol. That doesn\'t force you onto a smart charging plan. The state\'s stated aim is that owners who choose to join one later can do so without replacing the charger. Check the model is on the registered equipment list before you buy it. The portable cable that plugs into a powerpoint isn\'t covered.',
+            },
+            {
+                question: 'How much does it cost to charge an EV at home?',
+                answer: 'It depends on your car\'s efficiency and your tariff, and it\'s easy to work out. As an example, a car using 15 kWh per 100 km, driven the Australian average of about 33 km a day, needs roughly 5 kWh a day. At 40 cents per kWh, a round figure to swap for your own rate, that\'s about $2 a day. Charging in a cheaper time-of-use period or from your own solar brings it down. Your car\'s official energy use figure is on the federal Green Vehicle Guide.',
+            },
+            {
+                question: 'When\'s the cheapest time to charge an EV at home in Adelaide?',
+                answer: 'Usually the middle of the day. SA Power Networks\' residential time-of-use network tariff has a solar sponge period from 10am to 4pm, usually the cheapest time to use power, plus an off-peak period from midnight to 6am, with peak periods either side. Your retailer sets what you actually pay and may use different times, so check your plan. If the car\'s home during the day, the solar sponge window or your own panels are hard to beat, and a charger with scheduling makes it automatic.',
+            },
+            {
+                question: 'Can I charge my EV from my solar panels?',
+                answer: 'Yes, if the car\'s home while the sun\'s up. Charging during the day uses whatever your panels are producing before the house draws from the grid. A solar-aware charger goes further, adjusting its charging rate to match your surplus so you\'re not importing power to cover the gap. That usually needs a meter or sensor at the switchboard so the charger can see what the house is using. If the car\'s away all day, solar charging is limited, and overnight off-peak charging or a home battery becomes the practical option.',
+            },
+        ],
         cta: {
             heading: 'Get an EV Charger Quote',
             description:
@@ -119,6 +141,28 @@ export const upgradePosts: BlogPost[] = [
             <p>If you have more than about fifteen halogen downlights and you're still living in the house in three years, yes, comfortably. The lighting saving alone is meaningful, and the insulation improvement is the part most people underestimate.</p>
             <p>If you have a handful of halogens in a room you rarely use, it's less compelling on economics alone, though it's still worth doing when you're having other work done and someone is already in the roof space.</p>
         `,
+        faqs: [
+            {
+                question: 'Are halogen downlights being phased out in Australia?',
+                answer: 'Some halogens are, but probably not the ones in your downlights. A national efficiency standard that commenced on 4 October 2025 phases out a range of mains voltage halogen lamps, such as 240 volt GU10s, and existing stock can still be sold until October 2030. Low voltage 12 volt halogens, like the MR16 globes most older downlights use, aren\'t being phased out. So nobody has to rip out working halogens, but the running cost and the heat are still good reasons to switch.',
+            },
+            {
+                question: 'Why do my halogen downlight globes keep blowing?',
+                answer: 'If globes are blowing every few months, the globe usually isn\'t the real problem. The common causes are a failing or mismatched transformer, loose or heat-damaged connections at the lampholder, and the fitting running too hot because insulation has been pushed against it. Touching the glass with bare fingers when fitting a new globe can shorten its life too, because skin oils create hot spots. Repeated failures on the same fitting are worth having checked, since heat damage at the lampholder is also a fire risk.',
+            },
+            {
+                question: 'How can I tell if my downlights are halogen or LED?',
+                answer: 'Check the heat and the globe. After a few minutes on, a halogen throws noticeable heat you can feel with your hand held below it, while an LED barely does. Once it\'s off and cooled, look at it: a halogen is usually a glass-fronted reflector globe, often with two small pins at the back, with a transformer sitting in the ceiling above. An integrated LED downlight has a flat, frosted face and no separate globe. Some halogen fittings have had LED globes put in, which look similar from below.',
+            },
+            {
+                question: 'Will new LED downlights fit the holes left by my halogens?',
+                answer: 'Often, but not always. Halogen downlights were mostly installed in holes of around 90 mm, and plenty of LED downlights are made to suit that cut-out, but cut-out sizes vary between brands and models. If the new fitting needs a bigger hole, the plaster is simply cut larger. If it needs a smaller one, the gap has to be patched and painted, which is why it\'s worth measuring before choosing fittings. Moving a light to a better position also leaves a hole to patch, so plan both together.',
+            },
+            {
+                question: 'Do LED downlights get hot?',
+                answer: 'They get warm, not hot like halogens. Most of an LED downlight\'s heat comes off the heatsink at the back and the driver, and a good fitting is designed to shed it. That\'s why fittings rated and marked for insulation contact can be covered, where old halogen cans needed clearance. A downlight that feels genuinely hot, flickers, or dims itself after a while is usually overheating, often because a fitting that isn\'t rated for it has been buried in insulation, and it\'ll fail early.',
+            },
+        ],
         cta: {
             heading: 'Get a Downlight Replacement Quote',
             description:
@@ -182,6 +226,28 @@ export const upgradePosts: BlogPost[] = [
             <p>The same points apply, with one addition. The thing that actually determines whether the electrical trade helps or hurts your program isn't the quote, it's whether they turn up on the day they said.</p>
             <p>A rough-in that slips three days pushes the plasterer, which pushes the painter, which pushes handover. That cost never appears in the electrical quote but it's far larger than the difference between two quotes. It's worth weighting reliability accordingly.</p>
         `,
+        faqs: [
+            {
+                question: 'Do I need an electrician before the demolition starts?',
+                answer: 'Yes. Before walls, ceilings or cabinetry come out, the circuits in that area need to be isolated and made safe, and any cables that must stay live for the rest of the house need to be identified and protected. Cables often run through walls where nobody expects them, particularly in older houses that have been extended over the years. Getting the area made safe first also means cabling that can be reused gets kept, instead of being cut through during demolition.',
+            },
+            {
+                question: 'Should I get neutrals run to my light switches during a renovation?',
+                answer: 'If you\'re even considering smart switches or smart dimmers, yes. Many smart switches need a neutral at the switch to power their own electronics, and older switch wiring commonly runs only the active down to the switch. Without a neutral you\'re limited to no-neutral models, which can make LEDs flicker or glow faintly. With the walls open, running the extra conductor costs very little. Once the plaster\'s on, adding it means pulling new cable into finished walls.',
+            },
+            {
+                question: 'Can my electrician run data cabling while the walls are open?',
+                answer: 'Only if they\'re also a registered cabler. In Australia, cabling that connects to the telecommunications network, like data and phone points, has to be done or supervised by a cabler registered under the ACMA\'s cabling provider rules, which is separate from an electrical licence. Plenty of electricians hold both, so ask. Either way, rough-in is the time to run it: data points behind the TV, in the study and where the modem will live, plus a spare conduit for whatever you haven\'t thought of yet.',
+            },
+            {
+                question: 'Do I need to upgrade the smoke alarms when I extend my house in South Australia?',
+                answer: 'Yes, for an extension. In South Australia new dwellings, additions and extensions must have interconnected smoke alarms, so when one goes off they all go off, and homes built from 1 January 1995 need 240 volt mains-powered alarms under the Building Code. For a renovation inside the existing footprint, what\'s required depends on the scope of the building work, so check with your builder or certifier. Either way, rough-in is the cheapest time to run cable for hardwired, interconnected alarms.',
+            },
+            {
+                question: 'How many powerpoints should I put in a new kitchen?',
+                answer: 'More than you think, and planned around where things will sit rather than a set number. List every benchtop appliance you use and where it\'ll live: kettle, toaster, coffee machine, air fryer, microwave, phone chargers. Then add double powerpoints along each run of bench, plus dedicated points for the fridge, dishwasher, rangehood and anything that lives in a cupboard. Spread the heavy-draw appliances across more than one circuit, so the kettle and the air fryer aren\'t fighting over the same one.',
+            },
+        ],
         cta: {
             heading: 'Planning a Renovation?',
             description:
@@ -296,6 +362,28 @@ export const upgradePosts: BlogPost[] = [
             <p>Deal with it now if you can smell hot plastic, see any browning or scorching, or the board is warm to the touch. That isn't about asbestos at all, it's heat, and heat is the one symptom that doesn't wait. We wrote up <a href="/blog/burnt-main-switch-tea-tree-gully/">what that looks like on a board in Tea Tree Gully</a>.</p>
             <p>And if you just want to know, send a photo of the front of your board. That's usually enough to tell you roughly what era it's from and whether it's worth a proper look, and it costs nothing.</p>
         `,
+        faqs: [
+            {
+                question: 'How can I find out for sure if my switchboard panel is asbestos?',
+                answer: 'Only laboratory testing of a sample confirms it, and the sample has to be analysed by a NATA accredited lab. Don\'t break a piece off yourself: damaging the panel is exactly how fibres get released, and there are live parts behind the cover. In practice, a dark fibrous backing panel in an older house is treated as asbestos unless it\'s been tested, and the work is planned on that assumption. That\'s the safe default, not a scare tactic.',
+            },
+            {
+                question: 'Does an electrician need an asbestos licence to remove a switchboard panel?',
+                answer: 'Usually not. In South Australia a licence is needed to remove more than 10 square metres of non-friable asbestos, and a switchboard backing panel is far smaller than that. It still has to be done under the workplace safety rules for asbestos, which means controlling dust, keeping the panel intact where possible, and wrapping and disposing of it properly. Loose, crumbly debris inside an old meter box is friable asbestos, which is a different category.',
+            },
+            {
+                question: 'How do you get rid of an old asbestos switchboard in Adelaide?',
+                answer: 'It has to be wrapped and taken to a licensed facility, never put in the bin. South Australian guidance is to double wrap asbestos in heavy plastic over 200 microns thick, seal it with tape, and take it to an EPA licensed transfer station or depot. It can\'t go in household bins or council hard rubbish collections. When an electrician replaces the board, disposal of the old panel should be part of the quote, so ask if it isn\'t listed.',
+            },
+            {
+                question: 'Can an asbestos meter panel stop me getting a smart meter?',
+                answer: 'It can. SA Power Networks says installers can identify problems such as asbestos panels, no space in the board or substandard wiring, and you\'ll be told what has to be fixed before the meter goes in. Fixing it is at your cost, although SA Power Networks says you can choose not to. If you\'re planning solar or a battery anyway, dealing with the board at the same time usually makes more sense.',
+            },
+            {
+                question: 'Is it safe to use the switches on a board with an asbestos panel?',
+                answer: 'Yes. Resetting a breaker, turning the main switch off and on or pressing an RCD test button doesn\'t disturb the backing panel, so use the board normally. Fibres are released when the panel is drilled, cut, sanded or broken. What you shouldn\'t do is take the cover off, screw anything to the panel, or water blast around an outdoor meter box. Leave it closed, and tell whoever works on it next what it\'s made of.',
+            },
+        ],
         cta: {
             heading: 'Not Sure What\'s Behind Your Board?',
             description:
@@ -366,6 +454,28 @@ export const upgradePosts: BlogPost[] = [
             <h3>The Short Version</h3>
             <p>If you're planning anything that needs its own circuit, get the board checked first. It's a short look that either clears the way or saves you from finding out at the worst possible moment. Either answer is worth having before you spend the money.</p>
         `,
+        faqs: [
+            {
+                question: 'How many spare spaces should a new switchboard have?',
+                answer: 'Enough for everything you\'re realistically going to add, plus a few more. There\'s no fixed number for a house, so make a list of what\'s likely in the next ten years, such as an EV charger, a battery, air conditioning or a shed, and make sure each has room waiting for it. Some of those take more than one position. A few extra spare ways cost little when the board goes in and can save replacing it again later.',
+            },
+            {
+                question: 'Does a bigger switchboard give my house more power?',
+                answer: 'No. A bigger switchboard gives you more room for circuits, not more supply. How much the house can draw is set by your connection from SA Power Networks, the consumer mains and the main switch rating. You can have a board with plenty of spare ways and still not have the capacity for a big new load, which is why both space and supply get checked before something like an EV charger or ducted air goes in.',
+            },
+            {
+                question: 'Do I need three-phase power to add more circuits?',
+                answer: 'No. How many circuits you can have depends on switchboard space, and single-phase homes run plenty of them. Three-phase is about supply capacity for large loads, like a fast EV charger, big ducted systems or workshop machinery. In South Australia it means an application to SA Power Networks, which they recommend your electrician lodges, plus a three-phase switchboard. It\'s worth deciding before a new board goes in rather than after.',
+            },
+            {
+                question: 'How do I work out how many circuits my house has?',
+                answer: 'Count the circuit breakers, not every switch on the board. On most boards each breaker or RCBO feeds one circuit, while the main switch, any shared safety switches, solar isolators and off-peak timers aren\'t circuits in their own right. You only need to open the switchboard door for this, never the cover. Check the labels while you\'re there too, because \'Power 1, Power 2\' tells you nothing about which rooms are on what.',
+            },
+            {
+                question: 'Why does a new air conditioner need its own circuit?',
+                answer: 'Because the manufacturer usually requires it, and the load is too big to share. Split system installation manuals typically call for a dedicated power supply circuit, and a unit working hard through a hot afternoon on a shared circuit is how you get nuisance trips and overheated connections. Ducted systems need one for the same reason. It\'s why air conditioning is one of the usual jobs that runs into a full switchboard.',
+            },
+        ],
         cta: {
             heading: 'Planning Solar, an EV Charger or Air Conditioning?',
             description:
