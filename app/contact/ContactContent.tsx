@@ -6,6 +6,41 @@ import SuccessModal from '@/components/SuccessModal';
 import { trackEvent } from '@/components/Analytics';
 import { Phone, Mail, MapPin, Clock, Send, Loader2, AlertCircle } from 'lucide-react';
 
+/*
+ * The notification email goes to Justin, but replying to it goes to the
+ * customer (Web3Forms sets Reply-To from the `email` field) with the original
+ * quoted underneath. So the subject and every value in it have to read
+ * properly from both sides, which is why the email gets plain-English values
+ * rather than the option codes.
+ */
+const URGENCY_OPTIONS = [
+    { value: 'low', label: 'Low - General Enquiry (Reply within 24-48hrs)', email: 'Low – general enquiry' },
+    { value: 'medium', label: 'Medium - Standard Service (Reply within 24hrs)', email: 'Medium – standard service' },
+    { value: 'high', label: 'High - Urgent Service Required (Reply ASAP)', email: 'High – urgent service required', subjectPrefix: 'Urgent' },
+    { value: 'emergency', label: 'Emergency - Immediate Assistance Needed', email: 'Emergency – immediate assistance needed', subjectPrefix: 'Emergency' },
+];
+
+const SERVICE_OPTIONS = [
+    { value: 'residential', label: 'Residential Services', email: 'Residential services', subject: 'Residential electrical enquiry' },
+    { value: 'commercial', label: 'Commercial Services', email: 'Commercial services', subject: 'Commercial electrical enquiry' },
+    { value: 'medical', label: 'Medical & Disability Housing', email: 'Medical & disability housing', subject: 'Medical & disability housing enquiry' },
+    { value: 'switchboard', label: 'Switchboard Upgrade', email: 'Switchboard upgrade', subject: 'Switchboard upgrade enquiry' },
+    { value: 'rcd-testing', label: 'RCD Testing', email: 'RCD testing', subject: 'RCD testing enquiry' },
+    { value: 'thermal-imaging', label: 'Thermal Imaging Inspection', email: 'Thermal imaging inspection', subject: 'Thermal imaging enquiry' },
+    { value: 'maintenance', label: 'Maintenance & Repairs', email: 'Maintenance & repairs', subject: 'Maintenance & repairs enquiry' },
+    { value: 'emergency', label: 'Emergency Services', email: 'Emergency services', subject: 'Emergency service enquiry' },
+    { value: 'other', label: 'Other', email: 'Other', subject: 'Electrical enquiry' },
+];
+
+// Name first so enquiries can be told apart in the inbox list, where the end
+// of a long subject gets cut off.
+function buildSubject(name: string, urgency: string, service: string) {
+    const cleanName = name.replace(/\s+/g, ' ').trim().slice(0, 60);
+    const prefix = URGENCY_OPTIONS.find(o => o.value === urgency)?.subjectPrefix;
+    const topic = SERVICE_OPTIONS.find(o => o.value === service)?.subject ?? 'Electrical enquiry';
+    return [prefix, cleanName, topic].filter(Boolean).join(' – ') + ' | JPD Complete Electrical';
+}
+
 export default function ContactContent() {
     const [formData, setFormData] = useState({
         name: '',
@@ -25,10 +60,23 @@ export default function ContactContent() {
         setStatus("sending");
 
         const form = e.target as HTMLFormElement;
-        const data = new FormData(form);
+        const submitted = new FormData(form);
 
-        // Web3Forms Access Key
+        // Built field by field rather than sending the form as-is: Web3Forms
+        // prints each key as the label in the email, in this order.
+        const data = new FormData();
         data.append("access_key", "74377dbd-3c64-4ac9-9b0a-ca7dde014b2a");
+        data.append("subject", buildSubject(formData.name, formData.urgency, formData.service));
+        data.append("from_name", "JPD Website");
+        data.append("name", formData.name.trim());
+        data.append("phone", formData.phone.trim());
+        data.append("email", formData.email.trim());
+        data.append("urgency", URGENCY_OPTIONS.find(o => o.value === formData.urgency)?.email ?? formData.urgency);
+        const service = SERVICE_OPTIONS.find(o => o.value === formData.service)?.email;
+        if (service) data.append("service", service);
+        if (formData.message.trim()) data.append("Job description", formData.message.trim());
+        const botcheck = submitted.get("botcheck");
+        if (botcheck !== null) data.append("botcheck", botcheck);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -168,10 +216,9 @@ export default function ContactContent() {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
                                     >
                                         <option value="">Select urgency...</option>
-                                        <option value="low">Low - General Enquiry (Reply within 24-48hrs)</option>
-                                        <option value="medium">Medium - Standard Service (Reply within 24hrs)</option>
-                                        <option value="high">High - Urgent Service Required (Reply ASAP)</option>
-                                        <option value="emergency">Emergency - Immediate Assistance Needed</option>
+                                        {URGENCY_OPTIONS.map(o => (
+                                            <option key={o.value} value={o.value}>{o.label}</option>
+                                        ))}
                                     </select>
                                 </div>
 
@@ -187,15 +234,9 @@ export default function ContactContent() {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
                                     >
                                         <option value="">Select a service...</option>
-                                        <option value="residential">Residential Services</option>
-                                        <option value="commercial">Commercial Services</option>
-                                        <option value="medical">Medical & Disability Housing</option>
-                                        <option value="switchboard">Switchboard Upgrade</option>
-                                        <option value="rcd-testing">RCD Testing</option>
-                                        <option value="thermal-imaging">Thermal Imaging Inspection</option>
-                                        <option value="maintenance">Maintenance & Repairs</option>
-                                        <option value="emergency">Emergency Services</option>
-                                        <option value="other">Other</option>
+                                        {SERVICE_OPTIONS.map(o => (
+                                            <option key={o.value} value={o.value}>{o.label}</option>
+                                        ))}
                                     </select>
                                 </div>
 
