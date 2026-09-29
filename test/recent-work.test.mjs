@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => readFileSync(join(ROOT, p), 'utf8');
+// Normalised, because core.autocrlf checks these out as CRLF on Windows and the
+// parsing below splits on LF. Without it a fresh worktree fails with 0 categories.
+const read = (p) => readFileSync(join(ROOT, p), 'utf8').replace(/\r\n/g, '\n');
 
 const recentWork = read('lib/recent-work.ts');
 const jobReports = read('data/job-reports.ts');
@@ -73,6 +75,23 @@ test('every service with jobs written up is reachable from some category', () =>
     const covered = new Set(categories.flatMap((c) => c.services));
     for (const s of withJobs) {
         assert.ok(covered.has(s), `service "${s}" has jobs but no category collects it`);
+    }
+});
+
+test('every job report lands in the category for its main service', () => {
+    // A job's first service is the work it's about. If no category claims that
+    // one, the job only shows up by accident through a secondary service, under a
+    // heading about something else, or not at all.
+    const byService = new Map(categories.flatMap((c) => c.services.map((s) => [s, c.slug])));
+    const jobs = jobReports.split(/\n    \{\n        slug: /).slice(1).map((block) => ({
+        slug: block.match(/^'([^']+)'/)?.[1],
+        main: block.match(/\n        services: \[\s*'([^']+)'/)?.[1],
+    }));
+    assert.ok(jobs.length > 20, 'expected to parse the job reports');
+
+    for (const { slug, main } of jobs) {
+        assert.ok(main, `job "${slug}" has no services, so no page or category will show it`);
+        assert.ok(byService.has(main), `job "${slug}" is mainly "${main}", which no category collects`);
     }
 });
 

@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
 import { Phone, Check, ArrowRight, Receipt } from 'lucide-react';
 import TrustBadges from './TrustBadges';
@@ -5,9 +6,10 @@ import Accordion from './Accordion';
 import ServiceIcon from './ServiceIcon';
 import RecentJobs from './RecentJobs';
 import FeaturedJob from './FeaturedJob';
+import JobPhotoStrip from './JobPhotoStrip';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
-import { jobsForService } from '@/data/job-reports';
+import { workForService, stripCount } from '@/lib/service-work';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -16,11 +18,13 @@ const PHONE_HREF = 'tel:0435006420';
 export default function ServiceLandingPage({ service }: { service: Service }) {
     const { slug, name, icon, h1, intro, sections, priceFactors, faqs, related, description } = service;
 
-    // A job can lead this page instead of sitting in the card grid. Pulled out of
-    // the list as well, so the same job is not shown twice.
-    const jobs = jobsForService(slug);
-    const featured = jobs.find((job) => job.featuredFor?.includes(slug));
-    const gridJobs = featured ? jobs.filter((job) => job.slug !== featured.slug) : jobs;
+    const { featured, gridJobs, gridLimit, photos } = workForService(slug);
+
+    // The photo strip sits after the first body section, so the sections below it
+    // shift one step in the white/off-white alternation to keep it unbroken.
+    const hasStrip = stripCount(photos) > 0;
+    const sectionBg = (index: number) =>
+        (index + (hasStrip && index > 0 ? 1 : 0)) % 2 === 0 ? 'bg-white' : 'bg-neutral-offwhite';
 
     const serviceSchema = {
         '@context': 'https://schema.org',
@@ -104,36 +108,41 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
 
             {/* Body sections */}
             {sections.map((section, index) => (
-                <section
-                    key={section.heading}
-                    className={`section-padding ${index % 2 === 0 ? 'bg-white' : 'bg-neutral-offwhite'}`}
-                >
-                    <div className="container-custom">
-                        <div className="max-w-3xl">
-                            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 gold-underline">
-                                {section.heading}
-                            </h2>
-                            {section.body.map((paragraph) => (
-                                <p
-                                    key={paragraph.slice(0, 40)}
-                                    className="text-neutral-slate text-lg leading-relaxed mb-4"
-                                >
-                                    {paragraph}
-                                </p>
-                            ))}
-                            {section.bullets && (
-                                <ul className="mt-6 space-y-3">
-                                    {section.bullets.map((bullet) => (
-                                        <li key={bullet} className="flex items-start gap-3">
-                                            <Check className="w-5 h-5 text-gold shrink-0 mt-1" />
-                                            <span className="text-neutral-slate text-lg leading-relaxed">{bullet}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                <Fragment key={section.heading}>
+                    <section className={`section-padding ${sectionBg(index)}`}>
+                        <div className="container-custom">
+                            <div className="max-w-3xl">
+                                <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 gold-underline">
+                                    {section.heading}
+                                </h2>
+                                {section.body.map((paragraph) => (
+                                    <p
+                                        key={paragraph.slice(0, 40)}
+                                        className="text-neutral-slate text-lg leading-relaxed mb-4"
+                                    >
+                                        {paragraph}
+                                    </p>
+                                ))}
+                                {section.bullets && (
+                                    <ul className="mt-6 space-y-3">
+                                        {section.bullets.map((bullet) => (
+                                            <li key={bullet} className="flex items-start gap-3">
+                                                <Check className="w-5 h-5 text-gold shrink-0 mt-1" />
+                                                <span className="text-neutral-slate text-lg leading-relaxed">{bullet}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+
+                    {/* Real job photos break up the text early, rather than waiting
+                        for the job cards at the foot of the page. */}
+                    {index === 0 && (
+                        <JobPhotoStrip photos={photos} heading={`Photos From Our ${name} Jobs`} />
+                    )}
+                </Fragment>
             ))}
 
             {/* What drives the price */}
@@ -252,6 +261,7 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                 before the CTA so the proof is the last thing read before the ask. */}
             <RecentJobs
                 jobs={gridJobs}
+                limit={gridLimit}
                 angleFor={slug}
                 heading="Recent Work"
                 intro={`Real ${name} jobs from around Adelaide, with photos and what was actually involved.`}

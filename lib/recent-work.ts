@@ -126,20 +126,29 @@ export const workCategoryBySlug = Object.fromEntries(
 ) as Record<string, WorkCategory>;
 
 /**
- * Every job written up under any of a category's services, newest first.
+ * Every job written up under any of a category's services: the ones mainly about
+ * this category first, then the ones that only touch it, newest first within each.
  *
  * A job that spans three services appears in each category those services
  * belong to, which is correct: someone browsing renovations and someone
  * browsing powerpoints both want to see the renovation that involved twelve
  * new powerpoints. Deduped by slug so a job covering two services in the same
  * category is not listed twice.
+ *
+ * Newest-first alone let the Modbury Heights switchboard job, which made room
+ * for an EV charger, lead the EV category ahead of the charger job itself. The
+ * newest job leads the page, so it has to be one about the category's work.
  */
 export function jobsForCategory(category: WorkCategory): JobReport[] {
     const wanted = new Set(category.services);
+    const isMain = (job: JobReport) => (wanted.has(job.services[0]) ? 0 : 1);
     return jobReports
         .filter((job) => job.services.some((s) => wanted.has(s)))
         .slice()
-        .sort((a, b) => (b.updated ?? b.date).localeCompare(a.updated ?? a.date));
+        .sort(
+            (a, b) =>
+                isMain(a) - isMain(b) || (b.updated ?? b.date).localeCompare(a.updated ?? a.date)
+        );
 }
 
 /**

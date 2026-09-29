@@ -194,16 +194,6 @@ export const coreServices: Service[] = [
             'We install home wall chargers on a dedicated circuit with the protection the standard requires, and help you choose between a smart charger and a basic one. The charger is the easy part. The job is making sure your switchboard can actually carry it alongside everything else in the house.',
         sections: [
             {
-                heading: 'Why the Switchboard Comes First',
-                body: [
-                    'A typical single-phase home charger draws 32 amps continuously for hours at a time. That\'s a bigger sustained load than almost anything else in a house, and it\'s nothing like the short bursts a kettle or a microwave puts on the system.',
-                    'So before we talk about where the charger goes, we look at the board. What\'s the main switch rated at, what\'s the consumer mains cable, how much is already connected, and is there physical space for another circuit. In Greenwith and Golden Grove, where a lot of homes already have ducted air conditioning, an induction cooktop and a pool pump, that check genuinely matters.',
-                    'On older boards in Hope Valley, Modbury or Holden Hill, the honest answer is often that the board needs replacing before a charger goes on it. We would rather tell you that upfront than install a charger onto something that shouldn\'t be carrying it.',
-                    'Age isn\'t the only thing that rules a board out. If every position is already in use, or the protection isn\'t suitable for a new circuit, the board has to be upgraded before the charger goes in. The Modbury Heights jobs further down this page are exactly that: a full board upgraded on the same day the charger went in.',
-                    'Where the existing supply is tight, load management is often the answer rather than a supply upgrade. Most modern chargers can throttle their draw based on what the rest of the house is using, which lets you charge at full speed most of the time and back off automatically when the aircon and the oven are both running.',
-                ],
-            },
-            {
                 heading: 'Smart Charger or Basic Charger?',
                 body: [
                     'In South Australia, a new hard-wired charger has to be a model on the Technical Regulator\'s registered list that can respond to demand-response instructions, like pausing or slowing the charge. That\'s been the rule since 1 July 2024, and it doesn\'t put you on a demand-response plan. It just means the charger can join one later. So the choice isn\'t really between a connected charger and a dumb one. It\'s about which extra features you\'ll actually use.',
@@ -254,6 +244,16 @@ export const coreServices: Service[] = [
                     'The two things that decide placement are where the car actually parks and where the charge port is on the vehicle. A charger mounted on the wrong side of a double garage means running the cable around the car every single time, which gets old fast.',
                     'Cable run length from the switchboard is the other factor, and it\'s the main thing that moves the price. A charger on the garage wall directly behind the board is a short run. A charger at a detached garage down a Fairview Park or Vista block is a long run in bigger cable, and sometimes trenching.',
                     'Outdoors, the charger needs to be rated for it and positioned where it isn\'t going to be in the weather more than it has to be. We\'ll walk the site with you before quoting rather than guessing from a photo.',
+                ],
+            },
+            {
+                heading: 'Why the Switchboard Comes First',
+                body: [
+                    'A typical single-phase home charger draws 32 amps continuously for hours at a time. That\'s a bigger sustained load than almost anything else in a house, and it\'s nothing like the short bursts a kettle or a microwave puts on the system.',
+                    'So before we talk about where the charger goes, we look at the board. What\'s the main switch rated at, what\'s the consumer mains cable, how much is already connected, and is there physical space for another circuit. In Greenwith and Golden Grove, where a lot of homes already have ducted air conditioning, an induction cooktop and a pool pump, that check genuinely matters.',
+                    'On older boards in Hope Valley, Modbury or Holden Hill, the honest answer is often that the board needs replacing before a charger goes on it. We would rather tell you that upfront than install a charger onto something that shouldn\'t be carrying it.',
+                    'Age isn\'t the only thing that rules a board out. If every position is already in use, or the protection isn\'t suitable for a new circuit, the board has to be upgraded before the charger goes in. The Modbury Heights jobs further down this page are exactly that: a full board upgraded on the same day the charger went in.',
+                    'Where the existing supply is tight, load management is often the answer rather than a supply upgrade. Most modern chargers can throttle their draw based on what the rest of the house is using, which lets you charge at full speed most of the time and back off automatically when the aircon and the oven are both running.',
                 ],
             },
         ],
