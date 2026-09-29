@@ -104,18 +104,19 @@ export const workCategories: WorkCategory[] = [
         name: 'Much More',
         icon: 'downlight',
         blurb:
-            'Downlights, powerpoints, ceiling and exhaust fans, feature lighting, ovens and cooktops. The everyday jobs, done properly.',
+            'Downlights, powerpoints, ceiling and exhaust fans, feature lighting, ovens, cooktops and TV mounting. The everyday jobs, done properly.',
         intro:
-            'The bread-and-butter work: downlights, powerpoints, fans, feature lighting and appliance connections. Small jobs, but the ones people notice every day.',
+            'The bread-and-butter work: downlights, powerpoints, fans, feature lighting, appliance connections and TV mounting. Small jobs, but the ones people notice every day.',
         title: 'Downlights, Powerpoints & Fan Installation Jobs in Adelaide | JPD',
         description:
-            'Everyday electrical jobs across Adelaide: downlights, powerpoints, ceiling and exhaust fans, feature lighting, ovens and cooktops.',
+            'Everyday electrical jobs across Adelaide: downlights, powerpoints, ceiling and exhaust fans, feature lighting, ovens, cooktops and TV wall mounting.',
         services: [
             'downlight-installation-adelaide',
             'powerpoint-installation-adelaide',
             'ceiling-fan-installation-adelaide',
             'feature-lighting-led-strip-adelaide',
             'oven-cooktop-installation-adelaide',
+            'tv-wall-mounting-adelaide',
         ],
     },
 ];

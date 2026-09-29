@@ -343,4 +343,92 @@ export const lightingServices: Service[] = [
         ],
         related: ['switchboard-upgrade-adelaide', 'ev-charger-installation-adelaide', 'renovation-electrician-adelaide'],
     },
+    {
+        slug: 'tv-wall-mounting-adelaide',
+        name: 'TV Wall Mounting',
+        icon: 'tv',
+        blurb: 'TVs mounted on plasterboard, masonry or tile, with a powerpoint behind the screen so no cables show.',
+        title: 'TV Wall Mounting Adelaide | Professional Install | JPD',
+        description:
+            'TV wall mounting in Adelaide for homes and businesses. Plasterboard, masonry and tiled walls, above fireplaces, with the power behind the screen. Free quotes.',
+        h1: 'TV Wall Mounting, Adelaide',
+        intro:
+            'We mount TVs on plasterboard, masonry and tiled walls, in homes and businesses, including above fireplaces. And because we\'re electricians, the powerpoint goes behind the screen, so the only thing on the wall is the TV.',
+        sections: [
+            {
+                heading: 'Standard and Articulating TV Wall Mounts',
+                body: [
+                    'The bracket decides how the TV sits and whether it moves. It also decides what the wall has to carry, which is the part most people don\'t think about.',
+                    'Any bracket has to be rated for the size and weight of the screen and match the mounting holes on its back. A full-motion bracket asks more of the wall than a flat one: with the TV pulled out on its arm, the weight sits on the end of a lever, and the top fixings are pulled outward instead of loaded straight down. So the fixing has to suit the bracket, and we choose them together. These are the three kinds:',
+                ],
+                bullets: [
+                    'Fixed: sits flat against the wall. The neatest look, and no adjustment once it\'s up',
+                    'Tilting: angles the screen down, which helps when it has to sit above eye level, like over a fireplace',
+                    'Full motion: swings out from the wall and swivels, for corners, open-plan rooms and waiting areas where people sit in different places',
+                ],
+            },
+            {
+                heading: 'TV Mounting on Tiled Walls and Above Fireplaces',
+                body: [
+                    'Tiled feature walls are where TV mounting gets harder. Tile is a finished surface, and drilled the wrong way it chips or cracks, with no patching it afterwards and often no matching spare. It gets drilled with the right bit, no hammer action, and time.',
+                    'The weight doesn\'t go on the tile. The bracket is fixed into the structure behind it, whether that\'s a timber frame, masonry or a framed box around a fireplace, so the first job is finding out what\'s there and where the solid fixing points are. Whether a wall suits a TV depends on what\'s behind it, and if it won\'t carry one safely we\'ll tell you before drilling, not after.',
+                    'Above a fireplace, two manuals matter. The fireplace sets clearance and heat requirements for what can go above it, and the TV has its own temperature limits. Both get checked before the position is marked. Height is the other thing: above a fireplace the screen sits higher than is comfortable for long viewing, so it\'s worth sitting where you\'ll watch from first, and a tilting bracket often helps.',
+                ],
+            },
+            {
+                heading: 'Power Points, Antenna Points and Cable Management',
+                body: [
+                    'What makes a wall-mounted TV look finished is what you can\'t see. The neat way to do it is a powerpoint behind the screen, so the plug and any power adaptor sit hidden behind the TV instead of trailing down the wall. That\'s fixed wiring, so it needs a licensed electrician, and it\'s the reason to have an electrician mount the TV in the first place.',
+                    'Pushing the TV\'s own lead through the wall to a powerpoint down low isn\'t the answer. It\'s a flexible cord, not fixed wiring, and it isn\'t meant to be hidden inside a wall.',
+                    'An antenna point can be moved or added behind the screen too, and HDMI cables run inside the wall so a console or media box elsewhere in the room connects without a lead crossing the wall. Those go in a conduit where possible, kept apart from the power, so a cable can be swapped later without opening the wall.',
+                    'All of this is easiest while the walls are open. If you\'re renovating or building, get the power and cable positions decided before the plasterer or tiler starts, with the TV size and bracket already chosen, because they decide where everything lands.',
+                ],
+            },
+            {
+                heading: 'Homes and Businesses',
+                body: [
+                    'Most of our TV mounting is in homes: lounge rooms, bedrooms and above fireplaces. We also mount screens in waiting rooms, offices and meeting rooms, where the wall is often steel-stud partitioning rather than timber, and a full-motion bracket lets the screen face wherever the seating ends up.',
+                ],
+            },
+        ],
+        priceFactors: [
+            'What the wall is made of: plasterboard over timber, masonry, or a tiled feature wall',
+            'The bracket: fixed, tilting or full motion, and the size and weight of the screen',
+            'Whether a powerpoint goes in behind the screen, and how far the power has to come from',
+            'Moving or adding an antenna point, and running HDMI inside the wall',
+            'Mounting above a fireplace, where the clearances and what\'s behind the tile need checking first',
+            'Height and access, such as a high wall or a commercial site',
+        ],
+        faqs: [
+            {
+                question: 'Can you mount a TV on a tiled wall?',
+                answer: 'Usually, yes. The bracket is fixed into the structure behind the tile, not the tile itself, and the tile is drilled with the right bit and no hammer action so it doesn\'t chip or crack. If what\'s behind the tile won\'t carry the TV safely, we\'ll tell you before we drill.',
+            },
+            {
+                question: 'Can you mount a TV above a gas fireplace?',
+                answer: 'Often, but it depends on the fireplace and the TV. The fireplace manual sets the clearances and heat requirements above it, and the TV has its own temperature limits, so both get checked before anything is marked out. The other thing to think about is height, because above a fireplace the screen sits higher than is ideal for watching.',
+            },
+            {
+                question: 'Can a TV be mounted on plasterboard?',
+                answer: 'Yes, but not on the plasterboard alone. The bracket needs to be fixed into the timber or steel studs behind it, or into backing added in the wall, because plasterboard by itself isn\'t something to rely on for a TV\'s weight, especially on a bracket that swings out. Where the studs don\'t line up with where the screen needs to sit, that gets worked out before any drilling, rather than by adding more holes.',
+            },
+            {
+                question: 'Can you mount a TV on a brick wall?',
+                answer: 'Yes. Brick and block walls hold a TV well, with masonry anchors rated for the load, drilled into solid brick rather than the mortar joints. Older or softer brick needs more care with the anchors, and render can hide a crumbly patch, so the fixing gets checked as it goes in. The harder part on solid masonry is the cables, because they can\'t be dropped down inside the wall the way they can in a stud wall.',
+            },
+            {
+                question: 'What height should a TV be mounted at?',
+                answer: 'A good starting point is the middle of the screen at about eye level from where you usually sit. Above a fireplace that\'s rarely possible, which is where a tilting bracket helps. It\'s worth sitting in the spot before the wall is marked, rather than judging it standing up.',
+            },
+            {
+                question: 'Do you mount TVs in offices and waiting rooms?',
+                answer: 'Yes. Commercial walls are often steel-stud partitioning, which needs the right fixings, and a full-motion bracket suits a waiting room because it can be angled towards wherever the seating ends up. A powerpoint behind the screen matters even more there, since a visible lead in a public space gets pulled on.',
+            },
+            {
+                question: 'Can you install a bracket I\'ve already bought?',
+                answer: 'Yes, as long as it\'s rated for your screen\'s size and weight and suits the wall it\'s going on. Tell us the bracket and the TV model when you ask for a quote, and we\'ll confirm it before we come out.',
+            },
+        ],
+        related: ['powerpoint-installation-adelaide', 'feature-lighting-led-strip-adelaide', 'renovation-electrician-adelaide'],
+    },
 ];

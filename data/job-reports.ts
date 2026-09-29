@@ -44,6 +44,355 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'full-switchboard-upgrade-modbury-heights',
+        title: 'Upgrading a Full Switchboard in Modbury Heights',
+        seoTitle: 'Full Switchboard Upgrade Modbury Heights | JPD',
+        metaDescription:
+            'A full Modbury Heights switchboard with one safety switch shared across several circuits, upgraded so each circuit has its own RCBO. The same board before and after.',
+        excerpt:
+            'No room left for another circuit, and one safety switch shared across several. Here\'s the same board before and after, and why each circuit now has its own RCBO.',
+        date: '2026-09-28',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/switchboard_after_modbury_heights.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_before_modbury_heights.webp',
+                role: 'before',
+                alt: 'The original Modbury Heights switchboard with every position in use and one safety switch shared across several circuits',
+                caption:
+                    'Before. Every position in use, one safety switch shared across several circuits, and the later additions labelled by hand.',
+            },
+            {
+                src: '/images/switchboard_after_rcbos_modbury_heights.webp',
+                role: 'after',
+                alt: 'New switchboard with individual RCBOs, including circuits labelled Shed and EV Charger, next to the solar supply main switch',
+                caption:
+                    'After. Each circuit on its own RCBO, including a new one for the EV charger, with the solar supply marked as the second main switch.',
+            },
+            {
+                src: '/images/switchboard_after_modbury_heights.webp',
+                id: 'new-board',
+                alt: 'The finished Modbury Heights switchboard with a full row of RCBOs and printed circuit labels',
+                caption:
+                    'The whole board. Printed labels on every circuit, and the dual supply warning kept because the house still has solar.',
+            },
+        ],
+        services: [
+            'switchboard-upgrade-adelaide',
+            'ev-charger-installation-adelaide',
+            'rcd-testing-safety-switches-adelaide',
+        ],
+        angles: {
+            'ev-charger-installation-adelaide': {
+                title: 'A Full Switchboard Upgraded for an EV Charger',
+                blurb: 'There was nowhere on the old board for the charger\'s circuit, so the board came first. Here\'s what changed.',
+                anchor: 'ev-circuit',
+            },
+            'rcd-testing-safety-switches-adelaide': {
+                title: 'One Shared Safety Switch Swapped for RCBOs',
+                blurb: 'Several circuits used to share one safety switch. Now each has its own RCBO, so a fault only takes out the circuit it\'s on.',
+                anchor: 'rcbos',
+                image: '/images/switchboard_before_modbury_heights.webp',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A full switchboard is the most common reason a small job turns into a bigger one. You want an EV charger, an induction cooktop or another air conditioner, and there's simply nowhere on the switchboard, or the fuse box as plenty of people still call it, for the new circuit to go. If nobody checks the board before you buy the appliance, you find out on installation day, and the price you budgeted for isn't the price any more.</p>
+            <p>That's where this Modbury Heights job started. The customer wanted an EV charger, and the board had no room left for it. The two photos at the top of this page are the same board, before and after.</p>
+
+            <h3 id="before">What Was There</h3>
+            <p>Every position on the old board was in use. Several circuits sat behind one shared safety switch, each with an ordinary circuit breaker, and the circuits added over the years had been marked up by hand: air conditioning circuits pointed out with arrows, and "shed" written over one of the power labels.</p>
+            <p>The house also has an old 1 kW solar system, so the board already had two supplies feeding it. That's what the red dual supply warning on the cover is for, and it stayed on the new board for the same reason.</p>
+            <p>None of that is unusual for a board of its age. It had just been added to until there was nothing left to add to.</p>
+
+            <h3 id="rcbos">Why a Shared Safety Switch Is a Problem</h3>
+            <p>Two different devices protect a circuit, and they do different jobs.</p>
+            <p>A circuit breaker protects the cable. It trips on overload and short circuit, which stops a cable carrying more current than it's rated for. A safety switch, or RCD, protects people. It watches for current leaking to earth, which is what happens when someone touches something live, and it cuts the power fast enough to matter.</p>
+            <p>An RCBO does both jobs in one device, for one circuit.</p>
+            <p>On the old board, one RCD was covering several circuits. That works as protection, but it has a cost you notice every time something goes wrong: a fault on any one of those circuits trips all of them. Water in an outdoor fitting takes out the bedrooms. And because everything goes off together, nothing tells you where to start looking.</p>
+            <p>With an RCBO on each circuit, a fault trips the circuit it's on and nothing else. You lose one circuit rather than half the house, and the board has already told you which one it was. There's more on how safety switches work and get tested on our <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> page.</p>
+
+            <h3>What the Standard Asks For When a Board Is Replaced</h3>
+            <p>Replacing a domestic switchboard isn't just swapping the box. Under AS/NZS 3000, the final subcircuits that need RCD protection have to have it once the board is replaced.</p>
+            <p>So the upgrade is the natural point to fix the protection properly, rather than rebuild the old shared arrangement in a new enclosure. Here that meant individual RCBOs on the circuits instead of one safety switch covering several.</p>
+
+            <h3 id="ev-circuit">Making Room for the EV Charger</h3>
+            <p>The whole reason for the job was one new circuit the old board couldn't take. The new board has its own 32 amp circuit for the EV charger, a circuit for the shed, and the solar supply clearly marked as the second of two main switches.</p>
+            [[photo:new-board]]
+            <p>The switchboard upgrade and the charger went in on the same day. The charger is its own story, including why the customer picked a smart charger for a solar system that's still to come. That's written up in <a href="/blog/smart-ev-charger-solar-ready-modbury-heights/">a solar-ready smart EV charger in Modbury Heights</a>.</p>
+
+            <h3>Other Reasons a Board Runs Out of Room</h3>
+            <p>An EV charger is one of the most common triggers, but far from the only one. An induction cooktop replacing gas, extra air conditioning, electric hot water, an outdoor entertaining area or an extension all want circuits of their own, and an older board runs out of positions quickly. Age is the other reason: old devices, limited RCD protection, and a board that simply can't carry what the house now needs.</p>
+            <p>We've written up <a href="/blog/switchboard-full-no-spare-ways-adelaide/">what a full switchboard actually blocks</a> in more detail, including the quick fixes that get used to avoid dealing with the board. The short version is to check the board before you buy the appliance, not after. If there's no room, the upgrade is part of the job, and that's much better to know when you're comparing quotes.</p>
+
+            <h3>If Your Board Looks Like the Before Photo</h3>
+            <p>A full board isn't an emergency. If it's working and you're not adding anything, it can stay as it is. The exception is any sign of heat, like a hot plastic smell or scorch marks, which needs looking at straight away.</p>
+            <p>The time to act is when you want a new circuit and there's nowhere for it, or when the protection is the older shared kind and one fault keeps taking out half the house. A photo of the board is a good first step. It shows its age and the kind of protection it has, even though whether it's truly full can only be confirmed with the cover off.</p>
+            <p>Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers what the work involves. We cover Modbury Heights and the suburbs around it, including <a href="/electrician-modbury/">Modbury</a> next door.</p>
+        `,
+        faqs: [
+            {
+                question: 'How can I tell if my switchboard has RCBOs?',
+                answer: 'Look at the front of each device, without taking any covers off. An RCBO has its own small test button, and its label shows a sensitivity such as 30 mA as well as its amp rating. If every circuit has its own test button, the board has RCBOs. If only one or two devices have test buttons and the rest are plain breakers, those one or two are shared safety switches, each covering a group of circuits.',
+            },
+            {
+                question: 'Will a switchboard upgrade make my EV charge faster?',
+                answer: 'Not by itself. How fast an EV charges at home is set by the charger, the car\'s own onboard charger and your supply, and on a single-phase house a wall charger tops out at around 7 kW. What the board upgrade does is make room for the charger\'s own circuit, sized and protected for it, so the charger can run at the rate it\'s set up for. Anything faster comes down to the supply and the car, not the board.',
+            },
+            {
+                question: 'Does it cost more to put every circuit on its own RCBO?',
+                answer: 'Yes, in parts. An RCBO costs more than the plain circuit breaker it replaces, so a board with one on every circuit costs more than the older setup of one safety switch shared across several breakers. What that buys is a fault only switching off its own circuit, and a board that tells you straight away where the problem is. Along with the number of circuits, the enclosure and any asbestos or supply work, it\'s one of the things that sets the price of an upgrade.',
+            },
+            {
+                question: 'Can my old switchboard box be reused when the board is upgraded?',
+                answer: 'Sometimes. If the enclosure is sound, big enough for the new devices with some room to spare, and suited to where it\'s mounted, the new gear can go inside it and the box stays. If it\'s too small, damaged, or has an asbestos backing panel that needs to come out, it gets replaced instead. That\'s usually decided on site, because a lot of it can\'t be judged until the cover is off.',
+            },
+        ],
+        cta: {
+            heading: 'Is Your Switchboard Full?',
+            description:
+                'If there\'s no room for the circuit you need, the board usually has to come first. JPD Complete Electrical covers Modbury Heights and the north-eastern suburbs.',
+            linkText: 'Get Your Switchboard Assessed',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'smart-ev-charger-solar-ready-modbury-heights',
+        title: 'A Solar-Ready Smart EV Charger in Modbury Heights',
+        seoTitle: 'Smart EV Charger Install Modbury Heights | JPD',
+        metaDescription:
+            'An Evnex smart charger for a Modbury Heights home with an old 1 kW solar system, chosen to charge from surplus once the solar is upgraded. Plus the board it needed first.',
+        excerpt:
+            'The house has a 1 kW solar system that can\'t run a car charger on its own. So the charger was chosen for the bigger system that\'s coming, and the switchboard was upgraded to fit it.',
+        date: '2026-09-28',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/ev_charger_evnex_modbury_heights.webp',
+        gallery: [
+            {
+                src: '/images/ev_charger_type2_connector_modbury_heights.webp',
+                id: 'connector',
+                alt: 'Tethered Type 2 charging plug held up in front of the Evnex charger on a brick wall',
+                caption:
+                    'A tethered cable with a Type 2 plug, the standard for AC charging in Australia. It stays on the wall, so there\'s no cable to carry around in the car.',
+            },
+            {
+                src: '/images/ev_charger_evnex_closeup_modbury_heights.webp',
+                alt: 'Evnex smart EV charger mounted on a cream brick wall in Modbury Heights',
+                caption:
+                    'Smart or basic, a charger looks much the same on the wall. The difference is in what it\'s set up to respond to.',
+            },
+        ],
+        services: ['ev-charger-installation-adelaide'],
+        featuredFor: ['ev-charger-installation-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most people choose an EV charger for the house they have now. This Modbury Heights customer chose one for the house they're going to have: a bigger solar system is on the way, and they wanted a charger that could use it.</p>
+            <p>That needed two things to be true. The charger had to be able to charge from solar surplus once the new system is in, and the switchboard had to have room for the charger at all. It didn't, so the board was upgraded on the same day. Get either one wrong and it costs you: a second charger once the solar's in, or a board upgrade nobody mentioned until installation day.</p>
+
+            <h3 id="solar">Why a 1 kW System Can't Run a Car Charger</h3>
+            <p>The house already has solar. It's an old 1 kW system, which is small by today's standards.</p>
+            <p>Here's the catch. An EV charger can't charge at whatever rate it likes. Most won't run below about 6 amps, which is roughly 1.4 kW on a single-phase supply. Below that, the car simply doesn't charge.</p>
+            <p>A 1 kW system produces less than that even on a good day, and the house takes its share first: the fridge, anything on standby, whatever else is running. So the surplus never gets near what the charger needs to start. Solar charging on this house isn't a setting to switch on yet. It's something the charger will do once the upgraded system is producing a real surplus.</p>
+
+            <h3 id="smart">What the Smart Charger Will Do</h3>
+            <p>Once the new solar is in, the charger can watch two numbers: what the panels are producing and what the house is using. When there's more coming off the roof than the house needs, it sends the difference into the car instead of exporting it to the grid.</p>
+            <p>It adjusts the charging rate as the surplus rises and falls, down to the charger's minimum. A cloud goes over and the charge slows. The sun comes back and it picks up again. For that it needs monitoring, so it can see what's being exported, and that gets set up when the solar goes in.</p>
+            <p>Until then, and on days the sun doesn't cooperate, it charges from the grid like any other charger. It can also run on a schedule, so on a time-of-use tariff the car charges in the cheapest hours rather than whenever it's plugged in.</p>
+            <p>What solar charging actually saves depends on the tariff, the feed-in rate, how much the car gets driven, and one thing people forget: the car has to be home while the sun is up. A car that's parked at work from eight to five isn't soaking up much midday solar, whatever the charger can do.</p>
+
+            <h3>Why Buy the Charger Before the Solar</h3>
+            <p>Because the alternative is buying two chargers.</p>
+            <p>A basic charger would have done the job today. The car would charge overnight and nobody would notice the difference. But when the new solar goes in, a basic charger can't use it, and getting solar charging would mean replacing a charger that still works.</p>
+            <p>Choosing a compatible smart charger now costs more up front and avoids that. It's the same logic as running a spare cable while the wall is open: cheap now, expensive later.</p>
+
+            <h3 id="install">What Went In</h3>
+            <p>An Evnex smart charger on the house wall, with an isolator beside it so it can be switched off right there, and a tethered cable, so the plug lives on the charger rather than in the boot.</p>
+            [[photo:connector]]
+            <p>It's on its own 32 amp circuit from the new switchboard. A charger draws a heavy load for hours at a stretch, which is nothing like a kettle or an oven, so it doesn't share a circuit with anything else.</p>
+            <p>The switchboard upgrade and the charger install were done together, in one day.</p>
+
+            <h3 id="switchboard">Do You Need a Switchboard Upgrade Before Installing an EV Charger?</h3>
+            <p>Sometimes, and this was one of those times. A charger needs its own circuit, and the old board here was completely full. There was nowhere to put it.</p>
+            <p>So the board was upgraded first. The old arrangement, with one safety switch shared across several circuits, was replaced with an RCBO on each circuit, and the charger got its own. The before and after photos of that board, and why the change matters, are in <a href="/blog/full-switchboard-upgrade-modbury-heights/">upgrading a full switchboard in Modbury Heights</a>.</p>
+            <p>It's worth checking before you buy a charger, not after. A board that's full, has the wrong kind of protection for a new circuit, or can't carry the extra load turns a charger install into a board upgrade as well. That changes the price, so it's better known at the quoting stage.</p>
+            <p>If you're not sure about yours, our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page explains what the work involves, and our guide to <a href="/blog/switchboard-full-no-spare-ways-adelaide/">what a full switchboard blocks</a> covers the rest. A photo of the board is a good first step, since it shows its age and the protection it has.</p>
+
+            <h3>If You're Choosing a Charger</h3>
+            <p>Whether a smart charger is worth it comes down to what you'll use it for: solar, managing the load on the house, or charging at the cheapest time of day. Our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page goes through smart and basic chargers, and what an install involves in South Australia.</p>
+            <p>We cover Modbury Heights and the north-eastern suburbs, including <a href="/electrician-modbury/">Modbury</a> next door.</p>
+        `,
+        faqs: [
+            {
+                question: 'What\'s the difference between a tethered and an untethered EV charger?',
+                answer: 'A tethered charger has its cable permanently attached, while an untethered one has a socket and you plug in your own cable. Tethered is simpler day to day, because the cable is always there and you just plug the car in. Untethered looks neater on the wall and lets you replace the cable if it\'s damaged, or use a different one if you change to a car with another type of plug. For one car at home, tethered is usually the easier choice.',
+            },
+            {
+                question: 'Do smart EV chargers need Wi-Fi?',
+                answer: 'For their smart features, yes, or some other way to get online. Depending on the model, a charger connects over Wi-Fi, a network cable or mobile data, and it uses that connection for its app, schedules, solar settings and updates. Where the car parks is often where home Wi-Fi is weakest, so check the signal at that spot before installation. A Wi-Fi extender often fixes it. A fixed network cable is another option, and in Australia that has to be run by a registered cabler.',
+            },
+            {
+                question: 'Will a smart EV charger work with the solar system I already have?',
+                answer: 'Usually, as long as the charger supports solar charging and can see what your house is exporting. Many do that with their own sensor at the switchboard instead of talking to the inverter, so the inverter brand often doesn\'t matter, although some chargers are designed to pair with a particular brand. The bigger question is size. Most chargers need about 1.4 kW of spare solar before they\'ll start, so a small or older system may never produce enough.',
+            },
+            {
+                question: 'Does a home EV charger work in a blackout?',
+                answer: 'No. A home charger runs off the house supply, so when the grid goes down the charger stops too. A standard grid-connected solar system also switches off in a blackout, so there\'s no solar to charge from either. The car keeps whatever charge it already had. Charging through an outage would need a battery or generator set up to back up the charger\'s circuit, and that\'s a separate decision from choosing the charger.',
+            },
+        ],
+        cta: {
+            heading: 'Thinking About a Home EV Charger?',
+            description:
+                'We check the switchboard first and help you choose a charger that suits your solar now and later. JPD Complete Electrical covers Modbury Heights and the north-east.',
+            linkText: 'Get an EV Charger Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'front-light-faulty-diy-wiring-modbury-heights',
+        title: 'A Dead Front Light in Modbury Heights, and the DIY Join Behind It',
+        seoTitle: 'Front Light Not Working? DIY Wiring Fault | JPD',
+        metaDescription:
+            'Booked as a front light replacement in Modbury Heights. The new light still wasn\'t getting the right voltage, because a DIY join in the roof was starving it. What we found.',
+        excerpt:
+            'Booked as a simple front light swap. The new light didn\'t work properly either, because the real problem was a DIY join hidden in the roof.',
+        date: '2026-09-28',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/faulty_diy_joint_modbury_heights.webp',
+        services: ['emergency-electrician-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>When a front or outdoor light stops working, the fitting gets the blame. Most of the time that's fair. But when the new light doesn't work properly either, the problem was never the light. Keep swapping fittings and you're paying for lights that can't fix it, while the real fault, a bad join that makes heat, stays hidden in your roof.</p>
+            <p>This one was booked as a straightforward front light replacement in Modbury Heights. It turned into fault finding, and the fault turned out to be a DIY join hidden in the roof.</p>
+
+            <h3 id="light">Booked as a Light Swap</h3>
+            <p>The customer's front light had stopped working and they wanted it replaced. Simple enough.</p>
+            <p>During the swap it became clear the light wasn't getting the voltage it should. The rest of the house was fine, with normal voltage everywhere else. That ruled out the incoming supply and pointed at the wiring feeding that one light.</p>
+            <p>Replacing the fitting alone would never have fixed it. A new light on a bad feed behaves exactly like the old one.</p>
+
+            <h3 id="voltage">Why a Bad Join Starves a Light of Voltage</h3>
+            <p>A good electrical connection has almost no resistance. A poor one has more, and that resistance sits in the circuit like a small, unwanted load of its own.</p>
+            <p>Some of the voltage is lost across the bad join before it ever reaches the light, so the light isn't getting enough power. How much gets lost depends on the join and on what the light is drawing, which is why a fault like this can look intermittent: a light that flickers, glows dimly, works some days and not others, or won't start at all. LED fittings are particularly fussy about it, because the driver inside needs a proper supply to run.</p>
+            <p>The other thing resistance does is make heat, right at the join. That's the part that matters most, and it's why this isn't a fault to leave.</p>
+
+            <h3 id="join">What Was in the Roof</h3>
+            <p>Tracing the circuit led up into the roof space, and to a connection made during earlier DIY electrical work.</p>
+            <p>The photo at the top of this page is that join, pulled out where it could be seen. The conductors are twisted together and wrapped, with no proper connector and no junction box, and the insulation around the join has gone black.</p>
+            <p>A join like that can keep working for a long time, which is exactly the problem. Nobody knows it's there until the light it feeds starts misbehaving.</p>
+
+            <h3>What We Did</h3>
+            <p>The DIY connection came out and was replaced with a proper, compliant connection. The repaired wiring was then tested and verified, and the rest of the installation was checked while we were there. Where there's one DIY join, it's worth knowing whether there are others.</p>
+            <p>With a proper connection feeding it, the front light worked as it should.</p>
+
+            <h3>If a New Light Doesn't Fix It</h3>
+            <p>Stop swapping fittings. If a new light behaves the same as the old one, the fault is in the wiring, and another light won't change that.</p>
+            <p>A few signs point the same way: a new light that flickers or glows dimly, one that only works sometimes, or a light that stopped working after someone did some electrical work themselves. A switch plate or fitting that feels warm, or any smell of hot plastic, means switching that circuit off at the switchboard and getting it looked at.</p>
+            <p>And if some of the wiring in your house was done by a previous owner, it's worth mentioning when you book. Fixed wiring has to be done by a licensed electrician in South Australia, and jobs like this are a good part of why.</p>
+            <p>Our <a href="/emergency-electrician-adelaide/">electrical fault finding</a> page covers how we track faults down. We cover Modbury Heights and the north-eastern suburbs.</p>
+        `,
+        faqs: [
+            {
+                question: 'What should I do if I find a DIY electrical join in my roof?',
+                answer: 'Leave it alone, and don\'t try to re-tape or tidy it. If you know which circuit it\'s on, switch that circuit off at the switchboard, and keep clear of it while you\'re in the roof. Then get an electrician to look at it. A join made without a proper connector or junction box can be loose, hot or live, and the only real fix is cutting it out and remaking it properly.',
+            },
+            {
+                question: 'Can a bad electrical connection cause a fire?',
+                answer: 'Yes. A poor connection has resistance, and resistance at a join turns into heat. Over time that heat can break down the insulation around it and, in the worst case, set fire to dust or timber nearby. It often won\'t trip anything first, because a breaker reacts to overload and a safety switch reacts to current leaking to earth, and a hot join is neither. The warning signs are flickering, a light that won\'t work properly, or a hot smell.',
+            },
+            {
+                question: 'What is a junction box and why does a join need one?',
+                answer: 'A junction box is a small enclosure where cables are joined using proper connectors. It holds the join so it can\'t be strained or pulled apart, keeps the live conductors covered so nothing can touch them, and gives the connection a fixed place to sit instead of hanging loose in the roof. A join twisted together and wrapped in tape has none of that, which is why taped joins in a roof space are a common sign of DIY wiring.',
+            },
+            {
+                question: 'How can I tell if a previous owner did DIY electrical work?',
+                answer: 'Often you can\'t from inside the house, which is the problem. Things worth noticing are extension leads doing the job of permanent wiring, lights or powerpoints that look added later and don\'t match the rest, and newer circuits with no label at the switchboard. Testing the circuits picks up faults you can\'t see. If you\'re buying, ask for the Certificates of Compliance for any electrical work, because licensed electrical work in South Australia has to come with one.',
+            },
+        ],
+        cta: {
+            heading: 'New Light Still Not Working?',
+            description:
+                'When a new fitting doesn\'t fix it, the problem\'s in the wiring. We find it rather than guessing. JPD Complete Electrical covers Modbury Heights and the north-east.',
+            linkText: 'Book Electrical Fault Finding',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'tv-wall-mount-above-gas-fireplace-wynn-vale',
+        title: 'A TV Mounted Above a Gas Fireplace in Wynn Vale',
+        seoTitle: 'TV Mount Above Gas Fireplace, Wynn Vale | JPD',
+        metaDescription:
+            'A TV mounted on a tiled feature wall above a gas fireplace in Wynn Vale. Why tile and a fireplace make it harder than plasterboard, and what to check before you mount one.',
+        excerpt:
+            'A tiled feature wall above a gas fireplace is about the hardest place in a house to mount a TV neatly. Here\'s what it takes, and what to check first.',
+        date: '2026-09-28',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/tv_above_gas_fireplace_wynn_vale.webp',
+        services: ['tv-wall-mounting-adelaide'],
+        suburb: 'electrician-wynn-vale',
+        featuredFor: ['tv-wall-mounting-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Above the fireplace is where a lot of people want the TV. It's the focal point of the room and the wall is usually clear. It's also one of the harder places to mount a screen well, especially when the wall around the fireplace is tiled. Get it wrong and you're left with a cracked tile you can't match, a bracket that isn't fixed into anything solid, or a TV sitting in the fireplace's heat.</p>
+            <p>This one was in Wynn Vale: a gas fireplace set into a tiled feature wall running floor to ceiling, and a TV to go above it. The finished job needed to look neat, hold securely, and leave every tile intact.</p>
+
+            <h3 id="tiles">Why Tile Changes the Job</h3>
+            <p>Plasterboard is forgiving. A hole in the wrong place gets patched and painted, and nobody ever knows.</p>
+            <p>Tile isn't. It's a finished surface, and drilled the wrong way it chips at the edge of the hole or cracks across the face. Once a tile is cracked the fix is replacing it, and on a feature wall there's often no matching spare left. Drilling tile cleanly comes down to the right bit, no hammer action and patience, and it's the part of the job that can't be rushed.</p>
+
+            <h3 id="fixing">The Bracket Goes Into the Structure, Not the Tile</h3>
+            <p>Tile is a finish, not something to hang weight from. The bracket has to be fixed securely into a suitable supporting structure behind it, and the tile just happens to be in the way.</p>
+            <p>What that structure is varies. It might be a timber frame, masonry, or a framed box built around the fireplace. Working out what's there, and where the solid fixing points are, comes before any drilling, because it decides where the bracket can actually go.</p>
+            <p>That's also why the TV size and bracket need settling first. A bracket that doesn't line up with solid fixing points isn't a bracket you can use there.</p>
+
+            <h3 id="fireplace">Mounting Above a Gas Fireplace</h3>
+            <p>A fireplace adds a second set of limits.</p>
+            <p>The fireplace's installation manual sets clearance and heat requirements for what can go above it, and the TV has its own temperature limits. Both need checking before a hole goes anywhere, and the finished install has to keep the fireplace's required clearances. Every fireplace and TV is different, so this is a read-the-manuals job rather than a rule of thumb.</p>
+            <p>Then there's height. Above a fireplace a TV sits higher than it would on a plain wall, and higher than is ideal for watching from the couch. It's worth sitting where you'll actually watch before the position is marked, and a tilting bracket can help where the screen has to sit high.</p>
+
+            <h3>How This One Went</h3>
+            <p>The TV went up above the gas fireplace, centred on the tiled feature wall, with the tiles undamaged and the bracket secure. Getting there took careful planning, accurate measuring and a controlled approach to the drilling, because on a wall like this there's no second attempt.</p>
+            <p>It's not a standard TV install. The tile and the fireplace together made the positioning, the drilling and the fixing far more demanding than a plasterboard wall would ever be.</p>
+
+            <h3>If You're Planning the Same Thing</h3>
+            <ul>
+                <li>Check the fireplace manual for clearances above it, and the TV manual for its temperature limits</li>
+                <li>Decide the TV size and bracket before anything's marked out</li>
+                <li>Sit where you'll watch from before settling the height</li>
+                <li>If the wall isn't built yet, sort out the power and cable routes before the tiler starts</li>
+            </ul>
+            <p>That last one is the difference between cables hanging below the screen and none at all. Our <a href="/blog/led-downlights-tv-wall-mount-hope-valley/">Hope Valley job</a> shows what it takes to get power, HDMI and an antenna point behind a screen, and the <a href="/blog/tv-wall-mount-medical-waiting-room-gillman/">Gillman waiting room</a> shows a commercial install on a full-motion bracket.</p>
+            <p>There's more on bracket types, tiled walls and hiding the cables on our <a href="/tv-wall-mounting-adelaide/">TV wall mounting</a> page. We're based in Wynn Vale, and there's more about local work on our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page.</p>
+        `,
+        faqs: [
+            {
+                question: 'Will the heat from a gas fireplace damage my TV?',
+                answer: 'It can, if the TV is too close or the fireplace sends its heat straight up the wall. TV manuals list an operating temperature range, and running a TV hotter than that shortens its life. A mantel or heat deflector between the two can help, as long as the fireplace manufacturer allows one at that height. A simple check is to run the fireplace for an hour and feel the wall where the TV will go. If it\'s too hot to keep your hand on, it\'s too hot for the TV.',
+            },
+            {
+                question: 'Can a TV above a fireplace be pulled down to eye level?',
+                answer: 'Yes, with a pull-down bracket, sometimes called a mantel mount. It holds the TV up high when you\'re not watching and lets you draw it down and forward to a comfortable height when you are. These brackets are heavier than a standard mount and put more load on the fixings, so they need solid structure behind the wall. The TV also has to stay clear of the fireplace and any mantel when it\'s lowered, so the fireplace manual still sets the limits.',
+            },
+            {
+                question: 'Is it better to put the TV above the fireplace or beside it?',
+                answer: 'For comfort, beside it is usually better, because the screen can sit at eye height and away from the heat. Above the fireplace often wins anyway, because it\'s the focal point of the room and the only clear wall in the right spot. If it does go above, the fireplace clearances, a tilting or pull-down bracket, and checking the viewing angle from the couch make most of the difference. Decide before the room is finished, since it changes where the power goes.',
+            },
+            {
+                question: 'Should I put backing in the wall for a TV before it\'s tiled?',
+                answer: 'Yes, if you know where the TV is going. Timber noggings or a sheet of plywood fixed into the frame behind where the bracket will sit give it something solid to fix into, wherever the studs happen to fall. It\'s cheap to do while the wall is open and hard to add once it\'s tiled. Do it at the same time as the powerpoint behind the screen and a conduit for the cables, with the TV size and bracket already chosen.',
+            },
+        ],
+        cta: {
+            heading: 'Want the TV Above the Fireplace?',
+            description:
+                'Tile and a fireplace are what make TV mounting hard to get right. JPD Complete Electrical is based in Wynn Vale and covers the north-eastern suburbs.',
+            linkText: 'Get a TV Mounting Quote',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'switchboard-upgrade-asbestos-ridgehaven',
         title: 'A Full Asbestos Switchboard Replaced in Ridgehaven',
         seoTitle: 'Switchboard Upgrade Ridgehaven | JPD',
@@ -592,7 +941,7 @@ export const jobReports: JobReport[] = [
         author: 'Justin',
         category: 'Recent Work',
         image: '/images/tv_wall_mount_waiting_room_gillman.webp',
-        services: ['powerpoint-installation-adelaide'],
+        services: ['tv-wall-mounting-adelaide', 'powerpoint-installation-adelaide'],
         content: `
             <h3>Why This Matters to You</h3>
             <p>Mounting a screen on a wall looks like the same job everywhere. In a commercial fitout it isn't, and the differences are all in things nobody photographs: what's behind the plasterboard, where the outlet goes, and who has to be able to reach it in two years.</p>
@@ -1517,9 +1866,15 @@ export const jobReports: JobReport[] = [
             'downlight-installation-adelaide',
             'powerpoint-installation-adelaide',
             'renovation-electrician-adelaide',
+            'tv-wall-mounting-adelaide',
         ],
         suburb: 'electrician-hope-valley',
         angles: {
+            'tv-wall-mounting-adelaide': {
+                title: 'A Wall-Mounted TV With No Cables Showing in Hope Valley',
+                blurb: 'Power, two HDMI runs and a new antenna point, all inside the wall, so the only thing on it is the screen.',
+                anchor: 'tv-wall',
+            },
             'powerpoint-installation-adelaide': {
                 title: 'Power and Data Behind a Wall-Mounted TV in Hope Valley',
                 blurb: 'A powerpoint behind the screen, two HDMI runs and a new antenna point, all inside the wall so no cable shows.',

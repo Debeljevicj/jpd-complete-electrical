@@ -13,6 +13,7 @@ import {
     Plug,
     Thermometer,
     Tag,
+    Tv,
     type LucideIcon,
 } from 'lucide-react';
 
@@ -32,6 +33,7 @@ export const serviceIcons = {
     powerpoint: Plug,
     thermal: Thermometer,
     testtag: Tag,
+    tv: Tv,
 } as const;
 
 export type ServiceIconName = keyof typeof serviceIcons;

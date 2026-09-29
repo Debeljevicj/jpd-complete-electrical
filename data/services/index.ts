@@ -27,6 +27,7 @@ const displayOrder = [
     'smoke-alarm-installation-adelaide',
     'ceiling-fan-installation-adelaide',
     'powerpoint-installation-adelaide',
+    'tv-wall-mounting-adelaide',
     'thermal-imaging-adelaide',
     'test-and-tag-adelaide',
 ];

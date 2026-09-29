@@ -187,11 +187,11 @@ export const coreServices: Service[] = [
         name: 'EV Charger Installation',
         icon: 'ev',
         blurb: 'Home wall chargers on a dedicated circuit, with the right protection and the board capacity checked first.',
-        title: 'EV Charger Installation Adelaide | Home Chargers | JPD',
-        description: 'Home EV charger installation in Adelaide. Dedicated circuit, correct RCD protection and switchboard capacity checked first. Free quotes.',
+        title: 'EV Charger Installation Adelaide | Smart & Solar | JPD',
+        description: 'Home EV charger installation in Adelaide. Smart and solar-ready chargers on a dedicated circuit, with your switchboard checked first. Free quotes.',
         h1: 'EV Charger Installation, Adelaide',
         intro:
-            'We install home wall chargers on a dedicated circuit with the protection the standard requires. The charger is the easy part. The job is making sure your switchboard can actually carry it alongside everything else in the house.',
+            'We install home wall chargers on a dedicated circuit with the protection the standard requires, and help you choose between a smart charger and a basic one. The charger is the easy part. The job is making sure your switchboard can actually carry it alongside everything else in the house.',
         sections: [
             {
                 heading: 'Why the Switchboard Comes First',
@@ -199,7 +199,31 @@ export const coreServices: Service[] = [
                     'A typical single-phase home charger draws 32 amps continuously for hours at a time. That\'s a bigger sustained load than almost anything else in a house, and it\'s nothing like the short bursts a kettle or a microwave puts on the system.',
                     'So before we talk about where the charger goes, we look at the board. What\'s the main switch rated at, what\'s the consumer mains cable, how much is already connected, and is there physical space for another circuit. In Greenwith and Golden Grove, where a lot of homes already have ducted air conditioning, an induction cooktop and a pool pump, that check genuinely matters.',
                     'On older boards in Hope Valley, Modbury or Holden Hill, the honest answer is often that the board needs replacing before a charger goes on it. We would rather tell you that upfront than install a charger onto something that shouldn\'t be carrying it.',
+                    'Age isn\'t the only thing that rules a board out. If every position is already in use, or the protection isn\'t suitable for a new circuit, the board has to be upgraded before the charger goes in. The Modbury Heights jobs further down this page are exactly that: a full board upgraded on the same day the charger went in.',
                     'Where the existing supply is tight, load management is often the answer rather than a supply upgrade. Most modern chargers can throttle their draw based on what the rest of the house is using, which lets you charge at full speed most of the time and back off automatically when the aircon and the oven are both running.',
+                ],
+            },
+            {
+                heading: 'Smart Charger or Basic Charger?',
+                body: [
+                    'In South Australia, a new hard-wired charger has to be a model on the Technical Regulator\'s registered list that can respond to demand-response instructions, like pausing or slowing the charge. That\'s been the rule since 1 July 2024, and it doesn\'t put you on a demand-response plan. It just means the charger can join one later. So the choice isn\'t really between a connected charger and a dumb one. It\'s about which extra features you\'ll actually use.',
+                    'A basic charger suits plenty of households. If the car sits in the garage overnight and you\'re happy for it to charge whenever it\'s plugged in, it does the job, and many cars can schedule their own charging anyway. What a particular charger can do depends on the model, so we\'ll go through it with you.',
+                    'A smart charger earns its extra cost when you want it to react to something: your solar, the rest of the house\'s load, or the price of power at different times of day. And if solar is on the cards, even a few years out, it\'s worth choosing a charger that can use it now. Replacing a working charger later to get solar charging costs more than buying the right one first.',
+                    'The features that make the difference:',
+                ],
+                bullets: [
+                    'Solar surplus charging: the charger sees what your panels are exporting and puts the excess into the car instead of the grid',
+                    'Load management: the charger backs off when the rest of the house is drawing a lot, keeping the total within what your supply can carry',
+                    'Scheduled charging: charge in the cheapest hours on a time-of-use tariff, with or without solar',
+                    'Monitoring: see what the car has used and when, usually through an app',
+                ],
+            },
+            {
+                heading: 'Charging From Your Solar',
+                body: [
+                    'Solar surplus charging works by measuring what the house is exporting and turning that into charge. When the panels are producing more than the house is using, the charger takes the difference, and it adjusts as the surplus rises and falls with the weather.',
+                    'There\'s a floor, though. Most chargers can\'t charge below about 6 amps, which is roughly 1.4 kW on a single-phase supply. If the surplus is smaller than that, the car either waits or tops up from the grid, depending on how it\'s set up. That matters for older, smaller solar systems. A 1 kW system can\'t produce enough surplus to start a charge at all, which is why one of our Modbury Heights customers chose a solar-ready charger now and is waiting on a bigger system to use it.',
+                    'The car also has to be home while the sun\'s up. If it\'s parked at work from eight to five, most of the solar charging happens at weekends. What it saves depends on your tariff, your feed-in rate, how much you drive and when you charge, so we\'d rather talk through your situation than promise a number.',
                 ],
             },
             {
@@ -211,8 +235,8 @@ export const coreServices: Service[] = [
                     'A dedicated circuit, not a shared one, sized for the charger and the cable run length',
                     'RCD protection suitable for EV charging, which means a Type B, or a Type A where the charger itself provides 6 mA DC fault detection',
                     'A correctly rated circuit breaker and, where needed, additional board capacity',
+                    'A charger model on the Technical Regulator\'s registered list and capable of demand response, which South Australia has required since 1 July 2024',
                     'The charger mounted where the cable actually reaches the car without stretching across a walkway',
-                    'Notification to SA Power Networks where that\'s required for the installation',
                     'Full testing and a Certificate of Compliance for Electrical Work',
                 ],
             },
@@ -238,8 +262,8 @@ export const coreServices: Service[] = [
             'Whether the run is through a roof space, through walls, or needs trenching to a detached garage',
             'Whether the existing switchboard has capacity and space, or needs upgrading first',
             'Single-phase versus three-phase installation',
-            'The charger unit itself, if you want us to supply it rather than supplying your own',
-            'Any load management or metering requirements',
+            'The charger unit itself, smart or basic, if you want us to supply it rather than supplying your own',
+            'Solar surplus charging or load management, which need monitoring set up so the charger can see the rest of the house',
         ],
         faqs: [
             {
@@ -251,12 +275,20 @@ export const coreServices: Service[] = [
                 answer: 'No. Hardwired EV charging equipment is electrical work and has to be installed by a licensed electrician, with the correct protection and a Certificate of Compliance. Beyond the legal side, the sustained load involved isn\'t something to guess at.',
             },
             {
-                question: 'Do I need to tell SA Power Networks?',
-                answer: 'EV charging equipment generally needs to be notified to SA Power Networks, and we handle that as part of the install. Requirements can change, so we confirm what applies at the time rather than working off what was true last year.',
+                question: 'Does SA Power Networks need to approve my EV charger?',
+                answer: 'No. SA Power Networks doesn\'t need to approve a home EV charger before it goes in. What does matter is that the charger is a model on the Technical Regulator\'s registered list, that it\'s installed by a licensed electrician, and that the work is certified on a Certificate of Compliance. The rules around chargers have been changing, so we check what applies at the time of the install rather than working off what was true last year.',
             },
             {
-                question: 'Will my switchboard handle a charger?',
-                answer: 'Often yes, but it needs checking rather than assuming. We look at the main switch rating, the consumer mains, what\'s already connected, and whether there\'s physical space for another circuit. If it won\'t carry it, we\'ll tell you what it would take, and load management is frequently a cheaper answer than a supply upgrade.',
+                question: 'Do I need a switchboard upgrade for an EV charger?',
+                answer: 'Sometimes. The charger needs its own circuit, so if the board is full, has protection that isn\'t suitable for a new circuit, or can\'t carry the extra load, it has to be upgraded first. We look at the main switch rating, the consumer mains, what\'s already connected, and whether there\'s physical space before we quote. If it won\'t carry the charger, we\'ll tell you what it would take, and load management is frequently a cheaper answer than a supply upgrade.',
+            },
+            {
+                question: 'Is a smart EV charger worth it if I don\'t have solar?',
+                answer: 'It can be, depending on your tariff and your supply. Without solar, the main reasons to pay more are scheduling the charge into the cheapest hours on a time-of-use tariff, and load management, which stops the charger pushing a busy supply past its limit. If your car can schedule its own charging and your supply has plenty of headroom, a simpler charger does the same job. If solar is likely in the next few years, buying one that can use it now saves replacing it later.',
+            },
+            {
+                question: 'Why isn\'t my EV charger using my solar?',
+                answer: 'Usually it\'s one of four things. The surplus is smaller than the charger\'s minimum, which is about 1.4 kW on a single-phase supply. The monitoring the charger needs to see your export isn\'t fitted or isn\'t set up. Solar charging isn\'t switched on in the charger\'s settings. Or the car\'s own charging schedule is stopping it outside set hours. The first comes down to the size of your system. The other three are set-up issues, and they can be fixed.',
             },
             {
                 question: 'Is a three-phase charger worth it?',
