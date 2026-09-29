@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ServiceLandingPage from '@/components/ServiceLandingPage';
 import { serviceBySlug } from '@/data/services';
+import { shareMeta } from '@/lib/share';
 
 const service = serviceBySlug['oven-cooktop-installation-adelaide'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/oven-cooktop-installation-adelaide',
     },
-    openGraph: {
+    ...shareMeta({
         title: service.title,
         description: service.description,
-        url: 'https://jpdcompleteelectrical.com.au/oven-cooktop-installation-adelaide/',
-        type: 'website',
-    },
+        path: '/oven-cooktop-installation-adelaide/',
+    }),
 };
 
 export default function Page() {

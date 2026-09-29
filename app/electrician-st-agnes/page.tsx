@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import SuburbLandingPage from '@/components/SuburbLandingPage';
 import { suburbBySlug } from '@/data/suburbs';
+import { shareMeta } from '@/lib/share';
 
 const suburb = suburbBySlug['electrician-st-agnes'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/electrician-st-agnes',
     },
-    openGraph: {
+    ...shareMeta({
         title: suburb.title,
         description: suburb.description,
-        url: 'https://jpdcompleteelectrical.com.au/electrician-st-agnes/',
-        type: 'website',
-    },
+        path: '/electrician-st-agnes/',
+    }),
 };
 
 export default function Page() {

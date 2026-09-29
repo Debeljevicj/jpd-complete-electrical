@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ServiceLandingPage from '@/components/ServiceLandingPage';
 import { serviceBySlug } from '@/data/services';
+import { shareMeta } from '@/lib/share';
 
 const service = serviceBySlug['test-and-tag-adelaide'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/test-and-tag-adelaide',
     },
-    openGraph: {
+    ...shareMeta({
         title: service.title,
         description: service.description,
-        url: 'https://jpdcompleteelectrical.com.au/test-and-tag-adelaide/',
-        type: 'website',
-    },
+        path: '/test-and-tag-adelaide/',
+    }),
 };
 
 export default function Page() {

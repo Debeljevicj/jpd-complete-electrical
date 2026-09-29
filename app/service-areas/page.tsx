@@ -6,6 +6,7 @@ import Accordion from '@/components/Accordion';
 import ServiceIcon from '@/components/ServiceIcon';
 import { suburbs } from '@/data/suburbs';
 import { serviceIndex } from '@/data/services';
+import { shareMeta } from '@/lib/share';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -16,13 +17,12 @@ export const metadata: Metadata = {
     description:
         'Looking for an electrician near you? JPD Complete Electrical services all of Adelaide from a Wynn Vale base. Switchboards, EV chargers, emergency work.',
     alternates: { canonical: '/service-areas' },
-    openGraph: {
-        title: 'Electrician Near Me | Adelaide North-East Service Areas',
+    ...shareMeta({
+        title: 'Electrician Near Me | Adelaide Service Areas | JPD',
         description:
-            'Based in Wynn Vale, covering 15 suburbs across the City of Tea Tree Gully and surrounds. Switchboards, EV chargers, lighting, emergency callouts.',
-        url: `${SITE}/service-areas/`,
-        type: 'website',
-    },
+            'Looking for an electrician near you? JPD Complete Electrical services all of Adelaide from a Wynn Vale base. Switchboards, EV chargers, emergency work.',
+        path: '/service-areas/',
+    }),
 };
 
 const faqs = [

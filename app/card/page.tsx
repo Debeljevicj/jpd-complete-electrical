@@ -14,6 +14,7 @@
 import Image from 'next/image';
 import { UserPlus, Star, PhoneCall, ChevronRight } from 'lucide-react';
 import card from '@/content/card.json';
+import { shareMeta } from '@/lib/share';
 
 const { contact, vcard, reviewUrl, intro, actions } = card;
 
@@ -30,6 +31,11 @@ export const metadata = {
         index: false,
         follow: true,
     },
+    ...shareMeta({
+        title: card.meta.title,
+        description: card.meta.description,
+        path: '/card/',
+    }),
 };
 
 export default function CardPage() {

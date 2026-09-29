@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ServiceLandingPage from '@/components/ServiceLandingPage';
 import { serviceBySlug } from '@/data/services';
+import { shareMeta } from '@/lib/share';
 
 const service = serviceBySlug['renovation-electrician-adelaide'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/renovation-electrician-adelaide',
     },
-    openGraph: {
+    ...shareMeta({
         title: service.title,
         description: service.description,
-        url: 'https://jpdcompleteelectrical.com.au/renovation-electrician-adelaide/',
-        type: 'website',
-    },
+        path: '/renovation-electrician-adelaide/',
+    }),
 };
 
 export default function Page() {

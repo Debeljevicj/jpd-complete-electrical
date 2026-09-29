@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import SuburbLandingPage from '@/components/SuburbLandingPage';
 import { suburbBySlug } from '@/data/suburbs';
+import { shareMeta } from '@/lib/share';
 
 const suburb = suburbBySlug['electrician-banksia-park'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/electrician-banksia-park',
     },
-    openGraph: {
+    ...shareMeta({
         title: suburb.title,
         description: suburb.description,
-        url: 'https://jpdcompleteelectrical.com.au/electrician-banksia-park/',
-        type: 'website',
-    },
+        path: '/electrician-banksia-park/',
+    }),
 };
 
 export default function Page() {

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import SectionHeading from '@/components/SectionHeading';
 import { blogPosts } from '@/data/blog-posts';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+import { shareMeta } from '@/lib/share';
 
 export const metadata = {
     title: 'Electrical Tips & News | JPD Complete Electrical Blog',
@@ -10,6 +11,11 @@ export const metadata = {
     alternates: {
         canonical: '/blog',
     },
+    ...shareMeta({
+        title: 'Electrical Tips & News | JPD Complete Electrical Blog',
+        description: 'Expert electrical advice, safety tips, and industry news for Adelaide homeowners and businesses.',
+        path: '/blog/',
+    }),
 };
 
 export default function BlogPage() {

@@ -12,6 +12,7 @@ import {
     jobsForCategory,
     servicesForCategory,
 } from '@/lib/recent-work';
+import { shareMeta } from '@/lib/share';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
@@ -27,16 +28,22 @@ export function generateMetadata({ params }: Props): Metadata {
     const category = workCategoryBySlug[params.category];
     if (!category) return { title: 'Not Found' };
 
+    // Share the photo the page leads with: the featured job, framed by its angle
+    // for this category's first service, same as FeaturedJob renders it.
+    const lead = jobsForCategory(category)[0];
+    const leadAngle = lead?.angles?.[category.services[0]];
+
     return {
         title: category.title,
         description: category.description,
         alternates: { canonical: `/recent-work/${category.slug}` },
-        openGraph: {
+        ...shareMeta({
             title: category.title,
             description: category.description,
-            url: `${SITE}/recent-work/${category.slug}/`,
-            type: 'website',
-        },
+            path: `/recent-work/${category.slug}/`,
+            image: leadAngle?.image ?? lead?.image,
+            imageAlt: leadAngle?.title ?? lead?.title,
+        }),
     };
 }
 

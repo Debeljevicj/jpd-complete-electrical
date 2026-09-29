@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ServiceLandingPage from '@/components/ServiceLandingPage';
 import { serviceBySlug } from '@/data/services';
+import { shareMeta } from '@/lib/share';
 
 const service = serviceBySlug['rcd-testing-safety-switches-adelaide'];
 
@@ -10,12 +11,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/rcd-testing-safety-switches-adelaide',
     },
-    openGraph: {
+    ...shareMeta({
         title: service.title,
         description: service.description,
-        url: 'https://jpdcompleteelectrical.com.au/rcd-testing-safety-switches-adelaide/',
-        type: 'website',
-    },
+        path: '/rcd-testing-safety-switches-adelaide/',
+    }),
 };
 
 export default function Page() {

@@ -4,6 +4,7 @@ import { Phone, HelpCircle } from 'lucide-react';
 import TrustBadges from '@/components/TrustBadges';
 import Accordion from '@/components/Accordion';
 import { faqGroups, allFaqs } from '@/data/faqs';
+import { shareMeta } from '@/lib/share';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -14,13 +15,11 @@ export const metadata: Metadata = {
     description:
         'Straight answers on electrician costs, callout fees, switchboards, safety switches, smoke alarms and compliance. Licensed Adelaide electrician.',
     alternates: { canonical: '/faq' },
-    openGraph: {
+    ...shareMeta({
         title: 'Electrician FAQs Adelaide | JPD Complete Electrical',
-        description:
-            'Straight answers on costs, safety switches, switchboards, smoke alarms, EV chargers and compliance from a licensed Adelaide electrician.',
-        url: `${SITE}/faq/`,
-        type: 'website',
-    },
+        description: 'Straight answers on costs, safety switches, switchboards, smoke alarms, EV chargers and compliance from a licensed Adelaide electrician.',
+        path: '/faq/',
+    }),
 };
 
 export default function FaqPage() {

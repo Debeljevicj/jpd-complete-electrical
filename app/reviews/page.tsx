@@ -2,6 +2,7 @@ import SectionHeading from '@/components/SectionHeading';
 import ClientReviews from '@/components/ClientReviews';
 import Button from '@/components/Button';
 import { Star, ExternalLink } from 'lucide-react';
+import { shareMeta } from '@/lib/share';
 
 export const metadata = {
     title: 'Customer Reviews | JPD Complete Electrical Adelaide',
@@ -9,6 +10,11 @@ export const metadata = {
     alternates: {
         canonical: '/reviews',
     },
+    ...shareMeta({
+        title: 'Customer Reviews | JPD Complete Electrical Adelaide',
+        description: 'Read what our satisfied customers say about our electrical services. 5-star rated Adelaide electrician for residential and commercial projects.',
+        path: '/reviews/',
+    }),
 };
 
 export default function ReviewsPage() {

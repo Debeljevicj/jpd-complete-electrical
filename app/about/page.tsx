@@ -2,6 +2,7 @@ import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
 import Image from 'next/image';
 import { Shield, Users, Award, CheckCircle2 } from 'lucide-react';
+import { shareMeta } from '@/lib/share';
 
 export const metadata = {
     title: 'About Justin | Licensed Adelaide Electrician | JPD',
@@ -9,6 +10,11 @@ export const metadata = {
     alternates: {
         canonical: '/about',
     },
+    ...shareMeta({
+        title: 'About Justin | Licensed Adelaide Electrician | JPD',
+        description: 'Meet Justin, your local licensed electrician (PGE296191). Committed to reliability, honesty, and professional electrical services across Adelaide.',
+        path: '/about/',
+    }),
 };
 
 export default function AboutPage() {

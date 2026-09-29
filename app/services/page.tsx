@@ -10,6 +10,7 @@ import {
     Building2, AlertCircle, Calendar,
     HeartPulse, Home, Shield, Thermometer
 } from 'lucide-react';
+import { shareMeta } from '@/lib/share';
 
 export const metadata = {
     title: 'Electrical Services Adelaide | Switchboards, EV, Lighting',
@@ -17,6 +18,11 @@ export const metadata = {
     alternates: {
         canonical: '/services',
     },
+    ...shareMeta({
+        title: 'Electrical Services Adelaide | Switchboards, EV, Lighting',
+        description: 'Electrical services across Adelaide. Switchboard upgrades, EV chargers, downlights, safety switch testing and emergency callouts. Free quotes.',
+        path: '/services/',
+    }),
 };
 
 export default function ServicesPage() {

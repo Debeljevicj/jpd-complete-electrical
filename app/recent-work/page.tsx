@@ -5,6 +5,7 @@ import Button from '@/components/Button';
 import ServiceIcon from '@/components/ServiceIcon';
 import SectionHeading from '@/components/SectionHeading';
 import { workCategories, jobsForCategory } from '@/lib/recent-work';
+import { shareMeta } from '@/lib/share';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
@@ -13,13 +14,11 @@ export const metadata: Metadata = {
     description:
         'Real electrical jobs across Adelaide, written up with photos: switchboard upgrades, EV chargers, renovations, fault finding, testing and everyday work.',
     alternates: { canonical: '/recent-work' },
-    openGraph: {
+    ...shareMeta({
         title: 'Recent Work | JPD Complete Electrical',
-        description:
-            'Real electrical jobs across Adelaide, written up with photos. Browse by the kind of work.',
-        url: `${SITE}/recent-work/`,
-        type: 'website',
-    },
+        description: 'Real electrical jobs across Adelaide, written up with photos. Browse by the kind of work.',
+        path: '/recent-work/',
+    }),
 };
 
 export default function RecentWorkIndexPage() {

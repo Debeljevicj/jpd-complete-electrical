@@ -4,6 +4,7 @@ import { Phone, Clock, FileCheck, AlertTriangle } from 'lucide-react';
 import ContactContent from './ContactContent';
 import Accordion from '@/components/Accordion';
 import { suburbs } from '@/data/suburbs';
+import { shareMeta } from '@/lib/share';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -16,12 +17,11 @@ export const metadata: Metadata = {
     alternates: {
         canonical: '/contact',
     },
-    openGraph: {
+    ...shareMeta({
         title: 'Contact JPD Complete Electrical',
         description: 'Free electrical quotes across Adelaide. Call 0435 006 420 or send an enquiry.',
-        url: `${SITE}/contact/`,
-        type: 'website',
-    },
+        path: '/contact/',
+    }),
 };
 
 const whatHappensNext = [

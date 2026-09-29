@@ -9,6 +9,7 @@ import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
 import Accordion from '@/components/Accordion';
+import { shareMeta } from '@/lib/share';
 
 interface Props {
     params: {
@@ -34,12 +35,14 @@ export async function generateMetadata({ params }: Props) {
         alternates: {
             canonical: `/blog/${post.slug}`,
         },
-        openGraph: {
+        ...shareMeta({
             title: post.seoTitle ?? post.title,
             description: post.metaDescription ?? post.excerpt,
-            url: `https://jpdcompleteelectrical.com.au/blog/${post.slug}/`,
+            path: `/blog/${post.slug}/`,
+            image: post.image,
+            imageAlt: post.title,
             type: 'article',
-        },
+        }),
     };
 }
 
