@@ -8,64 +8,46 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const reviews = JSON.parse(readFileSync(join(ROOT, 'data', 'reviews.json'), 'utf8'));
 
 // lib/reviews.ts is TypeScript, so the formatter is reimplemented here from the
-// same rules rather than imported. Keep the two in step: if the thresholds in
-// lib/reviews.ts change, change them here too and these tests will say so.
-const MINUTE = 60_000, HOUR = 60 * MINUTE, DAY = 24 * HOUR;
-const WEEK = 7 * DAY, MONTH = 30.44 * DAY, YEAR = 365.25 * DAY;
+// same rules rather than imported. Keep the two in step: if lib/reviews.ts
+// changes, change this too and these tests will say so.
+const MONTHS = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+];
 
-function formatReviewAge(publishedAt, now = new Date()) {
+function formatReviewDate(publishedAt) {
     if (!publishedAt) return null;
-    const iso = /^\d{4}-\d{2}-\d{2}$/.test(publishedAt) ? `${publishedAt}T12:00:00Z` : publishedAt;
-    const then = new Date(iso).getTime();
-    if (Number.isNaN(then)) return null;
-    const delta = now.getTime() - then;
-    if (delta < 0) return 'just now';
-    if (delta < HOUR) return 'just now';
-    if (delta < DAY) {
-        const h = Math.floor(delta / HOUR);
-        return h === 1 ? 'an hour ago' : `${h} hours ago`;
-    }
-    if (delta < WEEK) {
-        const d = Math.floor(delta / DAY);
-        return d === 1 ? 'a day ago' : `${d} days ago`;
-    }
-    if (delta < MONTH) {
-        const w = Math.floor(delta / WEEK);
-        return w === 1 ? 'a week ago' : `${w} weeks ago`;
-    }
-    if (delta < YEAR) {
-        const m = Math.max(1, Math.floor(delta / MONTH));
-        return m === 1 ? 'a month ago' : `${m} months ago`;
-    }
-    const y = Math.floor(delta / YEAR);
-    return y === 1 ? 'a year ago' : `${y} years ago`;
+    const match = /^(\d{4})-(\d{2})/.exec(publishedAt);
+    if (!match) return null;
+    const month = Number(match[2]);
+    if (month < 1 || month > 12) return null;
+    return `${MONTHS[month - 1]} ${match[1]}`;
 }
 
-const NOW = new Date('2026-09-07T12:00:00Z');
-
-test('review ages are phrased the way Google phrases them', () => {
-    assert.equal(formatReviewAge('2026-09-07', NOW), 'just now');
-    assert.equal(formatReviewAge('2026-09-06', NOW), 'a day ago');
-    assert.equal(formatReviewAge('2026-09-04', NOW), '3 days ago');
-    assert.equal(formatReviewAge('2026-08-28', NOW), 'a week ago');
-    assert.equal(formatReviewAge('2026-08-17', NOW), '3 weeks ago');
-    assert.equal(formatReviewAge('2026-07-28', NOW), 'a month ago');
-    assert.equal(formatReviewAge('2026-05-20', NOW), '3 months ago');
-    assert.equal(formatReviewAge('2025-06-01', NOW), 'a year ago');
+test('a review shows its month and year, nothing finer', () => {
+    assert.equal(formatReviewDate('2026-10-07'), 'October 2026');
+    assert.equal(formatReviewDate('2026-10-01'), 'October 2026');
+    assert.equal(formatReviewDate('2026-09-30'), 'September 2026');
+    assert.equal(formatReviewDate('2025-12-14'), 'December 2025');
+    assert.equal(formatReviewDate('2026-01-12'), 'January 2026');
 });
 
 test('a missing date yields no label rather than a wrong one', () => {
-    assert.equal(formatReviewAge(null, NOW), null);
-    assert.equal(formatReviewAge('not a date', NOW), null);
-});
-
-test('a date-only value never reads as being in the future', () => {
-    // Anchoring at midday means a timezone offset cannot tip today into tomorrow.
-    assert.equal(formatReviewAge('2026-09-07', new Date('2026-09-07T00:30:00Z')), 'just now');
+    assert.equal(formatReviewDate(null), null);
+    assert.equal(formatReviewDate('not a date'), null);
+    assert.equal(formatReviewDate('2026-13-01'), null);
 });
 
 test('full API timestamps are handled, not just date-only strings', () => {
-    assert.equal(formatReviewAge('2026-09-05T04:22:11Z', NOW), '2 days ago');
+    assert.equal(formatReviewDate('2026-09-05T04:22:11Z'), 'September 2026');
+});
+
+test('the label is read off the string, so no timezone can shift the month', () => {
+    // A date-only value run through `new Date()` is UTC midnight, which in a
+    // negative-offset timezone is the previous evening. Reading the string
+    // directly means the last day of a month never reports the month before.
+    assert.equal(formatReviewDate('2026-10-01'), 'October 2026');
+    assert.equal(formatReviewDate('2026-08-31'), 'August 2026');
 });
 
 test('every review has the fields the components render', () => {
@@ -80,7 +62,7 @@ test('every review has the fields the components render', () => {
     }
 });
 
-test('review ids are unique, so the refresh script never collides', () => {
+test('review ids are unique, so an automated import never collides', () => {
     const ids = reviews.map((r) => r.id);
     assert.equal(new Set(ids).size, ids.length, 'duplicate review id');
 });
@@ -95,6 +77,13 @@ test('no review is dated in the future', () => {
     }
 });
 
+test('every dated review has a date the formatter can label', () => {
+    for (const r of reviews) {
+        if (!r.publishedAt) continue;
+        assert.ok(formatReviewDate(r.publishedAt), `${r.author} has an unlabelable date: ${r.publishedAt}`);
+    }
+});
+
 test('a review without a date declares itself unknown', () => {
     for (const r of reviews) {
         if (r.publishedAt === null) {
@@ -104,7 +93,7 @@ test('a review without a date declares itself unknown', () => {
 });
 
 // The refresh script's matcher, reimplemented. This is the part that decides
-// whether a review coming back from the API is one already on the site, and
+// whether a review coming back from an API is one already on the site, and
 // getting it wrong means duplicate reviews on the homepage.
 function textKey(content) {
     return (content || '').toLowerCase().replace(/[^a-z0-9 ]+/g, '')
@@ -119,7 +108,7 @@ function isSameReview(existing, incoming) {
 }
 
 test('an already-imported review is recognised despite a trimmed body', () => {
-    // Several reviews were pasted in truncated with an ellipsis. The API returns
+    // Several reviews were pasted in truncated with an ellipsis. An API returns
     // the full text, and matching on the whole string would re-import them.
     const onFile = reviews.find((r) => r.author === 'Daniel D');
     assert.ok(onFile, 'expected the Daniel D review on file');

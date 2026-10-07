@@ -1,7 +1,4 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { formatReviewAge } from '@/lib/reviews';
+import { formatReviewDate } from '@/lib/reviews';
 
 interface ReviewDateProps {
     publishedAt: string | null;
@@ -10,23 +7,15 @@ interface ReviewDateProps {
 }
 
 /**
- * A review's age, correct both for crawlers and for visitors.
+ * A review's month and year, e.g. "October 2026".
  *
- * The label is computed at build time so it is present in the served HTML,
- * which is what Google reads. But a static site is only as fresh as its last
- * deploy, and the weekly refresh only rebuilds when the reviews actually
- * change. So after hydration this recalculates against the visitor's real
- * clock. The first client render deliberately matches the server's, so there
- * is no hydration mismatch, and the correction lands a moment later.
+ * This used to be a client component that re-derived a "3 weeks ago" label
+ * against the visitor's clock after hydration, because a static label of that
+ * kind goes stale between deploys. A month label can't go stale, so it is
+ * rendered once at build time and left alone.
  */
 export default function ReviewDate({ publishedAt, fallback }: ReviewDateProps) {
-    const buildTimeLabel = formatReviewAge(publishedAt) ?? fallback ?? null;
-    const [label, setLabel] = useState(buildTimeLabel);
-
-    useEffect(() => {
-        setLabel(formatReviewAge(publishedAt) ?? fallback ?? null);
-    }, [publishedAt, fallback]);
-
+    const label = formatReviewDate(publishedAt) ?? fallback ?? null;
     if (!label) return null;
     return <>{label}</>;
 }

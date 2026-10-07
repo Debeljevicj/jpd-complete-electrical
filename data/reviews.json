@@ -1,5 +1,93 @@
 [
   {
+    "id": 30,
+    "author": "Kevin M",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-07",
+    "precision": "derived",
+    "content": "Found Justin to be an excellent local electrician, very easy to deal with, clearly explained costs both labour and parts with no surprises on the completion of the job. Arrived on time and was very efficient. Left area clean and tidy. I highly recommend Justin",
+    "avatarColor": "bg-cyan-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 31,
+    "author": "Lynne S",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-07",
+    "precision": "derived",
+    "content": "Very happy with the excellent work provided by Justin. He has great attention to detail, problem solving and getting things just right. I was also impressed with the respectful way he treated his work experience student while explaining things to him and involving him in the process. I would have no hesitation in recommending Justin to anyone looking for a quality and well priced tradesman.",
+    "avatarColor": "bg-sky-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 29,
+    "author": "Luke P",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-06",
+    "precision": "derived",
+    "content": "Couldn't be happier with the work. Reliable and easy to deal with from start to finish. The quality of the workmanship was excellent. Thanks Justin",
+    "avatarColor": "bg-amber-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 27,
+    "author": "Steven V",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-03",
+    "precision": "derived",
+    "content": "Justin provides a fantastic service as an electrician. He is incredibly professional, punctual and efficient. I will definitely use him in the future and can't recommend him enough!",
+    "avatarColor": "bg-rose-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 28,
+    "author": "Stacey F",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-03",
+    "precision": "derived",
+    "content": "I had a great experience with Justin. He did an excellent job replacing my smoke alarms and mounting a few TVs for me. He was friendly, genuine, punctual and very professional throughout the whole process. His pricing was also very reasonable, and the work was completed to a high standard. I'll definitely be using Justin again and have already recommended him to my friends and family! Thanks again",
+    "avatarColor": "bg-violet-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 26,
+    "author": "Jake",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-01",
+    "precision": "derived",
+    "content": "Justin has to be the most professional and friendly trades man I have ever had the pleasure of dealing with. He was punctual and knew exactly the most efficient and effective ways to navigate a technically complex job. JPD is saved within my contacts for all future electrical jobs. 5/5 Stars",
+    "avatarColor": "bg-red-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 25,
+    "author": "Kapil K",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-09-02",
+    "precision": "derived",
+    "content": "Have been using Justin for many years and no job is too small. From adding power points or replacing smoke alarms to provisioning new CAT 6 data points and camera installations, he has handled everything with utmost care, and keeps your property clean. Will not hesitate to recommend nor continue using his services.",
+    "avatarColor": "bg-pink-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 24,
+    "author": "Alan W",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-08-26",
+    "precision": "derived",
+    "content": "Jason provided great same day service replacing light switches to three locations in our home. Great job at a great price.",
+    "avatarColor": "bg-indigo-600",
+    "googleReviewId": null
+  },
+  {
     "id": 23,
     "author": "Marcus D",
     "source": "Google",

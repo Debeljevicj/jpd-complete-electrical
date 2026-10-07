@@ -3,10 +3,10 @@ import reviewsData from '@/data/reviews.json';
 /**
  * How confident we are in a review's date.
  *
- * - `exact`   pulled from the Google Places API, which returns a real timestamp.
- * - `derived` back-calculated from the relative string ("3 weeks ago") that was
- *             hardcoded at the time, offset against the git commit that added
- *             it. Accurate to within a few days, not to the hour.
+ * - `exact`   pulled from a Google API, which returns a real timestamp.
+ * - `derived` back-calculated from the relative string Google showed ("3 weeks
+ *             ago") on the day it was copied across. Accurate to within a few
+ *             days, which is plenty when the site only shows the month.
  * - `unknown` no date available. Facebook recommendations carry no timestamp.
  */
 export type DatePrecision = 'exact' | 'derived' | 'unknown';
@@ -21,7 +21,7 @@ export interface Review {
     precision: DatePrecision;
     content: string;
     avatarColor: string;
-    /** Places API resource name, so re-runs recognise a review already imported. */
+    /** Google's review id, so an automated import recognises one already on file. */
     googleReviewId: string | null;
 }
 
@@ -44,49 +44,28 @@ export const averageRating =
 
 export const reviewCount = reviews.length;
 
-const MINUTE = 60_000;
-const HOUR = 60 * MINUTE;
-const DAY = 24 * HOUR;
-const WEEK = 7 * DAY;
-const MONTH = 30.44 * DAY;
-const YEAR = 365.25 * DAY;
+const MONTHS = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+];
 
 /**
- * Renders a review's age the way Google phrases it ("3 weeks ago").
+ * Renders a review's date as its month and year ("October 2026").
  *
- * This is computed rather than stored. The old data hardcoded the string, so
- * "1 hour ago" stayed "1 hour ago" for two months and every visitor saw a date
- * that was plainly wrong. Passing `now` in keeps it testable.
+ * The site used to show Google-style ages ("3 weeks ago"). Those are only
+ * honest if something recomputes them, and a static site that rebuilds when
+ * reviews change, not when time passes, can't. A month never goes stale, and
+ * it is also all the accuracy a `derived` date can promise.
+ *
+ * Reads the year and month straight off the ISO string rather than through a
+ * Date, so no timezone offset can shift a date-only value into the next or
+ * previous month.
  */
-export function formatReviewAge(publishedAt: string | null, now: Date = new Date()): string | null {
+export function formatReviewDate(publishedAt: string | null): string | null {
     if (!publishedAt) return null;
-
-    // Date-only values are anchored at midday so a timezone offset cannot push
-    // them across a day boundary and report "in 4 hours" for something today.
-    const iso = /^\d{4}-\d{2}-\d{2}$/.test(publishedAt) ? `${publishedAt}T12:00:00Z` : publishedAt;
-    const then = new Date(iso).getTime();
-    if (Number.isNaN(then)) return null;
-
-    const delta = now.getTime() - then;
-    if (delta < 0) return 'just now';
-
-    if (delta < HOUR) return 'just now';
-    if (delta < DAY) {
-        const hours = Math.floor(delta / HOUR);
-        return hours === 1 ? 'an hour ago' : `${hours} hours ago`;
-    }
-    if (delta < WEEK) {
-        const days = Math.floor(delta / DAY);
-        return days === 1 ? 'a day ago' : `${days} days ago`;
-    }
-    if (delta < MONTH) {
-        const weeks = Math.floor(delta / WEEK);
-        return weeks === 1 ? 'a week ago' : `${weeks} weeks ago`;
-    }
-    if (delta < YEAR) {
-        const months = Math.max(1, Math.floor(delta / MONTH));
-        return months === 1 ? 'a month ago' : `${months} months ago`;
-    }
-    const years = Math.floor(delta / YEAR);
-    return years === 1 ? 'a year ago' : `${years} years ago`;
+    const match = /^(\d{4})-(\d{2})/.exec(publishedAt);
+    if (!match) return null;
+    const month = Number(match[2]);
+    if (month < 1 || month > 12) return null;
+    return `${MONTHS[month - 1]} ${match[1]}`;
 }

@@ -35,8 +35,8 @@ the record only.
 | File | What it does |
 |---|---|
 | `data/reviews.json` | The reviews. Machine-writable, hand-editable. |
-| `lib/reviews.ts` | Types, newest-first sort, and the "3 weeks ago" formatter. |
-| `components/ReviewDate.tsx` | Renders a review's age. |
+| `lib/reviews.ts` | Types, newest-first sort, and the "October 2026" formatter. |
+| `components/ReviewDate.tsx` | Renders a review's month and year. |
 | `scripts/refresh-reviews.mjs` | Fetches from Google, appends new reviews. |
 | `.github/workflows/refresh-reviews.yml` | Runs it weekly. |
 | `test/reviews.test.mjs` | Pins the date formatting and the duplicate matching. |
@@ -104,11 +104,12 @@ you cannot choose which five. There are 23 on the site, including the long
 detailed ones that do the actual selling, so the script appends new reviews and
 never deletes. The back catalogue is safe.
 
-**Dates are computed, not stored as text.** The old data hardcoded strings like
-`"1 hour ago"`, which froze on the day they were pasted — one review was still
-claiming "1 hour ago" two months later. Now each review carries a real date and
-the label is worked out at build time, then corrected in the browser on load so
-it cannot go stale between deploys.
+**Dates are stored as real dates and shown as a month.** The old data hardcoded
+strings like `"1 hour ago"`, which froze on the day they were pasted — one review
+was still claiming "1 hour ago" two months later. Each review now carries an ISO
+date and the site shows only its month and year ("October 2026"), decided on
+7 Oct 2026. A month can't go stale between deploys, and it's all the accuracy a
+back-derived date can honestly claim.
 
 **Date accuracy is flagged per review** in the `precision` field:
 
@@ -120,7 +121,7 @@ it cannot go stale between deploys.
   "Recommended" instead of a date rather than an invented one.
 
 **Nothing rebuilds if nothing changed.** A quiet week means no commit and no
-deploy. That is why `ReviewDate` recalculates client-side.
+deploy, and the month label doesn't need one.
 
 ## Adding a review by hand
 
