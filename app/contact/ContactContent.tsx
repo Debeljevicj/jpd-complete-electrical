@@ -131,12 +131,56 @@ export default function ContactContent() {
             {/* Contact Form & Info */}
             <section className="section-padding bg-white">
                 <div className="container-custom">
+                    <h1 className="text-3xl md:text-4xl font-bold text-navy gold-underline mb-6">Contact Your Adelaide Electrician</h1>
+
+                    {/* Calling is the primary path, the form is the fallback.
+                        The page used to open straight onto the form with the phone
+                        number as an aside in a sentence above it, so the default
+                        action was the slow one. Most enquiries are answered faster in
+                        a two-minute conversation than in a thread of emails, and a
+                        phone call is the only one of the two that can establish on the
+                        spot that someone doesn't need an electrician at all.
+
+                        No click handler needed: the delegated listener in Analytics
+                        tracks every tel: link on the site. */}
+                    <div className="bg-navy text-white rounded-2xl p-6 md:p-10 mb-10 md:mb-14 shadow-lg">
+                        <div className="md:flex md:items-center md:justify-between md:gap-10">
+                            <div className="md:flex-1">
+                                <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                                    Ring First. It's Faster.
+                                </h2>
+                                <p className="text-white/85 leading-relaxed mb-5 md:mb-0 md:max-w-xl">
+                                    You'll get Justin, not a call centre taking a message. Most jobs get
+                                    sorted in a two-minute conversation, and if it turns out you don't
+                                    need an electrician at all, we'll tell you that on the phone rather
+                                    than charging you to come and say it.
+                                </p>
+                            </div>
+                            <div className="md:shrink-0 md:text-right">
+                                <a
+                                    href="tel:0435006420"
+                                    className="btn btn-gold w-full md:w-auto text-lg md:text-xl px-8 py-4 inline-flex items-center justify-center gap-3 whitespace-nowrap"
+                                >
+                                    <Phone className="w-6 h-6" />
+                                    0435 006 420
+                                </a>
+                                <p className="text-white/60 text-sm mt-3">
+                                    Weekdays through the day. Urgent after hours, ring anyway.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
                         <div>
-                            <h1 className="text-3xl md:text-4xl font-bold text-navy gold-underline mb-8">Contact Your Adelaide Electrician</h1>
-                            <p className="text-neutral-slate mb-8">
-                                Fill out the form below and we'll get back to you, or give us a call on <a href="tel:0435006420" className="text-gold font-semibold hover:underline">0435 006 420</a> to speak with us directly.
+                            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
+                                Can't Talk Right Now?
+                            </h2>
+                            <p className="text-neutral-slate mb-8 leading-relaxed">
+                                Send the details through instead and we'll ring you back, usually the
+                                same day. It's the slower option, but you can do it at ten at night and
+                                still have an answer in the morning.
                             </p>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/*
