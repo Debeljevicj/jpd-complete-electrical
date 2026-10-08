@@ -1,3 +1,13 @@
+import { situationGuides } from './blog-guides-situations';
+import { seasonalGuides } from './blog-guides-seasonal';
+import { lightingGuides } from './blog-guides-lighting';
+import { roomGuides } from './blog-guides-rooms';
+import { everydayGuides } from './blog-guides-everyday';
+import { businessGuides } from './blog-guides-business';
+import { installGuides } from './blog-guides-installs';
+import { hiringGuides } from './blog-guides-hiring';
+import { faultGuides } from './blog-guides-faults';
+import { complianceGuides } from './blog-guides-compliance';
 import { pricingPosts } from './blog-guides-pricing';
 import { upgradePosts } from './blog-guides-upgrades';
 import { localPosts } from './blog-guides-local';
@@ -402,6 +412,16 @@ const legacyPosts: BlogPost[] = [
 export const blogPosts: BlogPost[] = [
     ...jobReports,
     ...localPosts,
+    ...situationGuides,
+    ...seasonalGuides,
+    ...lightingGuides,
+    ...roomGuides,
+    ...everydayGuides,
+    ...businessGuides,
+    ...installGuides,
+    ...hiringGuides,
+    ...faultGuides,
+    ...complianceGuides,
     ...pricingPosts,
     ...upgradePosts,
     ...legacyPosts,

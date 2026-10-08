@@ -10,19 +10,23 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => readFileSync(join(root, p), 'utf8');
 
+// Every guide module is picked up by name, so a new data/blog-guides-*.ts file
+// is checked from the moment it exists rather than when someone remembers to
+// list it here. Five modules went unchecked for a while because of that.
 const FILES = [
     'data/blog-posts.ts',
-    'data/blog-guides-local.ts',
-    'data/blog-guides-pricing.ts',
-    'data/blog-guides-upgrades.ts',
     'data/job-reports.ts',
+    ...readdirSync(join(root, 'data'))
+        .filter((f) => /^blog-guides-.*\.ts$/.test(f))
+        .sort()
+        .map((f) => `data/${f}`),
 ];
 
 const MIN_FAQS = 3;
