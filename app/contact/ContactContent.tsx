@@ -133,55 +133,46 @@ export default function ContactContent() {
                 <div className="container-custom">
                     <h1 className="text-3xl md:text-4xl font-bold text-navy gold-underline mb-6">Contact Your Adelaide Electrician</h1>
 
-                    {/* Calling is the primary path, the form is the fallback.
-                        The page used to open straight onto the form with the phone
-                        number as an aside in a sentence above it, so the default
-                        action was the slow one. Most enquiries are answered faster in
-                        a two-minute conversation than in a thread of emails, and a
-                        phone call is the only one of the two that can establish on the
-                        spot that someone doesn't need an electrician at all.
+                    <p className="text-neutral-slate text-lg leading-relaxed max-w-3xl mb-8">
+                        The easiest way to get a quote is the form below. Send a few details about the
+                        job and Justin will come back to you, usually the same day. You can fill it in
+                        whenever suits, which beats playing phone tag if you're at work.
+                    </p>
+
+                    {/* One row, not a block. This was a full panel with a heading and a
+                        four-line paragraph on the left and a single button on the right,
+                        so the right half sat empty and the button floated in it with
+                        nothing to line up against. A strip has one row to align, and
+                        keeps calling obvious without it outweighing the form.
 
                         No click handler needed: the delegated listener in Analytics
                         tracks every tel: link on the site. */}
-                    <div className="bg-navy text-white rounded-2xl p-6 md:p-10 mb-10 md:mb-14 shadow-lg">
-                        <div className="md:flex md:items-center md:justify-between md:gap-10">
-                            <div className="md:flex-1">
-                                <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                                    Ring First. It's Faster.
-                                </h2>
-                                <p className="text-white/85 leading-relaxed mb-5 md:mb-0 md:max-w-xl">
-                                    You'll get Justin, not a call centre taking a message. Most jobs get
-                                    sorted in a two-minute conversation, and if it turns out you don't
-                                    need an electrician at all, we'll tell you that on the phone rather
-                                    than charging you to come and say it.
-                                </p>
+                    <div className="bg-navy text-white rounded-xl px-5 py-4 md:px-7 md:py-5 mb-10 md:mb-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        <div className="flex items-center gap-3 min-w-0">
+                            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
+                                <Phone className="w-5 h-5 text-gold" />
                             </div>
-                            <div className="md:shrink-0 md:text-right">
-                                <a
-                                    href="tel:0435006420"
-                                    className="btn btn-gold w-full md:w-auto text-lg md:text-xl px-8 py-4 inline-flex items-center justify-center gap-3 whitespace-nowrap"
-                                >
-                                    <Phone className="w-6 h-6" />
-                                    0435 006 420
-                                </a>
-                                <p className="text-white/60 text-sm mt-3">
-                                    Weekdays through the day. Urgent after hours, ring anyway.
-                                </p>
-                            </div>
+                            <p className="leading-snug">
+                                <span className="font-semibold">Rather talk it through, or is it urgent?</span>{' '}
+                                <span className="text-white/70">You'll get Justin, not a call centre.</span>
+                            </p>
                         </div>
+                        <a
+                            href="tel:0435006420"
+                            className="btn btn-gold w-full sm:w-auto text-lg px-7 py-3 shrink-0 whitespace-nowrap"
+                        >
+                            0435 006 420
+                        </a>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
                         <div>
-                            <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
-                                Can't Talk Right Now?
-                            </h2>
-                            <p className="text-neutral-slate mb-8 leading-relaxed">
-                                Send the details through instead and we'll ring you back, usually the
-                                same day. It's the slower option, but you can do it at ten at night and
-                                still have an answer in the morning.
-                            </p>
+                            {/* SectionHeading rather than a bare h2, so this and
+                                "Contact Information" beside it are the same size, weight
+                                and underline. They were two different treatments at the
+                                top of two columns, which is what made the row look off. */}
+                            <SectionHeading>Send an Enquiry</SectionHeading>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/*
                                   * Web3Forms honeypot. Bots fill every field they find, so a
