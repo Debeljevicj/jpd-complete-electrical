@@ -44,6 +44,495 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'burnt-dryer-powerpoint-lightsview',
+        title: 'A Dryer Powerpoint That Burnt Through in Lightsview',
+        seoTitle: 'Burnt Dryer Powerpoint, Lightsview | JPD',
+        metaDescription:
+            'A safety switch kept tripping in Lightsview. The cause was the clothes dryer powerpoint, burnt through behind the socket with the plug melted into it.',
+        excerpt:
+            'The safety switch kept tripping. Behind the clothes dryer, the plug had melted and burnt a hole through the powerpoint. Here\'s why that happens, and why the outlet has to go.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/burnt_powerpoint_dryer_lightsview.webp',
+        gallery: [
+            {
+                src: '/images/melted_plug_dryer_lightsview.webp',
+                id: 'plug',
+                focus: 'center',
+                alt: 'Clothes dryer plug with one pin blackened and the plastic around it melted',
+                caption:
+                    'The dryer plug. The plastic around one pin has melted and the pin itself is black from the heat.',
+            },
+            {
+                src: '/images/burnt_powerpoint_back_lightsview.webp',
+                id: 'back',
+                focus: 'center',
+                alt: 'Back of the removed powerpoint showing charred and melted plastic around one socket contact',
+                caption:
+                    'The back of the powerpoint once it came off the wall. The damage was worse behind the face than on it.',
+            },
+            {
+                src: '/images/dryer_burnt_outlet_lightsview.webp',
+                focus: 'center',
+                alt: 'Front-loading clothes dryer pulled out from the wall with its cord and plug on the floor',
+                caption: 'The dryer pulled out so the outlet behind it could be reached.',
+            },
+        ],
+        services: ['emergency-electrician-adelaide', 'powerpoint-installation-adelaide'],
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Replacing a Burnt Dryer Powerpoint',
+                blurb: 'The plug melted and burnt a hole through the outlet. A powerpoint that looks like this has to be replaced, not cleaned up.',
+                anchor: 'replace',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>The powerpoint behind your clothes dryer is the one you never look at. It sits behind a heavy appliance, it's plugged in permanently, and it works hard for the hour or more every load takes to dry. That's exactly why it's one of the most common places in a house for a powerpoint to burn.</p>
+            <p>This one was in Lightsview. The call was about a safety switch that kept tripping. The cause was behind the front-loading clothes dryer: the plug had melted and burnt a hole right through the outlet. Left alone, a fault like this keeps heating every time the dryer runs, and the next stage is a fire behind an appliance nobody is watching.</p>
+
+            <h3>What We Found</h3>
+            <p>With the dryer pulled out, the damage was obvious from the front. One socket on the powerpoint had a hole burnt through the faceplate, and the plug was brown and melted around one pin.</p>
+            [[photo:plug]]
+            <p>Off the wall, the back of the powerpoint was worse. The plastic around one of the contacts was charred and melted, which is where the heat had been building for some time before anyone could see it from the front.</p>
+            [[photo:back]]
+
+            <h3>Why a Dryer Powerpoint Burns</h3>
+            <p>It comes down to a heavy load running for a long time through a connection that's no longer tight.</p>
+            <p>A clothes dryer's heating element draws close to the most a standard powerpoint is rated for, and it keeps drawing it for the whole drying cycle, often an hour or more. Over years, the springs inside the socket that grip the plug pins lose their tension, and the plug gets nudged every time the dryer is moved or vibrates as it tumbles. A slightly loose grip means a little more resistance at the pin, and resistance under a heavy load turns into heat.</p>
+            <p>The heat softens the plastic, which loosens the grip further, which makes more heat. It feeds itself, and it can run for months before anything visible happens. There's more on how heat builds at a connection in our guide to <a href="/blog/burning-smell-powerpoint-switchboard-appliance/">a burning smell from a powerpoint or appliance</a>.</p>
+
+            <h3>Why the Safety Switch Was Tripping</h3>
+            <p>Plastic that's been charred doesn't insulate the way it should. Once the material around a contact has burnt, some current can track across it to earth, and a safety switch is built to cut the power the moment it sees current going somewhere it shouldn't.</p>
+            <p>So the tripping wasn't a fault with the safety switch. It was the safety switch doing its job and pointing at the outlet. Resetting it and carrying on would have kept a burnt outlet in service behind a running appliance.</p>
+
+            <h3 id="replace">If Your Outlet Looks Like This, It Has to Be Replaced</h3>
+            <p>A powerpoint with a scorch mark, a melted face or a hole burnt through it is a fire hazard, and there's no repairing it. The contacts inside have been heated past what they're made for, and the plastic holding them has lost its strength. Cleaning it up or taping over it leaves the same weak connection behind the cover.</p>
+            <p>The powerpoint was replaced, and the plug has to be dealt with too. A melted plug has damaged pins, and pushing it into a new outlet starts the same problem again in the new socket.</p>
+            <p>Every powerpoint that runs a heavy appliance is worth a look now and then, especially if it's behind something you rarely move: the dryer, the washing machine, the dishwasher, the fridge. Brown marks, a warm faceplate, a plug that's loose in the socket or a faint hot plastic smell are all reasons to switch it off and get it checked. Our <a href="/powerpoint-installation-adelaide/">powerpoints and extra circuits</a> page covers replacing outlets and adding new ones.</p>
+            <p>We cover Lightsview and the surrounding suburbs. If something's tripping, our <a href="/emergency-electrician-adelaide/">fault finding</a> page explains how we track it down.</p>
+        `,
+        faqs: [
+            {
+                question: 'Why do clothes dryer plugs melt?',
+                answer: 'Usually because the socket has stopped gripping the plug pins firmly. A dryer\'s heating element draws a heavy load for the whole cycle, often an hour or more, and a loose connection under that load turns into heat. Over time the heat softens the plastic around the pin, which loosens the grip further and makes more heat. Vibration and moving the dryer speed it up. A brown or melted plug means the outlet it was in needs checking too, not just the plug.',
+            },
+            {
+                question: 'Can a burnt powerpoint make the safety switch trip?',
+                answer: 'Yes. Plastic that has charred no longer insulates properly, so a small amount of current can leak across it to earth. A safety switch is designed to trip as soon as it detects current leaking like that, so a burnt outlet often shows up as a safety switch that keeps tripping. That\'s the safety switch working, not failing. Keep the power off to that outlet and have it replaced rather than resetting and carrying on.',
+            },
+            {
+                question: 'Should the washing machine and dryer have separate powerpoints?',
+                answer: 'Yes, ideally each one has its own outlet rather than sharing one through a double adaptor or powerboard. Both draw a heavy load for long periods, and running two of them through one socket loads that connection far beyond what it sees with a single appliance. If they\'re on the same circuit and running both trips the breaker, or the outlet feels warm, giving the dryer its own circuit is the proper fix.',
+            },
+            {
+                question: 'Do I need a new plug on the appliance if the powerpoint burnt?',
+                answer: 'If the plug is melted, browned or has blackened pins, yes. Damaged pins don\'t make proper contact, so plugging a heat-damaged plug into a new outlet starts the same heating in the new socket. The plug or the whole cord needs replacing before the appliance goes back in. Check the appliance\'s warranty or manual first, since some manufacturers want their own service agent to replace the cord.',
+            },
+        ],
+        cta: {
+            heading: 'Safety Switch Tripping, or a Brown Powerpoint?',
+            description:
+                'A burnt outlet behind an appliance gets worse every time it runs. JPD Complete Electrical covers Lightsview, the north-east and metropolitan Adelaide.',
+            linkText: 'Book Electrical Fault Finding',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'same-day-oven-replacement-holden-hill',
+        title: 'Replacing a Faulty Oven the Same Day in Holden Hill',
+        seoTitle: 'Same Day Oven Replacement, Holden Hill | JPD',
+        metaDescription:
+            'A faulty under-bench oven in Holden Hill swapped for a new Westinghouse on the day we were called. What a like-for-like oven replacement involves, and what to check before buying one.',
+        excerpt:
+            'The oven had died and the customer already had the new one. We got there the same day, took the old one out and fitted the new one. Here\'s what to check before you buy yours.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/oven_replacement_westinghouse_holden_hill.webp',
+        gallery: [
+            {
+                src: '/images/oven_replacement_door_open_holden_hill.webp',
+                id: 'open',
+                focus: 'center',
+                alt: 'New under-bench electric oven installed below a gas cooktop, door open with racks fitted',
+                caption: 'The new oven in, racks fitted and tested before we left.',
+            },
+        ],
+        services: ['oven-cooktop-installation-adelaide'],
+        suburb: 'electrician-holden-hill',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>An oven doesn't fail at a convenient time. When it goes, the kitchen is half out of action until it's replaced, and most people's first instinct is to buy a new one and get it in quickly. That's fair, but buying first and checking later is how you end up with an oven that doesn't fit the cavity, or one that needs more from the circuit than the old one did, and a second wait while that gets sorted.</p>
+            <p>This one was a faulty under-bench oven in Holden Hill. The customer had already bought the replacement, a Westinghouse, and we got there the same day, took the old oven out and fitted the new one.</p>
+
+            <h3>What a Like-for-Like Swap Involves</h3>
+            <p>Replacing an oven with a similar one is usually straightforward, provided three things line up.</p>
+            <p><strong>It fits the cavity.</strong> Most built-in ovens are made to a common width, but the cut-out height and depth and the ventilation gaps vary between models. The manufacturer's installation manual gives the cut-out size, and it's worth comparing with the old oven before buying, not on the day.</p>
+            <p><strong>The circuit can carry it.</strong> The rating plate on the new oven says what it draws. If it's similar to the old one, the existing circuit will usually do. If it's noticeably bigger, the circuit and the switchboard need checking first.</p>
+            <p><strong>The connection suits it.</strong> Some ovens plug into a powerpoint behind the unit and some are hardwired. The manual says which, and that decides what the electrician needs to do to connect it.</p>
+            <p>Our guide to <a href="/blog/oven-induction-cooktop-electrical-requirements/">oven and cooktop electrical requirements</a> goes through each of those properly.</p>
+
+            <h3>How This One Went</h3>
+            <p>The old oven came out, the supply was checked, and the new Westinghouse went into the same cavity under the gas cooktop. Once it was connected, it was tested and run before we left, so the customer knew it was working rather than finding out at dinner time.</p>
+            [[photo:open]]
+            <p>Here the customer supplied the oven, which is common. We can also supply one and bring it to site if that's easier, which saves you arranging the delivery and the install separately.</p>
+
+            <h3>When It's Not Like-for-Like</h3>
+            <p>The swap gets bigger when the new oven is a different type or a bigger load: going from a single oven to a double, moving to a pyrolytic model, or replacing gas with electric. Those can need a bigger circuit, and on an older switchboard sometimes a board upgrade as well. None of that is a reason not to do it. It's just much better to know before the old oven comes out.</p>
+
+            <h3>If Your Oven Has Just Died</h3>
+            <p>Switch it off at the isolator or the circuit breaker if it's tripping, smelling hot or doing anything odd. Then check the rating plate and the cut-out size of the old oven, so you can match them when you buy. If you're not sure what you've got, a photo of the rating plate is usually enough for us to tell you whether a new oven will connect straight up.</p>
+            <p>Our <a href="/oven-cooktop-installation-adelaide/">oven and cooktop installation</a> page covers what we do, and our <a href="/electrician-holden-hill/">Holden Hill electrician</a> page covers local work.</p>
+        `,
+        faqs: [
+            {
+                question: 'Why does my oven trip the safety switch when it heats up?',
+                answer: 'Most often it\'s a failing element. As an element ages, moisture or a crack in its insulation lets a small current leak to earth, and that often only shows up once the element is hot. The safety switch sees the leak and trips. It can also be a damaged cable or connection behind the oven. Either way, leave the oven off and have it tested, because it\'s a fault the safety switch is correctly reacting to.',
+            },
+            {
+                question: 'Will a new oven fit where my old one was?',
+                answer: 'Often, but check before you buy. Built-in ovens are mostly made to a common width, but the cut-out height, the depth and the ventilation clearances differ between brands and models. The installation manual for the new oven lists the cut-out size it needs. Measure the old cavity and compare. A slightly smaller oven can usually be fitted with trim, while a bigger one means cabinetry work.',
+            },
+            {
+                question: 'Is it worth repairing an old oven instead of replacing it?',
+                answer: 'It depends on what\'s failed and how old the oven is. A single element or thermostat is often worth replacing on an oven that\'s otherwise sound, while a failed control board or a rusted cavity on an older oven usually isn\'t. Parts availability matters too, since parts for older models can be hard to get. Repairs inside the appliance are a job for an appliance technician. An electrician handles the supply and the connection.',
+            },
+            {
+                question: 'Can I keep using my oven if it only trips sometimes?',
+                answer: 'No. An oven that trips the safety switch or the circuit breaker, even occasionally, has a fault that the protection is picking up. Using it until it fails completely means relying on the safety switch to catch it every time. Turn it off at its isolator or circuit breaker and have it tested. It\'s often a single element, which is far cheaper to find now than after it damages something else.',
+            },
+        ],
+        cta: {
+            heading: 'Oven Just Died?',
+            description:
+                'Send us a photo of the rating plate and we\'ll tell you whether a new one connects straight up. JPD Complete Electrical covers Holden Hill and the north-eastern suburbs.',
+            linkText: 'Book an Oven Install',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'crystal-chandelier-wall-sconces-bedroom-adelaide-hills',
+        title: 'A Crystal Chandelier and Wall Sconces for an Adelaide Hills Bedroom',
+        seoTitle: 'Chandelier and Wall Sconces, Adelaide Hills | JPD',
+        metaDescription:
+            'A tiered crystal chandelier and plaster wall sconces in an Adelaide Hills bedroom, using the customer\'s own fittings. What a chandelier needs above the ceiling.',
+        excerpt:
+            'A tiered crystal chandelier and a pair of soft up and down wall sconces turned a plain bedroom into the nicest room in the house. Here\'s what goes into hanging them properly.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/chandelier_sconce_bedroom_adelaide_hills.webp',
+        gallery: [
+            {
+                src: '/images/crystal_chandelier_bedroom_adelaide_hills.webp',
+                id: 'chandelier',
+                focus: 'top',
+                alt: 'Tiered crystal chandelier lit in a bedroom with a decorative cornice and a window onto garden',
+                caption: 'The chandelier lit, centred in the room under the decorative cornice.',
+            },
+            {
+                src: '/images/plaster_wall_sconce_bedroom_adelaide_hills.webp',
+                id: 'sconce',
+                focus: 'center',
+                alt: 'Fluted white plaster wall sconce casting light up and down a bedroom wall',
+                caption: 'One of the plaster sconces, throwing light both up and down the wall.',
+            },
+        ],
+        services: ['feature-lighting-led-strip-adelaide'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Lighting is the cheapest way to change how a room feels, and a bedroom is where most people put up with a single ceiling light for years. A chandelier and a pair of wall sconces can turn it into the best room in the house. But a heavy fitting that's hung on plasterboard alone, or sconces wired as an afterthought, can mean a fitting that sags, cracks the ceiling or one day comes down.</p>
+            <p>This was a bedroom in the Adelaide Hills: a tiered crystal chandelier in the centre of the ceiling and plaster wall sconces either side, all fittings the customer supplied. The aim was to add an element of class to the room, and the photos show it worked.</p>
+
+            <h3 id="chandelier">The Chandelier</h3>
+            <p>A tiered crystal chandelier is a heavy fitting, and the weight isn't something to hang on plasterboard. It needs to be fixed into the ceiling structure above, a joist or a piece of timber fitted between joists, so the ceiling lining isn't carrying it. Where the light point doesn't line up with a joist, that support gets added above the ceiling before the fitting goes up.</p>
+            [[photo:chandelier]]
+            <p>Position matters as much as support. Centred on the room, rather than on wherever the old light happened to be, is what makes a chandelier look intended. The drop matters too. It needs to clear the head of anyone walking under it while still sitting in proportion with the ceiling height, and the chain is adjusted on site rather than guessed.</p>
+            <p>Assembly takes time. A crystal chandelier usually arrives with every strand packed separately, and hanging them is a job for patience rather than speed.</p>
+
+            <h3 id="sconces">The Wall Sconces</h3>
+            <p>The sconces are fluted plaster, throwing light both up and down the wall. That's what gives the room its warmth: a soft wash of light on the wall rather than one bright source overhead.</p>
+            [[photo:sconce]]
+            <p>Wall lights need their wiring brought to exactly the right point in the wall, at a height that suits the fitting and the furniture beside it. Setting them out evenly, the same height and the same distance from the corners, is the difference between sconces that look designed and sconces that look added.</p>
+            <p>With a chandelier and sconces in one room, switching them separately is worth it. The chandelier for when you want the room lit, the sconces for evenings, and neither forcing the other on.</p>
+
+            <h3>Customer-Supplied Fittings</h3>
+            <p>All the fittings were supplied by the customer, which is common with decorative lighting since people choose the look themselves. The things worth checking before buying are the fitting's weight, how it mounts, and whether it's approved for sale in Australia, because a fitting bought from an overseas site may not be. Our <a href="/feature-lighting-led-strip-adelaide/">feature lighting</a> page covers what we install, and our <a href="/blog/wall-sconces-stairwell-chandelier-redwood-park/">Redwood Park job</a> covers dimming LED fittings and hanging a chandelier over a stairwell.</p>
+            <p>We work across the Adelaide Hills and metropolitan Adelaide.</p>
+        `,
+        faqs: [
+            {
+                question: 'Does a heavy chandelier need extra support in the ceiling?',
+                answer: 'Yes. Plasterboard isn\'t made to carry a heavy fitting, so a chandelier should be fixed into the ceiling structure: a joist, or timber added between joists where the light point falls between them. The fitting\'s weight and mounting instructions decide what\'s needed. The support goes in from the roof space or through the ceiling before the chandelier is hung, which is much easier than fixing a sagging ceiling later.',
+            },
+            {
+                question: 'How big should a chandelier be for a bedroom?',
+                answer: 'A common rule of thumb is to add the room\'s length and width in metres and multiply by about eight to get a diameter in centimetres. A 4 by 4 metre bedroom suits a chandelier around 65 centimetres across. It\'s a starting point, not a rule. A high ceiling or a statement piece can go bigger, and a low ceiling usually wants something smaller or closer to the ceiling.',
+            },
+            {
+                question: 'Can wall lights be added where there\'s no wiring?',
+                answer: 'Yes. New cabling is run inside the wall from the ceiling space down to each sconce position, then to a switch. In a framed wall this is usually done with only small openings. Solid masonry walls, common in older Adelaide Hills homes, are harder, because the cable has to be chased into the wall and the plaster made good afterwards. Choose the fitting first, since its mounting plate decides exactly where the cable needs to come out.',
+            },
+            {
+                question: 'Should bedroom wall sconces be on a separate switch?',
+                answer: 'Usually, yes. Putting the sconces on their own switch, separate from the main ceiling light, lets you use the soft wall light in the evening without the overhead light. Many people also add a second switch by the bed, so the sconces can be turned off without getting up. That\'s easy to plan in while the wiring is going in, and awkward to add later.',
+            },
+        ],
+        cta: {
+            heading: 'Got a Statement Light to Hang?',
+            description:
+                'Chandeliers, pendants and wall lights fitted properly, whether you supply them or we do. JPD Complete Electrical covers the Adelaide Hills and metropolitan Adelaide.',
+            linkText: 'Get a Lighting Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'led-downlight-upgrade-golden-grove',
+        title: 'Swapping Old Downlights for New LEDs in Golden Grove',
+        seoTitle: 'Replacing Old Downlights With LED, Golden Grove | JPD',
+        metaDescription:
+            'Existing downlights swapped for new LED downlights through a Golden Grove home. What a like-for-like downlight upgrade involves, and what to check before you start.',
+        excerpt:
+            'The downlights were already there. They just weren\'t very good. Swapping them for new LEDs through the house made every room look brighter and newer.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/led_downlight_upgrade_lounge_golden_grove.webp',
+        gallery: [
+            {
+                src: '/images/led_downlight_upgrade_bedroom_golden_grove.webp',
+                id: 'bedroom',
+                focus: 'top',
+                alt: 'Freshly painted bedroom with new LED downlights in the ceiling and timber floorboards',
+                caption: 'One of the bedrooms with the new downlights in.',
+            },
+            {
+                src: '/images/led_downlight_upgrade_room_golden_grove.webp',
+                focus: 'top',
+                alt: 'Empty room with new LED downlights installed in the ceiling near the cornice',
+                caption: 'Even light across the room from the new downlights.',
+            },
+        ],
+        services: ['downlight-installation-adelaide'],
+        suburb: 'electrician-golden-grove',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Plenty of Adelaide homes already have downlights. They're just old: dull, yellow, mismatched where globes have been replaced over the years, and in some cases the type that runs hot or can't have insulation near it. Living with them costs you light, power and sometimes safety. Swapping them out is one of the simplest upgrades there is, as long as the new ones suit what's above the ceiling.</p>
+            <p>This Golden Grove job was exactly that: existing downlights through the house, swapped for new LED downlights room by room.</p>
+
+            <h3>Why Swapping Is Simpler Than Starting Fresh</h3>
+            <p>With existing downlights, most of the work is already done. The holes are cut, the cabling is in the ceiling and the switches are on the wall. The new fittings go into the existing positions, connected to the existing wiring.</p>
+            [[photo:bedroom]]
+            <p>That keeps the job quick and tidy. No new holes, no patching, and in most rooms the furniture barely has to move.</p>
+
+            <h3>What Gets Checked Along the Way</h3>
+            <p><strong>The hole size.</strong> New downlights are sold by cut-out size, and they need to match the holes already there. A slightly larger fitting can enlarge a hole, but a smaller one leaves a gap that needs patching. Matching them is the easy option.</p>
+            <p><strong>The insulation.</strong> Old downlights often had insulation kept clear of them, sometimes leaving bare patches in the ceiling. New LED downlights rated to be covered by insulation let it go back over the top. Our guide to <a href="/blog/downlights-and-ceiling-insulation-adelaide/">downlights and ceiling insulation</a> explains the ratings.</p>
+            <p><strong>The wiring.</strong> Swapping the fittings is a chance to see the condition of the cable and connections above each one. Anything brittle, scorched or badly joined gets fixed while we're up there, rather than left behind a new light.</p>
+            <p><strong>The switching.</strong> If any rooms were on dimmers, the new downlights need to be dimmable and compatible with the dimmer, or the dimmer replaced to suit.</p>
+
+            <h3>Choosing the New Ones</h3>
+            <p>The light you get out of a downlight comes down to a few numbers: lumens for brightness, colour temperature for how warm or cool the light looks, and beam angle for how wide it spreads. Getting those right per room matters more than the brand. Our guide to <a href="/blog/how-to-choose-led-downlights-adelaide/">choosing LED downlights</a> goes through them, and <a href="/blog/whole-house-led-downlights-golden-grove/">another Golden Grove job</a> shows more than forty downlights going in as part of a full renovation.</p>
+
+            <h3>The Result</h3>
+            <p>Every room got even, consistent light, with matching fittings from one room to the next instead of a mix of whatever had been replaced over the years. With fresh paint and floors, it's the kind of change that makes a whole house feel finished.</p>
+            <p>Our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page covers what we do, and our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page covers local work.</p>
+        `,
+        faqs: [
+            {
+                question: 'How long do LED downlights last?',
+                answer: 'Good quality LED downlights are commonly rated in the tens of thousands of hours, which at normal household use is many years. The rating is for the LED itself, though. The driver, the small power supply that runs it, is often the part that fails first, especially on cheap fittings or in a hot roof space. Choosing a reputable brand with a decent warranty matters more than the rated hours on the box.',
+            },
+            {
+                question: 'Should I replace all my downlights at once or just the broken ones?',
+                answer: 'If they\'re old, replacing a whole room or the whole house at once is usually better. New LEDs next to old fittings rarely match in colour or brightness, and the difference is obvious once they\'re side by side. Doing them together also means one visit instead of several. If only one or two have failed and the rest are fairly new, matching the existing model is a reasonable alternative.',
+            },
+            {
+                question: 'Can downlights be moved to a different spot when they\'re replaced?',
+                answer: 'Yes, but it turns a straight swap into a bigger job. Moving a downlight means cutting a new hole, running the cable to the new position and patching and painting the old hole. That\'s worth it where the old layout is genuinely wrong, like a light directly behind where you sit or a dark corner. If the existing positions work, keeping them is quicker, tidier and cheaper.',
+            },
+            {
+                question: 'Do new LED downlights need new wiring?',
+                answer: 'Usually not. In most cases the new downlights connect to the cabling already in the ceiling and run from the existing switches. Where the old fittings had a plug base or a transformer, those are often replaced to suit the new lights. If the existing cable is damaged, scorched or old enough to be brittle, that section gets replaced while the ceiling is being worked on.',
+            },
+        ],
+        cta: {
+            heading: 'Tired of Your Old Downlights?',
+            description:
+                'Swapping existing downlights for good LEDs is quick and makes every room look newer. JPD Complete Electrical covers Golden Grove and the north-eastern suburbs.',
+            linkText: 'Get a Downlight Quote',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'shed-cable-short-circuit-wynn-vale',
+        title: 'A Shed Cable That Wore Through and Shorted in Wynn Vale',
+        seoTitle: 'Shed Cable Short Circuit, Wynn Vale | JPD',
+        metaDescription:
+            'A cable run through a rough hole in a Wynn Vale shed wore through over time and shorted against the steel, tripping the circuit with sparks. What caused it and the fix.',
+        excerpt:
+            'The circuit tripped with sparks and the shed couldn\'t be switched back on. A cable fed through a rough-cut hole in the steel had worn through and shorted against the shed.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/shed_cable_shorted_wynn_vale.webp',
+        gallery: [
+            {
+                src: '/images/shed_cable_rough_hole_wynn_vale.webp',
+                id: 'hole',
+                focus: 'center',
+                alt: 'Damaged cable held beside the rough-cut hole in a galvanised steel shed wall it passed through',
+                caption: 'The cable next to the hole it ran through. The steel edge had nothing protecting the cable from it.',
+            },
+            {
+                src: '/images/shed_wall_hole_burn_wynn_vale.webp',
+                id: 'wall',
+                focus: 'center',
+                alt: 'Rough hole in a galvanised steel shed wall with a burn mark and rust streak below it',
+                caption: 'The hole in the shed wall, with the mark left where the cable shorted against it.',
+            },
+        ],
+        services: ['emergency-electrician-adelaide'],
+        suburb: 'electrician-wynn-vale',
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Cable doesn't wear out sitting still. It wears out where it rubs against something. Run a cable through a hole cut in a steel shed wall with nothing protecting it from the edge, and every bit of movement, wind and vibration slowly saws through the insulation. When it finally goes, the live conductor touches the steel. In this case that meant sparks and a tripped circuit. In a worse case it's a live shed wall.</p>
+            <p>This was in Wynn Vale. A circuit tripped with sparks flying, and the shed couldn't be switched back on.</p>
+
+            <h3>What Caused It</h3>
+            <p>The cable to the shed had been run through a rough hole in the galvanised steel wall. No grommet, no bush, no edge protection, just cable against cut metal.</p>
+            [[photo:hole]]
+            <p>Over time the edge of the hole wore through the cable's outer sheath, then through the insulation on the conductors inside. Once a conductor was bare against the steel, it shorted.</p>
+            <p>The cable in the photo at the top of this page is the result: the sheath worn through and the conductors burnt where they made contact.</p>
+            [[photo:wall]]
+
+            <h3>Why It Wouldn't Reset</h3>
+            <p>When the circuit tripped, it did its job: it cut the power the instant the short happened. But the fault was still there. Every time it was switched back on, the same damaged cable was still touching the same steel, so it tripped again straight away.</p>
+            <p>That's the point of a breaker or safety switch that won't stay on. It's telling you the fault hasn't gone anywhere, and resetting it repeatedly just repeats the short.</p>
+
+            <h3>The Fix</h3>
+            <p>The damaged section of cable was cut out and part of the run replaced, so it was compliant again. Then edge protection went around the hole, so the new cable sits against a smooth protected edge instead of raw steel and can't wear through the same way.</p>
+            <p>Replacing the cable alone would only have reset the clock. The cause was the hole, and the edge protection is what fixes it.</p>
+            <p>We didn't get a photo of the finished repair, only of what we found. The before photos are the useful ones anyway, because they show what to look for in your own shed.</p>
+
+            <h3>Check Your Own Shed</h3>
+            <p>Have a look wherever cables pass through the shed's walls, roof or framing. Cable running straight through a cut hole in steel with no grommet or edge protection is worth fixing before it fails. So is cable that's loose and flapping, run along the outside where it can be knocked, or showing scuffs and splits in the sheath.</p>
+            <p>If the shed trips and won't reset, leave it off and get it looked at. There's more on wiring a shed properly in our guide to <a href="/blog/running-power-to-shed-garage-granny-flat-adelaide/">running power to a shed or garage</a>, and the old fuse board in this same shed was upgraded too, which is written up in <a href="/blog/shed-switchboard-ceramic-fuses-upgrade-wynn-vale/">a shed switchboard upgrade in Wynn Vale</a>.</p>
+            <p>We're based in Wynn Vale. Our <a href="/emergency-electrician-adelaide/">fault finding</a> page explains how we track faults down, and our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page covers local work.</p>
+        `,
+        faqs: [
+            {
+                question: 'Why does a cable going through a metal wall need edge protection?',
+                answer: 'Because cut metal is sharp, and cable moves. Wind, vibration and temperature changes keep a cable shifting slightly against the edge of the hole, and over time that wears through the sheath and then the insulation. A grommet, bush or edge protection strip gives the cable a smooth edge to sit against. Without it, a cable through sheet steel is a fault waiting to happen.',
+            },
+            {
+                question: 'Can a damaged cable make a metal shed live?',
+                answer: 'It can, and that\'s the real danger. If a live conductor wears through and touches the steel, the shed\'s frame or cladding can become live. Proper earthing and a working safety switch are what make the protection operate quickly when that happens. If you ever get a tingle or shock from a shed, gate or fence, keep everyone away from it, switch the power off at the switchboard and call an electrician.',
+            },
+            {
+                question: 'Should I keep resetting a breaker that tripped with sparks?',
+                answer: 'No. Sparks mean there was a short circuit, and if the breaker trips again straight after you reset it, the fault is still there. Each reset repeats the short, which damages the cable and connections further and can start a fire. Leave it off, keep away from the area where the sparks came from, and have the circuit tested and repaired before it goes back on.',
+            },
+            {
+                question: 'Should the cable to my shed be in conduit?',
+                answer: 'Wherever it could be damaged, yes. Cable that runs where it can be knocked, stepped on, rubbed or hit by tools or equipment needs mechanical protection, and conduit is the usual way to provide it. Cable going underground to a shed has its own rules for depth and protection. Inside a shed, cable running at low level along walls or near where things are stored is a common place for damage.',
+            },
+        ],
+        cta: {
+            heading: 'Shed Tripping and Won\'t Reset?',
+            description:
+                'Leave it off, and we\'ll find what it\'s tripping on. JPD Complete Electrical is based in Wynn Vale and covers the north-eastern suburbs.',
+            linkText: 'Book Electrical Fault Finding',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'shed-switchboard-ceramic-fuses-upgrade-wynn-vale',
+        title: 'An Old Ceramic Fuse Board in a Wynn Vale Shed, Upgraded',
+        seoTitle: 'Shed Switchboard Upgrade, Wynn Vale | JPD',
+        metaDescription:
+            'A Wynn Vale shed still running on old ceramic fuses, no longer working and not compliant, replaced with a new enclosure and safety switch protection.',
+        excerpt:
+            'The house had been updated. The shed was still on old ceramic fuses, open, not working and not compliant. Here it is before and after.',
+        date: '2026-10-12',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/shed_switchboard_new_wynn_vale.webp',
+        gallery: [
+            {
+                src: '/images/shed_switchboard_ceramic_fuses_wynn_vale.webp',
+                role: 'before',
+                focus: 'center',
+                alt: 'Old shed switchboard with ceramic fuse carriers mounted on a timber post, cover off and wiring exposed',
+                caption: 'Before. Ceramic fuses on a timber post, the cover off, and wiring exposed. It wasn\'t working.',
+            },
+            {
+                src: '/images/shed_switchboard_new_wynn_vale.webp',
+                role: 'after',
+                focus: 'top',
+                alt: 'New enclosed shed switchboard with a main switch and safety switch protection, cable in conduit below',
+                caption: 'After. A new enclosure with a main switch and safety switch protection, and the cable in conduit.',
+            },
+        ],
+        services: ['switchboard-upgrade-adelaide', 'rcd-testing-safety-switches-adelaide'],
+        suburb: 'electrician-wynn-vale',
+        angles: {
+            'rcd-testing-safety-switches-adelaide': {
+                title: 'Safety Switch Protection for a Shed in Wynn Vale',
+                blurb: 'The shed was still on ceramic fuses with no safety switch. The new board protects everything in it.',
+                anchor: 'safety-switch',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A shed switchboard is easy to forget. The house board gets upgraded, the shed sits at the back of the yard doing what it always has, and nobody looks at it until it stops working. But a shed is where people use the most dangerous tools in the house, in the dampest conditions, often standing on concrete. Running that on old fuses with no safety switch is exactly where protection matters most.</p>
+            <p>This one was in Wynn Vale. The shed was still on its old ceramic fuse board, which had stopped working and wasn't compliant. It was replaced with a new enclosure and safety switch protection. The two photos at the top of this page are the board before and after.</p>
+
+            <h3>What Was There</h3>
+            <p>The old board was a set of rewireable ceramic fuses mounted on a timber post, with the cover off and the wiring exposed. It had stopped functioning, and as it stood it wasn't compliant with the wiring rules.</p>
+            <p>Ceramic fuses protect a cable from overload, but they don't protect people. There's no detection of current leaking to earth, which is the thing a safety switch exists to catch: a damaged lead, a wet power tool, a person touching something live. In a shed, that's the main risk. Rewireable fuses also tend to get repaired with whatever wire is to hand over the years, which can stop them protecting even the cable.</p>
+
+            <h3 id="safety-switch">What Went In</h3>
+            <p>A new enclosed board replaced the fuses, with a main switch and safety switch protection on the shed's circuits. The cable feeding it now runs in conduit, and everything is covered, labelled and closed up.</p>
+            <p>The practical difference is simple. If a lead gets cut by a mower, a drill gets wet or someone touches a damaged tool, the safety switch cuts the power fast enough to matter. On the old fuses, nothing would have happened until something was already hurt or burning. Our <a href="/rcd-testing-safety-switches-adelaide/">safety switches and RCD testing</a> page explains how they work.</p>
+
+            <h3>Why Shed Boards Get Left Behind</h3>
+            <p>A shed usually has its own small board fed from the house. When the house switchboard is upgraded, the shed board isn't automatically part of it. It's a separate board in a separate building, so unless someone specifically includes it, it keeps whatever it had, sometimes for decades.</p>
+            <p>That's why it's worth asking about the shed whenever the house board is being looked at, and having a look yourself next time you're out there. Fuses you pull out, no test button anywhere, a missing cover or wires you can see are all reasons to get it upgraded.</p>
+
+            <h3>If You've Got a Shed Like This</h3>
+            <p>If the shed board has no cover or exposed wiring, keep people away from it and switch the shed off at the house board if you can. Either way, a photo of the shed board is usually enough to tell you roughly what you're dealing with.</p>
+            <p>There's more on getting power to a shed properly in our guide to <a href="/blog/running-power-to-shed-garage-granny-flat-adelaide/">running power to a shed or garage</a>, and the cable into this same shed had worn through and shorted, which is written up in <a href="/blog/shed-cable-short-circuit-wynn-vale/">a shed cable that shorted in Wynn Vale</a>. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers the work. We're based in Wynn Vale, and our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page covers local work.</p>
+        `,
+        faqs: [
+            {
+                question: 'Does upgrading my house switchboard also upgrade the shed?',
+                answer: 'Not automatically. A shed with its own board is fed from the house, but the shed board is separate and stays as it is unless it\'s included in the work. The house upgrade may add protection to the cable feeding the shed, but the fuses or breakers inside the shed don\'t change. If your shed has its own board, ask for it to be checked whenever the house board is being upgraded.',
+            },
+            {
+                question: 'Is a switchboard with the cover off dangerous?',
+                answer: 'Yes. With the cover off, live terminals and conductors are exposed, and anyone reaching in to reset something can touch them. In a shed it\'s worse, because people are often holding metal tools, standing on concrete or working in damp conditions. Keep children and anyone else away from it, don\'t try to put it back together yourself, and have an electrician make it safe or replace it.',
+            },
+            {
+                question: 'How many circuits should a shed switchboard have?',
+                answer: 'At least one for lights and one for power, so a tripped powerpoint doesn\'t leave you working in the dark. Beyond that, it depends on what the shed is used for. A welder, a compressor, a kiln or an air conditioner usually wants its own circuit. Leaving a spare position or two is worth it too, because sheds tend to gain equipment over time.',
+            },
+            {
+                question: 'Where should a switchboard go in a shed?',
+                answer: 'Somewhere easy to reach in a hurry, usually near the main door and clear of where things get stacked. It shouldn\'t be behind shelving, above a bench you have to climb on, or where water drips or blows in. It needs to stay accessible, because the point of a switchboard is that you can turn things off quickly when something goes wrong.',
+            },
+        ],
+        cta: {
+            heading: 'Is Your Shed Still on Old Fuses?',
+            description:
+                'A shed is where safety switch protection matters most. JPD Complete Electrical is based in Wynn Vale and covers the north-eastern suburbs.',
+            linkText: 'Get Your Shed Board Assessed',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'full-switchboard-upgrade-modbury-heights',
         title: 'Upgrading a Full Switchboard in Modbury Heights',
         seoTitle: 'Full Switchboard Upgrade Modbury Heights | JPD',
