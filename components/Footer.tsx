@@ -48,7 +48,7 @@ export default function Footer() {
                             <li>Public liability &amp; professional indemnity insured</li>
                         </ul>
                         <div className="flex gap-4">
-                            <a href="https://www.facebook.com/profile.php?id=61567696480436" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold transition-colors" aria-label="Facebook">
+                            <a href="https://www.facebook.com/jpdcompleteelectrical" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold transition-colors" aria-label="Facebook">
                                 <Facebook className="w-5 h-5" />
                             </a>
                             <a href="https://www.instagram.com/jpdcompleteelectrical/" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-gold transition-colors" aria-label="Instagram">

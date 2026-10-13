@@ -38,7 +38,7 @@ export default function JsonLd() {
         // Distinguishes this business from the similarly named JPD Electrical
         // Solutions also trading in Adelaide.
         sameAs: [
-            'https://www.facebook.com/profile.php?id=61567696480436',
+            'https://www.facebook.com/jpdcompleteelectrical',
             'https://www.instagram.com/jpdcompleteelectrical/',
         ],
         address: {

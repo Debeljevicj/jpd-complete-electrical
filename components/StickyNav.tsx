@@ -21,7 +21,7 @@ export default function StickyNav() {
     ];
 
     const socialLinks = [
-        { href: 'https://www.facebook.com/profile.php?id=61567696480436', label: 'Facebook', icon: Facebook },
+        { href: 'https://www.facebook.com/jpdcompleteelectrical', label: 'Facebook', icon: Facebook },
         { href: 'https://www.instagram.com/jpdcompleteelectrical/', label: 'Instagram', icon: Instagram },
     ];
 

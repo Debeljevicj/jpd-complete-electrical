@@ -42,7 +42,7 @@ export default function Header() {
             <div className="hidden lg:block bg-navy/[0.035] border-b border-navy/[0.07]">
                 <div className="container-custom flex items-center justify-between py-1.5">
                     <div className="flex items-center gap-3">
-                        <a href="https://www.facebook.com/profile.php?id=61567696480436" target="_blank" rel="noopener noreferrer" className="text-navy/60 hover:text-gold transition-colors" aria-label="Facebook">
+                        <a href="https://www.facebook.com/jpdcompleteelectrical" target="_blank" rel="noopener noreferrer" className="text-navy/60 hover:text-gold transition-colors" aria-label="Facebook">
                             <Facebook className="w-4 h-4" />
                         </a>
                         <a href="https://www.instagram.com/jpdcompleteelectrical/" target="_blank" rel="noopener noreferrer" className="text-navy/60 hover:text-gold transition-colors" aria-label="Instagram">
