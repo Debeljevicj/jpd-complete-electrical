@@ -44,6 +44,122 @@ export interface JobReport extends BlogPost {
 
 export const jobReports: JobReport[] = [
     {
+        slug: 'office-data-point-repair-fullarton',
+        title: 'An Office Data Point That Had Dropped Into the Wall in Fullarton',
+        seoTitle: 'Office Data Point Repair, Fullarton | JPD',
+        metaDescription:
+            'An office network point in Fullarton had dropped back into the wall. The old jacks and faceplate had deteriorated, so both were replaced, relabelled and tested.',
+        excerpt:
+            'The work order said the internet cabling had fallen into the wall in the back office. Here\'s what had actually let go, and what went back in.',
+        date: '2026-10-17',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/data_point_hero_fullarton.webp',
+        gallery: [
+            {
+                src: '/images/data_point_cables_in_wall_fullarton.webp',
+                role: 'before',
+                focus: 'center',
+                alt: 'Wall opening in an office with the data faceplate removed and two blue network cables pulled back out, above a powerpoint',
+                caption: 'Before. The old plate off, and the two network cables pulled back out of the wall cavity.',
+            },
+            {
+                src: '/images/data_point_new_plate_fullarton.webp',
+                role: 'after',
+                focus: 'center',
+                alt: 'New two-port data faceplate on an office wall with both ports labelled, mounted above a powerpoint',
+                caption: 'After. A new two-port plate with new jacks, labelled with the same port numbers as before.',
+            },
+            {
+                src: '/images/data_point_old_faceplate_fullarton.webp',
+                id: 'oldplate',
+                focus: 'top',
+                alt: 'Old data faceplate in an office with empty apertures where the network jacks should be',
+                caption: 'The photo that came with the work order. The apertures were empty: the jacks had dropped back through the plate into the wall.',
+            },
+            {
+                src: '/images/data_point_old_mechs_fullarton.webp',
+                id: 'mechs',
+                focus: 'center',
+                alt: 'Two old network jacks held in a hand, the plastic chalky and discoloured, still terminated on their blue cables',
+                caption: 'The old jacks. The plastic had gone chalky and brittle, and they no longer stayed put in a plate.',
+            },
+            {
+                src: '/images/data_point_new_mechs_fullarton.webp',
+                id: 'newmechs',
+                focus: 'center',
+                alt: 'New network jacks terminated on the two cables inside the wall opening, with the new faceplate being fitted over them',
+                caption: 'New jacks terminated on both cables, and the new plate going on over them.',
+            },
+            {
+                src: '/images/data_point_cable_test_pass_fullarton.webp',
+                id: 'tester',
+                focus: 'center',
+                alt: 'Handheld network cable tester plugged into the new data port, its screen showing Pass with all eight conductors mapped',
+                caption: 'Each port tested after termination. All eight conductors mapped through and passed.',
+            },
+        ],
+        services: ['emergency-electrician-adelaide', 'powerpoint-installation-adelaide'],
+        angles: {
+            'powerpoint-installation-adelaide': {
+                title: 'Replacing a Deteriorated Data Point in an Office',
+                blurb: 'The old jacks and faceplate had gone brittle and dropped into the wall. New jacks, a new plate, relabelled and tested.',
+                anchor: 'replace',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>In an office, a data point that's let go isn't a cosmetic problem. The computer on that desk is off the network until it's fixed, and the usual workaround is a long patch lead run across the floor from somewhere else, or someone fishing the loose jack out of the wall and plugging into it as it hangs there. The first is a trip hazard in a walkway. The second gives you a connection that drops out whenever the lead moves, which looks like an IT problem and gets chased as one.</p>
+            <p>This one was a maintenance work order from an office in Fullarton: the internet cabling had fallen into the wall in the far back office. It turned out to be the data point itself, and it was fixed in the one visit.</p>
+
+            <h3>What Had Actually Happened</h3>
+            <p>The photo that came with the work order showed the problem well enough. The faceplate was still on the wall, but the apertures in it were empty. The jacks that should have been sitting in them had dropped back through the plate into the cavity, taking the cables with them.</p>
+            [[photo:oldplate]]
+            <p>With the plate off, there were two network cables in the wall, so this was a two-port outlet. The plasterboard around the opening had been chewed out over the years and the old plate wasn't holding much.</p>
+            <p>The jacks themselves were the cause. The plastic had gone chalky and brittle with age, the kind of deterioration that's obvious the moment you handle it. A data jack is held in its faceplate by small plastic clips, and once the plastic has degraded there's nothing left gripping the plate. The first decent tug on a patch lead, or just the weight of the cable behind it, pulls the jack back through into the wall.</p>
+            [[photo:mechs]]
+
+            <h3 id="replace">What Went In</h3>
+            <p>Both cables were re-terminated on new jacks, punched down fresh rather than reusing anything from the old ones, and a new two-port plate went over them. The ports were relabelled with the numbers the old plate carried, so nothing changes for whoever looks after the other end of those cables.</p>
+            [[photo:newmechs]]
+            <p>Relabelling sounds like a small thing. It isn't, in an office. Those numbers are how the port on the wall is traced back to its place in the comms cabinet, and a replacement plate with no numbers on it turns the next network problem into a hunt.</p>
+
+            <h3>Tested, Not Just Plugged In</h3>
+            <p>Each port was tested with a cable tester once the plate was on. The test checks that all eight conductors in the cable arrive at the right pin at the far end, with nothing open, shorted or crossed between pairs.</p>
+            [[photo:tester]]
+            <p>That matters because a data point with one pair wrong doesn't always fail outright. It can link at a lower speed, or work most of the time and drop under load, which is the kind of fault that gets blamed on the computer, the switch or the internet provider before anyone looks at the wall plate. Both ports here passed on every conductor, so the desk went back on the network with that question answered.</p>
+
+            <h3>Data Points Alongside the Electrical</h3>
+            <p>Most maintenance lists from an office or a clinic mix the two: a dead <a href="/powerpoint-installation-adelaide/">powerpoint</a>, a light that's flickering, a data point that's let go. We take those as one work order, with a photo of what's wrong and a note on when the room's free, and sort them in the one visit where we can. Our <a href="/emergency-electrician-adelaide/">fault finding</a> page covers how we track down the electrical ones, and there's a <a href="/blog/small-business-electrical-safety-checklist-adelaide/">small business electrical checklist</a> for the things worth looking at before they become a work order.</p>
+            <p>We cover Fullarton, the inner south-east and metropolitan Adelaide.</p>
+        `,
+        faqs: [
+            {
+                question: 'Why did my network point stop working when nothing was touched?',
+                answer: 'Usually because the jack in the wall plate has deteriorated. The plastic in older data jacks goes chalky and brittle with age, and the small clips that hold the jack in the faceplate stop gripping. After that it takes very little, a nudge on the patch lead or the weight of the cable behind it, for the jack to drop back into the wall or sit loose enough to lose contact. From the desk it looks like the network has gone down for no reason.',
+            },
+            {
+                question: 'Can a data point be repaired, or does the whole cable need replacing?',
+                answer: 'In most cases the cable in the wall is fine and only the jack at the wall end needs replacing. A new jack is terminated on the existing cable, a new plate goes on, and the port is tested. The cable itself only needs replacing if the test shows a fault along its length, such as a conductor that\'s broken or a pair that\'s been damaged, or if it has been cut or crushed somewhere in the wall or ceiling.',
+            },
+            {
+                question: 'What does testing a data point actually check?',
+                answer: 'A standard wiremap test checks that each of the eight conductors in the cable connects to the correct pin at the far end, and that none are open, shorted together or crossed between pairs. That\'s enough to confirm a port will link reliably. It\'s different from a certification test, which uses a more specialised instrument to measure how the cable performs against a category standard. For a replaced jack in an office, a wiremap pass on every conductor is the check that tells you the termination is right.',
+            },
+            {
+                question: 'Why do office data points have numbers on them?',
+                answer: 'The numbers tie each wall port to its position in the comms cabinet or patch panel at the other end of the cable. When a desk needs connecting, moving or fault finding, whoever looks after the network uses that number to find the right port without tracing cables through the ceiling. That\'s why a replacement plate should carry the same numbers the old one did. A plate with no labels on it works on the day and causes a hunt the next time something changes.',
+            },
+        ],
+        cta: {
+            heading: 'Something in the Office Not Working?',
+            description:
+                'Data points, powerpoints and lighting faults in offices and clinics, handled as one work order. JPD Complete Electrical covers Fullarton and metropolitan Adelaide.',
+            linkText: 'Book a Maintenance Visit',
+            href: '/contact',
+        },
+    },
+    {
         slug: 'burnt-dryer-powerpoint-lightsview',
         title: 'A Dryer Powerpoint That Burnt Through in Lightsview',
         seoTitle: 'Burnt Dryer Powerpoint, Lightsview | JPD',
