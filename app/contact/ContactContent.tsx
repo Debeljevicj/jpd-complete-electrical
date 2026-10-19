@@ -32,6 +32,24 @@ const SERVICE_OPTIONS = [
     { value: 'other', label: 'Other', email: 'Other', subject: 'Electrical enquiry' },
 ];
 
+/*
+ * Asked outright because analytics can't see most of these. Someone who finds
+ * JPD through ChatGPT or Google Maps usually rings or types the address in, so
+ * the visit arrives as direct traffic or not at all. The label doubles as the
+ * value in the email.
+ */
+const SOURCE_OPTIONS = [
+    { value: 'google-search', label: 'Google search' },
+    { value: 'google-maps', label: 'Google Maps / Business Profile' },
+    { value: 'chatgpt', label: 'ChatGPT' },
+    { value: 'gemini', label: 'Gemini or a Google AI answer' },
+    { value: 'other-ai', label: 'Another AI assistant' },
+    { value: 'social', label: 'Facebook or Instagram' },
+    { value: 'referral', label: 'Friend or referral' },
+    { value: 'directory', label: 'Directory (Yellow Pages, hipages etc.)' },
+    { value: 'other', label: 'Other' },
+];
+
 // Name first so enquiries can be told apart in the inbox list, where the end
 // of a long subject gets cut off.
 function buildSubject(name: string, urgency: string, service: string) {
@@ -49,6 +67,7 @@ export default function ContactContent() {
         urgency: '',
         service: '',
         message: '',
+        source: '',
     });
 
     const [status, setStatus] = useState<string>("");
@@ -74,6 +93,12 @@ export default function ContactContent() {
         data.append("urgency", URGENCY_OPTIONS.find(o => o.value === formData.urgency)?.email ?? formData.urgency);
         const service = SERVICE_OPTIONS.find(o => o.value === formData.service)?.email;
         if (service) data.append("service", service);
+        // Before "Job description", not after it. The portal's enquiry tracker
+        // (thermal-report/lib/enquiry-parse.js in the admin repo) reads
+        // everything from that key to the end of the email as the job
+        // description, so a field after it would land in the description.
+        const source = SOURCE_OPTIONS.find(o => o.value === formData.source)?.label;
+        if (source) data.append("Found us via", source);
         if (formData.message.trim()) data.append("Job description", formData.message.trim());
         const botcheck = submitted.get("botcheck");
         if (botcheck !== null) data.append("botcheck", botcheck);
@@ -92,6 +117,7 @@ export default function ContactContent() {
                 trackEvent('quote_request_submitted', {
                     service: formData.service || 'not specified',
                     urgency: formData.urgency || 'not specified',
+                    found_via: formData.source || 'not specified',
                 });
                 setSubmittedUrgency(formData.urgency);
                 setStatus("success");
@@ -102,6 +128,7 @@ export default function ContactContent() {
                     urgency: '',
                     service: '',
                     message: '',
+                    source: '',
                 });
                 setShowModal(true);
             } else {
@@ -288,6 +315,24 @@ export default function ContactContent() {
                                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition resize-none"
                                         placeholder="Please describe your electrical requirements (optional)..."
                                     />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="source" className="block text-navy font-semibold mb-2">
+                                        How did you find us?
+                                    </label>
+                                    <select
+                                        id="source"
+                                        name="source"
+                                        value={formData.source}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
+                                    >
+                                        <option value="">Select one (optional)...</option>
+                                        {SOURCE_OPTIONS.map(o => (
+                                            <option key={o.value} value={o.value}>{o.label}</option>
+                                        ))}
+                                    </select>
                                 </div>
 
                                 {status === 'error' && (
