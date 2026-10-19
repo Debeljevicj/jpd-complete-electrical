@@ -62,12 +62,22 @@ export default function Analytics() {
 
             const href = link.getAttribute('href') || '';
             if (href.startsWith('tel:')) {
-                trackEvent('phone_call_click', {
+                const params = {
                     // Which page the call came from is the useful part: it tells us
                     // whether the suburb pages actually generate calls.
                     page_path: window.location.pathname,
                     link_text: link.textContent?.trim().slice(0, 60) || '',
-                });
+                };
+                // Where the caller came from. GA keeps the session's own source,
+                // but that's the visit; this is the arrival that brought them,
+                // which may have been days earlier. Loaded on the click rather
+                // than with the page (it's usually already there from
+                // AttributionCapture), and the call itself never waits on it:
+                // a tel: link opens the dialler and leaves this page running.
+                import('@/lib/attribution.mjs')
+                    .then((m) => m.leadSource(m.readAttribution()))
+                    .catch(() => 'unknown')
+                    .then((lead_source) => trackEvent('phone_call_click', { ...params, lead_source }));
             } else if (href.startsWith('mailto:')) {
                 trackEvent('email_click', { page_path: window.location.pathname });
             }

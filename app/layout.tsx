@@ -8,6 +8,7 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import Analytics from "@/components/Analytics";
+import AttributionCapture from "@/components/AttributionCapture";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -97,6 +98,7 @@ export default function RootLayout({
                 <ScrollToTop />
                 <StickyMobileCTA />
                 <Analytics />
+                <AttributionCapture />
             </body>
         </html>
     );

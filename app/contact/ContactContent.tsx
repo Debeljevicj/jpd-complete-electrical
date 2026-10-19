@@ -99,6 +99,22 @@ export default function ContactContent() {
         // description, so a field after it would land in the description.
         const source = SOURCE_OPTIONS.find(o => o.value === formData.source)?.label;
         if (source) data.append("Found us via", source);
+        // The half they don't fill in: UTM tags, the site that linked here and
+        // where they landed (lib/attribution.mjs). Same rule, so also before
+        // "Job description". The portal's marketing page reads it. Loaded on
+        // Send, not with the page (it's usually already fetched by then), and
+        // a failure here never stops the enquiry going.
+        let tracking = '';
+        let leadSourceLabel = 'unknown';
+        try {
+            const attribution = await import('@/lib/attribution.mjs');
+            const state = attribution.readAttribution();
+            tracking = attribution.trackingLine(state);
+            leadSourceLabel = attribution.leadSource(state);
+        } catch {
+            // Offline or blocked: send without it.
+        }
+        if (tracking) data.append("Tracking", tracking);
         if (formData.message.trim()) data.append("Job description", formData.message.trim());
         const botcheck = submitted.get("botcheck");
         if (botcheck !== null) data.append("botcheck", botcheck);
@@ -118,6 +134,7 @@ export default function ContactContent() {
                     service: formData.service || 'not specified',
                     urgency: formData.urgency || 'not specified',
                     found_via: formData.source || 'not specified',
+                    lead_source: leadSourceLabel,
                 });
                 setSubmittedUrgency(formData.urgency);
                 setStatus("success");
