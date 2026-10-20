@@ -13,6 +13,7 @@ import {
     servicesForCategory,
 } from '@/lib/recent-work';
 import { shareMeta } from '@/lib/share';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
@@ -83,7 +84,7 @@ export default function RecentWorkCategoryPage({ params }: Props) {
         <div className="bg-white">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(listSchema) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd(listSchema) }}
             />
 
             <section className="bg-navy text-white py-14 md:py-20">

@@ -5,6 +5,7 @@ import TrustBadges from '@/components/TrustBadges';
 import Accordion from '@/components/Accordion';
 import { faqGroups, allFaqs } from '@/data/faqs';
 import { shareMeta } from '@/lib/share';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -47,7 +48,7 @@ export default function FaqPage() {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd([faqSchema, breadcrumbSchema]) }}
             />
 
             {/* Hero */}

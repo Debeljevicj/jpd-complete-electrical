@@ -7,6 +7,7 @@ import ServiceIcon from '@/components/ServiceIcon';
 import { suburbs } from '@/data/suburbs';
 import { serviceIndex } from '@/data/services';
 import { shareMeta } from '@/lib/share';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -90,7 +91,7 @@ export default function ServiceAreasPage() {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([areaSchema, faqSchema]) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd([areaSchema, faqSchema]) }}
             />
 
             {/* Hero */}

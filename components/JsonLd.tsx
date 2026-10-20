@@ -1,5 +1,6 @@
 import { services } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 
@@ -118,7 +119,7 @@ export default function JsonLd() {
     return (
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify([schema, website]) }}
+            dangerouslySetInnerHTML={{ __html: jsonLd([schema, website]) }}
         />
     );
 }

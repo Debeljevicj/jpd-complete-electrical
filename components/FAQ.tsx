@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Accordion from './Accordion';
 import { homepageFaqs } from '@/data/faqs';
+import { jsonLd } from '@/lib/json-ld';
 
 /**
  * Short FAQ block for the home page. The full set lives at /faq so the home page
@@ -23,7 +24,7 @@ export default function FAQ() {
         <section className="py-16 bg-neutral-offwhite">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
             />
             <div className="container-custom max-w-4xl">
                 <div className="text-center mb-10">

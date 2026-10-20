@@ -93,8 +93,8 @@ export default function ContactContent() {
         data.append("urgency", URGENCY_OPTIONS.find(o => o.value === formData.urgency)?.email ?? formData.urgency);
         const service = SERVICE_OPTIONS.find(o => o.value === formData.service)?.email;
         if (service) data.append("service", service);
-        // Before "Job description", not after it. The portal's enquiry tracker
-        // (thermal-report/lib/enquiry-parse.js in the admin repo) reads
+        // Before "Job description", not after it. The enquiry parser on the
+        // staff side reads these field labels (keep them stable) and takes
         // everything from that key to the end of the email as the job
         // description, so a field after it would land in the description.
         const source = SOURCE_OPTIONS.find(o => o.value === formData.source)?.label;

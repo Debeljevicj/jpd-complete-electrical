@@ -9,6 +9,7 @@ import InlineCTA from './InlineCTA';
 import { serviceIndex } from '@/data/services';
 import { suburbSlugByName, type Suburb } from '@/data/suburbs';
 import { jobsForSuburb } from '@/data/job-reports';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -95,7 +96,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([localService, faqSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd([localService, faqSchema, breadcrumbSchema]) }}
             />
 
             {/* Hero */}

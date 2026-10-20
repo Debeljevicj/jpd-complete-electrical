@@ -3,7 +3,7 @@
 # Bypass deliberately (never from Claude) with: git commit --no-verify
 
 blocked_path_patterns='(^|/)\.env(\.[^/]+)?$|\.pem$|\.key$|(^|/)(exports?|reports?|output|private)/|customer|invoice|\.csv$|\.xlsx?$'
-blocked_content_patterns='fergPAT_|xero_[a-zA-Z0-9]|sk-[a-zA-Z0-9]{10,}|AKIA[0-9A-Z]{16}|BEGIN (RSA|EC|OPENSSH) PRIVATE KEY|BEGIN CERTIFICATE'
+blocked_content_patterns='fergPAT_|xero_[a-zA-Z0-9]|sk-[a-zA-Z0-9]{10,}|sk-ant-|AIza[0-9A-Za-z_-]{35}|ghp_[0-9A-Za-z]{36}|github_pat_[0-9A-Za-z_]{22,}|AKIA[0-9A-Z]{16}|BEGIN ((RSA|EC|OPENSSH) )?PRIVATE KEY|BEGIN CERTIFICATE'
 
 staged=$(git diff --cached --name-only --diff-filter=ACM)
 fail=0

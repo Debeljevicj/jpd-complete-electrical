@@ -10,6 +10,7 @@ import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
 import Accordion from '@/components/Accordion';
 import { shareMeta } from '@/lib/share';
+import { jsonLd } from '@/lib/json-ld';
 
 interface Props {
     params: {
@@ -216,7 +217,7 @@ export default function BlogPostPage({ params }: Props) {
         <article className="bg-white min-h-screen pb-20">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd([articleSchema, faqSchema, breadcrumbSchema]) }}
             />
             {/* Hero / Header */}
             <div className="bg-navy text-white py-16 relative">

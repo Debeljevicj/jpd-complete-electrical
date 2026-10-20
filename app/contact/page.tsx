@@ -5,6 +5,7 @@ import ContactContent from './ContactContent';
 import Accordion from '@/components/Accordion';
 import { suburbs } from '@/data/suburbs';
 import { shareMeta } from '@/lib/share';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -86,7 +87,7 @@ export default function ContactPage() {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd(faqSchema) }}
             />
 
             <ContactContent />

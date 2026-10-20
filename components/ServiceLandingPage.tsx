@@ -10,6 +10,7 @@ import JobPhotoStrip from './JobPhotoStrip';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
 import { workForService, stripCount } from '@/lib/service-work';
+import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
@@ -67,7 +68,7 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
+                dangerouslySetInnerHTML={{ __html: jsonLd([serviceSchema, faqSchema, breadcrumbSchema]) }}
             />
 
             {/* Hero */}
