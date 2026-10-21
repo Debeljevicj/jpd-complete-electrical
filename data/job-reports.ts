@@ -120,7 +120,7 @@ export const jobReports: JobReport[] = [
             [[photo:mechs]]
 
             <h3 id="replace">What Went In</h3>
-            <p>Both cables were re-terminated on new jacks, punched down fresh rather than reusing anything from the old ones, and a new two-port plate went over them. The ports were relabelled with the numbers the old plate carried, so nothing changes for whoever looks after the other end of those cables.</p>
+            <p>We did the communications cabling ourselves: both cables re-terminated on new jacks, punched down fresh rather than reusing anything from the old ones, and a new two-port plate went over them. The ports were relabelled with the numbers the old plate carried, so nothing changes for whoever looks after the other end of those cables.</p>
             [[photo:newmechs]]
             <p>Relabelling sounds like a small thing. It isn't, in an office. Those numbers are how the port on the wall is traced back to its place in the comms cabinet, and a replacement plate with no numbers on it turns the next network problem into a hunt.</p>
 
