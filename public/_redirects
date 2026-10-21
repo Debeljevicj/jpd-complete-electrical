@@ -1,0 +1,25 @@
+# Short links for places where the address is shown as text: a bio, a page's
+# About section, a QR code. Each forwards to the home page with its UTM tags,
+# so the visit is still attributed (lib/attribution.mjs reads them on landing)
+# while people only ever see jpdcompleteelectrical.com.au/ig.
+#
+# 302, not 301: a browser keeps a 301 forever, so a short link pointed at the
+# wrong place could never be corrected for anyone who'd already used it.
+#
+# Each path is listed with and without its trailing slash, because the site is
+# exported with trailing slashes and a link can be typed either way.
+#
+# The full tagged addresses are the register in the admin repo
+# (thermal-report/lib/marketing-links.js); test/short-links.test.mjs checks
+# every line here.
+
+/ig     /?utm_source=instagram&utm_medium=social&utm_campaign=profile   302
+/ig/    /?utm_source=instagram&utm_medium=social&utm_campaign=profile   302
+/fb     /?utm_source=facebook&utm_medium=social&utm_campaign=profile    302
+/fb/    /?utm_source=facebook&utm_medium=social&utm_campaign=profile    302
+/li     /?utm_source=linkedin&utm_medium=social&utm_campaign=profile    302
+/li/    /?utm_source=linkedin&utm_medium=social&utm_campaign=profile    302
+/qr     /?utm_source=business-card&utm_medium=print&utm_campaign=qr     302
+/qr/    /?utm_source=business-card&utm_medium=print&utm_campaign=qr     302
+/van    /?utm_source=van&utm_medium=print&utm_campaign=qr               302
+/van/   /?utm_source=van&utm_medium=print&utm_campaign=qr               302
