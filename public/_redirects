@@ -1,5 +1,6 @@
-# Short links for places where the address is shown as text: a bio, a page's
-# About section, a QR code. Each forwards to the home page with its UTM tags,
+# Short links for places where the address is shown as text (a bio, a page's
+# About section, a QR code) or has to be read out to someone over the phone (a
+# directory set up by its own staff). Each forwards to the home page with its UTM tags,
 # so the visit is still attributed (lib/attribution.mjs reads them on landing)
 # while people only ever see jpdcompleteelectrical.com.au/ig.
 #
@@ -23,3 +24,7 @@
 /qr/    /?utm_source=business-card&utm_medium=print&utm_campaign=qr     302
 /van    /?utm_source=van&utm_medium=print&utm_campaign=qr               302
 /van/   /?utm_source=van&utm_medium=print&utm_campaign=qr               302
+/yp     /?utm_source=yellowpages&utm_medium=directory&utm_campaign=listing  302
+/yp/    /?utm_source=yellowpages&utm_medium=directory&utm_campaign=listing  302
+/tl     /?utm_source=truelocal&utm_medium=directory&utm_campaign=listing    302
+/tl/    /?utm_source=truelocal&utm_medium=directory&utm_campaign=listing    302
