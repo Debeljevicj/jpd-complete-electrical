@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowRight, ChevronLeft, Calendar } from 'lucide-react';
+import { ArrowRight, ChevronLeft, Calendar, Phone } from 'lucide-react';
 import Button from '@/components/Button';
 import ServiceIcon from '@/components/ServiceIcon';
 import FeaturedJob from '@/components/FeaturedJob';
@@ -102,9 +102,27 @@ export default function RecentWorkCategoryPage({ params }: Props) {
                         </div>
                         <div>
                             <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-                                {category.name}
+                                {category.h1 ?? category.name}
                             </h1>
                             <p className="text-gray-300 leading-relaxed">{category.intro}</p>
+                            {/* This page had no call or quote link until the closing band,
+                                several screens down on a phone. */}
+                            <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-4 mt-6">
+                                <a
+                                    href="tel:0435006420"
+                                    className="btn btn-gold text-sm sm:text-base px-3 sm:px-6 py-3 inline-flex items-center justify-center gap-2"
+                                >
+                                    <Phone className="w-5 h-5 flex-shrink-0" />
+                                    <span className="sm:hidden">Call Now</span>
+                                    <span className="hidden sm:inline">Call 0435 006 420</span>
+                                </a>
+                                <Link
+                                    href="/contact"
+                                    className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-sm sm:text-base px-3 sm:px-6 py-3"
+                                >
+                                    Get a Free Quote
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

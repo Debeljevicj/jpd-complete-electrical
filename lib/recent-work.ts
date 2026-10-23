@@ -20,6 +20,8 @@ export interface WorkCategory {
     icon: ServiceIconName;
     /** Home page card copy. */
     blurb: string;
+    /** Archive page H1, where the card name alone isn't what people search. Falls back to `name`. */
+    h1?: string;
     /** Archive page intro. */
     intro: string;
     title: string;
@@ -35,11 +37,14 @@ export const workCategories: WorkCategory[] = [
         icon: 'switchboard',
         blurb:
             'Old ceramic fuses, asbestos panels and boards with no room left. Replaced with a compliant board and full RCD protection.',
+        // Search Console (Aug to Oct 2026) has this archive among the pages showing
+        // for "switchboard upgrade" (avg 12.1) and "switchboard upgrade adelaide" (13.5).
+        h1: 'Switchboard Upgrades in Adelaide: Real Jobs',
         intro:
             'Switchboards are the job we get called for most, and the one where the difference between a tidy install and a rushed one shows up years later. Here are real boards we have replaced across Adelaide, with photos before, during and after.',
-        title: 'Switchboard Upgrade Jobs in Adelaide | JPD',
+        title: 'Switchboard Upgrade Adelaide | Real Jobs, Before & After',
         description:
-            'Real switchboard upgrades across Adelaide: asbestos panels, ceramic fuses and full boards replaced with compliant RCD protection. Photos and details of each job.',
+            'Real switchboard upgrades across Adelaide: ceramic fuses, asbestos panels and full boards replaced with RCBOs. Photos of each job. Call 0435 006 420.',
         services: ['switchboard-upgrade-adelaide'],
     },
     {

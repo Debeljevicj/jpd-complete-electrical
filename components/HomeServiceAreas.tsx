@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { MapPin, ArrowRight } from 'lucide-react';
 import { suburbs } from '@/data/suburbs';
 
+const inlineLink = 'text-navy font-semibold underline underline-offset-4 hover:text-gold transition-colors';
+
 /**
  * Home page service-area block.
  *
@@ -24,9 +26,39 @@ export default function HomeServiceAreas() {
                         What Areas Do We Service?
                     </h2>
                     <p className="text-neutral-slate text-lg leading-relaxed mb-4">
-                        All of Adelaide. We're based in Wynn Vale, so the north-east is where we work most days and
-                        where we can usually get to you fastest, but we take jobs right across the metro area and into
-                        regional South Australia when it makes sense.
+                        All of Adelaide. We're based in{' '}
+                        <Link href="/electrician-wynn-vale" className={inlineLink}>
+                            Wynn Vale
+                        </Link>
+                        , so the north-east is where we work most days and where we can usually get to you fastest,
+                        but we take jobs right across the metro area and into regional South Australia when it makes
+                        sense.
+                    </p>
+                    {/* In-sentence links to the suburb pages sitting closest to page one in
+                        Search Console. A link in a sentence carries more than a chip in a row
+                        of fifteen. */}
+                    <p className="text-neutral-slate text-lg leading-relaxed mb-4">
+                        Most weeks that means original 1960s and 70s boards in{' '}
+                        <Link href="/electrician-modbury" className={inlineLink}>
+                            Modbury
+                        </Link>{' '}
+                        and{' '}
+                        <Link href="/electrician-st-agnes" className={inlineLink}>
+                            St Agnes
+                        </Link>
+                        , EV chargers and LED lighting in{' '}
+                        <Link href="/electrician-greenwith" className={inlineLink}>
+                            Greenwith
+                        </Link>
+                        , and outdoor lighting and renovation work up the hill in{' '}
+                        <Link href="/electrician-fairview-park" className={inlineLink}>
+                            Fairview Park
+                        </Link>
+                        . Across all of them,{' '}
+                        <Link href="/recent-work/switchboard-upgrades" className={inlineLink}>
+                            switchboard upgrades
+                        </Link>{' '}
+                        are the job we get called for most.
                     </p>
                     <p className="text-neutral-slate text-lg leading-relaxed">
                         These are the suburbs we're in most often. Each one has a page covering the housing stock and

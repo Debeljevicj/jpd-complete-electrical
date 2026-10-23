@@ -5,6 +5,7 @@ import { blogPosts, type BlogPost } from '@/data/blog-posts';
 import { jobReports } from '@/data/job-reports';
 import { serviceBySlug } from '@/data/services';
 import { suburbBySlug } from '@/data/suburbs';
+import { workCategories } from '@/lib/recent-work';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
@@ -147,7 +148,7 @@ export default function BlogPostPage({ params }: Props) {
     // "related" block below can point at the actual pages this job supports
     // instead of the one hardcoded maintenance link every post used to share.
     const job = jobReports.find((j) => j.slug === params.slug);
-    const articleParts = splitArticle(post.content);
+    const articleParts = splitArticle(post.content, post.cta.afterHeadings);
 
     const gallery = post.gallery ?? [];
     const before = gallery.find((p) => p.role === 'before');
@@ -395,6 +396,34 @@ export default function BlogPostPage({ params }: Props) {
                                     </Link>
                                 </p>
                             )}
+                            {job.nearSuburbs
+                                ?.filter((s) => suburbBySlug[s])
+                                .map((s) => (
+                                    <p key={s} className="text-neutral-slate">
+                                        Next door:{' '}
+                                        <Link href={`/${s}`} className="text-navy font-bold hover:text-gold transition-colors">
+                                            Electrician in {suburbBySlug[s].name}
+                                        </Link>
+                                    </p>
+                                ))}
+                            {/* The archive for the job's main service, so a reader who liked one
+                                board write-up can see the rest. */}
+                            {(() => {
+                                const category = workCategories.find((c) => c.services.includes(job.services[0]));
+                                return category ? (
+                                    <p className="text-neutral-slate">
+                                        More jobs like this:{' '}
+                                        <Link
+                                            href={`/recent-work/${category.slug}`}
+                                            className="text-navy font-bold hover:text-gold transition-colors"
+                                        >
+                                            {/* "Much More" reads fine on a home page card, not as a link. */}
+                                            {category.slug === 'everyday-electrical' ? 'Everyday electrical jobs' : category.name}{' '}
+                                            across Adelaide
+                                        </Link>
+                                    </p>
+                                ) : null;
+                            })()}
                         </>
                     ) : (
                         <p className="text-neutral-slate">

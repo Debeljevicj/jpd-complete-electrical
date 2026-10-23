@@ -6,6 +6,8 @@ export interface SuburbFaq {
 export interface LocalJob {
     title: string;
     body: string;
+    /** The service page, guide or job write-up that goes deeper on this job. */
+    link?: { href: string; label: string };
 }
 
 export interface Suburb {
@@ -117,28 +119,32 @@ export const suburbs: Suburb[] = [
         population: 10103,
         council: 'City of Tea Tree Gully',
         hook: 'Local Sparky for the Newer End of the Grove',
-        title: 'Electrician Greenwith | EV Chargers, Downlights, Boards',
-        description: 'Greenwith electrician for EV charger installs, downlights, LED strip, switchboard upgrades and emergency callouts. Owner-operated. Free quotes.',
+        title: 'Electrician Greenwith | EV Chargers, LEDs | 0435 006 420',
+        description: 'Licensed Greenwith electrician, ten minutes away in Wynn Vale. EV chargers, LED and feature lighting, and full boards made room for. Call 0435 006 420.',
         intro:
             'JPD Complete Electrical covers Greenwith from our base in Wynn Vale, a short run up Golden Grove Road. EV chargers, downlights and LED strip lighting, switchboard upgrades, safety switch testing, oven and cooktop connections and emergency callouts.',
         local: [
             'Greenwith is the newer end of the Golden Grove development, built out through the 1990s and 2000s on bigger blocks with bigger houses. Two-storey is common, alfresco areas are common, and so are the electrical loads that come with them.',
             'The work here looks different to the older suburbs down the hill. We\'re rarely pulling out ceramic fuses in Greenwith. What we get instead is a twenty-five-year-old board that\'s technically fine but completely full, and a homeowner who wants an EV charger, a pool pump, ducted air conditioning and a heated alfresco all running off it. That\'s a load calculation and often a board rebuild, not a quick add-on.',
             'The other big one here\'s lighting. A lot of Greenwith homes were built with halogen downlights everywhere, and the owners are now replacing them with LED, adding feature lighting to the stairwell or the void, and running LED strip through the kitchen and the alfresco.',
+            'Three recent Greenwith jobs are written up below. A 7 kW EV charger in an apartment car park, where the supply and the permissions work differently to a house. A kitchen fitted out with new appliances and LED lighting, which is a much bigger load than the kitchen it replaced. And a weatherproof powerpoint for a new gas hot water unit that had no power anywhere near it.',
         ],
         housing: '1990s and 2000s family homes on larger blocks, plenty of two-storey',
         localJobs: [
             {
                 title: 'EV charger installs',
                 body: 'Greenwith has more home chargers going in than almost anywhere else we work. Long driveways, double garages and the sort of commute where charging at home actually pays for itself. We size the circuit properly, check what the existing board can carry alongside the aircon, and install the charger with the RCD protection the standard requires.',
+                link: { href: '/ev-charger-installation-adelaide/', label: 'EV charger installation' },
             },
             {
                 title: 'Feature lighting and LED strip',
                 body: 'Two-storey homes with voids and stairwells are made for feature lighting. We install LED strip in coves, under kitchen benches and joinery, in stair nosings and through alfresco pergolas, wired properly with the driver somewhere accessible rather than buried in a ceiling.',
+                link: { href: '/feature-lighting-led-strip-adelaide/', label: 'Feature lighting and LED strip' },
             },
             {
                 title: 'Switchboard capacity for a full house',
                 body: 'Ducted air conditioning, a pool or spa pump, an EV charger and an induction cooktop is a lot of load for a board that was built for a 1998 house. We check the main switch rating, the submain, and whether you have the space to add what you actually want.',
+                link: { href: '/blog/switchboard-full-no-spare-ways-adelaide/', label: 'When the switchboard is full' },
             },
             {
                 title: 'Oven, cooktop and kitchen renovations',
@@ -257,32 +263,37 @@ export const suburbs: Suburb[] = [
         population: 7865,
         council: 'City of Tea Tree Gully',
         hook: 'This Is Where We\'re Based',
-        title: 'Electrician Wynn Vale | Local, Licensed, Same Suburb | JPD',
-        description: 'JPD Complete Electrical is based in Wynn Vale. Switchboards, EV chargers, downlights, safety switch testing and emergency callouts. Free quotes.',
+        title: 'Electrician Wynn Vale | Based Here, Licensed | 0435 006 420',
+        description: 'Licensed sparky based in Wynn Vale. Old switchboards replaced, halogens swapped for LED, extra powerpoints and EV chargers. Free quotes: 0435 006 420.',
         intro:
             'JPD Complete Electrical is based right here in Wynn Vale. Switchboard upgrades, EV charger installs, downlights and feature lighting, safety switch testing, oven and cooktop connections and emergency callouts, from an electrician who lives in the same suburb.',
         local: [
             'Wynn Vale is home. Justin lives and works out of here, which means when you call for a Wynn Vale job, you aren\'t waiting on someone to fight their way across town.',
             'The suburb went up through the 1980s and into the early 90s, mostly single-storey brick veneer on regular blocks, with the newer pockets running up towards Golden Grove. Practically every original home in Wynn Vale now has a switchboard in the thirty-five to forty year bracket. Some have one safety switch covering the power circuits. Plenty have none.',
             'That\'s the bread and butter here. Board upgrades, adding proper RCD protection, replacing tired halogen downlights with LED, adding powerpoints where 1988 thought two would be plenty, and putting in EV chargers for people who have just bought their first electric car.',
+            'Sheds come up a lot too. Two of the Wynn Vale jobs written up further down this page were in the same backyard shed: a cable run through a rough hole in the steel that wore through and shorted, and the shed\'s own board, still running on old ceramic fuses. The others are a full bathroom strip-out wired across three visits and a TV mounted above a gas fireplace.',
         ],
         housing: '1980s and early 90s single-storey brick veneer, with newer pockets toward Golden Grove',
         localJobs: [
             {
                 title: 'Switchboard upgrades on original 1980s boards',
                 body: 'The original Wynn Vale boards are at the end of their sensible life. Early MCBs or fuses, one RCD if you\'re lucky, and no spare ways. We replace them with a correctly sized board on RCBOs so each circuit is protected and labelled on its own.',
+                link: { href: '/switchboard-upgrade-adelaide/', label: 'What a switchboard upgrade involves' },
             },
             {
                 title: 'Adding powerpoints where the house is short',
                 body: 'A 1988 bedroom got two powerpoints and nobody imagined a home office. We add outlets, including double and quad points, USB outlets and outdoor weatherproof points, and we run them properly from the board rather than daisy-chaining off whatever is nearest.',
+                link: { href: '/powerpoint-installation-adelaide/', label: 'Powerpoint installation' },
             },
             {
                 title: 'Halogen to LED downlight conversions',
                 body: 'Most Wynn Vale homes that had downlights put in during the 1990s or 2000s are still running halogens. Replacing the fittings with proper LED downlights cuts the running cost, removes the heat, and lets the insulation sit where it should.',
+                link: { href: '/blog/halogen-downlights-cost-adelaide/', label: 'What halogen downlights really cost to run' },
             },
             {
                 title: 'EV chargers and garage circuits',
                 body: 'Wynn Vale garages are being used for more than the car. Chargers, workshop tools, freezers and second fridges all add up. We run dedicated circuits to the garage and install home EV chargers with the protection the standard requires.',
+                link: { href: '/blog/home-ev-charger-adelaide-guide/', label: 'Read this before buying a home EV charger' },
             },
         ],
         landmarks: [
@@ -399,24 +410,27 @@ export const suburbs: Suburb[] = [
         population: 5593,
         council: 'City of Tea Tree Gully',
         hook: 'Homes, Rentals and Small Business',
-        title: 'Electrician Modbury | Switchboards, Emergency, Test & Tag',
-        description: 'Modbury electrician for switchboard upgrades, safety switch testing, emergency callouts, rental compliance and small commercial work. Free quotes.',
+        title: 'Electrician Modbury | Homes, Rentals, Shops | 0435 006 420',
+        description: 'Licensed Modbury electrician for 1960s and 70s switchboards, rental safety checks, shop fitouts and test and tag. Owner-operated. Call 0435 006 420.',
         intro:
             'JPD Complete Electrical services Modbury for switchboard upgrades, safety switch testing, emergency callouts, downlights and lighting, oven and cooktop connections, and electrical work for the shops and small businesses along North East Road.',
         local: [
             'Modbury is the commercial heart of this part of Adelaide. Westfield Tea Tree Plaza, Modbury Hospital, and a long strip of shops, offices and consulting rooms along North East Road, wrapped around a residential core that mostly went up in the 1960s and 70s.',
             'That gives us two very different jobs in the same suburb. On the residential side it\'s old switchboards, rental compliance and the usual repairs on ageing wiring. On the commercial side it\'s shop and office fitouts, lighting upgrades, distribution boards, exit and emergency lighting, and test and tag for businesses that need the paperwork to be right.',
             'Modbury also has more units, townhouses and infill development than the suburbs around it. Unit switchboards, shared supplies and metering arrangements come with their own quirks, and they\'re worth getting right the first time.',
+            'The closest work we\'ve written up is next door in Modbury Heights. A full switchboard with one safety switch shared across several circuits, rebuilt so each circuit has its own RCBO, which is what made room for the solar-ready EV charger at the same house. And a front light booked as a simple swap, where the new light still didn\'t work properly because of a DIY join hidden in the roof.',
         ],
         housing: '1960s and 70s homes with substantial unit and townhouse infill, plus commercial along North East Road',
         localJobs: [
             {
                 title: 'Switchboard upgrades on 1960s and 70s homes',
                 body: 'Rewireable fuses, no safety switches and too few circuits is the standard starting point on the original Modbury housing. We replace the board with a properly sized one on RCBOs and label it so the next person can actually understand it.',
+                link: { href: '/blog/full-switchboard-upgrade-modbury-heights/', label: 'A full board upgraded in Modbury Heights' },
             },
             {
                 title: 'Rental and property manager compliance',
                 body: 'Modbury has a lot of tenanted property. We handle safety switch testing, smoke alarm checks and replacement, and the repairs that come out of a condition report, with documentation you can file. Fast turnaround matters here and we work to it.',
+                link: { href: '/blog/landlord-electrical-safety-south-australia-rentals/', label: 'Landlord electrical safety in South Australia' },
             },
             {
                 title: 'Shop, office and consulting room fitouts',
@@ -425,6 +439,7 @@ export const suburbs: Suburb[] = [
             {
                 title: 'Test and tag for local businesses',
                 body: 'Portable appliance testing on a schedule, with a register you can actually produce when someone asks for it. We do this for offices, clinics, workshops and retail across Modbury and the surrounding suburbs.',
+                link: { href: '/test-and-tag-adelaide/', label: 'Test and tag for businesses' },
             },
         ],
         landmarks: [
@@ -610,32 +625,37 @@ export const suburbs: Suburb[] = [
         population: 4233,
         council: 'City of Tea Tree Gully',
         hook: 'Local Sparky for a 1970s Suburb',
-        title: 'Electrician St Agnes | Switchboards, Downlights, Repairs',
-        description: 'St Agnes electrician for switchboard upgrades, safety switches, downlights, ceiling fans, shed power and emergency callouts. Free quotes.',
+        title: 'Electrician St Agnes | 1970s Switchboards | 0435 006 420',
+        description: 'Licensed St Agnes electrician, a few minutes away in Wynn Vale. Old fuse boards replaced, tripping traced, LED downlights and shed power. Call 0435 006 420.',
         intro:
             'JPD Complete Electrical services St Agnes for switchboard upgrades, safety switch installs and testing, downlights and lighting, ceiling fans, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
             'St Agnes went up mainly through the 1970s, around The Village shopping centre and either side of Kelly Road. It\'s a quiet, established suburb where a lot of the original owners are still in the same houses.',
             'That means a lot of original switchboards. Rewireable fuses or the earliest circuit breakers, no RCDs, and a circuit layout designed before anyone had a microwave, a dishwasher, a second fridge and four devices charging in the kitchen. Nuisance tripping in a St Agnes home is very often just an overloaded 1970s circuit doing exactly what it was designed to do.',
             'Sloping blocks are common here too, which brings undercroft garages, sheds and the submains that feed them. If your shed lights dim when you start a tool, the submain is the first thing we look at.',
+            'The nearest job we\'ve written up is just over the boundary in Ridgehaven, on housing from the same era: a full switchboard with an asbestos backing, replaced because it was in the way of an EV charger and a battery. Boards built before the mid-1980s often have that asbestos backing, so it\'s worth knowing what to look for in a 1970s St Agnes home.',
         ],
         housing: '1970s brick veneer, plenty of original owners, a fair few sloping blocks',
         localJobs: [
             {
                 title: 'Switchboard upgrades',
                 body: 'Replacing the original 1970s board with a modern one on RCBOs. It gives you shock protection on every circuit, ends the situation where one fault kills the whole house, and gives you the spare capacity to add anything later.',
+                link: { href: '/blog/asbestos-switchboard-adelaide/', label: 'Asbestos in your switchboard: how to tell' },
             },
             {
                 title: 'Sorting out nuisance tripping',
                 body: 'Usually it\'s either an overloaded original circuit, a faulty appliance leaking to earth, or moisture somewhere it shouldn\'t be. We test to find which, rather than replacing parts and hoping. Once we know, the fix is usually simple.',
+                link: { href: '/blog/why-does-my-power-keep-tripping/', label: 'Why does my power keep tripping?' },
             },
             {
                 title: 'Downlights, ceiling fans and cooling',
                 body: 'LED downlights instead of tired old fittings, ceiling fans in the bedrooms and living areas, and dedicated circuits for split systems. Standard work on a house of this age and it makes a real difference to how it lives.',
+                link: { href: '/downlight-installation-adelaide/', label: 'LED downlight installation' },
             },
             {
                 title: 'Shed and garage power',
                 body: 'Undercroft garages and rear sheds on St Agnes blocks are often fed by a cable that was only ever meant to run a light and a single outlet. We size and install a proper submain with its own protection so the shed works like part of the house.',
+                link: { href: '/blog/running-power-to-shed-garage-granny-flat-adelaide/', label: 'Running power to a shed or garage' },
             },
         ],
         landmarks: [
@@ -680,20 +700,22 @@ export const suburbs: Suburb[] = [
         population: 3792,
         council: 'City of Tea Tree Gully',
         hook: 'Foothills Suburb, Local Electrician',
-        title: 'Electrician Fairview Park | Switchboards, Lighting, EV',
-        description: 'Fairview Park electrician for switchboard upgrades, outdoor and step lighting, EV chargers and renovation wiring. Local, free quotes.',
+        title: 'Electrician Fairview Park | Licensed Local | 0435 006 420',
+        description: 'Licensed Fairview Park electrician, just down Golden Grove Road in Wynn Vale. Switchboard upgrades, outdoor and step lighting, EV chargers. Call 0435 006 420.',
         intro:
             'JPD Complete Electrical services Fairview Park for switchboard upgrades, safety switch testing, downlights and outdoor lighting, EV charger installs, oven and cooktop connections, fault finding and emergency callouts.',
         local: [
             'Fairview Park sits up against the foothills at the top of Golden Grove Road, backing onto reserve land. It went up through the 1970s and into the 80s, and a lot of it\'s built into the slope.',
             'That slope shapes the electrical work. Split-level homes, undercroft garages, retaining walls and terraced gardens all mean cable runs that are longer and less obvious than they look, and outdoor lighting that has to survive genuinely wet winters up here.',
             'The housing stock itself is at the age where boards are due. Original fuse boards or early breakers, usually no safety switch on the lighting, and not much spare space. It\'s also a suburb where people stay a long time and renovate rather than move, so we do a good amount of kitchen, bathroom and extension work alongside the straight upgrades.',
+            'Garages here get used for more than parking. The Fairview Park job written up below is hexagon LED lighting in a garage for a car detailer, where seeing paint defects properly is the whole point of the lighting. It\'s the same thinking we bring to a home workshop or a garage gym: light the job you\'re actually doing in there.',
         ],
         housing: '1970s and 80s homes, often split-level or built into the slope, backing onto reserve',
         localJobs: [
             {
                 title: 'Switchboard upgrades on split-level homes',
                 body: 'Original boards from this era need replacing, and split-level layouts often mean the board is somewhere awkward. We replace it with a correctly sized board on RCBOs and relocate it where that makes sense and is practical.',
+                link: { href: '/switchboard-upgrade-adelaide/', label: 'What a switchboard upgrade involves' },
             },
             {
                 title: 'Outdoor, garden and step lighting',
@@ -702,10 +724,12 @@ export const suburbs: Suburb[] = [
             {
                 title: 'Renovation wiring',
                 body: 'Kitchens, bathrooms and extensions. We handle rough-in and fit-off, coordinate with the builder or cabinetmaker, and make sure the new work is on circuits that can carry it rather than hanging off whatever was nearest.',
+                link: { href: '/renovation-electrician-adelaide/', label: 'Renovation electrical work' },
             },
             {
                 title: 'EV chargers and garage circuits',
                 body: 'Undercroft and detached garages mean the charger is often a long way from the board. That drives the cable size and the price, so we measure it rather than quoting blind.',
+                link: { href: '/ev-charger-installation-adelaide/', label: 'EV charger installation' },
             },
         ],
         landmarks: [

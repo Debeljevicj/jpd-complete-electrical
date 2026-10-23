@@ -10,6 +10,7 @@ import JobPhotoStrip from './JobPhotoStrip';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
 import { workForService, stripCount } from '@/lib/service-work';
+import { workCategories, jobsForCategory } from '@/lib/recent-work';
 import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
@@ -20,6 +21,8 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
     const { slug, name, icon, h1, intro, sections, priceFactors, faqs, related, description } = service;
 
     const { featured, gridJobs, gridLimit, photos } = workForService(slug);
+    // The recent-work archive this service files into, for the "see every job" link.
+    const category = workCategories.find((c) => c.services.includes(slug));
 
     // The photo strip sits after the first body section, so the sections below it
     // shift one step in the white/off-white alternation to keep it unbroken.
@@ -74,24 +77,30 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
             {/* Hero */}
             <section className="bg-navy text-white py-16 md:py-20">
                 <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-5">
+                    {/* Buttons above the intro on phones, below it from md up. Same
+                        reason as the suburb hero: at 375px the intro left them at
+                        ~600-700px, under the fold once the browser's bars are drawn. */}
+                    <div className="max-w-3xl flex flex-col">
+                        <div className="self-start inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-5">
                             <ServiceIcon name={icon} className="w-4 h-4 text-gold" />
                             <span className="text-xs font-semibold tracking-wide uppercase text-gold">{name}</span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{h1}</h1>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{intro}</p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-5 md:mb-4 leading-tight">{h1}</h1>
+                        <p className="order-last md:order-none text-lg md:text-xl text-gray-300 leading-relaxed mt-6 md:mt-0 md:mb-8">
+                            {intro}
+                        </p>
+                        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-4">
                             <a
                                 href={PHONE_HREF}
-                                className="btn btn-gold text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center justify-center gap-2"
+                                className="btn btn-gold text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3 inline-flex items-center justify-center gap-2"
                             >
-                                <Phone className="w-5 h-5" />
-                                Call {PHONE}
+                                <Phone className="w-5 h-5 flex-shrink-0" />
+                                <span className="sm:hidden">Call Now</span>
+                                <span className="hidden sm:inline">Call {PHONE}</span>
                             </a>
                             <Link
                                 href="/contact"
-                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3"
+                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3"
                             >
                                 Get a Free Quote
                             </Link>
@@ -266,6 +275,15 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                 angleFor={slug}
                 heading="Recent Work"
                 intro={`Real ${name} jobs from around Adelaide, with photos and what was actually involved.`}
+                more={
+                    category && {
+                        href: `/recent-work/${category.slug}`,
+                        label:
+                            category.slug === 'everyday-electrical'
+                                ? `See all ${jobsForCategory(category).length} everyday electrical jobs`
+                                : `See all ${jobsForCategory(category).length} jobs in ${category.name}`,
+                    }
+                }
             />
 
             {/* CTA */}

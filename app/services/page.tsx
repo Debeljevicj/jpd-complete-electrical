@@ -8,9 +8,11 @@ import Button from '@/components/Button';
 import {
     Lightbulb, Plug, Fan, Gauge, Wrench, Zap,
     Building2, AlertCircle, Calendar,
-    HeartPulse, Home, Shield, Thermometer
+    HeartPulse, Home, Shield, Thermometer, Phone
 } from 'lucide-react';
 import { shareMeta } from '@/lib/share';
+
+const inlineLink = 'text-navy font-bold underline underline-offset-4 hover:text-gold';
 
 export const metadata = {
     title: 'Electrical Services Adelaide | Switchboards, EV, Lighting',
@@ -33,6 +35,24 @@ export default function ServicesPage() {
                 <div className="container-custom text-center">
                     <h1 className="text-4xl md:text-6xl font-bold mb-4">Electrical Services in Adelaide</h1>
                     <p className="text-xl text-gold">Comprehensive Electrical Work for Homes & Businesses</p>
+                    {/* This hero had no way to act at all; the first call or quote link
+                        was the closing band, a dozen screens down on a phone. */}
+                    <div className="grid grid-cols-2 sm:flex sm:flex-row sm:justify-center gap-3 sm:gap-4 mt-8 max-w-md sm:max-w-none mx-auto">
+                        <a
+                            href="tel:0435006420"
+                            className="btn btn-gold text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3 inline-flex items-center justify-center gap-2"
+                        >
+                            <Phone className="w-5 h-5 flex-shrink-0" />
+                            <span className="sm:hidden">Call Now</span>
+                            <span className="hidden sm:inline">Call 0435 006 420</span>
+                        </a>
+                        <Link
+                            href="/contact"
+                            className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3"
+                        >
+                            Get a Free Quote
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -70,8 +90,35 @@ export default function ServicesPage() {
                         ))}
                     </div>
                     <p className="text-neutral-slate text-lg leading-relaxed mt-8">
-                        Want the local version?{' '}
-                        <Link href="/service-areas" className="text-navy font-bold underline underline-offset-4 hover:text-gold">
+                        Want to see the work first? Here are{' '}
+                        <Link href="/recent-work/switchboard-upgrades" className={inlineLink}>
+                            real switchboard upgrades across Adelaide
+                        </Link>
+                        , with photos before and after.
+                    </p>
+                    <p className="text-neutral-slate text-lg leading-relaxed mt-4">
+                        Want the local version? We're based in{' '}
+                        <Link href="/electrician-wynn-vale" className={inlineLink}>
+                            Wynn Vale
+                        </Link>{' '}
+                        and work most days in{' '}
+                        <Link href="/electrician-greenwith" className={inlineLink}>
+                            Greenwith
+                        </Link>
+                        ,{' '}
+                        <Link href="/electrician-st-agnes" className={inlineLink}>
+                            St Agnes
+                        </Link>
+                        ,{' '}
+                        <Link href="/electrician-modbury" className={inlineLink}>
+                            Modbury
+                        </Link>{' '}
+                        and{' '}
+                        <Link href="/electrician-fairview-park" className={inlineLink}>
+                            Fairview Park
+                        </Link>
+                        , and right across Adelaide.{' '}
+                        <Link href="/service-areas" className={inlineLink}>
                             See every suburb we cover
                         </Link>{' '}
                         for detail on the housing stock and the work that comes up in your area.

@@ -94,7 +94,9 @@ export const upgradePosts: BlogPost[] = [
     {
         slug: 'halogen-downlights-cost-adelaide',
         title: 'Your Halogen Downlights Are Costing More Than You Think',
-        seoTitle: 'Halogen vs LED Downlights: The Real Cost | JPD',
+        seoTitle: 'Halogen Downlights: What They Really Cost to Run | JPD',
+        metaDescription:
+            'A halogen downlight draws around 50 watts, and thirty of them is 1,500. What that costs, what it does to your ceiling insulation, and what swapping to LED involves.',
         excerpt:
             'Thirty halogen downlights is 1,500 watts of lighting and a ceiling full of insulation gaps. The running cost is only half the problem.',
         date: '2026-08-13',
@@ -104,7 +106,7 @@ export const upgradePosts: BlogPost[] = [
         content: `
             <h3>Why This Matters to You</h3>
             <p>If your house was built or renovated between roughly 1995 and 2010, you very likely have halogen downlights, and there's a good chance nobody has ever told you what they're costing you.</p>
-            <p>A single halogen downlight draws around 50 watts. Thirty of them, which isn't unusual in a family home across Golden Grove, Greenwith or Gulfview Heights, is 1,500 watts. That's more than a decent air conditioner, running every evening.</p>
+            <p>A single halogen downlight draws around 50 watts. Thirty of them, which isn't unusual in a family home across <a href="/electrician-golden-grove/">Golden Grove</a>, <a href="/electrician-greenwith/">Greenwith</a> or <a href="/electrician-gulfview-heights/">Gulfview Heights</a>, is 1,500 watts. That's more than a decent air conditioner, running every evening.</p>
             <p>But the power bill is only half of it. The bigger issue is heat, and what that heat has done to your insulation.</p>
 
             <h3>The Insulation Problem Nobody Mentions</h3>

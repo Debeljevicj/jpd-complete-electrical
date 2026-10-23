@@ -65,6 +65,12 @@ export interface BlogPost {
         description: string;
         linkText: string;
         href: string;
+        /**
+         * How many sections of the article come before the mid-post CTA. Defaults
+         * to 2. Set to 1 on a post people land on from a product search, so the
+         * offer sits straight after the answer instead of after the job story.
+         */
+        afterHeadings?: number;
     };
 }
 

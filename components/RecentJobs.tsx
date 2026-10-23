@@ -17,6 +17,7 @@ export default function RecentJobs({
     intro,
     angleFor,
     limit = 3,
+    more,
 }: {
     jobs: JobReport[];
     heading: string;
@@ -29,6 +30,8 @@ export default function RecentJobs({
      * exactly the page that needs the most content of its own.
      */
     limit?: number;
+    /** A link under the grid to the full archive of this kind of job. */
+    more?: { href: string; label: string } | false;
 }) {
     if (jobs.length === 0) return null;
 
@@ -75,6 +78,17 @@ export default function RecentJobs({
                         );
                     })}
                 </div>
+
+                {more && (
+                    <div className="mt-8">
+                        <Link
+                            href={more.href}
+                            className="inline-flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors"
+                        >
+                            {more.label} <ArrowRight className="w-4 h-4" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );

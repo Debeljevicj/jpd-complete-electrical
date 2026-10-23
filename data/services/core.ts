@@ -94,8 +94,8 @@ export const coreServices: Service[] = [
         name: 'Switchboard Upgrades',
         icon: 'switchboard',
         blurb: 'Old fuses out, RCBOs in. Shock protection on every circuit and room to add what you want next.',
-        title: 'Switchboard Upgrade Adelaide | RCBO Boards | JPD Electrical',
-        description: 'Switchboard upgrades across Adelaide. Ceramic fuses replaced with modern RCBO boards, full safety switch protection and a Certificate of Compliance.',
+        title: 'Switchboard Upgrade Adelaide | Old Fuse Boards Replaced',
+        description: 'Old fuse boards replaced with RCBOs, safety switch protection on every circuit and a Certificate of Compliance. Licensed Adelaide sparky. Call 0435 006 420.',
         h1: 'Switchboard Upgrades in Adelaide',
         intro:
             'If your switchboard still has rewireable ceramic fuses, has no safety switches, trips regularly, or is so full there\'s nowhere to add a circuit, it\'s due. We replace it with a properly sized board on RCBOs and label it so it makes sense to whoever opens it next.',

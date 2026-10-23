@@ -4,9 +4,21 @@ import { Phone, Mail, MapPin, Facebook, Instagram } from 'lucide-react';
 import { serviceIndex } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
 
-/** Highest-intent services and biggest suburbs, so the footer links carry weight rather than listing everything. */
+/** Highest-intent services and a short list of suburbs, so the footer links carry weight rather than listing everything. */
 const footerServices = serviceIndex.slice(0, 6);
-const footerSuburbs = suburbs.slice(0, 7);
+// The suburb pages Search Console had nearest page one in Oct 2026, rather than the
+// seven biggest by population, which left St Agnes and Fairview Park out sitewide.
+const footerSuburbs = [
+    'electrician-wynn-vale',
+    'electrician-st-agnes',
+    'electrician-golden-grove',
+    'electrician-greenwith',
+    'electrician-fairview-park',
+    'electrician-modbury',
+    'electrician-redwood-park',
+]
+    .map((slug) => suburbs.find((s) => s.slug === slug))
+    .filter((s): s is (typeof suburbs)[number] => Boolean(s));
 
 const quickLinks = [
     { href: '/', label: 'Home' },

@@ -24,6 +24,12 @@ export interface JobReport extends BlogPost {
      */
     suburb?: string;
     /**
+     * Suburb pages this job is next door to, for a job in a suburb with no page
+     * of its own (Modbury Heights is shown on Modbury). Only feeds the "near"
+     * block on those pages; it never makes the job count as done in them.
+     */
+    nearSuburbs?: string[];
+    /**
      * Per-service framing for the card, keyed by service slug.
      *
      * One job legitimately covers several services, and someone arriving from the
@@ -688,6 +694,7 @@ export const jobReports: JobReport[] = [
             'ev-charger-installation-adelaide',
             'rcd-testing-safety-switches-adelaide',
         ],
+        nearSuburbs: ['electrician-modbury'],
         angles: {
             'ev-charger-installation-adelaide': {
                 title: 'A Full Switchboard Upgraded for an EV Charger',
@@ -790,6 +797,7 @@ export const jobReports: JobReport[] = [
             },
         ],
         services: ['ev-charger-installation-adelaide'],
+        nearSuburbs: ['electrician-modbury'],
         featuredFor: ['ev-charger-installation-adelaide'],
         content: `
             <h3>Why This Matters to You</h3>
@@ -867,6 +875,7 @@ export const jobReports: JobReport[] = [
         category: 'Recent Work',
         image: '/images/faulty_diy_joint_modbury_heights.webp',
         services: ['emergency-electrician-adelaide'],
+        nearSuburbs: ['electrician-modbury'],
         content: `
             <h3>Why This Matters to You</h3>
             <p>When a front or outdoor light stops working, the fitting gets the blame. Most of the time that's fair. But when the new light doesn't work properly either, the problem was never the light. Keep swapping fittings and you're paying for lights that can't fix it, while the real fault, a bad join that makes heat, stays hidden in your roof.</p>
@@ -2824,8 +2833,8 @@ export const jobReports: JobReport[] = [
     {
         slug: 'zetr-powerpoint-stone-splashback-golden-grove',
         title: 'Zetr Powerpoint on a Stone Splashback in Golden Grove',
-        seoTitle: 'Zetr Powerpoint on Stone Splashback | JPD',
-        metaDescription: `A flush matt black Zetr outlet set into a genuine stone splashback in a Golden Grove kitchen, and why the cutout has to be agreed before the stone is cut.`,
+        seoTitle: 'Zetr Flush Powerpoints: Installing Them in Stone | JPD',
+        metaDescription: `Zetr flush powerpoints sit level with stone or plasterboard. Where to buy them, why the cutout is agreed before the stone is cut, and a Golden Grove install.`,
         excerpt:
             'A flush matt black outlet set into genuine stone, where the cutout is made off site and there\'s no second attempt if the size is wrong.',
         date: '2026-08-15',
@@ -2843,6 +2852,10 @@ export const jobReports: JobReport[] = [
         },
         content: `
             <h3>Why This Matters to You</h3>
+            <p>Zetr is an Australian-designed range of architectural powerpoints and switches. Its flush range sits level with the surface, plasterboard or stone, instead of on top of it, and it comes in finishes including matt black. You buy it through Zetr's stockists, and like any fixed powerpoint it has to be installed by a licensed electrician.</p>
+            <p>The catch is the cutout. A flush outlet needs a hole the exact size that product calls for, agreed before the stone or tiles go in. Skip that step and a wrong cutout in a finished stone splashback can't be fixed neatly, so you're left with a visible compromise or a new slab.</p>
+
+            <h3>The Job: A Stone Splashback in Golden Grove</h3>
             <p>In an expensive kitchen, the powerpoints are usually the thing that lets the look down. Everything else gets chosen carefully, the stone, the tapware, the handles, the appliances, and then there's a standard white outlet screwed onto the splashback in the middle of it.</p>
             <p>This job was a premium kitchen renovation in Golden Grove with a genuine stone splashback, and the outlets were specified to match the rest of the room. Matt black Zetr outlets, sitting flush in the stone, chosen to tie in with the appliances.</p>
 
@@ -2866,8 +2879,8 @@ export const jobReports: JobReport[] = [
         `,
         faqs: [
             {
-                question: 'What is a Zetr powerpoint?',
-                answer: 'Zetr is an Australian-designed range of architectural powerpoints and switches, established in 2017. Its flush range is designed to sit level with the surface instead of on top of it, on substrates from plasterboard through to stone, and it comes in finishes including matt black. Like any fixed powerpoint it has to be installed by a licensed electrician, and the flush versions need the cutout planned before the surface is finished.',
+                question: 'Do Zetr flush powerpoints work in plasterboard as well as stone?',
+                answer: 'Yes. Zetr designs its flush range for surfaces from plasterboard through to stone. The difference is when the hole gets made. Plasterboard is cut on site, so there\'s some room to adjust, while a stone splashback is machined off site from the cutout dimension you give the stonemason. Either way, confirm the exact Zetr product before rough-in, because the cutout is specific to that product.',
             },
             {
                 question: 'Can a flush powerpoint be added to a stone splashback that\'s already installed?',
@@ -2883,11 +2896,14 @@ export const jobReports: JobReport[] = [
             },
         ],
         cta: {
-            heading: 'Planning a Premium Kitchen?',
+            heading: 'Want Zetr Outlets Installed?',
             description:
-                'Flush outlets in stone need the electrical decided before the stone is cut. JPD Complete Electrical works across Golden Grove and the north-eastern suburbs.',
-            linkText: 'Book a Kitchen Electrical Quote',
+                'JPD Complete Electrical supplies and installs Zetr flush outlets across Adelaide, with the cutout sorted before the stone or tiles go in.',
+            linkText: 'Get a Quote for Zetr Outlets',
             href: '/contact',
+            // People land here searching for Zetr itself, so the offer goes straight
+            // after the answer rather than after the job story.
+            afterHeadings: 1,
         },
     },
     {
@@ -3102,3 +3118,16 @@ export const jobsForService = (serviceSlug: string): JobReport[] =>
 
 export const jobsForSuburb = (suburbSlug: string): JobReport[] =>
     jobReports.filter((job) => job.suburb === suburbSlug).sort(byDateDesc);
+
+/**
+ * Jobs from the suburbs around this one, for a suburb page with little or no
+ * work of its own written up. Jobs tagged next door to it come first, then jobs
+ * from its neighbouring suburb pages in the order the suburb lists them.
+ */
+export const jobsNearSuburb = (suburbSlug: string, nearbySlugs: string[]): JobReport[] => {
+    const tagged = jobReports.filter((job) => job.nearSuburbs?.includes(suburbSlug)).sort(byDateDesc);
+    const neighbours = nearbySlugs.flatMap((slug) => jobsForSuburb(slug));
+    return [...tagged, ...neighbours].filter(
+        (job, i, all) => job.suburb !== suburbSlug && all.findIndex((j) => j.slug === job.slug) === i
+    );
+};

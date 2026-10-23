@@ -8,7 +8,7 @@ import RecentJobs from './RecentJobs';
 import InlineCTA from './InlineCTA';
 import { serviceIndex } from '@/data/services';
 import { suburbSlugByName, type Suburb } from '@/data/suburbs';
-import { jobsForSuburb } from '@/data/job-reports';
+import { jobsForSuburb, jobsNearSuburb } from '@/data/job-reports';
 import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
@@ -40,6 +40,11 @@ const whyPoints = [
 
 export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
     const { name, postcode, council, hook, intro, local, housing, localJobs, landmarks, nearby, faqs, slug } = suburb;
+    const ownJobs = jobsForSuburb(slug);
+    const nearJobs = jobsNearSuburb(
+        slug,
+        nearby.map((area) => suburbSlugByName[area]?.slice(1)).filter((s): s is string => Boolean(s))
+    );
 
     // A Service scoped to this suburb, provided by the canonical business node in
     // JsonLd.tsx. Declaring a second Electrician per page would read as fifty
@@ -102,8 +107,14 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             {/* Hero */}
             <section className="bg-navy text-white py-16 md:py-20">
                 <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-4">
+                    {/*
+                      * Flex column so the buttons can sit above the intro on phones and
+                      * below it from md up. Measured at 375px, the intro pushed "Get a
+                      * Free Quote" to ~740px, under the fold once Safari's bars take
+                      * their share, and the sticky bar only appears after a scroll.
+                      */}
+                    <div className="max-w-3xl flex flex-col">
+                        <div className="self-start inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-4">
                             <span className="w-2 h-2 bg-gold rounded-full" />
                             <span className="text-xs font-semibold tracking-wide uppercase text-gold">
                                 {name} SA {postcode}
@@ -111,18 +122,21 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                         </div>
                         <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-tight">Electrician {name}</h1>
                         <p className="text-xl md:text-2xl text-gold font-semibold mb-5">{hook}</p>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">{intro}</p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <p className="order-last md:order-none text-lg md:text-xl text-gray-300 leading-relaxed mt-6 md:mt-0 md:mb-8">
+                            {intro}
+                        </p>
+                        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-4">
                             <a
                                 href={PHONE_HREF}
-                                className="btn btn-gold text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center justify-center gap-2"
+                                className="btn btn-gold text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3 inline-flex items-center justify-center gap-2"
                             >
-                                <Phone className="w-5 h-5" />
-                                Call {PHONE}
+                                <Phone className="w-5 h-5 flex-shrink-0" />
+                                <span className="sm:hidden">Call Now</span>
+                                <span className="hidden sm:inline">Call {PHONE}</span>
                             </a>
                             <Link
                                 href="/contact"
-                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3"
+                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3"
                             >
                                 Get a Free Quote
                             </Link>
@@ -188,7 +202,11 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             <InlineCTA
                 tone="gold"
                 heading={`Need an electrician in ${name}?`}
-                body={`We're based in Wynn Vale, so ${name} is a short drive rather than a trip across town. Free quotes, fixed prices.`}
+                body={
+                    slug === 'electrician-wynn-vale'
+                        ? "We're based in Wynn Vale, so your job is just around the corner rather than a trip across town. Free quotes, fixed prices."
+                        : `We're based in Wynn Vale, so ${name} is a short drive rather than a trip across town. Free quotes, fixed prices.`
+                }
             />
 
             {/* Services */}
@@ -257,6 +275,14 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                                     <div>
                                         <h3 className="font-bold text-navy mb-2">{job.title}</h3>
                                         <p className="text-neutral-slate leading-relaxed">{job.body}</p>
+                                        {job.link && (
+                                            <Link
+                                                href={job.link.href}
+                                                className="inline-block mt-3 text-navy font-bold underline underline-offset-4 hover:text-gold transition-colors"
+                                            >
+                                                {job.link.label} →
+                                            </Link>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -370,11 +396,23 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
 
             {/* Real jobs done in this suburb. Renders nothing until one is written up. */}
             <RecentJobs
-                jobs={jobsForSuburb(slug)}
+                jobs={ownJobs}
                 limit={9}
                 heading={`Recent Work in ${name}`}
                 intro={`Jobs we have actually done in ${name}, with photos and what was involved.`}
             />
+
+            {/* Topped up from next door while a suburb has fewer than three of its own,
+                so St Agnes and Modbury carry real local work instead of nothing. Each
+                card names its own suburb, so nothing here claims a job happened in this one. */}
+            {ownJobs.length < 3 && (
+                <RecentJobs
+                    jobs={nearJobs}
+                    limit={3}
+                    heading={`Recent Work Near ${name}`}
+                    intro={`Jobs from the suburbs around ${name}, on the same kind of housing and the same kind of work.`}
+                />
+            )}
 
             {/* CTA */}
             <section className="section-padding bg-navy text-white">
