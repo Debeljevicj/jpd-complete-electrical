@@ -185,6 +185,30 @@ export function latestJobs(count = 3): JobReport[] {
         .slice(0, count);
 }
 
+/**
+ * The "Similar jobs" cards under a job report.
+ *
+ * The job's own `related` picks come first, in the order written. The rest is
+ * filled from jobs on the same main service, then jobs in the same or a
+ * neighbouring suburb, then jobs sharing any service, newest first within each.
+ * Never the job itself, never a slug twice.
+ */
+export function similarJobs(job: JobReport, count = 3): JobReport[] {
+    const bySlug = new Map(jobReports.map((j) => [j.slug, j]));
+    const newest = (a: JobReport, b: JobReport) => (b.updated ?? b.date).localeCompare(a.updated ?? a.date);
+    const places = new Set([job.suburb, ...(job.nearSuburbs ?? [])].filter(Boolean));
+    const others = jobReports.filter((j) => j.slug !== job.slug).slice().sort(newest);
+    const picked: JobReport[] = [];
+    const add = (j: JobReport | undefined) => {
+        if (j && j.slug !== job.slug && !picked.includes(j) && picked.length < count) picked.push(j);
+    };
+    for (const slug of job.related ?? []) add(bySlug.get(slug));
+    others.filter((j) => j.services[0] === job.services[0]).forEach(add);
+    others.filter((j) => [j.suburb, ...(j.nearSuburbs ?? [])].some((s) => s && places.has(s))).forEach(add);
+    others.filter((j) => j.services.some((s) => job.services.includes(s))).forEach(add);
+    return picked;
+}
+
 /** Categories that have at least one job written up, so no card leads to an empty page. */
 export const populatedWorkCategories = workCategories.filter(
     (c) => jobsForCategory(c).length > 0

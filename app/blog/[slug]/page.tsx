@@ -5,7 +5,8 @@ import { blogPosts, type BlogPost } from '@/data/blog-posts';
 import { jobReports } from '@/data/job-reports';
 import { serviceBySlug } from '@/data/services';
 import { suburbBySlug } from '@/data/suburbs';
-import { workCategories } from '@/lib/recent-work';
+import { workCategories, similarJobs } from '@/lib/recent-work';
+import RecentJobs from '@/components/RecentJobs';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
@@ -452,6 +453,19 @@ export default function BlogPostPage({ params }: Props) {
                     </p>
                 </div>
             </div>
+
+            {/* Other write-ups of the same kind of work, or nearby, so a reader
+                (and a crawler) carries on to the next job instead of leaving. */}
+            {job && (
+                <div className="mt-16">
+                    <RecentJobs
+                        jobs={similarJobs(job)}
+                        heading="Similar jobs"
+                        angleFor={job.services[0]}
+                        more={false}
+                    />
+                </div>
+            )}
         </article>
     );
 }
