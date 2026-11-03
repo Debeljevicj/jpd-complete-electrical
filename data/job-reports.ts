@@ -46,9 +46,557 @@ export interface JobReport extends BlogPost {
      * slice of it, a card in a row of three undersells it.
      */
     featuredFor?: string[];
+    /**
+     * Job report slugs shown first in the "Similar jobs" cards under this one:
+     * the same kind of work, or the same fault in another suburb. The rest of
+     * the row is filled automatically (similarJobs in lib/recent-work.ts).
+     */
+    related?: string[];
 }
 
 export const jobReports: JobReport[] = [
+    {
+        slug: 'switchboard-rcbos-smoke-alarms-wynn-vale',
+        title: 'One Safety Switch for the Whole House, Replaced With RCBOs in Wynn Vale',
+        seoTitle: 'Switchboard Upgrade to RCBOs, Wynn Vale | JPD',
+        metaDescription:
+            'A Wynn Vale switchboard ran every circuit through one safety switch. It now has an RCBO on each circuit, plus two new smoke alarms, done in the one visit.',
+        excerpt:
+            'The old board had a safety switch, just one, carrying most of the house. Here\'s why that matters when something trips, and what replaced it.',
+        date: '2026-11-03',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/switchboard_rcbos_hero_wynn_vale.webp',
+        gallery: [
+            {
+                src: '/images/switchboard_single_rcd_before_wynn_vale.webp',
+                role: 'before',
+                focus: 'top',
+                alt: 'Older switchboard in a meter box with a row of red circuit breakers beside a single safety switch',
+                caption: 'Before. Circuit breakers, and one safety switch shared between them.',
+            },
+            {
+                src: '/images/switchboard_rcbos_after_wynn_vale.webp',
+                role: 'after',
+                focus: 'top',
+                alt: 'New switchboard with a main switch and a row of RCBOs, each with a green circuit label underneath',
+                caption: 'After. A main switch and an RCBO on every circuit, each one labelled.',
+            },
+            {
+                src: '/images/switchboard_rcbos_open_wynn_vale.webp',
+                id: 'open',
+                focus: 'top',
+                alt: 'Switchboard with the cover off showing the new row of RCBOs wired in, with the incoming cables above',
+                caption: 'The new RCBOs going in, before the cover went back on.',
+            },
+            {
+                src: '/images/smoke_alarm_hallway_wynn_vale.webp',
+                id: 'alarm1',
+                focus: 'center',
+                alt: 'New white smoke alarm mounted on a ceiling near the cornice',
+                caption: 'One of the two new smoke alarms.',
+            },
+            {
+                src: '/images/smoke_alarm_bedroom_wynn_vale.webp',
+                id: 'alarm2',
+                focus: 'center',
+                alt: 'Second new smoke alarm on a white ceiling with its green power light on',
+                caption: 'The second alarm, powered up and showing its green light.',
+            },
+        ],
+        services: ['switchboard-upgrade-adelaide', 'smoke-alarm-installation-adelaide', 'rcd-testing-safety-switches-adelaide'],
+        suburb: 'electrician-wynn-vale',
+        related: ['shed-switchboard-ceramic-fuses-upgrade-wynn-vale', 'switchboard-upgrade-signs-golden-grove', 'full-switchboard-upgrade-modbury-heights'],
+        angles: {
+            'smoke-alarm-installation-adelaide': {
+                title: 'Two New Smoke Alarms With a Switchboard Upgrade',
+                blurb: 'Two new smoke alarms fitted in the same visit as an RCBO switchboard upgrade in Wynn Vale.',
+                anchor: 'smoke-alarms',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A lot of Adelaide homes have a safety switch, and plenty of owners stop there: the box is ticked. The catch is how many circuits that one switch is carrying. When it trips, everything on it goes off together, the fridge, the lights, the powerpoints in half the house, and you're left standing at the meter box with no way of telling which circuit caused it.</p>
+            <p>That was the setup at this house in Wynn Vale. The board has now been replaced with an RCBO on every circuit, and two new smoke alarms went in on the same visit.</p>
+
+            <h3>What Was There</h3>
+            <p>The old board wasn't a fuse board. It had circuit breakers, a surge diverter and one safety switch, with most of the house sitting behind it. That was a reasonable board when it went in, and it still worked. What it couldn't do is keep a fault on one circuit from blacking out the rest.</p>
+            <p>A tripping heater, a wet outdoor powerpoint or a failing appliance all look the same from the board: the one safety switch drops, and so does every circuit behind it. Finding the cause means switching circuits on one at a time and waiting to see which one trips it again. Our guide on <a href="/blog/why-does-my-power-keep-tripping/">why the power keeps tripping</a> goes through that process, and it's slow when one switch is doing all the work.</p>
+
+            <h3>What Went In</h3>
+            <p>The new board has a main switch and an RCBO on each circuit, nine in all. An RCBO is a circuit breaker and a safety switch in one device, so each circuit is protected on its own and trips on its own.</p>
+            [[photo:open]]
+            <p>Each RCBO is labelled for what it runs: stove, air conditioning, heater, laundry, garage, power and lights. If one trips now, the rest of the house stays on and the label tells you which circuit it was. There's a surge diverter on the new board too, as there was on the old one.</p>
+            <p>If you want to see what happens on the day of a board replacement, <a href="/blog/switchboard-upgrade-what-actually-happens/">this guide walks through it</a>, and our <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page covers when it's worth doing. It's the same change we made to <a href="/blog/shed-switchboard-ceramic-fuses-upgrade-wynn-vale/">an old shed board in Wynn Vale</a>, which still had ceramic fuses, and to <a href="/blog/switchboard-upgrade-signs-golden-grove/">a Golden Grove board that was showing its age</a>.</p>
+
+            <h3 id="smoke-alarms">Two New Smoke Alarms</h3>
+            <p>Two new smoke alarms went in at the same time. Doing them alongside the board meant one shutdown for the house instead of two visits.</p>
+            [[photo:alarm1]]
+            [[photo:alarm2]]
+            <p>Our <a href="/smoke-alarm-installation-adelaide/">smoke alarm page</a> covers how they're fitted, and the <a href="/blog/smoke-alarm-rules-south-australia-homeowners-landlords/">smoke alarm rules for South Australia</a> explain what's required when you sell, rent or extend. The board's safety switches can also be <a href="/rcd-testing-safety-switches-adelaide/">tested on a regular cycle</a>, which is worth doing with any board, old or new.</p>
+            <p>We cover Wynn Vale and the rest of the north-east. There's more of our <a href="/electrician-wynn-vale/">work in Wynn Vale</a>, including <a href="/blog/untethered-ev-charger-wynn-vale/">a 7 kW EV charger installed nearby</a>.</p>
+        `,
+        faqs: [
+            {
+                question: 'If my switchboard already has a safety switch, is it worth going to RCBOs?',
+                answer: 'Often, yes, depending on how many circuits that one switch carries. An older board with a single safety switch across most of the house will still protect you, but any fault on any circuit takes the lot off at once and gives no clue where it came from. With an RCBO on each circuit, only the faulty one goes off and the label tells you which it was. Whether it\'s worth doing now depends on the board\'s condition and how often it trips.',
+            },
+            {
+                question: 'Will an RCBO stop my power from tripping?',
+                answer: 'No, and it shouldn\'t. If something is leaking current to earth, the RCBO on that circuit trips, exactly as it\'s meant to. What changes is how much of the house goes off with it. Instead of losing the fridge, the lights and every powerpoint behind one safety switch, you lose the one circuit with the fault on it, and that makes the cause far easier to find.',
+            },
+            {
+                question: 'What should I do when one RCBO trips?',
+                answer: 'Check its label to see which circuit it is, then unplug whatever was running on that circuit and push the RCBO back up. If it stays on, plug things back in one at a time to find the appliance causing it. If it trips again with nothing plugged in, or it trips on a lighting or fixed circuit like the oven, leave it off and call an electrician. A fault in the wiring needs finding, not resetting.',
+            },
+            {
+                question: 'Can new smoke alarms go in at the same time as a switchboard upgrade?',
+                answer: 'Yes, and it\'s a sensible time to do them. Hardwired smoke alarms run off a circuit at the board, so the power is already off and the board is being worked on. Doing both together means one shutdown and one visit instead of two. It\'s also a good moment to check the date on any alarms you\'re keeping, because they\'re replaced on age, not on whether they still beep.',
+            },
+        ],
+        cta: {
+            heading: 'One Safety Switch Carrying the Whole House?',
+            description:
+                'Switchboard upgrades to RCBOs, with smoke alarms and safety switch testing done in the same visit. JPD Complete Electrical covers Wynn Vale and the north-east.',
+            linkText: 'Get a Switchboard Quote',
+            href: '/switchboard-upgrade-adelaide',
+        },
+    },
+    {
+        slug: 'untethered-ev-charger-wynn-vale',
+        title: 'A 7 kW Untethered EV Charger in a Wynn Vale Garage',
+        seoTitle: '7 kW Untethered EV Charger, Wynn Vale | JPD',
+        metaDescription:
+            'A 7 kW SEVR EV charger installed in a Wynn Vale garage, with a 7 metre cable that unplugs from the charger and an isolator mounted beside it.',
+        excerpt:
+            'An untethered 7 kW charger on the garage wall, with an isolator beside it and a 7 metre cable that comes off the charger when it\'s not in use.',
+        date: '2026-11-03',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/ev_charger_hero_wynn_vale.webp',
+        gallery: [
+            {
+                src: '/images/ev_charger_sevr_isolator_wynn_vale.webp',
+                id: 'wall',
+                focus: 'center',
+                alt: 'Black SEVR EV charger with a yellow light ring mounted on a brick garage wall, with a white isolator switch above it',
+                caption: 'The charger on the garage wall, with its isolator above it.',
+            },
+            {
+                src: '/images/ev_charger_cable_plug_wynn_vale.webp',
+                id: 'plug',
+                focus: 'center',
+                alt: 'Hand holding the Type 2 plug of a charging cable beside the wall-mounted charger',
+                caption: 'The 7 metre cable. It plugs into the charger at one end and the car at the other.',
+            },
+            {
+                src: '/images/ev_charger_plugged_in_wynn_vale.webp',
+                id: 'plugged',
+                focus: 'center',
+                alt: 'Charging cable plugged into the socket on the front of the EV charger',
+                caption: 'Cable plugged in at the charger end.',
+            },
+            {
+                src: '/images/ev_charger_garage_side_wynn_vale.webp',
+                id: 'side',
+                focus: 'center',
+                alt: 'The EV charger and isolator on the brick wall beside the garage door frame',
+                caption: 'Mounted beside the garage door, where the car parks.',
+            },
+        ],
+        services: ['ev-charger-installation-adelaide'],
+        suburb: 'electrician-wynn-vale',
+        related: ['ev-charger-install-greenwith', 'smart-ev-charger-solar-ready-modbury-heights', 'switchboard-rcbos-smoke-alarms-wynn-vale'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Most people start out charging an EV from a portable lead in an ordinary powerpoint. It works, but it's slow, and it leans on a powerpoint and circuit for hours at a time that were never put in with that in mind. A 7 kW wall charger on its own circuit charges roughly three times faster than a lead in a standard 10 amp powerpoint, and takes that load off your everyday powerpoints.</p>
+            <p>This one went into a garage in Wynn Vale: a 7 kW SEVR charger with a 7 metre cable that unplugs from the charger.</p>
+            [[photo:wall]]
+
+            <h3>Tethered or Untethered</h3>
+            <p>This is an untethered charger. Instead of a cable that's fixed to the unit, it has a socket on the front, and the cable plugs into it. When the car's not charging, the cable can come off and be put away, or go in the boot.</p>
+            [[photo:plug]]
+            <p>A tethered charger has its cable permanently attached, which is quicker day to day: unhook it and plug in. Untethered keeps the wall tidier and means a damaged cable is swapped rather than the charger repaired. Neither is better across the board. Our <a href="/blog/home-ev-charger-adelaide-guide/">home EV charger guide</a> goes through the choice along with the rest of what to decide before buying.</p>
+            [[photo:plugged]]
+
+            <h3>The Isolator Beside It</h3>
+            <p>Above the charger is an isolator. It lets the charger be switched off at the wall, for servicing or if something isn't right, without anyone going to the switchboard to find the right circuit.</p>
+            [[photo:side]]
+            <p>Where the charger goes is worth thinking about before the day. It needs to sit where the cable reaches the car's charge port with the car parked the way you normally park it, without the cable stretched tight or lying across the path in and out of the garage. A 7 metre cable gives a fair amount of room, but it's still worth measuring.</p>
+
+            <h3>Other Chargers We've Installed</h3>
+            <p>Every charger install is a little different, depending on the board, the supply and where the car lives. We've also put in <a href="/blog/ev-charger-install-greenwith/">a charger in a Greenwith garage</a> and <a href="/blog/smart-ev-charger-solar-ready-modbury-heights/">a smart, solar-ready charger in Modbury Heights</a>, where the switchboard was upgraded first to make room. If your board is older, it's worth reading about <a href="/blog/switchboard-rcbos-smoke-alarms-wynn-vale/">an RCBO switchboard upgrade we did nearby</a>, because the board is the first thing we check when quoting a charger.</p>
+            <p>More on what we do is on our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page. We cover Wynn Vale and the north-east, and you can see more of our <a href="/electrician-wynn-vale/">work in Wynn Vale</a>.</p>
+        `,
+        faqs: [
+            {
+                question: 'Can I leave the cable plugged into an untethered charger all the time?',
+                answer: 'Yes. Plenty of people leave the cable in the charger and use it like a tethered unit, only unplugging it when they want to take it in the car. In a garage that\'s fine. On a charger outside, unplugging and storing the cable keeps it out of the sun and the weather and stops it walking off. Either way, hang it up rather than leaving it on the floor where it gets driven over.',
+            },
+            {
+                question: 'How long does an EV charging cable need to be?',
+                answer: 'Long enough to reach the car\'s charge port without being pulled tight, with the car parked the way you normally park it. Measure from where the charger will go to the charge port, following the route the cable will take, and allow some slack. Charge ports are in different places on different cars, so a cable that suits one car can be short for the next one. A 7 metre cable suits most single-car garages.',
+            },
+            {
+                question: 'Why is there an isolator next to my EV charger?',
+                answer: 'So the charger can be switched off right where it is. If it needs servicing, or something doesn\'t look right, the isolator cuts its power without anyone tracking down the right circuit at the switchboard. It\'s a quick and obvious way to make the charger dead, which is what you want for anyone working on it, and for you if you\'re unsure whether it\'s safe to touch.',
+            },
+            {
+                question: 'Does an untethered charger work with any electric car?',
+                answer: 'Most EVs sold in Australia use a Type 2 connection for AC charging, which is what a wall charger like this has on the front. You need a cable with the right plug for your car at the car end. Some older imported models use Type 1, and for those a Type 2 to Type 1 cable does the job. Check the car\'s charge port, or its manual, before buying a cable.',
+            },
+        ],
+        cta: {
+            heading: 'Thinking About a Home EV Charger?',
+            description:
+                'Tethered or untethered, single or three phase, with the switchboard checked before anything is fitted. JPD Complete Electrical covers Wynn Vale and the north-east.',
+            linkText: 'Get an EV Charger Quote',
+            href: '/ev-charger-installation-adelaide',
+        },
+    },
+    {
+        slug: 'faulty-downlights-worn-switch-hindmarsh',
+        title: 'Two Faulty Downlights and a Light Switch About to Fall Apart in Hindmarsh',
+        seoTitle: 'Faulty Downlights Replaced, Hindmarsh | JPD',
+        metaDescription:
+            'Two faulty downlights replaced in a Hindmarsh unit, plus a worn light switch that was close to exposing live parts and smoke alarms flagged as due next year.',
+        excerpt:
+            'The job was two faulty downlights. While we were there, a bedroom switch was close to coming apart, and the smoke alarms turned out to be from 2017.',
+        date: '2026-11-03',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/downlights_hero_hindmarsh.webp',
+        gallery: [
+            {
+                src: '/images/light_switch_worn_before_hindmarsh.webp',
+                role: 'before',
+                focus: 'center',
+                alt: 'Two-gang light switch on a white bedroom wall, looking normal from a distance',
+                caption: 'Before. The bedroom switch. From across the room it looked fine.',
+            },
+            {
+                src: '/images/light_switch_new_hindmarsh.webp',
+                role: 'after',
+                focus: 'center',
+                alt: 'New two-gang light switch on the same bedroom wall',
+                caption: 'After. A new switch in the same spot.',
+            },
+            {
+                src: '/images/light_switch_broken_mech_hindmarsh.webp',
+                id: 'mech',
+                focus: 'center',
+                alt: 'Hand holding the old switch mechanism, broken apart into pieces',
+                caption: 'The old switch mechanism once it was out. It came apart in the hand.',
+            },
+            {
+                src: '/images/downlights_kitchen_hindmarsh.webp',
+                id: 'kitchen',
+                focus: 'top',
+                alt: 'Kitchen ceiling with LED downlights on over white cabinetry and a bench',
+                caption: 'Downlights working again.',
+            },
+            {
+                src: '/images/downlight_bedroom_hindmarsh.webp',
+                id: 'bedroom',
+                focus: 'top',
+                alt: 'Bedroom ceiling with a new LED downlight on beside a ceiling fan',
+                caption: 'The replacement downlight in the bedroom.',
+            },
+            {
+                src: '/images/smoke_alarm_date_code_hindmarsh.webp',
+                id: 'datecode',
+                focus: 'bottom',
+                alt: 'Back label of a Clipsal smoke alarm showing its model number and a date code of 111217',
+                caption: 'The back of one of the smoke alarms. Date code 111217, made in December 2017.',
+            },
+        ],
+        services: ['downlight-installation-adelaide', 'emergency-electrician-adelaide', 'smoke-alarm-installation-adelaide'],
+        related: ['led-downlight-upgrade-golden-grove', 'front-light-faulty-diy-wiring-modbury-heights', 'office-data-point-repair-fullarton'],
+        angles: {
+            'emergency-electrician-adelaide': {
+                title: 'A Light Switch About to Expose Live Parts',
+                blurb: 'Found during a downlight call-out in Hindmarsh: a switch mechanism coming apart behind its rocker.',
+                anchor: 'switch',
+            },
+            'smoke-alarm-installation-adelaide': {
+                title: 'Smoke Alarms From 2017, Due Next Year',
+                blurb: 'Checked during a maintenance visit in Hindmarsh: two alarms with a 2017 date code, due for replacement in 2027.',
+                anchor: 'smoke-alarms',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A maintenance visit is booked for one thing, but an electrician standing in the room sees everything else as well. A worn switch or an ageing smoke alarm doesn't make it onto a work order, because nobody notices them until they fail. That's exactly when they become a problem: a switch that comes apart in your hand, or an alarm that's past its date when it's needed.</p>
+            <p>This was a maintenance job at a unit in Hindmarsh, booked to replace two faulty downlights. It turned into a few small things done in the one trip.</p>
+
+            <h3>First, the Cooktop</h3>
+            <p>On the way there, the inspection that was on at the unit flagged that one cooktop burner wasn't lighting. That was the first thing looked at on arrival. The igniter for that burner needed cleaning, and once it was clean the burner lit normally, so no separate call-out was needed for it.</p>
+
+            <h3>The Two Downlights</h3>
+            <p>The job itself was two downlights that had failed. Both were replaced with new fittings, and everything was tested before we left.</p>
+            [[photo:kitchen]]
+            [[photo:bedroom]]
+            <p>When one or two LED downlights in a room fail and the rest keep working, it's nearly always the fittings themselves, not the wiring. If you're choosing replacements, our guide on <a href="/blog/how-to-choose-led-downlights-adelaide/">how to choose LED downlights</a> covers colour, brightness and size, so the new ones don't stand out from the old. More on what we do is on our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page.</p>
+
+            <h3 id="switch">A Switch About to Come Apart</h3>
+            <p>In the bedroom with one of the faulty downlights, the light switch was close to falling apart. From across the room it looked normal. Up close, the mechanism behind the rocker was breaking up.</p>
+            [[photo:mech]]
+            <p>That matters more than it sounds. The plastic rocker on a switch is what keeps your finger away from the metal parts behind it, and those parts are live. Once the rocker comes off, the next person to reach for the light in the dark can touch them. There was a spare switch in the van, so it was replaced on the spot at no extra cost, rather than becoming another call-out later. Our <a href="/emergency-electrician-adelaide/">fault finding</a> page covers the jobs that don't wait.</p>
+
+            <h3 id="smoke-alarms">Smoke Alarms Due Next Year</h3>
+            <p>The smoke alarms in the unit looked older, so we checked the date codes on the back. Two of them were made in 2017.</p>
+            [[photo:datecode]]
+            <p>Smoke alarms are replaced ten years from the date they were made, so those two are due in 2027. Nothing needed doing on the day, but it's on record now rather than found at the next inspection. The <a href="/blog/smoke-alarm-rules-south-australia-homeowners-landlords/">smoke alarm rules for South Australia</a> set out what landlords need to have in place, and the <a href="/blog/landlord-electrical-safety-south-australia-rentals/">landlord electrical safety guide</a> covers the rest of a rental. When they're due, our <a href="/smoke-alarm-installation-adelaide/">smoke alarm installation</a> page explains what we fit.</p>
+
+            <h3>Small Jobs Found on Other Visits</h3>
+            <p>Most of our maintenance jobs go this way. A <a href="/blog/front-light-faulty-diy-wiring-modbury-heights/">front light in Modbury Heights</a> turned out to be someone's DIY wiring, and an <a href="/blog/office-data-point-repair-fullarton/">office data point in Fullarton</a> had more going on than the work order said. If you're replacing downlights across a whole room, there's a write-up of <a href="/blog/led-downlight-upgrade-golden-grove/">an LED downlight upgrade in Golden Grove</a>.</p>
+            <p>We cover Hindmarsh, the inner west and metropolitan Adelaide.</p>
+        `,
+        faqs: [
+            {
+                question: 'Is a loose light switch dangerous?',
+                answer: 'It can be. The plastic rocker is what keeps fingers away from the metal parts inside the switch, and those parts are live whenever the circuit is on. A rocker that wobbles, sits crooked or feels gritty usually means the mechanism behind it is wearing or cracking. If it comes off, the live parts behind it are exposed. Stop using it, and get the switch replaced rather than pushing the rocker back on.',
+            },
+            {
+                question: 'Why did only some of my LED downlights stop working?',
+                answer: 'When one or two downlights fail and the rest on the same switch keep working, the cause is nearly always the fittings themselves. LED downlights have a driver that can fail on its own, and replacing the fitting is usually the fix. If every light on a switch goes out at once, look at the switch, the circuit breaker or the safety switch instead, because the fault is somewhere they all share.',
+            },
+            {
+                question: 'How do I read the date code on a smoke alarm?',
+                answer: 'It\'s printed on the label on the back or side, and the format depends on the brand. On the Clipsal alarm in this job it was six digits for day, month and year, so 111217 is 11 December 2017. Other brands print a full date or a replace-by date. Smoke alarms are replaced ten years from the date they were made. If you can\'t find any date, treat the alarm as due.',
+            },
+            {
+                question: 'Can an electrician fix other small things while they\'re there?',
+                answer: 'Usually, yes, and it\'s cheaper than a second visit. Tell us about anything else that\'s bothering you when you book, and send a photo if you can, so we bring the right parts. We also point out anything we notice that looks unsafe or due for replacement. For a rental, anything beyond the work order goes to whoever booked it before we do it, unless it\'s minor and leaving it would be unsafe.',
+            },
+        ],
+        cta: {
+            heading: 'Downlights Out or Something Not Right?',
+            description:
+                'Faulty lights, worn switches and smoke alarm checks, sorted in the one visit where we can. JPD Complete Electrical covers Hindmarsh and metropolitan Adelaide.',
+            linkText: 'Book a Maintenance Visit',
+            href: '/contact',
+        },
+    },
+    {
+        slug: 'new-powerpoints-rcbo-board-windsor-gardens',
+        title: 'Two New Powerpoints at a Built-In Desk, and an RCBO Board, in Windsor Gardens',
+        seoTitle: 'New Powerpoints and RCBO Board, Windsor Gardens | JPD',
+        metaDescription:
+            'Two new powerpoints for a built-in desk in Windsor Gardens, a bathroom heat lamp replaced, and the switchboard upgraded to RCBOs in the same job.',
+        excerpt:
+            'Two powerpoints where a built-in desk actually needs them, so the leads stop running across the floor. The switchboard went to RCBOs in the same job.',
+        date: '2026-11-03',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/powerpoints_hero_windsor_gardens.webp',
+        gallery: [
+            {
+                src: '/images/powerpoint_desk_nook_windsor_gardens.webp',
+                id: 'nook',
+                focus: 'center',
+                alt: 'New double powerpoint low on a white wall under a built-in timber desk',
+                caption: 'One of the new powerpoints, under the built-in desk.',
+            },
+            {
+                src: '/images/powerpoint_under_desk_windsor_gardens.webp',
+                id: 'desk',
+                focus: 'center',
+                alt: 'New double powerpoint on the wall beneath a white desk, above the skirting',
+                caption: 'The second powerpoint, under the desk where the leads can reach it.',
+            },
+            {
+                src: '/images/switchboard_rcbos_windsor_gardens.webp',
+                id: 'board',
+                focus: 'top',
+                alt: 'Switchboard with a red main switch and a row of RCBOs with green circuit labels, mounted in a meter box',
+                caption: 'The switchboard after its upgrade to RCBOs.',
+            },
+        ],
+        services: ['powerpoint-installation-adelaide', 'switchboard-upgrade-adelaide'],
+        related: ['zetr-powerpoint-stone-splashback-golden-grove', 'hot-water-unit-powerpoint-greenwith', 'switchboard-rcbos-smoke-alarms-wynn-vale'],
+        angles: {
+            'switchboard-upgrade-adelaide': {
+                title: 'An RCBO Switchboard Upgrade in Windsor Gardens',
+                blurb: 'The switchboard upgraded to RCBOs alongside new powerpoints and a bathroom fitting swap.',
+                anchor: 'switchboard',
+            },
+        },
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>A desk with no powerpoint near it ends up with a powerboard on the floor, fed by an extension lead from across the room. It works, until the lead gets kicked out, the board gets overloaded with a computer, a monitor, a printer and a heater, or someone trips on the cable in the dark. A powerpoint where the desk actually is fixes all of that for good.</p>
+            <p>This job in Windsor Gardens was two new powerpoints, plus two other things done in the same visit.</p>
+
+            <h3>Two Powerpoints Where the Desk Needs Them</h3>
+            <p>Both new powerpoints went in low on the wall under the built-in desk. That keeps the plugs and leads out of sight and off the desktop, close enough to plug in a computer, a monitor and a charger without anything running across the floor.</p>
+            [[photo:nook]]
+            [[photo:desk]]
+            <p>If you're currently running a desk off a powerboard, our guide to <a href="/blog/powerboards-double-adaptors-extension-leads-safely/">powerboards, double adaptors and extension leads</a> explains where that's fine and where it isn't. Our <a href="/powerpoint-installation-adelaide/">powerpoint installation</a> page covers adding new ones.</p>
+
+            <h3>The Bathroom Fitting</h3>
+            <p>In the bathroom, the old four-in-one heat lamp unit was replaced with a light and fan. The <a href="/blog/bathroom-electrical-zones-rules-adelaide/">bathroom electrical zones guide</a> covers what can go where in a wet area.</p>
+
+            <h3 id="switchboard">The Switchboard Went to RCBOs</h3>
+            <p>The switchboard was upgraded to RCBOs as part of the same job. Each circuit now has its own combined circuit breaker and safety switch, so a fault on one circuit trips that circuit alone instead of taking out half the house.</p>
+            [[photo:board]]
+            <p>It's the same change we made to <a href="/blog/switchboard-rcbos-smoke-alarms-wynn-vale/">a Wynn Vale board that had one safety switch for the whole house</a>. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrade</a> page explains when it's worth doing.</p>
+
+            <h3>Other Powerpoint Jobs</h3>
+            <p>A powerpoint is rarely just a powerpoint. We've fitted <a href="/blog/zetr-powerpoint-stone-splashback-golden-grove/">a flush powerpoint into a stone splashback in Golden Grove</a> and <a href="/blog/hot-water-unit-powerpoint-greenwith/">a dedicated powerpoint for a hot water unit in Greenwith</a>, and each one depended on what it was for and where it had to go.</p>
+            <p>We cover Windsor Gardens, the north-east and metropolitan Adelaide.</p>
+        `,
+        faqs: [
+            {
+                question: 'Can a new powerpoint go on an existing circuit?',
+                answer: 'Usually, yes. Most new powerpoints are wired off an existing power circuit nearby, as long as that circuit has the capacity and tests correctly. A new circuit is only needed when what\'s being plugged in draws a lot on its own, such as an oven, a large heater or an EV charger, or when the existing circuit is already carrying too much. We check that before deciding which way to wire it.',
+            },
+            {
+                question: 'Is a new powerpoint better than a powerboard under the desk?',
+                answer: 'For a desk you use every day, yes. A powerboard fed from a lead across the room is a trip hazard, easy to overload and easy to knock loose. A fixed powerpoint at the desk removes the lead altogether. A powerboard plugged into a powerpoint right beside the desk is fine for a few low-draw items like a computer and a monitor, but keep heaters and kettles on a wall powerpoint of their own.',
+            },
+            {
+                question: 'Do I need a switchboard upgrade to add powerpoints?',
+                answer: 'Not always. If the circuit you\'re adding to already has safety switch protection and the board is in reasonable condition, a new powerpoint can usually go straight in. Where the board is old, has no safety switches or has no room left, we\'ll say so when quoting, because new work has to be protected properly. Plenty of people choose to do both at once to save a second visit.',
+            },
+            {
+                question: 'Where should a powerpoint go for a built-in desk?',
+                answer: 'Low on the wall under the desk suits most setups, because it keeps plugs and leads out of sight and off the desktop. Above the desk is better if you\'re plugging and unplugging things often, such as a laptop charger or a desk lamp. If the desk will hold a computer, a monitor and chargers, a double powerpoint at least is worth it, and two is better if there\'s a second workstation.',
+            },
+        ],
+        cta: {
+            heading: 'Need More Powerpoints?',
+            description:
+                'New powerpoints where you actually need them, with the switchboard checked and upgraded if it needs it. JPD Complete Electrical covers Windsor Gardens and metropolitan Adelaide.',
+            linkText: 'Get a Powerpoint Quote',
+            href: '/powerpoint-installation-adelaide',
+        },
+    },
+    {
+        slug: 'outdoor-led-lights-pergola-floodlight-craigmore',
+        title: 'Pergola Battens, a Dead Floodlight and a Garage Light Put Back in Craigmore',
+        seoTitle: 'Outdoor LED Light Replacement, Craigmore | JPD',
+        metaDescription:
+            'Old pergola fluorescents swapped for LED battens, a failed halogen floodlight replaced with LED, and a garage camera taken off its light point in Craigmore.',
+        excerpt:
+            'Three outdoor lights that had stopped pulling their weight: two old pergola fluorescents, a dead halogen floodlight, and a garage light point a camera had taken over.',
+        date: '2026-11-03',
+        author: 'Justin',
+        category: 'Recent Work',
+        image: '/images/outdoor_led_lighting_hero_craigmore.webp',
+        gallery: [
+            {
+                src: '/images/floodlight_old_halogen_craigmore.webp',
+                role: 'before',
+                focus: 'center',
+                alt: 'Old silver halogen floodlight mounted high on a dark Colorbond wall',
+                caption: 'Before. The old halogen floodlight, which had failed.',
+            },
+            {
+                src: '/images/floodlight_led_new_craigmore.webp',
+                role: 'after',
+                focus: 'center',
+                alt: 'New black LED floodlight mounted in the same spot on the Colorbond wall',
+                caption: 'After. A new LED floodlight on the same circuit and switch.',
+            },
+            {
+                src: '/images/pergola_old_fluoro_craigmore.webp',
+                id: 'oldfluoro',
+                focus: 'top',
+                alt: 'Gabled pergola roof with an old caged fluorescent light fitting along one rafter',
+                caption: 'One of the old fluorescent fittings under the pergola.',
+            },
+            {
+                src: '/images/pergola_led_battens_lit_craigmore.webp',
+                id: 'battens',
+                focus: 'top',
+                alt: 'Pergola roof with a new slimline LED batten lit along a rafter',
+                caption: 'A new LED batten in place, on the existing wiring and switch.',
+            },
+            {
+                src: '/images/pergola_led_batten_craigmore.webp',
+                id: 'batten2',
+                focus: 'top',
+                alt: 'New LED batten fixed along a pergola rafter, seen from below',
+                caption: 'The second batten, on the other side of the pergola.',
+            },
+            {
+                src: '/images/floodlight_perished_wiring_craigmore.webp',
+                id: 'wiring',
+                focus: 'center',
+                alt: 'Cable and terminal block hanging from the wall behind the removed floodlight, covered in dust and cobwebs',
+                caption: 'Behind the old floodlight once it was off. The connection had been sitting in dust and cobwebs.',
+            },
+            {
+                src: '/images/garage_ring_camera_before_craigmore.webp',
+                id: 'garagebefore',
+                focus: 'top',
+                alt: 'Open garage with a small security camera fitted to the ceiling light point',
+                caption: 'Before. A camera fitted on the garage ceiling light point, and no light.',
+            },
+            {
+                src: '/images/garage_led_batten_craigmore.webp',
+                id: 'garageafter',
+                focus: 'top',
+                alt: 'The same garage with an LED batten light on the ceiling',
+                caption: 'After. An LED batten back on the point and switch, the way it was before the camera.',
+            },
+        ],
+        services: ['downlight-installation-adelaide'],
+        related: ['outdoor-feature-lighting-redwood-park', 'ceiling-fans-pergola-ridgehaven', 'security-camera-install-golden-grove'],
+        content: `
+            <h3>Why This Matters to You</h3>
+            <p>Outdoor lights are the ones nobody looks after. A dim fluorescent under the pergola or a floodlight that's quietly stopped working gets put up with for years, because it's still daylight when you notice it. Then it's dark, the kids are in the play area and the yard light doesn't come on.</p>
+            <p>This job in Craigmore was three of those: two pergola lights, a floodlight over the playground and a garage light.</p>
+
+            <h3>Pergola Fluorescents to LED Battens</h3>
+            <p>The pergola had two old fluorescent fittings, the caged tube type that was standard under pergolas for years. They were replaced with two LED battens on the existing wiring and switch, and the old fittings were taken away.</p>
+            [[photo:oldfluoro]]
+            [[photo:battens]]
+            <p>An LED batten comes on instantly at full brightness, with no flicker, no starter and no tubes to buy. Under a pergola it's also one less fitting collecting bugs and dust inside a cage. Our <a href="/blog/led-lighting-upgrade-benefits/">LED lighting upgrade guide</a> covers what else changes when old lights go to LED.</p>
+            [[photo:batten2]]
+
+            <h3>The Playground Floodlight</h3>
+            <p>The floodlight over the play area was an old halogen, and it had failed. Halogen floods run hot, and over the years that heat is hard on the fitting itself as much as the lamp.</p>
+            <p>With the old fitting off, the connection behind it had been sitting in dust and cobwebs. That's typical of an outdoor fitting that's been up a long time, and it's why we look at what's behind a light before reusing a circuit. The new LED floodlight went onto the existing circuit and switch.</p>
+            [[photo:wiring]]
+            <p>If you're thinking about a sensor on an outdoor light at the same time, there's a guide to <a href="/blog/outdoor-sensor-security-lights-adelaide/">outdoor sensor and security lights</a>.</p>
+
+            <h3>A Garage Light Taken Over by a Camera</h3>
+            <p>In the garage, a security camera had been fitted to the ceiling light point, so the camera had power but the garage had no light. The camera came off and an LED batten went back on the existing point and switch, so the garage is lit the way it was before.</p>
+            [[photo:garagebefore]]
+            [[photo:garageafter]]
+            <p>A camera and a light can both have power. It just needs planning, as we did for <a href="/blog/security-camera-install-golden-grove/">a security camera install in Golden Grove</a>.</p>
+
+            <h3>More Outdoor Lighting Work</h3>
+            <p>Outdoor areas are where a bit of thought about lighting pays off. We've done <a href="/blog/outdoor-feature-lighting-redwood-park/">outdoor feature lighting in Redwood Park</a> and <a href="/blog/ceiling-fans-pergola-ridgehaven/">ceiling fans under a pergola in Ridgehaven</a>, and a <a href="/blog/front-light-faulty-diy-wiring-modbury-heights/">front light in Modbury Heights</a> that turned out to be faulty DIY wiring. Our <a href="/downlight-installation-adelaide/">LED lighting</a> page covers the rest of what we install.</p>
+            <p>We cover Craigmore, the northern suburbs and metropolitan Adelaide.</p>
+        `,
+        faqs: [
+            {
+                question: 'Can a security camera be wired into an existing light point?',
+                answer: 'Some cameras are made to be, but then the camera takes over that point and the light that was there is gone, and the switch now turns the camera off. If you want both a camera and the light, the camera needs its own power, usually from a nearby powerpoint or a dedicated supply run to where it mounts. It\'s worth planning before the camera goes up, so the area doesn\'t end up dark.',
+            },
+            {
+                question: 'Why did my halogen floodlight stop working?',
+                answer: 'Usually the lamp has blown, but on an older fitting it\'s often more than that. Halogen floodlights run very hot, and years of that heat breaks down the lamp holder, the seals and the wiring inside the fitting. Replacing the lamp can get it going again for a while, but on a tired fitting a new LED floodlight is the better fix. It runs far cooler and doesn\'t need lamps.',
+            },
+            {
+                question: 'Do lights under a pergola need to be weatherproof?',
+                answer: 'Yes. Even under a solid roof, a pergola is open to wind-driven rain, damp air, dust and insects, so the fitting needs an outdoor rating. Look for an IP rating suited to outdoor use on the box. An indoor batten under a pergola can let water and bugs inside, which is how outdoor fittings end up failing early or tripping the safety switch after rain.',
+            },
+            {
+                question: 'Can the old wiring be reused when outdoor lights are replaced?',
+                answer: 'Usually, yes, if it\'s in good condition. When an old outdoor light comes off, we look at the cable and connection behind it and test the circuit before anything new goes on. If the cable is sound, the new fitting connects to it and the existing switch keeps working as before. If it\'s perished, damaged or was never run properly, that section is replaced first.',
+            },
+        ],
+        cta: {
+            heading: 'Outdoor Lights That Have Given Up?',
+            description:
+                'Pergola lights, floodlights and garage lighting replaced with LED on your existing circuits wherever they\'re sound. JPD Complete Electrical covers Craigmore and metropolitan Adelaide.',
+            linkText: 'Get a Lighting Quote',
+            href: '/downlight-installation-adelaide',
+        },
+    },
     {
         slug: 'office-data-point-repair-fullarton',
         title: 'An Office Data Point That Had Dropped Into the Wall in Fullarton',
@@ -460,7 +1008,7 @@ export const jobReports: JobReport[] = [
 
             <h3>The Result</h3>
             <p>Every room got even, consistent light, with matching fittings from one room to the next instead of a mix of whatever had been replaced over the years. With fresh paint and floors, it's the kind of change that makes a whole house feel finished.</p>
-            <p>Our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page covers what we do, and our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page covers local work.</p>
+            <p>Our <a href="/downlight-installation-adelaide/">downlights and LED lighting</a> page covers what we do, and our <a href="/electrician-golden-grove/">Golden Grove electrician</a> page covers local work. If it's only one or two downlights that have failed, there's <a href="/blog/faulty-downlights-worn-switch-hindmarsh/">a smaller job in Hindmarsh</a> that shows what to expect.</p>
         `,
         faqs: [
             {
@@ -626,7 +1174,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You've Got a Shed Like This</h3>
             <p>If the shed board has no cover or exposed wiring, keep people away from it and switch the shed off at the house board if you can. Either way, a photo of the shed board is usually enough to tell you roughly what you're dealing with.</p>
-            <p>There's more on getting power to a shed properly in our guide to <a href="/blog/running-power-to-shed-garage-granny-flat-adelaide/">running power to a shed or garage</a>, and the cable into this same shed had worn through and shorted, which is written up in <a href="/blog/shed-cable-short-circuit-wynn-vale/">a shed cable that shorted in Wynn Vale</a>. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers the work. We're based in Wynn Vale, and our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page covers local work.</p>
+            <p>There's more on getting power to a shed properly in our guide to <a href="/blog/running-power-to-shed-garage-granny-flat-adelaide/">running power to a shed or garage</a>, and the cable into this same shed had worn through and shorted, which is written up in <a href="/blog/shed-cable-short-circuit-wynn-vale/">a shed cable that shorted in Wynn Vale</a>. Our <a href="/switchboard-upgrade-adelaide/">switchboard upgrades</a> page covers the work, and a house board in Wynn Vale that went from <a href="/blog/switchboard-rcbos-smoke-alarms-wynn-vale/">one safety switch to an RCBO on every circuit</a> shows the same upgrade on a main board. We're based in Wynn Vale, and our <a href="/electrician-wynn-vale/">Wynn Vale electrician</a> page covers local work.</p>
         `,
         faqs: [
             {
@@ -2425,7 +2973,7 @@ export const jobReports: JobReport[] = [
 
             <h3>If You're Getting a Charger</h3>
             <p>Sort the charger choice and the location before you book the electrical, because both change the job. We install customer-supplied units like this one and we can supply a range of brands, so if you haven't bought yet that's worth a conversation first rather than after.</p>
-            <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There's more on our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page.</p>
+            <p>In a house, the questions are board capacity and the distance from the board. In an apartment, add metering and permissions to that list and start earlier. There's more on our <a href="/ev-charger-installation-adelaide/">EV charger installation</a> page, and on what we cover locally on our <a href="/electrician-greenwith/">Greenwith electrician</a> page. For an untethered charger, where the cable unplugs from the unit, see <a href="/blog/untethered-ev-charger-wynn-vale/">a 7 kW charger we installed in Wynn Vale</a>.</p>
         `,
         faqs: [
             {
