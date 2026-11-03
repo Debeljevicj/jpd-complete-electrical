@@ -1,5 +1,104 @@
 [
   {
+    "id": 32,
+    "author": "Mark T",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-02",
+    "precision": "derived",
+    "content": "Justin was great to deal with, very helpful, professional and reliable. Really happy with his work and would highly recommend!",
+    "avatarColor": "bg-emerald-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 33,
+    "author": "Ian A",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-02",
+    "precision": "derived",
+    "content": "Justin has just completed an install for us. Everything from arriving on time til he cleaned up and left was excellent. No question was too silly for him to answer respectfully and he gives me great confidence to use again",
+    "avatarColor": "bg-slate-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 34,
+    "author": "Leonardo M",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-27",
+    "precision": "derived",
+    "content": "Great experience with Justin for my project. Industry professional and easy to work with I would highly reccomend for any electrical installs or residential/ commercial works!",
+    "avatarColor": "bg-green-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 35,
+    "author": "Pia G",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-27",
+    "precision": "derived",
+    "content": "Justin was extremely professional, knowledgeable, efficient and friendly. His communication was fantastic, and he was very accommodating to our timing needs. I would not hesitate to recommend him and if there are any further electrical needs for my home, I will use his services again!!",
+    "avatarColor": "bg-indigo-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 36,
+    "author": "Roger F",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-27",
+    "precision": "derived",
+    "content": "I would absolutely recommend JPD Complete Electrical. Justin was extremely professional, patient and organised. He listened and kept us informed and updated throughout the entire process. When we have electrical needs in the future, we will definitely be contacting Justin!",
+    "avatarColor": "bg-blue-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 37,
+    "author": "Brad",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-20",
+    "precision": "derived",
+    "content": "Exceptional Service Across All Our Sites! Justin at JDP Electrical has been an invaluable asset to our aged care independent living sites across Adelaide. He handles a wide range of electrical tasks for us, and his depth of knowledge and years of industry experience are evident in everything he does. What truly sets Justin apart is his incredible work ethic—he is exceptionally reliable, always brings a positive and enthusiastic attitude, and completes every job with standard-setting quality and care. Finding a trade professional who combines top-tier technical expertise with such outstanding professionalism is rare. We highly recommend Justin and JDP Electrical to anyone looking for dependable, high-quality electrical work!",
+    "avatarColor": "bg-teal-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 38,
+    "author": "Kirsty B",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-13",
+    "precision": "derived",
+    "content": "I was very impressed with the service provided by Justin from JPD Complete Electrical. He responded to my enquiry promptly, kept me updated on his arrival time, and arrived exactly when he said he would. He took the time to discuss the best solution for the GPO I needed and completed the work efficiently, leaving the area clean and tidy when finished. What stood out most to me was the way he interacted with the work experience student who accompanied him. Justin was patient, encouraging, and respectful throughout the visit. It’s clear that he values teaching and supporting young people entering the trade. Highly recommended.",
+    "avatarColor": "bg-purple-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 39,
+    "author": "Molly P",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-13",
+    "precision": "derived",
+    "content": "We have been using Justin for all of our electrical needs for over 5 years and he is reliable, honest and shows incredible care in his workmanship and surroundings. Justin’s knowledge is extensive and he offers up alternatives for you to consider. Justin communicates with you through the entire process. We recently had a warranty case for an electrical item and Justin was super helpful providing all the information required for the claim. On top of all of this, Justin is a polite, respectful and a complete professional.",
+    "avatarColor": "bg-orange-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 40,
+    "author": "Brett U",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-10-13",
+    "precision": "derived",
+    "content": "Justin answered the initial text I sent quickly and was able to confirm a date shortly after. He arrived when he said he would after confirming the time on the day. He did a nice neat job. Thanks mate. I would thoroughly recommend him and will be using him again.",
+    "avatarColor": "bg-lime-600",
+    "googleReviewId": null
+  },
+  {
     "id": 30,
     "author": "Kevin M",
     "source": "Google",
