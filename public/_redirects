@@ -20,6 +20,8 @@
 /fb/    /?utm_source=facebook&utm_medium=social&utm_campaign=profile    302
 /li     /?utm_source=linkedin&utm_medium=social&utm_campaign=profile    302
 /li/    /?utm_source=linkedin&utm_medium=social&utm_campaign=profile    302
+/tt     /?utm_source=tiktok&utm_medium=social&utm_campaign=profile      302
+/tt/    /?utm_source=tiktok&utm_medium=social&utm_campaign=profile      302
 /qr     /?utm_source=business-card&utm_medium=print&utm_campaign=qr     302
 /qr/    /?utm_source=business-card&utm_medium=print&utm_campaign=qr     302
 /van    /?utm_source=van&utm_medium=print&utm_campaign=qr               302
