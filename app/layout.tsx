@@ -42,6 +42,11 @@ export const metadata: Metadata = {
                 media: '(prefers-color-scheme: dark)',
             },
         ],
+        // iPhone "Add to Home Screen". Opaque white on purpose: iOS paints a
+        // transparent icon's background black, which would hide the navy logo.
+        // public/favicon.ico (16/32/48) is for the clients that ask for
+        // /favicon.ico directly and ignore these links; it was a 404.
+        apple: '/apple-touch-icon.png',
     },
     metadataBase: new URL('https://jpdcompleteelectrical.com.au'),
     // Inherited by any route that does not set its own alternates.canonical, which

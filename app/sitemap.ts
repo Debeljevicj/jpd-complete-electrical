@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${SITE}/blog/`, changeFrequency: 'weekly', priority: 0.7 },
         { url: `${SITE}/recent-work/`, changeFrequency: 'weekly', priority: 0.8 },
         { url: `${SITE}/faq/`, changeFrequency: 'monthly', priority: 0.7 },
+        { url: `${SITE}/privacy/`, changeFrequency: 'yearly', priority: 0.2 },
     ];
 
     // /card/ is deliberately absent. It is noindex - it exists for the QR code on

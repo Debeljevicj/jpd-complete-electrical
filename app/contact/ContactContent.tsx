@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import SectionHeading from '@/components/SectionHeading';
 import SuccessModal from '@/components/SuccessModal';
 import { trackEvent } from '@/components/Analytics';
@@ -374,6 +375,10 @@ export default function ContactContent() {
                                         </>
                                     )}
                                 </button>
+                                <p className="text-sm text-neutral-slate text-center">
+                                    Your details are only used to reply to you and do the job.{' '}
+                                    <Link href="/privacy" className="underline hover:text-gold">Privacy policy</Link>
+                                </p>
                             </form>
                         </div>
 
