@@ -4,6 +4,7 @@ import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { GA_MEASUREMENT_ID, analyticsEnabled } from '@/data/analytics';
+import { clarityEvent } from '@/components/Clarity';
 
 declare global {
     interface Window {
@@ -18,7 +19,12 @@ declare global {
  * never depend on analytics being present.
  */
 export function trackEvent(name: string, params: Record<string, unknown> = {}) {
-    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+    if (typeof window === 'undefined') return;
+    // The same moments go to Clarity as custom events (name only: Clarity
+    // events carry no parameters), so its recordings can be filtered to the
+    // visits that called or sent an enquiry. Independent of GA being on.
+    clarityEvent(name);
+    if (typeof window.gtag !== 'function') return;
     window.gtag('event', name, params);
 }
 

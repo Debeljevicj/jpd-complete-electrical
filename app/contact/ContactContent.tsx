@@ -220,7 +220,7 @@ export default function ContactContent() {
                                 and underline. They were two different treatments at the
                                 top of two columns, which is what made the row look off. */}
                             <SectionHeading>Send an Enquiry</SectionHeading>
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6" data-clarity-mask="true">
                                 {/*
                                   * Web3Forms honeypot. Bots fill every field they find, so a
                                   * submission with this populated is rejected server-side.

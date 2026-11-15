@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { shareMeta } from '@/lib/share';
+import { clarityEnabled } from '@/data/analytics';
 
 /*
  * Privacy policy. Written to match what the site and the business actually do,
  * so it has to change when they do. Check it whenever one of these changes:
- *   - a third-party script or embed is added (components/Analytics.tsx, maps)
+ *   - a third-party script or embed is added (components/Analytics.tsx,
+ *     components/Clarity.tsx, maps). Clarity's lines only show once
+ *     CLARITY_PROJECT_ID is set: update LAST_UPDATED in that same commit.
  *   - the contact form's fields or delivery service change (app/contact/)
  *   - what lib/attribution.mjs stores, or how long (MAX_AGE_DAYS)
  *   - a new service starts holding customer details (job management,
@@ -90,6 +93,15 @@ export default function PrivacyPage() {
                             tell one visit from the next. Your IP address is shortened before it&apos;s stored, and we
                             can&apos;t see who any visitor is.
                         </li>
+                        {clarityEnabled && (
+                            <li>
+                                <strong>Microsoft Clarity.</strong> Shows us how pages get used: where people click,
+                                how far they scroll and where they give up, as heatmaps and as recordings of mouse
+                                and screen movement on the site. Anything typed into a form is hidden before it
+                                leaves your browser, so the recordings never contain your details. It sets cookies
+                                to tell one visit from the next, and we can&apos;t see who any visitor is.
+                            </li>
+                        )}
                         <li>
                             <strong>Where you came from.</strong> Your browser keeps a short note of the site or link
                             that brought you here (for example Google, Facebook or one of our QR codes) and the page
@@ -131,6 +143,9 @@ export default function PrivacyPage() {
                     <ul className={ul}>
                         <li><strong>Web3Forms</strong> delivers the contact form to our inbox.</li>
                         <li><strong>Google</strong> (Google Workspace) for email, documents and our calendar, plus Google Analytics.</li>
+                        {clarityEnabled && (
+                            <li><strong>Microsoft</strong> runs Clarity, which shows us how the site gets used.</li>
+                        )}
                         <li><strong>Cloudflare</strong> hosts this site and our internal staff systems.</li>
                         <li><strong>Fergus</strong> is our job management system: jobs, quotes, site details and photos.</li>
                         <li><strong>Xero</strong> is our accounting system: invoices and payments.</li>
@@ -166,7 +181,13 @@ export default function PrivacyPage() {
 
                     <h2 className={h2}>Cookies and browser storage</h2>
                     <p className={p}>
-                        Google Analytics sets cookies (names starting with <code>_ga</code>). The &quot;where you came
+                        Google Analytics sets cookies (names starting with <code>_ga</code>).
+                        {clarityEnabled && (
+                            <>
+                                {' '}Microsoft Clarity sets cookies named <code>_clck</code> and <code>_clsk</code>,
+                                and Microsoft may set its own <code>MUID</code> cookie.
+                            </>
+                        )} The &quot;where you came
                         from&quot; note above is kept in your browser&apos;s local storage. You can clear both in your
                         browser settings at any time, block cookies outright, or install Google&apos;s{' '}
                         <a

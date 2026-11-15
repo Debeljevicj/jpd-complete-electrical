@@ -15,3 +15,17 @@
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-W76JZ5EJKL';
 
 export const analyticsEnabled = GA_MEASUREMENT_ID.length > 0;
+
+/**
+ * Microsoft Clarity project ID (heatmaps and session recordings).
+ *
+ * Like the GA ID, not a secret: it sits in the page source of every site that
+ * runs Clarity. Find it in Clarity under Settings > Overview > Project ID
+ * (about ten letters and numbers, e.g. `abcd1234ef`).
+ *
+ * While this is empty, Clarity never loads, the privacy policy leaves it out,
+ * and nothing else changes.
+ */
+export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
+
+export const clarityEnabled = /^[a-z0-9]{6,16}$/i.test(CLARITY_PROJECT_ID);

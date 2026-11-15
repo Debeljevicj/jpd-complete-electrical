@@ -9,6 +9,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import Analytics from "@/components/Analytics";
 import AttributionCapture from "@/components/AttributionCapture";
+import Clarity from "@/components/Clarity";
 
 const inter = Inter({
     subsets: ['latin'],
@@ -104,6 +105,7 @@ export default function RootLayout({
                 <StickyMobileCTA />
                 <Analytics />
                 <AttributionCapture />
+                <Clarity />
             </body>
         </html>
     );
