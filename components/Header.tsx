@@ -10,13 +10,23 @@ import StickyNav from './StickyNav';
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
+    // Phones only: once the page is scrolled, the logo row folds away and a small
+    // JPD mark joins the menu row instead. The two rows took ~140px of a phone
+    // screen (Justin, 15 Nov 2026: "the screen's quite small" when scrolling).
+    const [isCompact, setIsCompact] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
+            const y = window.scrollY;
+            setIsScrolled(y > 20);
+            // Different thresholds in and out. Folding the row shortens the page
+            // above the content, and with one threshold the scroll position (or
+            // the browser's scroll anchoring) could bounce it straight back open.
+            setIsCompact((compact) => (compact ? y > 8 : y > 80));
         };
-        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -53,7 +63,12 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="container-custom">
+            {/* The 0fr/1fr grid row animates the fold without measuring heights.
+                From lg up this row holds the whole desktop nav, so it never folds. */}
+            <div
+                className={`grid transition-[grid-template-rows] duration-200 motion-reduce:transition-none lg:grid-rows-[1fr] ${isCompact ? 'grid-rows-[0fr] invisible lg:visible' : 'grid-rows-[1fr]'}`}
+            >
+            <div className="container-custom min-h-0 overflow-hidden lg:overflow-visible">
                 <div className="flex items-center justify-between py-3">
                     {/* Logo box matches the artwork's 5.55:1 aspect, so there is no dead
                         letterbox space above and below to throw the alignment out. */}
@@ -101,11 +116,12 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+            </div>
 
             {/* The mobile nav lives inside the header rather than as its own sticky
                 element. It used to pin itself at a hardcoded top-[72px] while the
                 header is only 60px tall, which left a gap the page scrolled through. */}
-            <StickyNav />
+            <StickyNav compact={isCompact} />
         </header>
     );
 }
