@@ -7,6 +7,7 @@ import { serviceBySlug } from '@/data/services';
 import { suburbBySlug } from '@/data/suburbs';
 import { workCategories, similarJobs } from '@/lib/recent-work';
 import RecentJobs from '@/components/RecentJobs';
+import PhotoSlot from '@/components/PhotoSlot';
 import { Calendar, User, ChevronLeft } from 'lucide-react';
 import Button from '@/components/Button';
 import InlineCTA from '@/components/InlineCTA';
@@ -277,16 +278,15 @@ export default function BlogPostPage({ params }: Props) {
                         ))}
                     </div>
                 ) : (
-                    <div className="relative h-[240px] sm:h-[320px] md:h-[400px] w-full rounded-xl overflow-hidden shadow-xl mb-12">
-                        <Image
-                            src={post.image}
-                            alt={post.title}
-                            fill
-                            sizes="(max-width: 896px) 100vw, 896px"
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
+                    <PhotoSlot
+                        src={post.image}
+                        alt={post.title}
+                        focus={post.imageFocus}
+                        variant="banner"
+                        sizes="(max-width: 896px) 100vw, 896px"
+                        priority
+                        className="rounded-xl shadow-xl mb-12"
+                    />
                 )}
 
                 {/* Content, split so a CTA sits partway through rather than only at the

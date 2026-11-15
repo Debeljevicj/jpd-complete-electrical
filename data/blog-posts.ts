@@ -28,6 +28,8 @@ export interface BlogPost {
     author: string;
     content: string;
     image: string;
+    /** CSS object-position the banner and card crop centre on. Defaults to the middle. See PhotoSlot. */
+    imageFocus?: string;
     /**
      * Job and guide photos.
      *

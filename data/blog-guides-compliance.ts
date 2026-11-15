@@ -19,7 +19,8 @@ export const complianceGuides: BlogPost[] = [
         date: '2026-10-08',
         author: 'Justin',
         category: 'Safety',
-        image: '/images/electrician_working_1764247092697.webp',
+        image: '/images/justin_meter_box_switchboard.webp',
+        imageFocus: '45% 43%',
         content: `
             <h3>Why This Matters to You</h3>
             <p>A smoke alarm that is missing, flat or past its life doesn't do anything when a fire starts at night. Most deaths in house fires come from breathing in smoke, not from the flames, and people asleep don't wake up to it. An alarm that works is what turns that into a few extra minutes to get out.</p>

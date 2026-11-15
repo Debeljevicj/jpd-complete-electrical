@@ -3,7 +3,7 @@ import { coreServices } from './core';
 import { lightingServices } from './lighting';
 import { projectServices } from './projects';
 
-export type { Service, ServiceFaq, ServiceSection } from './types';
+export type { Service, ServiceFaq, ServicePhoto, ServiceSection } from './types';
 
 const bySlug = Object.fromEntries(
     [...coreServices, ...lightingServices, ...projectServices].map((s) => [s.slug, s])
@@ -41,4 +41,6 @@ export const services: Service[] = displayOrder.map((slug) => {
 export const serviceBySlug = bySlug;
 
 /** Lightweight shape for grids and link lists, so callers do not pull in full page copy. */
-export const serviceIndex = services.map(({ slug, name, icon, blurb }) => ({ slug, name, icon, blurb }));
+export const serviceIndex = services.map(({ slug, name, icon, blurb, photo }) => ({ slug, name, icon, blurb, photo }));
+
+export type ServiceIndexEntry = (typeof serviceIndex)[number];

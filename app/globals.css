@@ -202,3 +202,63 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+/* PhotoSlot (components/PhotoSlot.tsx): crop on the focal point, or frame the
+   whole photo on a blurred copy of itself when its shape is too far from the
+   box's. The component sets data-sm / data-lg and the shapes as variables. */
+.photo-slot {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #012C45;
+  aspect-ratio: var(--ar-sm);
+}
+
+.photo-slot-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.photo-slot .photo-slot-bg {
+  display: none;
+  object-fit: cover;
+  filter: blur(22px) brightness(0.55) saturate(1.1);
+  transform: scale(1.15);
+}
+
+.photo-slot[data-sm="framed"] .photo-slot-bg {
+  display: block;
+}
+
+.photo-slot[data-sm="framed"] .photo-slot-inner {
+  width: auto;
+  aspect-ratio: var(--ir);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+@media (min-width: 640px) {
+  .photo-slot {
+    aspect-ratio: var(--ar-lg);
+  }
+
+  .photo-slot[data-lg="cover"] .photo-slot-bg {
+    display: none;
+  }
+
+  .photo-slot[data-lg="cover"] .photo-slot-inner {
+    width: 100%;
+    aspect-ratio: auto;
+    box-shadow: none;
+  }
+
+  .photo-slot[data-lg="framed"] .photo-slot-bg {
+    display: block;
+  }
+
+  .photo-slot[data-lg="framed"] .photo-slot-inner {
+    width: auto;
+    aspect-ratio: var(--ir);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+  }
+}

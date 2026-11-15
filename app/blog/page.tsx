@@ -41,6 +41,7 @@ export default function BlogPage() {
                                         alt={post.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                        style={{ objectPosition: post.imageFocus ?? '50% 50%' }}
                                     />
                                     <div className="absolute top-4 left-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
                                         {post.category}

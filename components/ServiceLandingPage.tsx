@@ -1,7 +1,8 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
-import { Phone, Check, ArrowRight, Receipt } from 'lucide-react';
+import { Phone, Check, ArrowRight, Receipt, MapPin } from 'lucide-react';
 import TrustBadges from './TrustBadges';
+import PhotoSlot from './PhotoSlot';
 import Accordion from './Accordion';
 import ServiceIcon from './ServiceIcon';
 import RecentJobs from './RecentJobs';
@@ -18,7 +19,7 @@ const PHONE = '0435 006 420';
 const PHONE_HREF = 'tel:0435006420';
 
 export default function ServiceLandingPage({ service }: { service: Service }) {
-    const { slug, name, icon, h1, intro, sections, priceFactors, faqs, related, description } = service;
+    const { slug, name, icon, photo, h1, intro, sections, priceFactors, faqs, related, description } = service;
 
     const { featured, gridJobs, gridLimit, photos } = workForService(slug);
     // The recent-work archive this service files into, for the "see every job" link.
@@ -80,7 +81,10 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                     {/* Buttons above the intro on phones, below it from md up. Same
                         reason as the suburb hero: at 375px the intro left them at
                         ~600-700px, under the fold once the browser's bars are drawn. */}
-                    <div className="max-w-3xl flex flex-col">
+                    {/* With a job photo, it sits beside the text from lg up and under it
+                        below that, so the buttons stay where the comment above put them. */}
+                    <div className={photo ? 'grid gap-10 lg:gap-12 items-center lg:grid-cols-[1.15fr_1fr]' : ''}>
+                    <div className="max-w-3xl flex flex-col min-w-0">
                         <div className="self-start inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-5">
                             <ServiceIcon name={icon} className="w-4 h-4 text-gold" />
                             <span className="text-xs font-semibold tracking-wide uppercase text-gold">{name}</span>
@@ -105,6 +109,24 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                                 Get a Free Quote
                             </Link>
                         </div>
+                    </div>
+                    {photo && (
+                        <figure className="min-w-0">
+                            <PhotoSlot
+                                src={photo.src}
+                                alt={photo.alt}
+                                focus={photo.focus}
+                                variant="hero"
+                                sizes="(max-width: 1023px) 100vw, 560px"
+                                priority
+                                className="rounded-xl ring-1 ring-white/15 shadow-2xl"
+                            />
+                            <figcaption className="mt-3 text-sm text-gray-300 flex items-center gap-2">
+                                <MapPin className="w-4 h-4 text-gold shrink-0" aria-hidden />
+                                {photo.suburb ? `Our work in ${photo.suburb}` : 'Our work'}
+                            </figcaption>
+                        </figure>
+                    )}
                     </div>
                 </div>
             </section>

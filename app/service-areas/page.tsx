@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { Phone, MapPin, ArrowRight } from 'lucide-react';
 import TrustBadges from '@/components/TrustBadges';
 import Accordion from '@/components/Accordion';
-import ServiceIcon from '@/components/ServiceIcon';
+import ServicePhotoGrid from '@/components/ServicePhotoGrid';
 import { suburbs } from '@/data/suburbs';
-import { serviceIndex } from '@/data/services';
 import { shareMeta } from '@/lib/share';
 import { jsonLd } from '@/lib/json-ld';
 
@@ -220,26 +219,7 @@ export default function ServiceAreasPage() {
                             we do week in, week out across these suburbs.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        {serviceIndex.map((service) => (
-                            <Link
-                                key={service.slug}
-                                href={`/${service.slug}`}
-                                className="card group hover:border-gold hover:shadow-md transition-all"
-                            >
-                                <div className="w-11 h-11 rounded-lg bg-navy flex items-center justify-center mb-3 group-hover:bg-gold transition-colors">
-                                    <ServiceIcon
-                                        name={service.icon}
-                                        className="w-5 h-5 text-gold group-hover:text-navy transition-colors"
-                                    />
-                                </div>
-                                <h3 className="font-bold text-navy mb-1 group-hover:text-gold transition-colors">
-                                    {service.name}
-                                </h3>
-                                <p className="text-sm text-neutral-slate leading-snug">{service.blurb}</p>
-                            </Link>
-                        ))}
-                    </div>
+                    <ServicePhotoGrid />
                 </div>
             </section>
 

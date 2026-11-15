@@ -93,7 +93,8 @@ export const pricingPosts: BlogPost[] = [
         date: '2026-08-13',
         author: 'Justin',
         category: 'Advice',
-        image: '/images/electrician_working_1764247092697.webp',
+        image: '/images/justin_meter_box_switchboard.webp',
+        imageFocus: '45% 43%',
         content: `
             <h3>Why This Matters to You</h3>
             <p>Electrical work is one of the few trades where you can't inspect the result. You can see whether a paint job is good. You can't see whether a connection was torqued properly, whether the circuit is protected correctly, or whether the earthing was ever checked. It looks identical either way until something goes wrong.</p>
