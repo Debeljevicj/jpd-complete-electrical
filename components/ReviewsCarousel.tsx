@@ -45,7 +45,18 @@ function ReviewCard({ review }: { review: Review }) {
     );
 }
 
-export default function ReviewsCarousel() {
+const googleCount = reviews.filter((r) => r.source === 'Google').length;
+
+interface ReviewsCarouselProps {
+    /**
+     * Rows of cards on a tablet or desktop page. Three is the full block; the
+     * home page shows two, so the fold is a taste of the reviews and the
+     * arrows page through the rest.
+     */
+    rows?: 2 | 3;
+}
+
+export default function ReviewsCarousel({ rows = 3 }: ReviewsCarouselProps) {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     // The buttons only exist from md up, where the track is a grid whose
@@ -71,7 +82,7 @@ export default function ReviewsCarousel() {
                             <Star key={star} className="w-5 h-5 fill-gold text-gold" />
                         ))}
                     </div>
-                    <span className="text-neutral-slate ml-2 font-medium">Average Rating</span>
+                    <span className="text-neutral-slate ml-2 font-medium">across {googleCount} Google reviews</span>
                 </div>
             </div>
 
@@ -104,7 +115,7 @@ export default function ReviewsCarousel() {
                 */}
                 <div
                     ref={scrollContainerRef}
-                    className="flex items-start md:grid md:items-stretch md:grid-flow-col md:grid-rows-3 md:auto-cols-[calc(50%-12px)] lg:auto-cols-[calc(33.333%-16px)] gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-2 px-1 relative z-10"
+                    className={`flex items-start md:grid md:items-stretch md:grid-flow-col ${rows === 2 ? 'md:grid-rows-2' : 'md:grid-rows-3'} md:auto-cols-[calc(50%-12px)] lg:auto-cols-[calc(33.333%-16px)] gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide py-2 px-1 relative z-10`}
                     style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                     {reviews.map((review) => (

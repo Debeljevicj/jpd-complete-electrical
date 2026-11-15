@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Clock, FileCheck, AlertTriangle } from 'lucide-react';
 import ContactContent from './ContactContent';
 import Accordion from '@/components/Accordion';
@@ -93,99 +94,109 @@ export default function ContactPage() {
             <ContactContent />
 
             {/* What happens after you get in touch */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
-                    <div className="max-w-3xl mb-10">
-                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4 gold-underline">
-                            What Happens After You Get in Touch
-                        </h2>
-                        <p className="text-neutral-slate text-lg leading-relaxed">
-                            No call centre, no sales visit, no pressure. JPD Complete Electrical is owner-operated, so
-                            the person who answers the phone is the person who does the work.
-                        </p>
+            <section className="bg-white">
+                <div className="container-custom py-14 md:py-24">
+                    <div className="mx-auto max-w-5xl">
+                        <div className="grid gap-5 md:grid-cols-2 md:items-end md:gap-16">
+                            <h2 className="display text-4xl text-navy md:text-5xl">What Happens After You Get in Touch</h2>
+                            <p className="text-base leading-relaxed text-neutral-slate md:text-lg">
+                                No call centre, no sales visit, no pressure. JPD Complete Electrical is owner-operated, so
+                                the person who answers the phone is the person who does the work.
+                            </p>
+                        </div>
+                        {/* A line with a dot per step: across on desktop, down the side on a phone. */}
+                        <ol className="mt-10 grid gap-8 border-l border-gold/50 md:mt-14 md:grid-cols-4 md:gap-6 md:border-l-0 md:border-t">
+                            {whatHappensNext.map(({ title, body }) => (
+                                <li key={title} className="relative pl-6 md:pl-0 md:pt-7">
+                                    <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-gold-dark ring-4 ring-white md:-top-[5px] md:left-0" />
+                                    <h3 className="font-heading text-lg font-semibold leading-snug text-navy">{title}</h3>
+                                    <p className="mt-2 text-sm leading-relaxed text-neutral-slate">{body}</p>
+                                </li>
+                            ))}
+                        </ol>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {whatHappensNext.map(({ icon: Icon, title, body }) => (
-                            <div key={title} className="flex items-start gap-4">
-                                <div className="w-11 h-11 rounded-lg bg-navy flex items-center justify-center shrink-0">
-                                    <Icon className="w-5 h-5 text-gold" />
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-navy mb-1">{title}</h3>
-                                    <p className="text-neutral-slate leading-relaxed">{body}</p>
-                                </div>
+                </div>
+            </section>
+
+            {/* Emergency. The form's "Is it an emergency?" link lands here. */}
+            <section id="emergency" className="scroll-mt-28 bg-navy text-white">
+                <div className="container-custom py-14 md:py-24">
+                    <div className="mx-auto grid max-w-5xl items-center gap-8 md:grid-cols-[2fr_3fr] md:gap-16">
+                        <figure>
+                            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-navy">
+                                <Image
+                                    src="/images/burnt_main_switch_tea_tree_gully.webp"
+                                    alt="Burnt and melted main switch inside an old switchboard"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 380px"
+                                    className="object-cover"
+                                    style={{ objectPosition: '50% 35%' }}
+                                />
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Emergency */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-5">Is It an Emergency?</h2>
-                        <p className="text-lg text-white/85 leading-relaxed mb-4">
-                            If you have lost power completely, have a breaker or safety switch that won't stay on,
-                            can smell burning near the switchboard, have a sparking outlet, or have had water get into
-                            anything electrical, don't use the form. Ring{' '}
-                            <a href={PHONE_HREF} className="text-gold font-semibold underline underline-offset-4">
-                                {PHONE}
+                            <figcaption className="mt-2 text-xs text-white/45">
+                                A burnt main switch, from a call-out in Tea Tree Gully.
+                            </figcaption>
+                        </figure>
+                        <div>
+                            <p className="eyebrow eyebrow-on-dark mb-5">Emergencies</p>
+                            <h2 className="display text-4xl md:text-6xl">Is It an Emergency?</h2>
+                            <p className="mt-6 text-lg leading-relaxed text-white/85">
+                                If you have lost power completely, have a breaker or safety switch that won&apos;t stay on,
+                                can smell burning near the switchboard, have a sparking outlet, or have had water get into
+                                anything electrical, don&apos;t use the form. Ring{' '}
+                                <a href={PHONE_HREF} className="font-semibold text-gold underline underline-offset-4">
+                                    {PHONE}
+                                </a>
+                                .
+                            </p>
+                            <p className="mt-4 text-sm leading-relaxed text-white/60">
+                                If something is visibly wrong, turn the main switch off at the board first, then call. And
+                                if your neighbours have lost power too, that&apos;s a network fault: ring SA Power Networks on
+                                13 13 66, because it isn&apos;t something we can fix.
+                            </p>
+                            <a href={PHONE_HREF} className="pill pill-gold mt-7">
+                                <Phone className="h-4 w-4" />
+                                Call {PHONE}
                             </a>
-                            .
-                        </p>
-                        <p className="text-lg text-white/85 leading-relaxed mb-4">
-                            If something is visibly wrong, turn the main switch off at the board first, then call. And
-                            if your neighbours have lost power too, that's a network fault: ring SA Power Networks on
-                            13 13 66, because it isn't something we can fix.
-                        </p>
-                        <a href={PHONE_HREF} className="btn btn-gold text-lg px-8 py-3.5 inline-flex items-center gap-2">
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* FAQs */}
-            <section className="section-padding bg-neutral-offwhite">
-                <div className="container-custom max-w-4xl">
-                    <h2 className="text-2xl md:text-3xl font-bold text-navy mb-8 gold-underline">
-                        Before You Get in Touch
-                    </h2>
-                    <Accordion items={contactFaqs} />
-                    <p className="text-neutral-slate mt-6">
-                        More questions on pricing, safety and compliance are answered on the{' '}
-                        <Link href="/faq" className="text-navy font-bold underline underline-offset-4 hover:text-gold">
-                            FAQ page
-                        </Link>
-                        .
-                    </p>
-                </div>
-            </section>
-
-            {/* Suburbs */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
-                    <div className="max-w-3xl mb-6">
-                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4 gold-underline">
-                            Where We Work
-                        </h2>
-                        <p className="text-neutral-slate text-lg leading-relaxed">
-                            All of Adelaide. These are the suburbs we're in most often, each with a page on the
-                            electrical work that actually comes up there.
-                        </p>
-                    </div>
-                    <div className="flex flex-wrap gap-2">
-                        {suburbs.map((suburb) => (
-                            <Link
-                                key={suburb.slug}
-                                href={`/${suburb.slug}`}
-                                className="px-4 py-2 bg-neutral-offwhite rounded-full border border-gray-200 text-sm text-navy font-semibold hover:border-gold hover:text-gold transition-colors"
-                            >
-                                {suburb.name}
-                            </Link>
-                        ))}
+            {/* FAQs, with where we work beside them */}
+            <section className="bg-warm-50">
+                <div className="container-custom py-14 md:py-24">
+                    <div className="mx-auto grid max-w-5xl gap-10 md:grid-cols-[2fr_3fr] md:gap-16">
+                        <div>
+                            <h2 className="display text-4xl text-navy md:text-5xl">Before You Get in Touch</h2>
+                            <p className="mt-5 text-sm leading-relaxed text-neutral-slate">
+                                More questions on pricing, safety and compliance are answered on the{' '}
+                                <Link href="/faq" className="font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4 hover:text-gold-dark">
+                                    FAQ page
+                                </Link>
+                                .
+                            </p>
+                            <div className="mt-8 border-t border-navy/10 pt-6">
+                                <h3 className="font-heading text-lg font-semibold text-navy">Where We Work</h3>
+                                <p className="mt-2 text-sm leading-relaxed text-neutral-slate">
+                                    All of Adelaide. These are the suburbs we&apos;re in most often, each with a page on the
+                                    electrical work that actually comes up there.
+                                </p>
+                                <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1.5 text-sm">
+                                    {suburbs.map((suburb) => (
+                                        <li key={suburb.slug}>
+                                            <Link
+                                                href={`/${suburb.slug}`}
+                                                className="text-navy underline decoration-navy/25 underline-offset-4 transition-colors hover:text-gold-dark hover:decoration-gold"
+                                            >
+                                                {suburb.name}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                        <Accordion items={contactFaqs} />
                     </div>
                 </div>
             </section>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ClosingCTA from '@/components/ClosingCTA';
 import Link from 'next/link';
 import { Phone, HelpCircle } from 'lucide-react';
 import TrustBadges from '@/components/TrustBadges';
@@ -121,28 +122,7 @@ export default function FaqPage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Still Not Sure?</h2>
-                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Ring and ask. We would rather answer a question on the phone for free than have you guess, and
-                        we'll tell you honestly if you don't need us.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href={PHONE_HREF}
-                            className="btn btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
-                        >
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
-                        <Link href="/contact" className="btn bg-white text-navy hover:bg-neutral-offwhite text-lg px-8 py-4">
-                            Get a Free Quote
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

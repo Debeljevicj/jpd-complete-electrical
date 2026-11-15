@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
-import Button from '@/components/Button';
-import ServiceIcon from '@/components/ServiceIcon';
-import SectionHeading from '@/components/SectionHeading';
-import { workCategories, jobsForCategory } from '@/lib/recent-work';
+import RecentWorkExplorer from '@/components/RecentWorkExplorer';
+import ClosingCTA from '@/components/ClosingCTA';
+import { workCategories, jobsForCategory, latestJobs, jobPlace, MAP_PLACES } from '@/lib/recent-work';
+import { jobReports } from '@/data/job-reports';
 import { shareMeta } from '@/lib/share';
-
-const SITE = 'https://jpdcompleteelectrical.com.au';
 
 export const metadata: Metadata = {
     title: 'Recent Work | Electrical Jobs Across Adelaide | JPD',
@@ -21,77 +18,71 @@ export const metadata: Metadata = {
     }),
 };
 
+// Short names for the filter row, where the full category names don't fit a phone.
+const TAB_LABELS: Record<string, string> = {
+    'switchboard-upgrades': 'Switchboards',
+    'service-and-maintenance': 'Maintenance',
+    'ev-charger-installation': 'EV chargers',
+    'renovations-and-extensions': 'Renovations',
+    'fault-finding-and-emergency': 'Faults',
+    'everyday-electrical': 'Everyday',
+};
+
 export default function RecentWorkIndexPage() {
     const categories = workCategories.map((category) => ({
         category,
         jobs: jobsForCategory(category),
     }));
 
-    const totalJobs = new Set(categories.flatMap(({ jobs }) => jobs.map((j) => j.slug))).size;
+    const jobs = latestJobs(jobReports.length).map((job) => ({
+        slug: job.slug,
+        title: job.title,
+        image: job.image,
+        place: jobPlace(job),
+        categories: categories.filter(({ jobs: list }) => list.some((j) => j.slug === job.slug)).map(({ category }) => category.slug),
+    }));
 
     return (
         <div className="bg-white">
-            <section className="bg-navy text-white py-14 md:py-20">
-                <div className="container-custom max-w-3xl">
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-                        Recent work
-                    </h1>
-                    <p className="text-gray-300 leading-relaxed">
-                        {totalJobs} real jobs from around Adelaide, written up with photos of what
-                        was there before and what it looked like when we left. Pick the kind of
-                        work you are after.
-                    </p>
+            <section className="bg-neutral-offwhite">
+                <div className="container-custom py-10 md:py-16">
+                    <RecentWorkExplorer
+                        jobs={jobs}
+                        mapped={MAP_PLACES}
+                        categories={categories.map(({ category }) => ({
+                            slug: category.slug,
+                            label: TAB_LABELS[category.slug] ?? category.name,
+                            name: category.slug === 'everyday-electrical' ? 'Everyday' : category.name,
+                        }))}
+                    />
                 </div>
             </section>
 
-            <section className="section-padding">
-                <div className="container-custom">
-                    <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        {categories.map(({ category, jobs }) => (
-                            <Link
-                                key={category.slug}
-                                href={`/recent-work/${category.slug}`}
-                                className="group bg-warm-50 rounded-xl p-6 border border-orange-100 hover:shadow-lg hover:border-gold/30 transition-all flex flex-col"
-                            >
-                                <div className="w-12 h-12 rounded-lg bg-navy group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300">
-                                    <ServiceIcon
-                                        name={category.icon}
-                                        className="w-6 h-6 text-gold group-hover:text-navy transition-colors duration-300"
-                                    />
-                                </div>
-                                <h2 className="text-xl font-bold text-navy mb-2">{category.name}</h2>
-                                <p className="text-neutral-slate text-sm leading-relaxed flex-1">
-                                    {category.blurb}
-                                </p>
-                                <span className="inline-flex items-center gap-2 text-navy font-bold text-sm mt-4 group-hover:text-gold transition-colors">
-                                    {jobs.length > 0
-                                        ? `View ${jobs.length} ${jobs.length === 1 ? 'job' : 'jobs'}`
-                                        : 'See what this covers'}
-                                    <ArrowRight className="w-4 h-4" />
+            {/* Plain links to each archive page. The filter above works in place;
+                these are the pages themselves, for anyone (and any crawler) that
+                wants the full write-up of a kind of work. */}
+            <section className="border-t border-navy/10 bg-white">
+                <div className="container-custom py-10 md:py-14">
+                    <h2 className="font-heading text-xl font-semibold text-navy">Browse by kind of work</h2>
+                    <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                        {categories.map(({ category, jobs: list }) => (
+                            <li key={category.slug}>
+                                <Link
+                                    href={`/recent-work/${category.slug}`}
+                                    className="text-navy underline decoration-gold decoration-2 underline-offset-4 hover:text-gold-dark"
+                                >
+                                    {category.name}
+                                </Link>{' '}
+                                <span className="text-neutral-slate">
+                                    {list.length} {list.length === 1 ? 'job' : 'jobs'}
                                 </span>
-                            </Link>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </section>
 
-            <section className="section-padding bg-neutral-offwhite border-t border-gray-100">
-                <div className="container-custom text-center max-w-2xl mx-auto">
-                    <SectionHeading centered>Want yours on this page?</SectionHeading>
-                    <p className="text-neutral-slate mb-6">
-                        Send through a couple of photos of what you need done and Justin will come
-                        back to you with a quote.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                        <Button href="/contact" variant="primary">
-                            Get a free quote
-                        </Button>
-                        <Button href="tel:0435006420" variant="outline">
-                            Call 0435 006 420
-                        </Button>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </div>
     );
 }

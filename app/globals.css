@@ -55,6 +55,42 @@
     @apply border-2 border-navy text-navy hover:bg-navy hover:text-white;
   }
 
+  /* Small gold label with a rule in front of it, above a fold's heading. */
+  .eyebrow {
+    @apply flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-dark;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply block h-px w-7 shrink-0 bg-gold;
+  }
+
+  .eyebrow-on-dark {
+    @apply text-gold;
+  }
+
+  /* Fold headings: big, tight, semibold. The base h1-h6 rule adds letter
+     spacing, which this takes back off. */
+  .display {
+    @apply font-heading font-semibold tracking-tight leading-[1.02];
+  }
+
+  .pill {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold transition-colors duration-200 whitespace-nowrap;
+  }
+
+  .pill-gold {
+    @apply bg-gold text-navy hover:bg-gold-dark;
+  }
+
+  .pill-ghost-dark {
+    @apply border border-white/25 text-white hover:border-white/60 hover:bg-white/5;
+  }
+
+  .pill-ghost-light {
+    @apply border border-navy/20 text-navy hover:border-navy/50 hover:bg-navy/5;
+  }
+
   .card {
     @apply bg-white p-5 md:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100;
   }

@@ -1,201 +1,178 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import SectionHeading from '@/components/SectionHeading';
-import { X, ZoomIn, Instagram } from 'lucide-react';
+import Link from 'next/link';
+import ClosingCTA from '@/components/ClosingCTA';
+import { ArrowRight, X, ZoomIn, Instagram } from 'lucide-react';
 
-const categories = ['All', 'Residential', 'Commercial'];
+export interface GalleryPhoto {
+    src: string;
+    /** Shown on the tile and under the photo when it is opened. */
+    title: string;
+    alt: string;
+    /** Filter this photo sits under. */
+    kind: string;
+    /** Suburb or area, for photos that come from a job write-up. */
+    place?: string;
+    /** The write-up the photo belongs to. */
+    job?: { href: string; title: string };
+}
 
-const projects = [
-    { id: 1, title: 'Commercial TV Ceiling Mount', category: 'Commercial', image: '/images/commercial_tv_wall_mount.webp' },
-    { id: 2, title: 'Medical Examination Lighting', category: 'Commercial', image: '/images/medical_examination_lighting_2.webp' },
-    { id: 3, title: 'CCTV Installation', category: 'Commercial', image: '/images/cctv_installation.webp' },
-    { id: 4, title: 'EV Charger Installation', category: 'Commercial', image: '/images/commercial_ev_charger.webp' },
-    { id: 5, title: 'Perimeter LED Lighting Upgrade', category: 'Commercial', image: '/images/commercial_perimeter_lighting_1.webp' },
-    { id: 6, title: 'Perimeter LED Lighting — Night View', category: 'Commercial', image: '/images/commercial_perimeter_lighting_2.webp' },
-    { id: 7, title: 'Kitchen LED Strip Lighting', category: 'Residential', image: '/images/kitchen_led_strip.webp' },
-    { id: 8, title: 'LED Backlit Mirror', category: 'Residential', image: '/images/led_backlit_mirror.webp' },
-    { id: 9, title: 'Shed Power Installation', category: 'Residential', image: '/images/shed_power.webp' },
-    { id: 10, title: 'Exterior Feature Lighting', category: 'Residential', image: '/images/exterior_feature_lighting.webp' },
-    { id: 11, title: 'Feature Wall Lighting', category: 'Residential', image: '/images/feature_wall_lighting.webp' },
-    { id: 12, title: 'New Powerpoint Installation', category: 'Residential', image: '/images/new_powerpoint.webp' },
-    { id: 13, title: 'Shed Lighting', category: 'Residential', image: '/images/shed_lighting.webp' },
-    { id: 14, title: 'Shed Switchboard', category: 'Residential', image: '/images/shed_switchboard.webp' },
-    { id: 15, title: 'Bathroom Renovation', category: 'Residential', image: '/images/bathroom_renovation.webp' },
-    { id: 16, title: '6.6kW Solar System', category: 'Residential', image: '/images/solar_system_6kw.webp' },
-    { id: 17, title: 'Solar System Installation', category: 'Residential', image: '/images/solar_system_main.webp' },
-    { id: 18, title: 'Switchboard Upgrade', category: 'Residential', image: '/images/residential_switchboard_upgrade_1.webp' },
-    { id: 19, title: 'Switchboard Upgrade', category: 'Residential', image: '/images/residential_switchboard_upgrade_2.webp' },
-    { id: 20, title: 'Pool Switchboard & Power', category: 'Residential', image: '/images/residential_pool_switchboard.webp' },
-];
+interface GalleryContentProps {
+    photos: GalleryPhoto[];
+    /** Filter names, in order, without "All". */
+    kinds: string[];
+    jobCount: number;
+}
 
-export default function GalleryContent() {
-    const [activeFilter, setActiveFilter] = useState('All');
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+const PAGE = 24;
 
-    // Custom order for 'All' view: prioritize specific projects
-    const customOrderIds = [17, 18, 13, 15, 3, 4]; // Solar, Switchboard, Shed Lighting, Bathroom, CCTV, EV Charger
+/**
+ * The gallery: every photo from the job write-ups, plus the older project
+ * photos that have no write-up. The list is built in app/gallery/page.tsx from
+ * data/job-reports.ts, so a new write-up's photos turn up here on their own.
+ *
+ * Shows 24 at a time. The rest are added by the button rather than all loaded
+ * at once, because there are a couple of hundred of them.
+ */
+export default function GalleryContent({ photos, kinds, jobCount }: GalleryContentProps) {
+    const [kind, setKind] = useState('All');
+    const [limit, setLimit] = useState(PAGE);
+    const [open, setOpen] = useState<GalleryPhoto | null>(null);
 
-    const filteredProjects = activeFilter === 'All'
-        ? [...projects].sort((a, b) => {
-            const indexA = customOrderIds.indexOf(a.id);
-            const indexB = customOrderIds.indexOf(b.id);
+    const filtered = kind === 'All' ? photos : photos.filter((p) => p.kind === kind);
+    const shown = filtered.slice(0, limit);
 
-            // Both are in priority list
-            if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-            // Only a is in priority list
-            if (indexA !== -1) return -1;
-            // Only b is in priority list
-            if (indexB !== -1) return 1;
-            // Neither in priority list, maintain original order
-            return a.id - b.id;
-        })
-        : projects.filter(p => p.category === activeFilter);
+    useEffect(() => {
+        if (!open) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setOpen(null);
+        };
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [open]);
 
     return (
         <>
             {/* Hero */}
-            <section className="bg-navy text-white py-20">
-                <div className="container-custom text-center">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4">Our Work</h1>
-                    <p className="text-xl text-gold">Quality Electrical Installations Across Adelaide</p>
+            <section className="bg-navy text-white py-14 md:py-20">
+                <div className="container-custom">
+                    <p className="eyebrow eyebrow-on-dark mb-5">Gallery</p>
+                    <h1 className="display text-5xl md:text-7xl">Our Work</h1>
+                    <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
+                        {photos.length} photos from real jobs across Adelaide, including every photo from the {jobCount} jobs we
+                        have written up. Open one to see it full size and read the job it came from.
+                    </p>
                 </div>
             </section>
 
             {/* Gallery */}
-            <section className="section-padding bg-white">
+            <section className="bg-white py-10 md:py-16">
                 <div className="container-custom">
-                    <SectionHeading centered>Project Gallery</SectionHeading>
-
-                    {/* Filters */}
-                    <div className="flex flex-wrap justify-center gap-4 mb-12">
-                        {categories.map((category) => (
-                            <button
-                                key={category}
-                                onClick={() => setActiveFilter(category)}
-                                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${activeFilter === category
-                                    ? 'bg-navy text-white'
-                                    : 'bg-gray-200 text-neutral-slate hover:bg-gold hover:text-navy'
+                    <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+                        <div className="flex gap-2.5" role="group" aria-label="Filter by kind of work">
+                            {['All', ...kinds].map((name) => (
+                                <button
+                                    key={name}
+                                    type="button"
+                                    aria-pressed={kind === name}
+                                    onClick={() => {
+                                        setKind(name);
+                                        setLimit(PAGE);
+                                    }}
+                                    className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+                                        kind === name ? 'bg-navy text-white' : 'bg-neutral-offwhite text-neutral-slate hover:bg-gold hover:text-navy'
                                     }`}
-                            >
-                                {category}
-                            </button>
-                        ))}
+                                >
+                                    {name}
+                                </button>
+                            ))}
+                        </div>
                     </div>
+                    <p className="mt-5 text-sm text-neutral-slate" aria-live="polite">
+                        Showing {shown.length} of {filtered.length} photos
+                    </p>
 
-                    {/* Gallery Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {filteredProjects.map((project) => (
-                            <div
-                                key={project.id}
-                                className="card overflow-hidden p-0 group cursor-pointer relative"
-                                onClick={() => setSelectedImage(project.image)}
-                            >
-                                <div className="relative h-64 overflow-hidden">
+                    <ul className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-5 lg:grid-cols-4">
+                        {shown.map((photo) => (
+                            <li key={photo.src}>
+                                <button
+                                    type="button"
+                                    onClick={() => setOpen(photo)}
+                                    className="group relative block aspect-square w-full overflow-hidden rounded-xl bg-navy-deep text-left"
+                                    aria-label={`Open photo: ${photo.title}`}
+                                >
                                     <Image
-                                        src={project.image}
-                                        alt={project.title}
+                                        src={photo.src}
+                                        alt={photo.alt}
                                         fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                         loading="lazy"
-                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                        <ZoomIn className="w-10 h-10 text-white drop-shadow-lg" />
-                                    </div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                                        <span className="inline-block px-3 py-1 bg-gold text-navy text-xs font-bold rounded-full mb-2">
-                                            {project.category}
-                                        </span>
-                                        <h3 className="text-white font-bold text-lg">{project.title}</h3>
-                                    </div>
-                                </div>
-                            </div>
+                                    <span className="absolute inset-0 flex items-center justify-center bg-navy/0 opacity-0 transition group-hover:bg-navy/30 group-hover:opacity-100">
+                                        <ZoomIn className="h-8 w-8 text-white drop-shadow-lg" />
+                                    </span>
+                                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/60 to-transparent p-3 pt-8">
+                                        {photo.place && (
+                                            <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-gold">{photo.place}</span>
+                                        )}
+                                        <span className="line-clamp-2 text-xs font-semibold leading-snug text-white md:text-sm">{photo.title}</span>
+                                    </span>
+                                </button>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
+
+                    {filtered.length > limit && (
+                        <div className="mt-8 text-center">
+                            <button type="button" onClick={() => setLimit((n) => n + PAGE)} className="pill pill-ghost-light">
+                                Show {Math.min(PAGE, filtered.length - limit)} more photos
+                            </button>
+                        </div>
+                    )}
                 </div>
             </section>
 
-            {/* Lightbox Modal */}
-            {selectedImage && (
+            {/* Lightbox */}
+            {open && (
                 <div
-                    className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fade-in"
-                    onClick={() => setSelectedImage(null)}
+                    className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 p-4"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={open.title}
+                    onClick={() => setOpen(null)}
                 >
                     <button
-                        className="absolute top-4 right-4 text-white hover:text-gold transition-colors"
-                        onClick={() => setSelectedImage(null)}
+                        type="button"
+                        className="absolute right-4 top-4 text-white transition-colors hover:text-gold"
+                        onClick={() => setOpen(null)}
+                        aria-label="Close photo"
                     >
-                        <X className="w-10 h-10" />
+                        <X className="h-10 w-10" />
                     </button>
-                    <div className="relative w-full max-w-5xl h-[80vh]" onClick={(e) => e.stopPropagation()}>
-                        <Image
-                            src={selectedImage}
-                            alt="Project Full View"
-                            fill
-                            className="object-contain"
-                        />
+                    <div className="relative h-[70vh] w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+                        <Image src={open.src} alt={open.alt} fill sizes="100vw" className="object-contain" />
+                    </div>
+                    <div className="mt-4 max-w-2xl text-center" onClick={(e) => e.stopPropagation()}>
+                        <p className="text-sm text-white/85">{open.title}</p>
+                        {open.job && (
+                            <Link
+                                href={open.job.href}
+                                className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-gold underline decoration-gold/40 underline-offset-4 hover:decoration-gold"
+                            >
+                                Read the job: {open.job.title} <ArrowRight className="h-4 w-4 shrink-0" />
+                            </Link>
+                        )}
                     </div>
                 </div>
             )}
 
-            {/* Before/After Section */}
-            <section className="section-padding bg-neutral-offwhite">
-                <div className="container-custom">
-                    <SectionHeading centered>Professional Electrical Work</SectionHeading>
-                    <p className="text-center text-neutral-slate text-lg mb-12 max-w-3xl mx-auto">
-                        Every project is completed with attention to detail, ensuring safety compliance and customer satisfaction.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="card">
-                            <h3 className="text-2xl font-bold text-navy mb-4">Quality Workmanship</h3>
-                            <p className="text-neutral-slate mb-4">
-                                Every installation is completed to Australian electrical standards with clean, professional finishes.
-                            </p>
-                            <ul className="space-y-2 text-neutral-slate">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>Licensed and insured electrician</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>Compliance with safety standards</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>Clean and tidy work sites</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="card">
-                            <h3 className="text-2xl font-bold text-navy mb-4">Our Commitment</h3>
-                            <p className="text-neutral-slate mb-4">
-                                From residential homes to commercial facilities, we deliver reliable electrical solutions.
-                            </p>
-                            <ul className="space-y-2 text-neutral-slate">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>Transparent pricing and quotes</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>On-time project completion</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-gold">•</span>
-                                    <span>100% customer satisfaction focus</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Instagram Connect */}
-            <section className="section-padding bg-white border-t border-gray-100">
+            <section className="section-padding bg-neutral-offwhite border-t border-gray-100">
                 <div className="container-custom text-center">
-                    <div className="inline-flex items-center justify-center p-4 bg-neutral-offwhite rounded-full mb-6">
+                    <div className="inline-flex items-center justify-center p-4 bg-white rounded-full mb-6">
                         <Instagram className="w-8 h-8 text-navy" />
                     </div>
                     <h2 className="text-3xl font-bold text-navy mb-4">Follow Us on Instagram</h2>
@@ -214,18 +191,7 @@ export default function GalleryContent() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Project?</h2>
-                    <p className="text-xl mb-8 text-white/90">
-                        Contact us today for a free consultation and quote
-                    </p>
-                    <a href="/contact/" className="btn btn-gold text-lg px-8 py-4 inline-block">
-                        Get a Free Quote
-                    </a>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

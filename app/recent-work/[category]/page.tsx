@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ClosingCTA from '@/components/ClosingCTA';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -256,25 +257,7 @@ export default function RecentWorkCategoryPage({ params }: Props) {
                 </section>
             )}
 
-            <section className="section-padding bg-neutral-offwhite border-t border-gray-100">
-                <div className="container-custom text-center max-w-2xl mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-bold text-navy mb-3">
-                        Got a job like one of these?
-                    </h2>
-                    <p className="text-neutral-slate mb-6">
-                        Send through a couple of photos and Justin will come back to you with a
-                        quote. No callout fee to quote.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                        <Button href="/contact" variant="primary">
-                            Get a free quote
-                        </Button>
-                        <Button href="tel:0435006420" variant="outline">
-                            Call 0435 006 420
-                        </Button>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </div>
     );
 }

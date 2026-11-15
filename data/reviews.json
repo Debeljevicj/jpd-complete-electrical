@@ -1,5 +1,38 @@
 [
   {
+    "id": 43,
+    "author": "Susan E",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-13",
+    "precision": "derived",
+    "content": "I completed an online enquiry form on JPD Complete Electrical's website after a google search of electricians in my area. Justin promptly made contact and after providing photos of the work I wanted done gave me a very reasonable quote and booked me in a timely manner. Justin's communication was excellent and he was on time to the appointment we sent. Justin was a friendly young man with great attention to detail. I have no hesitations in recommending him.",
+    "avatarColor": "bg-teal-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 42,
+    "author": "Stephanie C",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-13",
+    "precision": "derived",
+    "content": "I needed a few lights changed on a really high ceiling, and previous enquiries with other sparkies made it sound like a difficult job. However, Justin responded to my enquiry with a can-do attitude!! He was super quick to respond, came exactly on time, and completed the job to a high standard in a short timeframe! I'm so impressed with his professionalism and attention to detail. Thanks so much to Justin and his team for your help!!",
+    "avatarColor": "bg-rose-600",
+    "googleReviewId": null
+  },
+  {
+    "id": 41,
+    "author": "Gino D",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-13",
+    "precision": "derived",
+    "content": "We use JPD for all electrical works in our workplace. Exceptional service from Justin and team. Always reliable, friendly, consistent and takes time to explain the process. Highly recommend JPD electrical! Thanks guys",
+    "avatarColor": "bg-green-600",
+    "googleReviewId": null
+  },
+  {
     "id": 32,
     "author": "Mark T",
     "source": "Google",
@@ -437,6 +470,17 @@
     "precision": "unknown",
     "content": "Wasn’t sure who to call when my powerpoints in my new townhouse all went. Called JPD and they were so helpful and fixed the issue for me right away, great price too. Definitely will use them again for all future needs!!",
     "avatarColor": "bg-blue-800",
+    "googleReviewId": null
+  },
+  {
+    "id": 44,
+    "author": "Samreet B",
+    "source": "Google",
+    "rating": 5,
+    "publishedAt": "2026-11-01",
+    "precision": "derived",
+    "content": "We had an electrical emergency at around 10 pm when our safety switch tripped and the whole house lost power. We contacted JPD Complete Electrical, and the electrician was incredibly polite, kind and professional. What impressed us most was that he patiently guided us over the phone and helped us resolve the issue without charging us anything. He did it purely out of kindness and humanity, without expecting anything in return. It's rare to find people who are so genuine and willing to help others, especially late at night. We are truly grateful for his kindness and support. Highly recommend JPD Complete Electrical to anyone looking for an honest, helpful and reliable electrician. Thank you so much for being such a wonderful human being!",
+    "avatarColor": "bg-cyan-600",
     "googleReviewId": null
   }
 ]

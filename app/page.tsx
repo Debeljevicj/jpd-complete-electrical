@@ -1,18 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '@/components/Button';
-import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
-import ReviewsCarousel from '@/components/ReviewsCarousel';
-import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
-import HomeServiceAreas from '@/components/HomeServiceAreas';
-import InstagramFeed from '@/components/InstagramFeed';
 import Reveal from '@/components/Reveal';
-import TrustBar from '@/components/TrustBar';
 import ServiceIcon from '@/components/ServiceIcon';
-import { workCategories, jobsForCategory, latestJobs } from '@/lib/recent-work';
-import { Shield, MessageCircle, Award, Zap, UserPlus } from 'lucide-react';
+import ReviewsCarousel from '@/components/ReviewsCarousel';
+import WhereWeWork from '@/components/WhereWeWork';
+import ClosingCTA from '@/components/ClosingCTA';
+import { workCategories, jobsForCategory, homeJobs } from '@/lib/recent-work';
+import { suburbs } from '@/data/suburbs';
+import { reviews } from '@/lib/reviews';
+import TrustBar from '@/components/TrustBar';
+import { ArrowRight, Zap, UserPlus } from 'lucide-react';
+
+const suburbHrefs = Object.fromEntries(suburbs.map((s) => [s.name, `/${s.slug}/`]));
 
 export default function Home() {
     return (
@@ -59,7 +60,7 @@ export default function Home() {
                         </div>
 
                         <h1 className="text-3xl md:text-7xl font-bold leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                            Reliable. Honest. Professional. <span className="text-gold">Electrical Work in Adelaide</span> You Can Trust.
+                            Reliable. Honest. Professional. <span className="text-gold">Electrical Work</span> You Can Trust.
                         </h1>
 
                         <p className="hidden md:block text-xl text-gray-300 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -110,10 +111,11 @@ export default function Home() {
             <TrustBar />
 
             {/* Services Snapshot */}
-            <section className="section-padding bg-white">
+            <section className="bg-white py-12 md:py-20">
                 <div className="container-custom">
-                    <SectionHeading centered>Our Services</SectionHeading>
-                    <p className="text-center text-neutral-slate max-w-2xl mx-auto -mt-4 mb-8 text-sm md:text-base">
+                    <p className="eyebrow mb-4">What we do</p>
+                    <h2 className="display text-3xl text-navy md:text-5xl">Our Services</h2>
+                    <p className="mb-8 mt-3 text-sm text-neutral-slate md:text-base">
                         Tap any of these to see real jobs we have done, with photos.
                     </p>
                     {/* Driven off lib/recent-work.ts rather than six hand-written cards, so
@@ -139,97 +141,48 @@ export default function Home() {
                         })}
                     </div>
 
-                    <div className="text-center mt-8">
+                    <div className="mt-8">
                         <Link
                             href="/services"
-                            className="inline-flex items-center gap-2 text-navy font-bold hover:text-gold transition-colors"
+                            className="inline-flex items-center gap-2 font-semibold text-navy underline decoration-gold decoration-2 underline-offset-4 hover:text-gold-dark"
                         >
-                            Browse every service we offer <span className="text-lg">→</span>
+                            Browse every service we offer <ArrowRight className="h-4 w-4" />
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Who We Serve */}
-            <section className="py-10 bg-neutral-offwhite border-y border-gray-100">
-                <div className="container-custom text-center">
-                    <p className="text-lg font-semibold text-navy">
-                        Trusted by homeowners, builders, property managers, aged care &amp; NDIS housing providers, and medical clinics across Adelaide.
-                    </p>
-                </div>
-            </section>
-
-            {/* Testimonials */}
-            <section className="section-padding bg-white">
+            {/* Reviews: cards you can page through, two rows at a time. */}
+            <section className="bg-warm-50 py-12 md:py-20">
                 <div className="container-custom">
-                    <SectionHeading centered>What Our Clients Say</SectionHeading>
-                    <div className="mt-6 md:mt-12">
-                        <ReviewsCarousel />
+                    <p className="eyebrow mb-4">Reviews</p>
+                    <h2 className="display text-3xl text-navy md:text-5xl">What Our Clients Say</h2>
+                    <div className="mt-6 md:mt-10">
+                        <ReviewsCarousel rows={2} />
                     </div>
-                    <div className="text-center mt-4 md:mt-12">
-                        <Link href="/reviews" className="btn btn-primary">
-                            Read More Reviews
+                    <div className="mt-4 text-center md:mt-8">
+                        <Link href="/reviews" className="pill pill-ghost-light">
+                            Read all {reviews.length} reviews
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Instagram */}
-            <InstagramFeed />
+            <WhereWeWork hrefs={suburbHrefs} />
 
-            {/* Why Choose JPD */}
-            <section className="section-padding bg-navy text-white relative overflow-hidden">
-                {/* Pattern removed */}
-                <div className="container-custom relative z-10">
-                    <SectionHeading centered className="!text-white">Why Choose JPD Complete Electrical</SectionHeading>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        <Reveal delay={0} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                                <Shield className="w-10 h-10 text-navy" />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-3 text-gold">Reliable & Honest</h3>
-                            <p className="text-white/80 leading-relaxed">
-                                Transparent pricing, punctual service, and dependable workmanship you can trust every time.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={100} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                                <Award className="w-10 h-10 text-navy" />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-3 text-gold">High-Quality Workmanship</h3>
-                            <p className="text-white/80 leading-relaxed">
-                                Clean, professional installations with meticulous attention to detail and safety standards.
-                            </p>
-                        </Reveal>
-                        <Reveal delay={200} className="text-center group p-6 rounded-xl hover:bg-white/5 transition-colors">
-                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gold rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                                <MessageCircle className="w-10 h-10 text-navy" />
-                            </div>
-                            <h3 className="text-2xl font-bold mb-3 text-gold">Clear Communication</h3>
-                            <p className="text-white/80 leading-relaxed">
-                                We keep you informed throughout the entire job with clear explanations and regular updates.
-                            </p>
-                        </Reveal>
-                    </div>
-                </div>
-            </section>
-
-            {/* Process Steps - How We Work */}
-            <ProcessSteps />
-
-            {/* Recent jobs. These were three hardcoded cards with a stock photo, a
-                paragraph and no link. They are now the three most recent job write-ups,
-                each one going to the full article, so the section argues for the work
-                with real jobs instead of describing it. */}
-            <section className="section-padding bg-neutral-offwhite">
+            {/* Recent jobs: the three most recent job write-ups, each one going to
+                the full article, so the section argues for the work with real jobs
+                instead of describing it. */}
+            <section className="bg-neutral-offwhite py-12 md:py-20">
                 <div className="container-custom">
-                    <SectionHeading centered>Recent Jobs</SectionHeading>
-                    <p className="text-center text-neutral-slate max-w-2xl mx-auto -mt-4 mb-8 text-sm md:text-base">
-                        Real jobs from around Adelaide, written up with photos of what was there
-                        before and what it looked like when we left.
+                    <p className="eyebrow mb-4">Recent jobs</p>
+                    <h2 className="display text-3xl text-navy md:text-5xl">Recent Jobs</h2>
+                    <p className="mb-8 mt-3 max-w-2xl text-sm text-neutral-slate md:text-base">
+                        A few of the jobs we have written up, with photos of what was there
+                        before and what it looked like when we left. There are plenty more where these came from.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {latestJobs(3).map((job, i) => (
+                        {homeJobs(3).map((job, i) => (
                             <Reveal key={job.slug} delay={i * 100} className="h-full">
                                 <Link
                                     href={`/blog/${job.slug}`}
@@ -260,40 +213,20 @@ export default function Home() {
                             </Reveal>
                         ))}
                     </div>
-                    <div className="text-center mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-                        <Link href="/recent-work" className="btn btn-primary">
-                            View All Recent Work
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                        <Link href="/recent-work" className="pill pill-ghost-light">
+                            All recent work
                         </Link>
-                        <Link href="/gallery" className="btn btn-outline">
-                            Photo Gallery
+                        <Link href="/gallery" className="pill pill-ghost-light">
+                            Photo gallery
                         </Link>
                     </div>
                 </div>
             </section>
-
-            {/* FAQ Section */}
-            <HomeServiceAreas />
 
             <FAQ />
 
-            {/* Final CTA */}
-            <section className="section-padding bg-navy text-white relative overflow-hidden">
-                {/* Pattern removed */}
-                <div className="container-custom text-center relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
-                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Contact us today for a free consultation and quote on your next electrical project
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link href="/contact" className="btn btn-gold text-lg px-8">
-                            Get a Free Quote
-                        </Link>
-                        <a href="tel:0435006420" className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-lg px-8">
-                            Call 0435 006 420
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, CheckCircle2, MapPin, Clock, ShieldCheck, Wrench } from 'lucide-react';
+import { ArrowRight, Phone, CheckCircle2, MapPin, Clock, ShieldCheck, Wrench } from 'lucide-react';
 import TrustBadges from './TrustBadges';
 import Accordion from './Accordion';
 import ServicePhotoGrid from './ServicePhotoGrid';
 import RecentJobs from './RecentJobs';
 import InlineCTA from './InlineCTA';
+import ClosingCTA from './ClosingCTA';
+import SuburbHeroMap from './SuburbHeroMap';
 import { serviceIndex } from '@/data/services';
-import { suburbSlugByName, type Suburb } from '@/data/suburbs';
+import { suburbs as allSuburbs, suburbSlugByName, type Suburb } from '@/data/suburbs';
 import { jobsForSuburb, jobsNearSuburb } from '@/data/job-reports';
 import { jsonLd } from '@/lib/json-ld';
 
@@ -37,6 +39,8 @@ const whyPoints = [
         body: 'You get a time, not a window that covers the whole day. If something changes, you hear about it from us first.',
     },
 ];
+
+const suburbHrefs = Object.fromEntries(allSuburbs.map((s) => [s.name, `/${s.slug}/`]));
 
 export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
     const { name, postcode, council, hook, intro, local, housing, localJobs, landmarks, nearby, faqs, slug } = suburb;
@@ -105,42 +109,36 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
             />
 
             {/* Hero */}
-            <section className="bg-navy text-white py-16 md:py-20">
-                <div className="container-custom">
-                    {/*
-                      * Flex column so the buttons can sit above the intro on phones and
-                      * below it from md up. Measured at 375px, the intro pushed "Get a
-                      * Free Quote" to ~740px, under the fold once Safari's bars take
-                      * their share, and the sticky bar only appears after a scroll.
-                      */}
-                    <div className="max-w-3xl flex flex-col">
-                        <div className="self-start inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-4">
-                            <span className="w-2 h-2 bg-gold rounded-full" />
-                            <span className="text-xs font-semibold tracking-wide uppercase text-gold">
+            <section className="bg-navy text-white">
+                <div className="container-custom py-10 md:py-20">
+                    <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[6fr_5fr] lg:gap-16">
+                        {/*
+                          * Flex column so the buttons can sit above the intro on phones and
+                          * below it from md up. Measured at 375px, the intro pushed "Get a
+                          * Free Quote" to ~740px, under the fold once Safari's bars take
+                          * their share, and the sticky bar only appears after a scroll.
+                          */}
+                        <div className="flex flex-col">
+                            <p className="eyebrow eyebrow-on-dark mb-5">
                                 {name} SA {postcode}
-                            </span>
+                            </p>
+                            <h1 className="display text-5xl md:text-7xl">
+                                Electrician <span className="block">{name}</span>
+                            </h1>
+                            <p className="mt-4 font-heading text-xl font-medium leading-snug text-gold md:text-2xl">{hook}</p>
+                            <p className="order-last mt-6 max-w-xl text-base leading-relaxed text-white/75 md:order-none md:mb-8 md:mt-5 md:text-lg">
+                                {intro}
+                            </p>
+                            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-0">
+                                <Link href="/contact" className="pill pill-gold">
+                                    Get a free quote <ArrowRight className="h-4 w-4" />
+                                </Link>
+                                <a href={PHONE_HREF} className="pill pill-ghost-dark">
+                                    <Phone className="h-4 w-4 flex-shrink-0" /> {PHONE}
+                                </a>
+                            </div>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-tight">Electrician {name}</h1>
-                        <p className="text-xl md:text-2xl text-gold font-semibold mb-5">{hook}</p>
-                        <p className="order-last md:order-none text-lg md:text-xl text-gray-300 leading-relaxed mt-6 md:mt-0 md:mb-8">
-                            {intro}
-                        </p>
-                        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-3 sm:gap-4">
-                            <a
-                                href={PHONE_HREF}
-                                className="btn btn-gold text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3 inline-flex items-center justify-center gap-2"
-                            >
-                                <Phone className="w-5 h-5 flex-shrink-0" />
-                                <span className="sm:hidden">Call Now</span>
-                                <span className="hidden sm:inline">Call {PHONE}</span>
-                            </a>
-                            <Link
-                                href="/contact"
-                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3"
-                            >
-                                Get a Free Quote
-                            </Link>
-                        </div>
+                        <SuburbHeroMap name={name} hrefs={suburbHrefs} />
                     </div>
                 </div>
             </section>
@@ -395,25 +393,7 @@ export default function SuburbLandingPage({ suburb }: { suburb: Suburb }) {
                 />
             )}
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Need an Electrician in {name}?</h2>
-                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Licensed, insured and based just up the road. Free quotes, fixed prices, and a Certificate of
-                        Compliance on every job that needs one.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href={PHONE_HREF} className="btn btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2">
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
-                        <Link href="/contact" className="btn bg-white text-navy hover:bg-neutral-offwhite text-lg px-8 py-4">
-                            Get a Free Quote
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

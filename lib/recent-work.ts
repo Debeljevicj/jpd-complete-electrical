@@ -1,6 +1,7 @@
 import { jobReports, type JobReport } from '@/data/job-reports';
 import { serviceBySlug, type ServicePhoto } from '@/data/services';
 import type { ServiceIconName } from '@/components/ServiceIcon';
+import suburbShapes from '@/data/suburb-shapes.json';
 
 /**
  * The job-post archives behind the home page's "Our Services" grid.
@@ -193,6 +194,27 @@ export function latestJobs(count = 3): JobReport[] {
         .slice(0, count);
 }
 
+// The three jobs on the home page, picked by hand. Newest-first put a two
+// downlight repair there, and Justin asked for more substantial work up front
+// (15 Nov 2026): a switchboard, an EV charger and a partial rewire. To change
+// what the home page shows, change these slugs.
+const HOME_JOBS = [
+    'switchboard-rcbos-smoke-alarms-wynn-vale',
+    'untethered-ev-charger-wynn-vale',
+    'partial-house-rewire-old-cable-kingswood',
+];
+
+/**
+ * The jobs shown on the home page: the hand-picked ones, in that order. If a
+ * slug no longer exists, the newest job not already picked takes its place, so
+ * the row never comes up short.
+ */
+export function homeJobs(count = 3): JobReport[] {
+    const picked = HOME_JOBS.map((slug) => jobReports.find((j) => j.slug === slug)).filter((j): j is JobReport => Boolean(j));
+    const fill = latestJobs(jobReports.length).filter((j) => !picked.includes(j));
+    return [...picked, ...fill].slice(0, count);
+}
+
 /**
  * The "Similar jobs" cards under a job report.
  *
@@ -221,3 +243,29 @@ export function similarJobs(job: JobReport, count = 3): JobReport[] {
 export const populatedWorkCategories = workCategories.filter(
     (c) => jobsForCategory(c).length > 0
 );
+
+/**
+ * The suburbs drawn on the recent-work map (data/suburb-shapes.json). Longest
+ * name first, so "Modbury Heights" is found before "Modbury".
+ */
+export const MAP_PLACES: string[] = (suburbShapes as { name: string }[])
+    .map((s) => s.name)
+    .sort((a, b) => b.length - a.length);
+
+// Places we have written up jobs in that are off the map's edge.
+const FURTHER_AFIELD = [
+    'Adelaide Hills', 'Craigmore', 'Fullarton', 'Gillman', 'Hindmarsh',
+    'Kingswood', 'Lightsview', 'Mawson Lakes', 'Norwood',
+];
+
+/**
+ * Where a job was, read from its title, because every job title names its
+ * suburb and the `suburb` field only exists for the fifteen with a page.
+ *
+ * A job somewhere new that is in neither list comes back as "Adelaide" and is
+ * counted with the jobs further afield. Add its suburb to FURTHER_AFIELD (or
+ * to scripts/build-suburb-map.mjs, if it should be drawn) to name it.
+ */
+export function jobPlace(job: JobReport): string {
+    return [...MAP_PLACES, ...FURTHER_AFIELD].find((name) => job.title.includes(name)) ?? 'Adelaide';
+}

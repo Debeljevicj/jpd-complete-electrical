@@ -2,10 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import SectionHeading from '@/components/SectionHeading';
 import SuccessModal from '@/components/SuccessModal';
 import { trackEvent } from '@/components/Analytics';
-import { Phone, Mail, MapPin, Clock, Send, Loader2, AlertCircle } from 'lucide-react';
+import { Mail, Clock, Loader2, AlertCircle, ArrowRight, MessageSquare, UserPlus, Zap } from 'lucide-react';
 
 /*
  * The notification email goes to Justin, but replying to it goes to the
@@ -13,12 +12,15 @@ import { Phone, Mail, MapPin, Clock, Send, Loader2, AlertCircle } from 'lucide-r
  * quoted underneath. So the subject and every value in it have to read
  * properly from both sides, which is why the email gets plain-English values
  * rather than the option codes.
+ *
+ * `label` is the wording the old dropdown used; the tiles on the form show
+ * `tile` and `note`. The values and the email wording are unchanged.
  */
 const URGENCY_OPTIONS = [
-    { value: 'low', label: 'Low - General Enquiry (Reply within 24-48hrs)', email: 'Low – general enquiry' },
-    { value: 'medium', label: 'Medium - Standard Service (Reply within 24hrs)', email: 'Medium – standard service' },
-    { value: 'high', label: 'High - Urgent Service Required (Reply ASAP)', email: 'High – urgent service required', subjectPrefix: 'Urgent' },
-    { value: 'emergency', label: 'Emergency - Immediate Assistance Needed', email: 'Emergency – immediate assistance needed', subjectPrefix: 'Emergency' },
+    { value: 'low', label: 'Low - General Enquiry (Reply within 24-48hrs)', email: 'Low – general enquiry', tile: 'General enquiry', note: 'Reply within 24-48 hrs' },
+    { value: 'medium', label: 'Medium - Standard Service (Reply within 24hrs)', email: 'Medium – standard service', tile: 'Standard service', note: 'Reply within 24 hrs' },
+    { value: 'high', label: 'High - Urgent Service Required (Reply ASAP)', email: 'High – urgent service required', subjectPrefix: 'Urgent', tile: 'Urgent', note: 'Reply ASAP' },
+    { value: 'emergency', label: 'Emergency - Immediate Assistance Needed', email: 'Emergency – immediate assistance needed', subjectPrefix: 'Emergency', tile: 'Emergency', note: 'Call now as well' },
 ];
 
 const SERVICE_OPTIONS = [
@@ -168,6 +170,11 @@ export default function ContactContent() {
         });
     };
 
+    const field =
+        'w-full rounded-lg border border-navy/15 bg-white px-3.5 py-3 text-[15px] text-navy outline-none transition placeholder:text-navy/35 focus:border-transparent focus:ring-2 focus:ring-gold';
+    const label = 'mb-1.5 block text-sm font-semibold text-navy';
+    const optional = <span className="ml-1 text-xs font-normal text-navy/45">optional</span>;
+
     return (
         <>
             <SuccessModal
@@ -175,52 +182,74 @@ export default function ContactContent() {
                 onClose={() => setShowModal(false)}
                 urgency={submittedUrgency}
             />
-            {/* Contact Form & Info */}
-            <section className="section-padding bg-white">
-                <div className="container-custom">
-                    <h1 className="text-3xl md:text-4xl font-bold text-navy gold-underline mb-6">Contact Your Adelaide Electrician</h1>
+            {/* The number on the left, the form on the right. On a phone the
+                number comes first, then the form.
 
-                    <p className="text-neutral-slate text-lg leading-relaxed max-w-3xl mb-8">
-                        The easiest way to get a quote is the form below. Send a few details about the
-                        job and Justin will come back to you, usually the same day. You can fill it in
-                        whenever suits, which beats playing phone tag if you're at work.
-                    </p>
-
-                    {/* One row, not a block. This was a full panel with a heading and a
-                        four-line paragraph on the left and a single button on the right,
-                        so the right half sat empty and the button floated in it with
-                        nothing to line up against. A strip has one row to align, and
-                        keeps calling obvious without it outweighing the form.
-
-                        No click handler needed: the delegated listener in Analytics
-                        tracks every tel: link on the site. */}
-                    <div className="bg-navy text-white rounded-xl px-5 py-4 md:px-7 md:py-5 mb-10 md:mb-14 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                        <div className="flex items-center gap-3 min-w-0">
-                            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center shrink-0">
-                                <Phone className="w-5 h-5 text-gold" />
-                            </div>
-                            <p className="leading-snug">
-                                <span className="font-semibold">Rather talk it through, or is it urgent?</span>{' '}
-                                <span className="text-white/70">You'll get Justin, not a call centre.</span>
+                No click handlers on the tel:, sms: or mailto: links: the
+                delegated listener in Analytics tracks every tel: link on the site. */}
+            <section className="bg-navy text-white">
+                <div className="container-custom py-10 md:py-20">
+                    <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[5fr_6fr] lg:gap-16">
+                        <div className="lg:pt-6">
+                            <p className="eyebrow eyebrow-on-dark mb-5">Contact</p>
+                            <h1 className="display text-4xl md:text-6xl">Contact Your Adelaide Electrician</h1>
+                            <p className="mt-5 max-w-sm text-lg leading-relaxed text-white/80">
+                                Rather talk it through, or is it urgent? You&apos;ll get Justin, not a call centre.
                             </p>
-                        </div>
-                        <a
-                            href="tel:0435006420"
-                            className="btn btn-gold w-full sm:w-auto text-lg px-7 py-3 shrink-0 whitespace-nowrap"
-                        >
-                            0435 006 420
-                        </a>
-                    </div>
 
-                    <div className="grid lg:grid-cols-2 gap-12">
-                        {/* Contact Form */}
-                        <div>
-                            {/* SectionHeading rather than a bare h2, so this and
-                                "Contact Information" beside it are the same size, weight
-                                and underline. They were two different treatments at the
-                                top of two columns, which is what made the row look off. */}
-                            <SectionHeading>Send an Enquiry</SectionHeading>
-                            <form onSubmit={handleSubmit} className="space-y-6" data-clarity-mask="true">
+                            <p className="mt-9 text-sm font-semibold text-gold">Call or text Justin</p>
+                            <a
+                                href="tel:0435006420"
+                                className="display mt-1 block text-5xl text-white transition-colors hover:text-gold md:text-7xl"
+                            >
+                                0435 006 420
+                            </a>
+                            <p className="mt-4 flex max-w-sm items-start gap-2.5 text-sm leading-relaxed text-white/70">
+                                <Zap className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                                <span>
+                                    For urgent electrical issues that can&apos;t wait, give us a call directly.{' '}
+                                    <a href="#emergency" className="font-semibold text-white underline decoration-gold underline-offset-4">
+                                        Is it an emergency?
+                                    </a>
+                                </span>
+                            </p>
+
+                            <div className="mt-6 flex flex-wrap gap-2.5">
+                                <a href="sms:0435006420" className="pill pill-ghost-dark min-h-[44px] px-4 text-sm">
+                                    <MessageSquare className="h-4 w-4" /> Text
+                                </a>
+                                <a href="mailto:admin@jpdcompleteelectrical.com.au" className="pill pill-ghost-dark min-h-[44px] px-4 text-sm">
+                                    <Mail className="h-4 w-4" /> Email
+                                </a>
+                                <Link href="/card" className="pill pill-ghost-dark min-h-[44px] px-4 text-sm">
+                                    <UserPlus className="h-4 w-4" /> Save number
+                                </Link>
+                            </div>
+
+                            <ul className="mt-8 max-w-sm space-y-2 border-t border-white/10 pt-6 text-sm text-white/65">
+                                {[
+                                    'Monday - Friday: 7:00 AM - 5:00 PM',
+                                    'Saturday - Sunday: By appointment',
+                                    'Emergency services available after hours by appointment',
+                                ].map((line) => (
+                                    <li key={line} className="flex items-start gap-2.5">
+                                        <Clock className="mt-0.5 h-4 w-4 shrink-0 text-white/40" />
+                                        {line}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <div className="rounded-2xl bg-white p-5 text-navy shadow-2xl md:p-8">
+                            <p className="eyebrow mb-3">Send an enquiry</p>
+                            <h2 className="display text-3xl text-navy">Get a free quote</h2>
+                            <p className="mt-3 text-sm leading-relaxed text-neutral-slate">
+                                The easiest way to get a quote is the form below. Send a few details about the
+                                job and Justin will come back to you, usually the same day. You can fill it in
+                                whenever suits, which beats playing phone tag if you&apos;re at work.
+                            </p>
+
+                            <form onSubmit={handleSubmit} className="mt-6 space-y-5" data-clarity-mask="true">
                                 {/*
                                   * Web3Forms honeypot. Bots fill every field they find, so a
                                   * submission with this populated is rejected server-side.
@@ -237,42 +266,37 @@ export default function ContactContent() {
                                     autoComplete="off"
                                     aria-hidden="true"
                                 />
-                                <div>
-                                    <label htmlFor="name" className="block text-navy font-semibold mb-2">
-                                        Full Name *
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
-                                        placeholder="Enter your name"
-                                    />
+                                <div className="grid gap-5 sm:grid-cols-2">
+                                    <div>
+                                        <label htmlFor="name" className={label}>Full name *</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                            autoComplete="name"
+                                            className={field}
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="phone" className={label}>Phone *</label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
+                                            autoComplete="tel"
+                                            className={field}
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="phone" className="block text-navy font-semibold mb-2">
-                                        Phone Number *
-                                    </label>
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
-                                        placeholder="0400 000 000"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="email" className="block text-navy font-semibold mb-2">
-                                        Email Address *
-                                    </label>
+                                    <label htmlFor="email" className={label}>Email *</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -280,40 +304,51 @@ export default function ContactContent() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
-                                        placeholder="your@email.com"
+                                        autoComplete="email"
+                                        className={field}
                                     />
                                 </div>
 
-                                <div>
-                                    <label htmlFor="urgency" className="block text-navy font-semibold mb-2">
-                                        Urgency Level *
-                                    </label>
-                                    <select
-                                        id="urgency"
-                                        name="urgency"
-                                        value={formData.urgency}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
-                                    >
-                                        <option value="">Select urgency...</option>
-                                        {URGENCY_OPTIONS.map(o => (
-                                            <option key={o.value} value={o.value}>{o.label}</option>
+                                {/* The same four values the dropdown sent, as tiles: one tap
+                                    instead of two, and the reply time is readable before choosing. */}
+                                <fieldset>
+                                    <legend className={label}>How urgent is it? *</legend>
+                                    <div className="grid grid-cols-2 gap-2.5">
+                                        {URGENCY_OPTIONS.map((o) => (
+                                            <label
+                                                key={o.value}
+                                                className={`flex cursor-pointer items-start gap-2.5 rounded-lg border px-3 py-2.5 transition ${
+                                                    formData.urgency === o.value
+                                                        ? 'border-gold bg-gold/10 ring-1 ring-gold'
+                                                        : 'border-navy/15 hover:border-navy/40'
+                                                }`}
+                                            >
+                                                <input
+                                                    type="radio"
+                                                    name="urgency"
+                                                    value={o.value}
+                                                    checked={formData.urgency === o.value}
+                                                    onChange={handleChange}
+                                                    required
+                                                    className="mt-1 h-3.5 w-3.5 accent-[#B08F3F]"
+                                                />
+                                                <span>
+                                                    <span className="block text-sm font-semibold text-navy">{o.tile}</span>
+                                                    <span className="block text-xs text-neutral-slate">{o.note}</span>
+                                                </span>
+                                            </label>
                                         ))}
-                                    </select>
-                                </div>
+                                    </div>
+                                </fieldset>
 
                                 <div>
-                                    <label htmlFor="service" className="block text-navy font-semibold mb-2">
-                                        Service Required
-                                    </label>
+                                    <label htmlFor="service" className={label}>Kind of work {optional}</label>
                                     <select
                                         id="service"
                                         name="service"
                                         value={formData.service}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
+                                        className={field}
                                     >
                                         <option value="">Select a service...</option>
                                         {SERVICE_OPTIONS.map(o => (
@@ -323,32 +358,28 @@ export default function ContactContent() {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-navy font-semibold mb-2">
-                                        Job Description
-                                    </label>
+                                    <label htmlFor="message" className={label}>What needs doing? {optional}</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         value={formData.message}
                                         onChange={handleChange}
-                                        rows={6}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition resize-none"
-                                        placeholder="Please describe your electrical requirements (optional)..."
+                                        rows={4}
+                                        className={`${field} resize-y`}
+                                        placeholder="e.g. Old fuse board, power keeps tripping when the heater's on. House is 1970s."
                                     />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="source" className="block text-navy font-semibold mb-2">
-                                        How did you find us?
-                                    </label>
+                                    <label htmlFor="source" className={label}>How did you find us? {optional}</label>
                                     <select
                                         id="source"
                                         name="source"
                                         value={formData.source}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition"
+                                        className={field}
                                     >
-                                        <option value="">Select one (optional)...</option>
+                                        <option value="">Select one...</option>
                                         {SOURCE_OPTIONS.map(o => (
                                             <option key={o.value} value={o.value}>{o.label}</option>
                                         ))}
@@ -356,126 +387,35 @@ export default function ContactContent() {
                                 </div>
 
                                 {status === 'error' && (
-                                    <div className="flex items-start gap-3 bg-red-50 border border-red-200 text-red-700 rounded-lg p-4">
-                                        <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                    <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
+                                        <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0" />
                                         <p className="text-sm">Something went wrong sending your message. Please try again, or call us directly on <a href="tel:0435006420" className="font-semibold underline">0435 006 420</a>.</p>
                                     </div>
                                 )}
 
-                                <button
-                                    type="submit"
-                                    disabled={status === 'sending'}
-                                    className="btn btn-gold w-full text-lg flex items-center justify-center gap-2"
-                                >
-                                    {status === 'sending' ? (
-                                        <>
-                                            Sending... <Loader2 className="w-5 h-5 animate-spin" />
-                                        </>
-                                    ) : (
-                                        <>
-                                            Send Message <Send className="w-5 h-5" />
-                                        </>
-                                    )}
-                                </button>
-                                <p className="text-sm text-neutral-slate text-center">
-                                    Your details are only used to reply to you and do the job.{' '}
-                                    <Link href="/privacy" className="underline hover:text-gold">Privacy policy</Link>
-                                </p>
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                                    <button
+                                        type="submit"
+                                        disabled={status === 'sending'}
+                                        className="pill pill-gold w-full shrink-0 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+                                    >
+                                        {status === 'sending' ? (
+                                            <>
+                                                Sending... <Loader2 className="h-4 w-4 animate-spin" />
+                                            </>
+                                        ) : (
+                                            <>
+                                                Send enquiry <ArrowRight className="h-4 w-4" />
+                                            </>
+                                        )}
+                                    </button>
+                                    <p className="text-xs leading-relaxed text-neutral-slate">
+                                        Your details are only used to reply to you and do the job.{' '}
+                                        <Link href="/privacy" className="underline hover:text-gold-dark">Privacy policy</Link>
+                                    </p>
+                                </div>
                             </form>
                         </div>
-
-                        {/* Contact Information */}
-                        <div>
-                            <SectionHeading>Contact Information</SectionHeading>
-
-                            <div className="space-y-6 mb-8">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Phone className="w-6 h-6 text-gold" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-navy mb-1">Phone</h3>
-                                        <a href="tel:0435006420" className="text-neutral-slate hover:text-gold transition-colors text-lg">
-                                            0435 006 420
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Mail className="w-6 h-6 text-gold" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-navy mb-1">Email</h3>
-                                        <a href="mailto:admin@jpdcompleteelectrical.com.au" className="text-neutral-slate hover:text-gold transition-colors">
-                                            admin@jpdcompleteelectrical.com.au
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
-                                        <Clock className="w-6 h-6 text-gold" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-navy mb-1">Business Hours</h3>
-                                        <p className="text-neutral-slate">Monday - Friday: 7:00 AM - 5:00 PM</p>
-                                        <p className="text-neutral-slate">Saturday - Sunday: By appointment</p>
-                                        <p className="text-neutral-slate text-sm mt-2 italic">Emergency services available after hours by appointment</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Service Areas */}
-                            <div className="bg-white p-8 rounded-lg shadow-lg">
-                                <h3 className="text-2xl font-bold text-navy mb-6">Service Areas</h3>
-                                <div className="relative h-64 bg-neutral-offwhite rounded-lg mb-6 overflow-hidden group">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418336.63960122806!2d138.2815111742472!3d-34.99988560775201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab735c7c526b33f%3A0x4033654628ec640!2sAdelaide%20SA!5e0!3m2!1sen!2sau!4v1709615000000!5m2!1sen!2sau"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        className="absolute inset-0"
-                                    />
-                                </div>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3 p-3 bg-neutral-offwhite rounded-lg">
-                                        <MapPin className="w-5 h-5 text-gold" />
-                                        <span className="font-medium text-navy">Adelaide Metropolitan Area</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 p-3 bg-neutral-offwhite rounded-lg">
-                                        <MapPin className="w-5 h-5 text-gold" />
-                                        <span className="font-medium text-navy">Adelaide CBD</span>
-                                    </li>
-                                    <li className="flex items-center gap-3 p-3 bg-neutral-offwhite rounded-lg">
-                                        <MapPin className="w-5 h-5 text-gold" />
-                                        <span className="font-medium text-navy">Regional & Remote (Upon Enquiry)</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Emergency Contact */}
-            <section className="section-padding bg-neutral-offwhite">
-                <div className="container-custom text-center">
-                    <div className="max-w-3xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">Need Emergency Electrical Services?</h2>
-                        <p className="text-neutral-slate text-lg mb-6">
-                            For urgent electrical issues that can't wait, give us a call directly.
-                        </p>
-                        <a
-                            href="tel:0435006420"
-                            className="btn btn-gold text-xl px-10 py-5 inline-flex items-center gap-3"
-                        >
-                            <Phone className="w-6 h-6" />
-                            Call Now: 0435 006 420
-                        </a>
                     </div>
                 </div>
             </section>

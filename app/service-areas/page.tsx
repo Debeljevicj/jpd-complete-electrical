@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Phone, MapPin, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import AreaPicker from '@/components/AreaPicker';
+import ClosingCTA from '@/components/ClosingCTA';
 import TrustBadges from '@/components/TrustBadges';
 import Accordion from '@/components/Accordion';
 import ServicePhotoGrid from '@/components/ServicePhotoGrid';
@@ -9,8 +11,6 @@ import { shareMeta } from '@/lib/share';
 import { jsonLd } from '@/lib/json-ld';
 
 const SITE = 'https://jpdcompleteelectrical.com.au';
-const PHONE = '0435 006 420';
-const PHONE_HREF = 'tel:0435006420';
 
 export const metadata: Metadata = {
     title: 'Electrician Near Me | Adelaide Service Areas | JPD',
@@ -93,39 +93,13 @@ export default function ServiceAreasPage() {
                 dangerouslySetInnerHTML={{ __html: jsonLd([areaSchema, faqSchema]) }}
             />
 
-            {/* Hero */}
-            <section className="bg-navy text-white py-16 md:py-20">
-                <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full border border-white/20 mb-5">
-                            <MapPin className="w-4 h-4 text-gold" />
-                            <span className="text-xs font-semibold tracking-wide uppercase text-gold">
-                                Based in Wynn Vale SA 5127
-                            </span>
-                        </div>
-                        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-                            Electrician Near Me in Adelaide&apos;s North-East
-                        </h1>
-                        <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                            If you're searching for an electrician near you and you live anywhere around Golden Grove,
-                            Modbury, Tea Tree Gully or the foothills, we're probably closer than whoever came up first.
-                            JPD Complete Electrical is owner-operated out of Wynn Vale, right in the middle of the patch.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <a
-                                href={PHONE_HREF}
-                                className="btn btn-gold text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3 inline-flex items-center justify-center gap-2"
-                            >
-                                <Phone className="w-5 h-5" />
-                                Call {PHONE}
-                            </a>
-                            <Link
-                                href="/contact"
-                                className="btn btn-outline border-white text-white hover:bg-white hover:text-navy text-base md:text-lg px-6 md:px-8 py-2.5 md:py-3"
-                            >
-                                Get a Free Quote
-                            </Link>
-                        </div>
+            {/* Hero: the map, and the suburb the visitor picked (components/AreaPicker.tsx) */}
+            <section className="bg-navy text-white">
+                <div className="container-custom py-10 md:py-20">
+                    <div className="mx-auto max-w-6xl">
+                        <AreaPicker
+                            suburbs={suburbs.map(({ name, slug, postcode, hook, housing }) => ({ name, slug, postcode, hook, housing }))}
+                        />
                     </div>
                 </div>
             </section>
@@ -140,7 +114,7 @@ export default function ServiceAreasPage() {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <div className="max-w-3xl">
-                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6 gold-underline">
+                        <h2 className="display mb-6 text-3xl text-navy md:text-5xl">
                             Why &ldquo;Near Me&rdquo; Actually Matters With Electrical Work
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed mb-4">
@@ -167,7 +141,7 @@ export default function ServiceAreasPage() {
             <section className="section-padding bg-neutral-offwhite">
                 <div className="container-custom">
                     <div className="max-w-3xl mb-10">
-                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4 gold-underline">
+                        <h2 className="display mb-4 text-3xl text-navy md:text-5xl">
                             Suburbs We Cover
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed">
@@ -211,7 +185,7 @@ export default function ServiceAreasPage() {
             <section className="section-padding bg-white">
                 <div className="container-custom">
                     <div className="max-w-3xl mb-10">
-                        <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4 gold-underline">
+                        <h2 className="display mb-4 text-3xl text-navy md:text-5xl">
                             What We Do Across the Area
                         </h2>
                         <p className="text-neutral-slate text-lg leading-relaxed">
@@ -226,35 +200,14 @@ export default function ServiceAreasPage() {
             {/* FAQs */}
             <section className="section-padding bg-neutral-offwhite">
                 <div className="container-custom max-w-4xl">
-                    <h2 className="text-2xl md:text-3xl font-bold text-navy mb-8 gold-underline">
+                    <h2 className="display mb-8 text-3xl text-navy md:text-5xl">
                         Common Questions About Finding an Electrician Near You
                     </h2>
                     <Accordion items={faqs} />
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Need an Electrician Nearby?</h2>
-                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Licensed, insured, owner-operated and based in Wynn Vale. Free quotes across Adelaide&apos;s
-                        north-east.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href={PHONE_HREF}
-                            className="btn btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
-                        >
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
-                        <Link href="/contact" className="btn bg-white text-navy hover:bg-neutral-offwhite text-lg px-8 py-4">
-                            Get a Free Quote
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

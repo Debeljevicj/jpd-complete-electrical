@@ -26,6 +26,12 @@ const config: Config = {
                     100: '#FFEDD5',
                 },
             },
+            // A wide screen with a real mouse. Width alone is not enough: a phone
+            // asking for the desktop site, or a tablet on its side, is wide but has
+            // nothing to hover with. Used for the review-star hover cards.
+            screens: {
+                'can-hover': { raw: '(min-width: 1024px) and (hover: hover) and (pointer: fine)' },
+            },
             fontFamily: {
                 heading: ['var(--font-outfit)', 'sans-serif'],
                 body: ['var(--font-inter)', 'sans-serif'],

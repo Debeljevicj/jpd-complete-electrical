@@ -8,6 +8,7 @@ import ServiceIcon from './ServiceIcon';
 import RecentJobs from './RecentJobs';
 import FeaturedJob from './FeaturedJob';
 import JobPhotoStrip from './JobPhotoStrip';
+import ClosingCTA from './ClosingCTA';
 import { serviceBySlug, type Service } from '@/data/services';
 import { suburbs } from '@/data/suburbs';
 import { workForService, stripCount } from '@/lib/service-work';
@@ -177,35 +178,36 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                 </Fragment>
             ))}
 
-            {/* What drives the price */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom">
-                    <div className="max-w-3xl">
-                        <div className="flex items-center gap-3 mb-5">
-                            <Receipt className="w-7 h-7 text-gold" />
-                            <h2 className="text-2xl md:text-3xl font-bold">What Drives the Price</h2>
+            {/* What drives the price: the pitch on the left, the factors as a ruled list on the right */}
+            <section className="bg-warm-50">
+                <div className="container-custom py-14 md:py-24">
+                    <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-[2fr_3fr] md:gap-16">
+                        <div>
+                            <p className="eyebrow mb-5">Price</p>
+                            <h2 className="display text-3xl text-navy md:text-5xl">What Drives the Price</h2>
+                            <p className="mt-5 text-base leading-relaxed text-neutral-slate md:text-lg">
+                                We aren&apos;t going to publish a headline figure that turns into something else once we&apos;re on
+                                site. What we&apos;ll do is tell you exactly what moves the number, so you can see where your
+                                job is likely to sit before you call.
+                            </p>
+                            <a href={PHONE_HREF} className="pill pill-ghost-light mt-7">
+                                <Phone className="h-4 w-4" />
+                                Call {PHONE}
+                            </a>
                         </div>
-                        <p className="text-lg text-white/85 leading-relaxed mb-6">
-                            We aren't going to publish a headline figure that turns into something else once we're on
-                            site. What we'll do is tell you exactly what moves the number, so you can see where your
-                            job is likely to sit before you call.
-                        </p>
-                        <ul className="space-y-3 mb-8">
-                            {priceFactors.map((factor) => (
-                                <li key={factor} className="flex items-start gap-3">
-                                    <Check className="w-5 h-5 text-gold shrink-0 mt-1" />
-                                    <span className="text-white/85 text-lg leading-relaxed">{factor}</span>
-                                </li>
-                            ))}
-                        </ul>
-                        <p className="text-lg text-white/85 leading-relaxed mb-8">
-                            Quotes are free, fixed, and state what's included and excluded. If we think something might
-                            turn up once we open things up, you hear about it before we start rather than on the invoice.
-                        </p>
-                        <a href={PHONE_HREF} className="btn btn-gold text-lg px-8 py-3.5 inline-flex items-center gap-2">
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
+                        <div>
+                            <ul className="border-t-2 border-navy">
+                                {priceFactors.map((factor) => (
+                                    <li key={factor} className="border-b border-navy/10 py-4 font-heading text-base font-medium leading-snug text-navy md:text-lg">
+                                        {factor}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p className="mt-6 border-l-2 border-gold pl-4 text-sm leading-relaxed text-neutral-slate">
+                                Quotes are free, fixed, and state what&apos;s included and excluded. If we think something might
+                                turn up once we open things up, you hear about it before we start rather than on the invoice.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -308,28 +310,7 @@ export default function ServiceLandingPage({ service }: { service: Service }) {
                 }
             />
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get a Free Quote</h2>
-                    <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                        Owner-operated, licensed and insured. Justin quotes the job, does the job, and answers the phone
-                        afterwards.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a
-                            href={PHONE_HREF}
-                            className="btn btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
-                        >
-                            <Phone className="w-5 h-5" />
-                            Call {PHONE}
-                        </a>
-                        <Link href="/contact" className="btn bg-white text-navy hover:bg-neutral-offwhite text-lg px-8 py-4">
-                            Request a Quote
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }

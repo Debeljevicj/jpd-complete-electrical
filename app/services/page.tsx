@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ClosingCTA from '@/components/ClosingCTA';
 import SectionHeading from '@/components/SectionHeading';
 import ServiceCard from '@/components/ServiceCard';
 import ServicePhotoGrid from '@/components/ServicePhotoGrid';
@@ -314,23 +315,7 @@ export default function ServicesPage() {
             {/* Service Area Checker */}
             <ServiceAreaChecker />
 
-            {/* CTA */}
-            <section className="section-padding bg-navy text-white">
-                <div className="container-custom text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Need an Electrician?</h2>
-                    <p className="text-xl mb-8 text-white/90">
-                        Request a free quote for your electrical project today
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button href="/contact" variant="gold" className="text-lg px-8 py-4">
-                            Get a Quote
-                        </Button>
-                        <a href="tel:0435006420" className="btn bg-white text-navy hover:bg-neutral-offwhite text-lg px-8 py-4">
-                            Call 0435 006 420
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <ClosingCTA />
         </>
     );
 }
