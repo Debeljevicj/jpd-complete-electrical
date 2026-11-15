@@ -18,7 +18,7 @@ import { clarityEnabled } from '@/data/analytics';
  * No em or en dashes in the copy, same rule as the blog.
  */
 
-const LAST_UPDATED = '9 November 2026';
+const LAST_UPDATED = '15 November 2026';
 const EMAIL = 'admin@jpdcompleteelectrical.com.au';
 const PHONE = '0435 006 420';
 const PHONE_HREF = 'tel:0435006420';

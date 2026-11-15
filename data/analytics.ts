@@ -26,6 +26,6 @@ export const analyticsEnabled = GA_MEASUREMENT_ID.length > 0;
  * While this is empty, Clarity never loads, the privacy policy leaves it out,
  * and nothing else changes.
  */
-export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_ID || '';
+export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_ID || 'zdwva878h7';
 
 export const clarityEnabled = /^[a-z0-9]{6,16}$/i.test(CLARITY_PROJECT_ID);
