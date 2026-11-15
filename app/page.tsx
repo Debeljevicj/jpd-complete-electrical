@@ -132,6 +132,7 @@ export default function Home() {
                                         href={`/recent-work/${category.slug}`}
                                         linkLabel={jobCount > 0 ? `${jobCount} recent ${jobCount === 1 ? 'job' : 'jobs'}` : 'See the work'}
                                         compact
+                                        photo={category.photo}
                                     />
                                 </Reveal>
                             );

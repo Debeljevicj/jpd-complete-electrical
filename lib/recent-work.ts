@@ -1,5 +1,5 @@
 import { jobReports, type JobReport } from '@/data/job-reports';
-import { serviceBySlug } from '@/data/services';
+import { serviceBySlug, type ServicePhoto } from '@/data/services';
 import type { ServiceIconName } from '@/components/ServiceIcon';
 
 /**
@@ -18,6 +18,8 @@ export interface WorkCategory {
     /** Card and page title, in the words a customer would use. */
     name: string;
     icon: ServiceIconName;
+    /** Real job photo for the home page card. */
+    photo?: ServicePhoto;
     /** Home page card copy. */
     blurb: string;
     /** Archive page H1, where the card name alone isn't what people search. Falls back to `name`. */
@@ -35,6 +37,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'switchboard-upgrades',
         name: 'Switchboard Upgrades',
         icon: 'switchboard',
+        photo: { src: '/images/switchboard_labelled_after_ridgehaven.webp', alt: 'Finished switchboard with a JPD sticker and every circuit labelled', focus: '50% 12%', suburb: 'Ridgehaven' },
         blurb:
             'Old ceramic fuses, asbestos panels and boards with no room left. Replaced with a compliant board and full RCD protection.',
         // Search Console (Aug to Oct 2026) has this archive among the pages showing
@@ -51,6 +54,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'service-and-maintenance',
         name: 'Service & Maintenance',
         icon: 'rcd',
+        photo: { src: '/images/rewire_insulation_testing_kingswood.webp', alt: 'Insulation resistance tester connected to circuit cables at a wall during testing', focus: '50% 50%', suburb: 'Kingswood' },
         blurb:
             'RCD testing, smoke alarms, emergency lighting, test and tag and thermal imaging. Scheduled compliance for homes and businesses.',
         intro:
@@ -69,6 +73,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'ev-charger-installation',
         name: 'EV Charger Installation',
         icon: 'ev',
+        photo: { src: '/images/ev_charger_evnex_modbury_heights.webp', alt: 'Evnex EV charger and isolator on a brick garage wall with the charging cable coiled beside it', focus: '50% 50%', suburb: 'Modbury Heights' },
         blurb:
             'Home and workplace chargers installed properly: load checked, board upgraded if it needs it, and set up to run on cheap power.',
         intro:
@@ -82,6 +87,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'renovations-and-extensions',
         name: 'Renovations & Extensions',
         icon: 'renovation',
+        photo: { src: '/images/kitchen_renovation_golden_grove.webp', alt: 'Renovated kitchen with downlights and a skylight', focus: '50% 40%', suburb: 'Golden Grove' },
         blurb:
             'Rough-in through to fit-off. Kitchens, extensions and whole-house rewires, coordinated around the other trades.',
         intro:
@@ -95,6 +101,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'fault-finding-and-emergency',
         name: 'Fault Finding & Emergency',
         icon: 'emergency',
+        photo: { src: '/images/burnt_main_switch_tea_tree_gully.webp', alt: 'Burnt and melted main switch inside an old switchboard', focus: '50% 35%', suburb: 'Tea Tree Gully' },
         blurb:
             'Power out, a breaker that won\'t stay in, or something burning. Diagnosed and made safe, then fixed properly.',
         intro:
@@ -108,6 +115,7 @@ export const workCategories: WorkCategory[] = [
         slug: 'everyday-electrical',
         name: 'Much More',
         icon: 'downlight',
+        photo: { src: '/images/hex_led_lighting_garage_fairview_park.webp', alt: 'Hexagon LED lighting across a garage ceiling above a parked car', focus: '50% 28%', suburb: 'Fairview Park' },
         blurb:
             'Downlights, powerpoints, ceiling and exhaust fans, feature lighting, ovens, cooktops and TV mounting. The everyday jobs, done properly.',
         intro:
